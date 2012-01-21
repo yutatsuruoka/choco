@@ -20,8 +20,7 @@ class PostsController extends AppController {
     public function add() {
         if ($this->request->is('post')) {
             if ($this->Post->save($this->request->data)) {
-                $this->Session->setFlash('Your post has been saved.');
-                $this->redirect(array('action' => 'index'));
+                $this->redirect(array('controller' => 'users', 'action' => 'twitter'));
             } else {
                 $this->Session->setFlash('Unable to add your post.');
             }
@@ -42,6 +41,15 @@ class PostsController extends AppController {
     	}
 	}
 	
+	function beforeFilter() {
+        parent::beforeFilter();
+
+        // Tell the Auth controller that the 'create' action is accessible 
+        // without being logged in.
+        $this->Auth->allow('add', 'index');
+   
+    }
+	
 	function delete($id) {
     	if ($this->request->is('get')) {
         	throw new MethodNotAllowedException();
@@ -51,6 +59,7 @@ class PostsController extends AppController {
         	$this->redirect(array('action' => 'index'));
     	}
 	}
+
 }
 
 /*
