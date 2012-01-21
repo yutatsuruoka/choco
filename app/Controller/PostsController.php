@@ -20,7 +20,7 @@ class PostsController extends AppController {
     public function add() {
         if ($this->request->is('post')) {
             if ($this->Post->save($this->request->data)) {
-                $this->redirect(array('controller' => 'users', 'action' => 'twitter'));
+                $this->redirect(array('controller' => 'users', 'action' => 'beg'));
             } else {
                 $this->Session->setFlash('Unable to add your post.');
             }

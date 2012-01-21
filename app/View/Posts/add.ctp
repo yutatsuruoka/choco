@@ -4,11 +4,12 @@
 <?php
 echo $this->Form->create('Post');
 ?>
-誰にチョコをネダリますか？<br>
+誰にチョコをネダリますか？<br />
 <?
-echo $this->Form->input('girl_id',array('label'=>"相手のtwitterアカウント", 'id' => true));
+echo $this->Form->input('girl_id',array('label'=>"相手のtwitterアカウント　@", 'id' => true, 'type' => 'text'));
 ?>
-チョコを受け取る名前と住所を教えて下さい<br>
+<br />
+チョコを受け取る、アナタの名前と住所を教えて下さい<br />
 (この情報は公開されません)
 <?
 echo $this->Form->input('user_name',array('label'=>'名前：'));
