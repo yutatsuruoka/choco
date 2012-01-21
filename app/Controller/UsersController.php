@@ -188,7 +188,7 @@ class UsersController extends AppController {
                 $this->currentURL() . '/users/twitter_callback');
         $this->Session->write('twitter_request_token', $requestToken);
         $this->redirect('https://api.twitter.com/oauth/authorize?oauth_token=' 
-                . $requestToken->key);
+               . $requestToken->key);
     }
 
     public function twitter_callback() {

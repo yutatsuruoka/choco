@@ -116,20 +116,6 @@ class AppController extends Controller {
             $https = false;
         }
             
-        $port = "";
-        if (isset($_SERVER['SERVER_PORT'])) {
-            if ($https) {
-                if ($_SERVER['SERVER_PORT'] != 443) {
-                    $port = $_SERVER['SERVER_PORT'];
-                }
-            }
-            else {
-                if ($_SERVER['SERVER_PORT'] != 80) {
-                    $port = $_SERVER['SERVER_PORT'];
-                }
-            }
-        }
-        
-        return $protocol . $_SERVER['HTTP_HOST'] . ':' . $port . $_SERVER['REQUEST_URI'];    	
+        return $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];    	
     }
 }
