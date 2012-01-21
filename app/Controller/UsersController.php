@@ -59,10 +59,16 @@ class UsersController extends AppController {
         }
     } 
     
-    function login_success($email, $redirect = true) {
-        $this->current_user =  $this->User->find('first', array(
-            'conditions' => array('email' => $email)
-        ));
+    function login_success($user, $redirect = true) {
+        $u =  $this->User->find('first', array(
+            'conditions' => array('email' => $user->id . '@twitter')));
+        $this->current_user = $u['User'];
+        
+        $this->Auth->login(array('id' => $this->current_user['id']
+                , 'email' => $user->id . '@twitter'
+                , 'type' => 1
+                , 'name' => $user->name));
+
         
         if ($redirect) {
             return $this->redirect($this->Auth->redirect());
@@ -128,10 +134,7 @@ class UsersController extends AppController {
             $this->Session->setFlash('Returning Twitter user');
         }
         
-        $this->Auth->login(array('email' => $user->id . '@twitter'
-            , 'type' => 1, 'name' => $user->name));
-
-        $this->login_success($user->id . '@twitter', false);
+        $this->login_success($user, false);
         
         $this->redirect(array('action' => 'set_address'));
     } 
@@ -195,125 +198,15 @@ class UsersController extends AppController {
             $this->Session->setFlash('Returning Twitter user at give_callback()');
         }
         
-        $this->Auth->login(array('email' => $user->id . '@twitter'
-            , 'type' => 1, 'name' => $user->name));
-        
         // check that we are the right person
         $this->loadModel("Post");
         $this->Post->findById($postId);
         
         // successful login
-        $this->login_success($user->id . '@twitter', false);
+        $this->login_success($user, false);
         
         $this->redirect("/posts/set_type/" . $postId);
     }   
-
-    public function twitter() {
-        $requestToken = $this->OauthConsumer->getRequestToken('Twitter', 
-                'https://api.twitter.com/oauth/request_token', 
-                Router::url('/', true) . 'users/twitter_callback');
-        $this->Session->write('twitter_request_token', $requestToken);
-        $this->redirect('https://api.twitter.com/oauth/authorize?oauth_token=' 
-               . $requestToken->key);
-    }
-
-    public function twitter_callback() {
-        $requestToken = $this->Session->read('twitter_request_token');
-        $accessToken = $this->OauthConsumer->getAccessToken('Twitter', 
-                'https://api.twitter.com/oauth/access_token', $requestToken);
-
-        if (empty($accessToken)) {
-            $this->Session->setFlash('Access Token invalid');
-            $this->redirect('/');
-        }
-        
-        // 認証ユーザ情報の取得
-        $json = $this->OauthConsumer->get('Twitter', $accessToken->key, 
-                $accessToken->secret, 
-                'http://twitter.com/account/verify_credentials.json', array());
-        $user = json_decode($json);
-
-        if (!$this->User->find('first', array('conditions' 
-            => array(
-                'email' => $user->id . '@twitter'
-                , 'type' => 1
-                , 'deleted' => NULL
-            )))) {
-            // create new user
-            $this->User->save(array('User' 
-                => array(
-                    'email' => $user->id . '@twitter'
-                    , 'type' => 1
-                    , 'name' => $user->name
-                )), false);
-            
-            $this->Session->setFlash('Twitter user created');
-        }
-        else {
-            $this->Session->setFlash('Returning Twitter user');
-        }
-        
-        $this->Auth->login(array('email' => $user->id . '@twitter'
-            , 'type' => 1, 'name' => $user->name));
-        
-        $this->login_success($user->id . '@twitter', false);
-    }   
-
-    public function facebook() {
-        $this->log('facebook() called', LOG_DEBUG);
-        
-        $url = $this->fb->getLoginUrl(array('redirect_uri' => 
-            Router::url('/', true) . 'users/facebook_callback', 
-            'req_perms' => 'email'));  
-        $this->redirect($url);  
-    }
-
-    public function facebook_callback() {
-        $this->log('facebook_callback() called', LOG_DEBUG);
-        $uid = $this->fb->getUser();  
-        if ($uid == 0) {
-            $this->log('no facebook uid!', LOG_DEBUG);
-            $this->Session->setFlash('Facebook login failed');
-            $this->redirect('/');
-        }
-        
-        $me = null;  
-        try {  
-            $me = $this->fb->api('/me');
-            
-            $access_token = $this->fb->getAccessToken();  
-        } catch (FacebookApiException $e) {  
-            error_log($e);  
-        }
-        
-        $name = $me['first_name'] . ' ' . $me['last_name'];
-        if (!$this->User->find('first', array('conditions' 
-            => array(
-                'email' => $me['id'] . '@facebook'
-                , 'type' => 2
-                , 'deleted' => NULL
-            )))) {
-            // create new user
-            $this->User->save(array('User' 
-                => array(
-                    'email' => $me['id'] . '@facebook'
-                    , 'type' => 2
-                    , 'name' => $name,  
-                )), false);
-            
-            $this->Session->setFlash('Facebook user created');
-        }
-        else {
-            $this->Session->setFlash('Returning Facebook user');
-        }
-        
-        $this->Auth->login(array('email' => $me['id'] . '@facebook',
-                'name' => $name,  
-                'type' => 2));
-        
-        $this->login_success($user->id . '@twitter', false);
-    }
-    
 }
 
 ?>

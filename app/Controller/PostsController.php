@@ -45,14 +45,14 @@ class PostsController extends AppController {
     function set_type($id = null) {
         $this->Post->id = $id;
     	if ($this->request->is('get')) {
-        	$this->request->data = $this->Post->read();
-  		} else {
-        	if ($this->Post->save($this->request->data)) {
-          	  	$this->Session->setFlash('Your post has been updated.');
-            	$this->redirect(array('action' => 'index'));
-        	} else {
-            	$this->Session->setFlash('Unable to update your post.');
-        	}
+            $this->request->data = $this->Post->read();
+        } else {
+            if ($this->Post->save($this->request->data)) {
+                $this->Session->setFlash('Your post has been updated.');
+                $this->redirect('/payment/index/' . $id);
+            } else {
+                $this->Session->setFlash('Unable to update your post.');
+            }
     	}
     }
 

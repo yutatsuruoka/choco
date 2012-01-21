@@ -26,6 +26,7 @@ class PaymentController extends AppController {
 	function index($post_id=null) {
 
 		$user_id = $this->current_user['id'];
+                var_dump($this->current_user);
 		
 		if(!empty($post_id)&&!empty($user_id)){
 						
