@@ -2,6 +2,7 @@
 class PostsController extends AppController {
     public $name = 'Posts';
     public $helpers = array('Html', 'Form');
+    public $components = array('OauthConsumer');
 	
     public function index() {
         $this->set('posts', $this->Post->find('all'));
@@ -46,8 +47,7 @@ class PostsController extends AppController {
 
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
-        $this->Auth->allow('add', 'index');
-   
+        $this->Auth->allow('add', 'index', 'beg', 'beg_callback');
     }
 	
 	function delete($id) {

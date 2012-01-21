@@ -9,9 +9,8 @@
 	<tr>
 		<td><?php echo $this->Html->link($user['User']['id'], array('action' => 'view', $user['User']['id']));?>
 		<td><?php echo $user['User']['name']; ?></td>
-		<td><?php echo $user['User']['address']; ?></td>
-		<td><?php echo $user['User']['tel']; ?></td>
-		<td><?php echo $user['User']['money']; ?></td>
+		<td><?php echo $user['User']['user_name']; ?></td>
+		<td><?php echo $user['User']['state']; ?></td>
 	</tr>
 	<?php endforeach; ?>
 </table>

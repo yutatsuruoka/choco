@@ -23,13 +23,13 @@ class UsersController extends AppController {
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
         $this->Auth->allow('signup', 'login', 'twitter', 'twitter_callback'
-                , 'facebook', 'facebook_callback', 'beg', 'beg_twitter');
+                , 'facebook', 'facebook_callback', 'beg', 'beg_callback');
 
         $this->fb = new Facebook(array(  
             'appId'  => Configure::Read('Facebook.appId'),  
             'secret' => Configure::Read('Facebook.secret'),  
             'cookie' => true,  
-        ));  
+        ));
     }
 
     public function signup() {
@@ -92,7 +92,7 @@ class UsersController extends AppController {
                 . $requestToken->key);
     }
 
-    public function beg_callback() {
+    public function beg_callback() {        
         $requestToken = $this->Session->read('twitter_request_token');
         $accessToken = $this->OauthConsumer->getAccessToken('Twitter', 
                 'https://api.twitter.com/oauth/access_token', $requestToken);
@@ -132,7 +132,20 @@ class UsersController extends AppController {
             , 'type' => 1, 'name' => $user->name));
 
         $this->login_success($user->id . '@twitter', false);
+        
+        $this->redirect(array('action' => 'set_address', $User));
     } 
+    
+    public function set_address() {
+    var_dump($User);
+        if ($this->request->is('post')) {
+            if ($this->User->save($this->request->data)) {
+                $this->redirect(array('controller' => 'users', 'action' => 'index'));
+            } else {
+                $this->Session->setFlash('Unable to add your post.');
+            }
+        }
+    }
 	
     public function give() {
         $requestToken = $this->OauthConsumer->getRequestToken('Twitter', 
@@ -290,6 +303,7 @@ class UsersController extends AppController {
         
         $this->login_success($user->id . '@twitter', false);
     }
+    
 }
 
 ?>
