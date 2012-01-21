@@ -132,11 +132,14 @@ class UsersController extends AppController {
             , 'type' => 1, 'name' => $user->name));
 
         $this->login_success($user->id . '@twitter', false);
-        
-        $this->redirect(array('action' => 'set_address'));
+    
+        $this->Session->write('user_Id', $this->current_user['id']);
+
+        $this->redirect('/users/set_address/');
     } 
     
     public function set_address() {
+	var_dump($this->Session->read('user_Id'));
         if ($this->request->is('post')) {
             if ($this->User->save($this->request->data)) {
                 $this->redirect(array('controller' => 'users', 'action' => 'index'));
