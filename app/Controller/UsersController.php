@@ -73,7 +73,7 @@ class UsersController extends AppController {
 
         // rewrite logout url for facebook users
         if ($this->Auth->user('type') == 2) {
-            $params = array('next' => $this->currentURL . $logout_url);
+            $params = array('next' => $this->currentURL() . $logout_url);
 
             $logout_url = $facebook->getLogoutUrl($params);
         }
@@ -81,10 +81,10 @@ class UsersController extends AppController {
         $this->redirect($logout_url);
     }       
 
-	public function beg() {
+    public function beg() {
         $requestToken = $this->OauthConsumer->getRequestToken('Twitter', 
                 'https://api.twitter.com/oauth/request_token', 
-                $this->currentURL . '/users/beg_callback');
+                $this->currentURL() . '/users/beg_callback');
         $this->Session->write('twitter_request_token', $requestToken);
         $this->redirect('https://api.twitter.com/oauth/authorize?oauth_token=' 
                 . $requestToken->key);
@@ -131,10 +131,61 @@ class UsersController extends AppController {
         $this->redirect($this->Auth->redirect());
     } 
 	
+    public function give() {
+        $requestToken = $this->OauthConsumer->getRequestToken('Twitter', 
+                'https://api.twitter.com/oauth/request_token', 
+                $this->currentURL() . '/users/give_callback');
+        $this->Session->write('twitter_request_token', $requestToken);
+        $this->redirect('https://api.twitter.com/oauth/authorize?oauth_token=' 
+                . $requestToken->key);
+    }
+
+    public function give_callback() {
+        $requestToken = $this->Session->read('twitter_request_token');
+        $accessToken = $this->OauthConsumer->getAccessToken('Twitter', 
+                'https://api.twitter.com/oauth/access_token', $requestToken);
+
+        if (empty($accessToken)) {
+            $this->Session->setFlash('Access Token invalid');
+            $this->redirect('/');
+        }
+        
+        // 認証ユーザ情報の取得
+        $json = $this->OauthConsumer->get('Twitter', $accessToken->key, 
+                $accessToken->secret, 
+                'http://twitter.com/account/verify_credentials.json', array());
+        $user = json_decode($json);
+
+        if (!$this->User->find('first', array('conditions' 
+            => array(
+                'email' => $user->id . '@twitter'
+                , 'type' => 1
+                , 'deleted' => NULL
+            )))) {
+            // create new user
+            $this->User->save(array('User' 
+                => array(
+                    'email' => $user->id . '@twitter'
+                    , 'type' => 1
+                    , 'name' => $user->name
+                )), false);
+            
+            $this->Session->setFlash('Twitter user created');
+        }
+        else {
+            $this->Session->setFlash('Returning Twitter user');
+        }
+        
+        $this->Auth->login(array('email' => $user->id . '@twitter'
+            , 'type' => 1, 'name' => $user->name));
+        
+        return $this->login_success($user->id . '@twitter');
+    }   
+
     public function twitter() {
         $requestToken = $this->OauthConsumer->getRequestToken('Twitter', 
                 'https://api.twitter.com/oauth/request_token', 
-                $this->currentURL . '/users/twitter_callback');
+                $this->currentURL() . '/users/twitter_callback');
         $this->Session->write('twitter_request_token', $requestToken);
         $this->redirect('https://api.twitter.com/oauth/authorize?oauth_token=' 
                 . $requestToken->key);
@@ -186,7 +237,7 @@ class UsersController extends AppController {
         $this->log('facebook() called', LOG_DEBUG);
         
         $url = $this->fb->getLoginUrl(array('redirect_uri' => 
-            $this->currentURL . '/users/facebook_callback', 
+            $this->currentURL() . '/users/facebook_callback', 
             'req_perms' => 'email'));  
         $this->redirect($url);  
     }
