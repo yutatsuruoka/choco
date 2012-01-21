@@ -29,7 +29,7 @@ class PostsController extends AppController {
     }
     
     function edit($id = null) {
- 	   	$this->Post->id = $id;
+        $this->Post->id = $id;
     	if ($this->request->is('get')) {
         	$this->request->data = $this->Post->read();
   		} else {
@@ -40,9 +40,23 @@ class PostsController extends AppController {
             	$this->Session->setFlash('Unable to update your post.');
         	}
     	}
-	}
-	
-	function beforeFilter() {
+    }
+
+    function set_type($id = null) {
+        $this->Post->id = $id;
+    	if ($this->request->is('get')) {
+        	$this->request->data = $this->Post->read();
+  		} else {
+        	if ($this->Post->save($this->request->data)) {
+          	  	$this->Session->setFlash('Your post has been updated.');
+            	$this->redirect(array('action' => 'index'));
+        	} else {
+            	$this->Session->setFlash('Unable to update your post.');
+        	}
+    	}
+    }
+
+    function beforeFilter() {
         parent::beforeFilter();
 
         // Tell the Auth controller that the 'create' action is accessible 
@@ -50,7 +64,7 @@ class PostsController extends AppController {
         $this->Auth->allow('add', 'index', 'beg', 'beg_callback');
     }
 	
-	function delete($id) {
+    function delete($id) {
     	if ($this->request->is('get')) {
         	throw new MethodNotAllowedException();
     	}
@@ -58,7 +72,7 @@ class PostsController extends AppController {
         	$this->Session->setFlash('The post with id: ' . $id . ' has been deleted.');
         	$this->redirect(array('action' => 'index'));
     	}
-	}
+    }
 
 }
 

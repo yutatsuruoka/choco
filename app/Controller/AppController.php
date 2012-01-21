@@ -23,7 +23,7 @@
 App::uses('Controller', 'Controller');
 
 class AppController extends Controller {
-    var $helpers = array('Html', 'Form', 'Facebook.Facebook');
+    var $helpers = array('Html', 'Form', 'Facebook.Facebook', "Session");
     var $components = array('Session', 'Auth', 'Facebook.Connect');
 
     var $current_user = false;

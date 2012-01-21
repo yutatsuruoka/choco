@@ -8,6 +8,15 @@
 </head>
 <body>
 <header>
+<?php 
+if($this->Session->check("Message.flash")){
+	echo '<div id="flashWrapper">';
+	echo $this->Session->flash();
+	echo '</div>';
+	echo $this->Html->script('jquery/jquery-1.6.2.min');
+	echo $this->Html->script('application');
+}
+?>
 <div class = "cen">
 	<h1>チョコくれ</h1>
 </div>

@@ -148,21 +148,25 @@ class UsersController extends AppController {
     }
 	
     public function give() {
+        $postId = $this->request->params['pass'][0];
+        
         $requestToken = $this->OauthConsumer->getRequestToken('Twitter', 
                 'https://api.twitter.com/oauth/request_token', 
-                Router::url('/', true) . 'users/give_callback');
+                Router::url('/', true) . 'users/give_callback/' . $postId);
         $this->Session->write('twitter_request_token', $requestToken);
         $this->redirect('https://api.twitter.com/oauth/authorize?oauth_token=' 
                 . $requestToken->key);
     }
 
     public function give_callback() {
+        $postId = $this->request->params['pass'][0];
+        
         $requestToken = $this->Session->read('twitter_request_token');
         $accessToken = $this->OauthConsumer->getAccessToken('Twitter', 
                 'https://api.twitter.com/oauth/access_token', $requestToken);
 
         if (empty($accessToken)) {
-            $this->Session->setFlash('Access Token invalid');
+            $this->Session->setFlash('Access Token invalid at give_callback()');
             $this->redirect('/');
         }
         
@@ -186,16 +190,23 @@ class UsersController extends AppController {
                     , 'name' => $user->name
                 )), false);
             
-            $this->Session->setFlash('Twitter user created');
+            $this->Session->setFlash('Twitter user created at give_callback()');
         }
         else {
-            $this->Session->setFlash('Returning Twitter user');
+            $this->Session->setFlash('Returning Twitter user at give_callback()');
         }
         
         $this->Auth->login(array('email' => $user->id . '@twitter'
             , 'type' => 1, 'name' => $user->name));
         
+        // check that we are the right person
+        $this->loadModel("Post");
+        $this->Post->findById($postId);
+        
+        // successful login
         $this->login_success($user->id . '@twitter', false);
+        
+        $this->redirect("/posts/set_type/" . $postId);
     }   
 
     public function twitter() {
