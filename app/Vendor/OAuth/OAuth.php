@@ -69,7 +69,7 @@ class OAuthSignatureMethod_HMAC_SHA1 extends OAuthSignatureMethod {
     $request->base_string = $base_string;
 
     $key_parts = array(
-      $consumer->secret,
+      ($consumer) ? $consumer->secret : "",
       ($token) ? $token->secret : ""
     );
 
@@ -243,7 +243,7 @@ class OAuthRequest {
     $defaults = array("oauth_version" => OAuthRequest::$version,
                       "oauth_nonce" => OAuthRequest::generate_nonce(),
                       "oauth_timestamp" => OAuthRequest::generate_timestamp(),
-                      "oauth_consumer_key" => $consumer->key);
+                      "oauth_consumer_key" => ($consumer) ? $consumer->key : "");
     if ($token)
       $defaults['oauth_token'] = $token->key;
 
