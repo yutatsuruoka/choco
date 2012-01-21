@@ -1,1 +1,1 @@
-This is payment index
+Payment index.

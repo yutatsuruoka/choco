@@ -156,3 +156,18 @@ div.error {
 	text-decoration:none; 
 }
 
+#flashWrapper {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#fff;
+	width:100%;
+}
+
+
+#flashWrapper #flashMessage {
+	font-weight:bold;
+	color:#ff0000;
+	text-align:center;
+}
+
