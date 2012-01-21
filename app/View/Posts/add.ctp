@@ -1,11 +1,22 @@
 <!-- File: /app/View/Posts/add.ctp -->
 
-<h1>Add Post</h1>
+<h1>ちょこくれ</h1>
 <?php
 echo $this->Form->create('Post');
-echo $this->Form->input('title');
-echo $this->Form->input('userid');
-echo $this->Form->input('body', array('rows' => '3'));
-echo $this->Form->input('feeling');
+?>
+誰にチョコをネダリますか？<br>
+<?
+echo $this->Form->input('title',array('label'=>"twitterアカウント"));
+?>
+チョコを受け取る名前と住所を教えて下さい<br>
+(この情報は公開されません)
+<?
+echo $this->Form->input('title',array('label'=>'名前：'));
+echo $this->Form->input('title',array('label'=>'郵便番号：'));
+echo $this->Form->input('title',array('label'=>'都道府県：'));
+echo $this->Form->input('title',array('label'=>'市区町村：'));
+echo $this->Form->input('title',array('label'=>'番地：'));
+echo $this->Form->input('title',array('label'=>'マンション名：'));
 echo $this->Form->end('Save Post');
 ?>
+</div>

@@ -4,7 +4,11 @@ class UsersController extends AppController {
     public $helpers = array('Html', 'Form');
 	
     public function index() {
-        $this->set('Users', $this->User->find('all'));
+        $this->set('users', $this->User->find('all'));
     }
- 
+    
+    public function view($id = null) {
+    	$this->User->id = $id;
+        $this->set('user', $this->User->read());
+    }
 }

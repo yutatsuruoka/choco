@@ -9,14 +9,11 @@
 <body>
 <header>
 <div class = "cen">
-	<h1>Sample</h1>
+	<h1>チョコくれ</h1>
 </div>
 </header>
 <?php echo $content_for_layout ?>
 <footer>
-<div class = "cen">
-	<img src="./img/waru.jpeg">
-</div>
 </footer>
 </body>
 </html>

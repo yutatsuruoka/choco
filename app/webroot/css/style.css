@@ -1,0 +1,158 @@
+/*
+postter CSS
+@tsuru
+*/
+
+body,th,td { 
+	font-size:90%;	
+	background:#ccc; 
+}
+
+a { 
+	text-decoration:none; 
+}
+
+body {
+margin: auto;
+padding: 0;
+width: 800px;
+}
+
+/*
+a:hover { 
+	text-decoration:underline; color:#dd0000; 
+}
+*/
+
+/* center */
+div.cen { 
+	text-align:center; 
+}
+
+/* menu */
+ul.nav{
+	list-style-type: none;
+	margin: 15px auto 80px auto;
+	padding: 0;
+	width: 690px;
+}
+
+
+ul.nav .a { 
+	font-size: 8px;
+}
+
+ul.nav .a1 a:hover{
+	-moz-box-shadow:0 0 10px red;	
+	-webkit-box-shadow : 0 0 20px red;
+}
+
+ul.nav .b1 a:hover{
+	-moz-box-shadow:0 0 10px #A757A8;
+	-webkit-box-shadow : 0 0 20px #A757A8;
+}
+
+ul.nav .c1 a:hover{
+	-moz-box-shadow:0 0 10px blue;
+	-webkit-box-shadow : 0 0 20px blue;
+}
+
+ul.nav .d1 a:hover{
+	-moz-box-shadow:0 0 10px green;
+	-webkit-box-shadow : 0 0 20px green;
+}
+
+/* css3botton */
+ul.nav li a {
+	display: block;	
+	width: 170px;
+	padding: 0px;
+	border: 1px solid black;
+	color: black;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	background-color: white;
+	border-radius: .8em;
+	-webkit-transition: box-shadow .4s ease-out;
+	float: left;
+}
+
+/* /menu */
+
+
+/* title */
+h1 { 
+	font-size:200%;
+	margin-bottom:0; 
+	color:#333; 
+}
+
+/* feed */
+table { 
+	margin-bottom:1.5em; 
+	margin-left:auto; 
+	margin-right:auto; 
+}
+
+/* form center */
+form.art { 
+	width: 370px;
+	margin-bottom:1.5em; 
+	margin-left:auto; 
+	margin-right:auto; 
+}
+
+/* feed back */
+td.bg-wh { 
+	background:#fff; 
+	box-shadow: 2px 2px 10px #bbb; 
+	-webkit-border-radius: 10px; 
+    -moz-border-radius: 10px; 
+    padding-left: 10px;
+	padding-right: 7px;
+	padding-top: 5px;
+}
+
+tr.margin {
+	margin: 5px,0,5px,0;
+}
+
+/* feed width */
+td.w650 { 
+	width:650px; 
+}
+
+.right { 
+	float: right; 
+}
+
+div.user {
+	margin-left: 680px;
+}
+
+div.error {
+	color: red;
+}
+
+/* footer */
+.footer{
+	margin: 15px auto 0 auto;
+	text-align: left;
+	height: 30px;
+	font-size: 13px;
+	color: gray;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid white;
+}
+
+.footer .company{
+	width: 350px;
+	height: 20px;
+	margin: 0 auto 0 auto;
+	text-align: left;
+	padding: 5px;
+	float: left;
+	text-decoration:none; 
+}
+
