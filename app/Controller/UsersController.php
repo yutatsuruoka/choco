@@ -41,7 +41,7 @@ class UsersController extends AppController {
             if ($this->User->save()) {
                 $this->Session->setFlash(__('Your account has been created'));
                 $this->Auth->login($this->request->data); // manually log in the user
-                return $this->redirect($this->Auth->redirect()); // redirect
+                return $this->login_success($this->request->data['email']);
             } else {
                 $this->Session->setFlash(__('Your newly created account could not be saved.'));
             }
@@ -51,13 +51,21 @@ class UsersController extends AppController {
     function login() {
         if(!empty($this->data)) {
             if ($this->Auth->login()) {
-                return $this->redirect($this->Auth->redirect());
+                return $this->login_success($this->data['User']['email']);
             }
             else {
                 $this->Session->setFlash(__('Email or password is incorrect',true));
             }
         }
     } 
+    
+    function login_success($email) {
+        $this->current_user =  $this->User->find('first', array(
+            'conditions' => array('email' => $email)
+        ));
+        
+        return $this->redirect($this->Auth->redirect());
+    }
 
     public function logout() {
         $logout_url = $this->Auth->logout();
@@ -170,7 +178,8 @@ class UsersController extends AppController {
         
         $this->Auth->login(array('email' => $user->id . '@twitter'
             , 'type' => 1, 'name' => $user->name));
-        $this->redirect($this->Auth->redirect());
+        
+        return $this->login_success($user->id . '@twitter');
     }   
 
     public function facebook() {
