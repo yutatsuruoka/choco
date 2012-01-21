@@ -133,11 +133,10 @@ class UsersController extends AppController {
 
         $this->login_success($user->id . '@twitter', false);
         
-        $this->redirect(array('action' => 'set_address', $User));
+        $this->redirect(array('action' => 'set_address'));
     } 
     
     public function set_address() {
-    var_dump($User);
         if ($this->request->is('post')) {
             if ($this->User->save($this->request->data)) {
                 $this->redirect(array('controller' => 'users', 'action' => 'index'));
