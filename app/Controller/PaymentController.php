@@ -105,6 +105,8 @@ class PaymentController extends AppController {
 				$payment['Payment']['status'] = 0;				
 				if(isset($_REQUEST['payment_status']) && preg_match('/completed/i',$_REQUEST['payment_status'])){
 					$payment['Payment']['status'] = 1;				
+				}else{
+					$payment['Payment']['status'] = 2;				
 				}
 				$this->Payment->save($payment);
 			}
