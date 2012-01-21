@@ -60,7 +60,7 @@ class UsersController extends AppController {
 
         // rewrite logout url for facebook users
         if ($this->Auth->user('type') == 2) {
-            $params = array('next' => 'http://kazumax.kamiya.com' . $logout_url);
+            $params = array('next' => $this->currentURL . $logout_url);
 
             $logout_url = $facebook->getLogoutUrl($params);
         }
@@ -71,7 +71,7 @@ class UsersController extends AppController {
     public function twitter() {
         $requestToken = $this->OauthConsumer->getRequestToken('Twitter', 
                 'https://api.twitter.com/oauth/request_token', 
-                'http://kazumax.kamiya.com/users/twitter_callback');
+                $this->currentURL . '/users/twitter_callback');
         $this->Session->write('twitter_request_token', $requestToken);
         $this->redirect('https://api.twitter.com/oauth/authorize?oauth_token=' 
                 . $requestToken->key);
@@ -122,7 +122,7 @@ class UsersController extends AppController {
         $this->log('facebook() called', LOG_DEBUG);
         
         $url = $this->fb->getLoginUrl(array('redirect_uri' => 
-            'http://kazumax.kamiya.com/users/facebook_callback', 
+            $this->currentURL . '/users/facebook_callback', 
             'req_perms' => 'email'));  
         $this->redirect($url);  
     }

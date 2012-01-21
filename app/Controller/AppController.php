@@ -28,9 +28,9 @@ class AppController extends Controller {
 
     var $current_user = false;
     
-	var $logger = null;
+    var $logger = null;
     
-	function beforeFilter()
+    function beforeFilter()
     {
         // Specify which controller/action handles logging in:
         $this->Auth->loginAction = array('controller' => 'users', 
@@ -51,8 +51,7 @@ class AppController extends Controller {
                     'username' => 'email'
                     , 'password' => 'password')
                 , 'userModel' => 'User'
-                , 'scope' => array('User.deleted' => null
-                    , 'User.type' => 0)
+                , 'scope' => array('User.deleted' => null)
             ), 'Form'
         );
 
@@ -60,43 +59,42 @@ class AppController extends Controller {
         $this->current_user = $this->Auth->user();
         
         //Application ロギング
-		require_once APP.'Vendor/PEAR/Log.php';    
-		$log_level = PEAR_LOG_INFO;
-		switch(LOG_LEVEL){
-				case 'EMERG':     /* System is unusable */
-					$log_level = PEAR_LOG_EMERG;
-					break; 
-				case 'ALERT':     /* Immediate action required */
-					$log_level = PEAR_LOG_ALERT;
-					break; 
-				case 'CRIT':     /* Critical conditions */
-					$log_level = PEAR_LOG_CRIT;
-					break; 
-				case 'ERR':     /* Error conditions */
-					$log_level = PEAR_LOG_ERR;
-					break; 
-				case 'WARNING':     /* Warning conditions */
-					$log_level = PEAR_LOG_WARNING;
-					break; 
-				case 'NOTICE':     /* Normal but significant */
-					$log_level = PEAR_LOG_NOTICE;
-					break; 
-				case 'INFO':     /* Informational */
-					$log_level = PEAR_LOG_INFO;
-					break; 
-				case 'DEBUG':     /* Debug-level messages */
-					$log_level = PEAR_LOG_DEBUG;
-					break; 
-				case 'ALL':    /* All messages */
-					$log_level = PEAR_LOG_ALL;
-					break; 
-				case 'NONE':    /* No message */
-					$log_level = PEAR_LOG_NONE;
-					break; 
-		}
-		
-		$this->logger = &Log::factory(LOG_OUTPUT,LOG_FILE, 'APP',null,$log_level);
-        
+        require_once APP.'Vendor/PEAR/Log.php';    
+        $log_level = PEAR_LOG_INFO;
+        switch(LOG_LEVEL){
+                        case 'EMERG':     /* System is unusable */
+                                $log_level = PEAR_LOG_EMERG;
+                                break; 
+                        case 'ALERT':     /* Immediate action required */
+                                $log_level = PEAR_LOG_ALERT;
+                                break; 
+                        case 'CRIT':     /* Critical conditions */
+                                $log_level = PEAR_LOG_CRIT;
+                                break; 
+                        case 'ERR':     /* Error conditions */
+                                $log_level = PEAR_LOG_ERR;
+                                break; 
+                        case 'WARNING':     /* Warning conditions */
+                                $log_level = PEAR_LOG_WARNING;
+                                break; 
+                        case 'NOTICE':     /* Normal but significant */
+                                $log_level = PEAR_LOG_NOTICE;
+                                break; 
+                        case 'INFO':     /* Informational */
+                                $log_level = PEAR_LOG_INFO;
+                                break; 
+                        case 'DEBUG':     /* Debug-level messages */
+                                $log_level = PEAR_LOG_DEBUG;
+                                break; 
+                        case 'ALL':    /* All messages */
+                                $log_level = PEAR_LOG_ALL;
+                                break; 
+                        case 'NONE':    /* No message */
+                                $log_level = PEAR_LOG_NONE;
+                                break; 
+        }
+
+        $this->logger = &Log::factory(LOG_OUTPUT,LOG_FILE, 'APP',null,$log_level);
     }
 
     function beforeRender() {
@@ -110,11 +108,28 @@ class AppController extends Controller {
     	if (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1)
 	      || isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https'
 	    ) {
-	      $protocol = 'https://';
-	    }
-	    else {
-	      $protocol = 'http://';
-	    }
-	    return $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];    	
+            $protocol = 'https://';
+            $https = true;
+        }
+        else {
+            $protocol = 'http://';
+            $https = false;
+        }
+            
+        $port = "";
+        if (isset($_SERVER['SERVER_PORT'])) {
+            if ($https) {
+                if ($_SERVER['SERVER_PORT'] != 443) {
+                    $port = $_SERVER['SERVER_PORT'];
+                }
+            }
+            else {
+                if ($_SERVER['SERVER_PORT'] != 80) {
+                    $port = $_SERVER['SERVER_PORT'];
+                }
+            }
+        }
+        
+        return $protocol . $_SERVER['HTTP_HOST'] . ':' . $port . $_SERVER['REQUEST_URI'];    	
     }
 }

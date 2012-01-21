@@ -3,6 +3,7 @@
 <div class = "cen">
 	<h1>Blog posts</h1>
 	<p><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></p>
+	<p><?php echo $this->Html->link('Logout', '/users/logout'); ?></p>
 </div>
 <table>
     <tr>
