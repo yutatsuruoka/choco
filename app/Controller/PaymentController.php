@@ -40,8 +40,7 @@ class PaymentController extends AppController {
 			}else{
 				
 				//if post is already paid, never go to payment.
-				$payment = $this->Payment->find("first",
-                                        array( "conditions" => array("Payment.post_id"=>$post_id,'Payment.status' => 1)));				
+				$payment = $this->Payment->find("first",array( "conditions" => array("Payment.post_id"=>$post_id,'Payment.status' => 1)));				
 				if(!empty($payment)){
 					$this->Session->setFlash("post($post_id) already paid.");
 		          	$this->logger->info("post($post_id) already paid.");
