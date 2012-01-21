@@ -1,6 +1,6 @@
 <div class="SNS Login">
 <p><?php echo $this->Html->link('Login via Twitter', array('action' => 'twitter')); ?></p>
-<p><?php echo $this->Html->link('Login via Facebook', array('action' => 'facebook')); ?></p>
+<!-- <p><?php echo $this->Html->link('Login via Facebook', array('action' => 'facebook')); ?></p> -->
 <p><?php echo $this->Html->link('Signup', array('action' => 'signup')); ?></p>
 </div>
 <div class="users form">
