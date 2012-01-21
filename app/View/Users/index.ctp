@@ -1,5 +1,5 @@
-<!-- File: /app/View/Users/index.ctp -->
-
+<div class="users form">
+<?php echo $this->Html->link('Login via Twitter', array('action' => 'twitter')); ?>
 
 <!-- ここで$users配列をループして、投稿情報を表示 -->
 <table>
@@ -9,3 +9,5 @@
 	</tr>
 	<?php endforeach; ?>
 </table>
+
+</div>
