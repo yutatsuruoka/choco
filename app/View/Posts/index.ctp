@@ -19,7 +19,7 @@
 	<tr>
 		<td><?php echo $post['Post']['id']; ?></td>
 		<td>
-			<?php echo $this->Html->link($post['Post']['useid'], array('action' => 'view', $post['Post']['id']));?>
+			<?php echo $this->Html->link($post['Post']['userid'], array('action' => 'view', $post['Post']['id']));?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($post['Post']['title'], array('action' => 'view', $post['Post']['id']));?>
