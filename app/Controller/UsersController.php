@@ -142,15 +142,20 @@ class UsersController extends AppController {
     } 
     
     public function set_address() {
-	var_dump($this->Session->read('user_Id'));
+		$this->User->id = $this->Session->read('user_Id');
         if ($this->request->is('post')) {
             if ($this->User->save($this->request->data)) {
-                $this->redirect(array('controller' => 'users', 'action' => 'index'));
+                $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
             } else {
                 $this->Session->setFlash('Unable to add your post.');
             }
         }
     }
+	
+    public function thankyou() {
+    	
+    }
+
 	
     public function give() {
         $postId = $this->request->params['pass'][0];
