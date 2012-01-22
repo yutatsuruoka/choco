@@ -137,12 +137,15 @@ class UsersController extends AppController {
         $this->login_success($user, false);
         
         $this->Session->write('user_Id', $this->current_user['id']);
+        
+        $this->Session->write('user_Name', $this->current_user['name']);
 
         $this->redirect('/users/set_address/');
     } 
     
     public function set_address() {
 		$this->User->id = $this->Session->read('user_Id');
+		$this->set('user', $this->User->read());
         if ($this->request->is('post')) {
             if ($this->User->save($this->request->data)) {
                 $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
