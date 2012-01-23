@@ -113,12 +113,15 @@ class UsersController extends AppController {
                 $accessToken->secret, 
                 'http://twitter.com/account/verify_credentials.json', array());
         $user = json_decode($json);
-
+		
+		/*
+var_dump($this->User->idt);
+		if ($this->User->id = $this->$user->name);
+*/
+		
         if (!$this->User->find('first', array('conditions' 
             => array(
                 'email' => $user->id . '@twitter'
-                , 'type' => 1
-                , 'deleted' => NULL
             )))) {
             // create new user
             $this->User->save(array('User' 
