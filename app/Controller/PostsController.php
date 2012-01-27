@@ -43,7 +43,11 @@ class PostsController extends AppController {
     }
 
     function set_type($id = null) {
+    var_dump($id);
         $this->Post->id = $id;
+    var_dump($this->Post->find('first', array('conditions' 
+            => array(
+                'id' => $id))));
     	if ($this->request->is('get')) {
             $this->request->data = $this->Post->read();
         } else {
