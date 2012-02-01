@@ -1,0 +1,525 @@
+/* =============================================================================
+    base 
+   ========================================================================== */
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "ヒラギノ角ゴ ProN", Arial, sans-serif;
+  color: #000;
+  min-width: 1000px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  /* Fix for webkit rendering */
+  -webkit-text-size-adjust: none; }
+
+a, a:visited {
+  color: #fff;
+  text-decoration: none; }
+
+a:hover {
+  color: #b6ff00; }
+
+::-moz-selection {
+  background: #b6ff00;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #b6ff00;
+  color: #fff;
+  text-shadow: none; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer; }
+
+.wrapper {
+  width: 1000px;
+  margin: 0 auto; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clearfix:after {
+  height: 0;
+  visibility: hidden;
+  content: ".";
+  display: block;
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+/* =============================================================================
+    contentsFlow01 template 
+   ========================================================================== */
+/*********** header ***********/
+header {
+  position: relative;
+  z-index: 2;
+  background: #b6ff00 url(../i/hrimg.png) repeat-x left bottom;
+  padding: 50px 0 60px; }
+  header .wrapper {
+    position: relative; }
+    header .wrapper h1 {
+      width: 246px;
+      margin: 0 auto 35px; }
+    header .wrapper .caption {
+      padding: 0 0 0 138px; }
+    header .wrapper .snsContainer {
+      position: absolute;
+      top: -20px;
+      right: 0; }
+      header .wrapper .snsContainer .snsButton {
+        float: left;
+        width: 70px; }
+
+/*********** end header ***********/
+/*********** .entryContainer ***********/
+.entryContainer {
+  padding: 40px 0 50px;
+  text-align: center;
+  -moz-box-shadow: 0px 3px 5px #c9c9c9;
+  -webkit-box-shadow: 0px 3px 5px #c9c9c9;
+  box-shadow: 0px 3px 5px #c9c9c9;
+  position: relative;
+  z-index: 1; }
+  .entryContainer .caption {
+    font-size: 24px;
+    margin: 0 0 15px; }
+    .entryContainer .caption strong {
+      font-size: 48px; }
+  .entryContainer .parenthesis {
+    width: 80px;
+    margin: -25px 0 0; }
+  .entryContainer .formContainer {
+    width: 813px;
+    margin: 0 13px; }
+    .entryContainer .formContainer input {
+      display: block;
+      float: left;
+      font-size: 24px;
+      color: #d7d7d7;
+      letter-spacing: .01em;
+      border: none; }
+    .entryContainer .formContainer input#twitterAccount {
+      width: 478px;
+      height: 70px;
+      padding: 0 0 0 20px;
+      margin: 0 10px 0 0;
+      border: solid 1px #cccccc;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background: #ffffff; }
+    .entryContainer .formContainer input#twitterAccount:focus {
+      color: #666;
+      letter-spacing: .05em; }
+    .entryContainer .formContainer input#submitButton {
+      width: 303px;
+      height: 73px;
+      overflow: hidden;
+      background: url(../i/chocokure_btn.png) no-repeat left top; }
+    .entryContainer .formContainer input#submitButton:hover {
+      background: url(../i/chocokure_btn.png) no-repeat left bottom; }
+    .entryContainer .formContainer p {
+      margin: 20px 0 0;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold; }
+
+/*********** end .entryContainer ***********/
+/*********** .aboutContainer ***********/
+.aboutContainer {
+  background: url(../i/hrimg02.png) repeat-x left bottom #f6f6f6;
+  padding: 100px 0 100px;
+  position: relative;
+  z-index: 0; }
+  .aboutContainer section {
+    padding: 0 0 100px;
+    margin: 0 0 100px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 1px 0 #fff; }
+    .aboutContainer section .textContainer h2 {
+      margin: 0 0 25px; }
+    .aboutContainer section .textContainer p {
+      font-size: 14px;
+      line-height: 1.6em;
+      font-weight: bold; }
+  .aboutContainer #flow2 .textContainer {
+    margin: 60px 0 0;
+    padding: 0 0 0 30px; }
+  .aboutContainer #flow3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-bottom: none;
+    box-shadow: none; }
+    .aboutContainer #flow3 h2 {
+      margin: 0 0 25px; }
+    .aboutContainer #flow3 p {
+      margin: 0 0 25px;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 1.6em; }
+
+.aboutContainer h2.aboutTtl {
+  margin: 0 0 145px;
+  text-align: center; }
+
+/*********** end .aboutContainer ***********/
+/*********** #socialContainer ***********/
+#socialContainer {
+  background: #f6f6f6;
+  padding: 55px 0; }
+  #socialContainer .fbContainer {
+    float: left;
+    width: 560px;
+    height: 530px;
+    overflow: scroll; }
+  #socialContainer .happyContainer {
+    float: right;
+    width: 390px; }
+    #socialContainer .happyContainer li {
+      margin: 0 10px 10px 0;
+      float: left;
+      width: 90px;
+      height: 90px; }
+    #socialContainer .happyContainer li.last {
+      margin: 0; }
+
+/*********** end #socialContainer ***********/
+/*********** footer ***********/
+footer {
+  font-size: 10px;
+  letter-spacing: .12em;
+  padding: 20px 0 0;
+  background: #000;
+  color: #fff;
+  overflow: hidden; }
+  footer .createTeam {
+    margin: 45px 0; }
+  footer .team {
+    width: 500px;
+    border-right: 1px solid #333; }
+    footer .team h3 {
+      margin: 0 0 30px; }
+    footer .team .teamMember {
+      width: 235px;
+      margin: 0 0 20px; }
+      footer .team .teamMember .memberIcon {
+        width: 100px;
+        float: left;
+        margin: 0 14px 0 0; }
+      footer .team .teamMember .memberProfile .memberSns {
+        margin: 12px 0 0; }
+        footer .team .teamMember .memberProfile .memberSns .facebookIcon a {
+          display: block;
+          text-indent: -9999px;
+          width: 21px;
+          height: 20px;
+          margin: 0 4px 12px 0;
+          background: url(../i/facebook_icon.png) no-repeat left top; }
+        footer .team .teamMember .memberProfile .memberSns .twitterIcon a {
+          display: block;
+          text-indent: -9999px;
+          width: 21px;
+          height: 20px;
+          margin: 0 0 10px;
+          background: url(../i/twitter_icon.png) no-repeat left top; }
+        footer .team .teamMember .memberProfile .memberSns .facebookIcon a:hover {
+          background: url(../i/facebook_icon.png) no-repeat left bottom; }
+        footer .team .teamMember .memberProfile .memberSns .twitterIcon a:hover {
+          background: url(../i/twitter_icon.png) no-repeat left bottom; }
+      footer .team .teamMember .memberProfile p.name {
+        font-size: 18px;
+        line-height: 18px;
+        font-style: normal;
+        margin: 0 0 8px;
+        letter-spacing: .25em; }
+      footer .team .teamMember .memberProfile p.post {
+        line-height: 1.4em;
+        letter-spacing: .15em; }
+    footer .team .last {
+      margin: 0; }
+  footer ul.info {
+    text-align: center;
+    padding: 0 0 20px; }
+    footer ul.info li {
+      display: inline; }
+
+#monosp {
+  width: 449px;
+  padding: 0 0 0 50px;
+  border-right: none; }
+  #monosp #second {
+    width: 209px; }
+
+/*********** end footer ***********/
+/* =============================================================================
+    contentsFlow02 
+   ========================================================================== */
+#formSheet {
+  padding: 50px 0 60px;
+  -moz-box-shadow: 0px 3px 5px #c9c9c9;
+  -webkit-box-shadow: 0px 3px 5px #c9c9c9;
+  box-shadow: 0px 3px 5px #c9c9c9;
+  position: relative;
+  z-index: 1; }
+  #formSheet h2 {
+    text-align: center; }
+  #formSheet .caption {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin: 0 0 20px; }
+  #formSheet form {
+    padding: 0 15px; }
+    #formSheet form .sheetContainer {
+      width: 476px;
+      border: 1px solid #d2d2d2;
+      font-size: 12px;
+      margin: 0 0 10px; }
+      #formSheet form .sheetContainer li {
+        border-bottom: 1px solid #d2d2d2;
+        background: url(../i/form_bg.png) repeat-x left top; }
+        #formSheet form .sheetContainer li .labelContainer {
+          border-right: 1px solid #d2d2d2;
+          float: left;
+          padding: 20px 0 0;
+          text-align: center;
+          width: 100px; }
+          #formSheet form .sheetContainer li .labelContainer label {
+            line-height: 20px;
+            color: #525252; }
+        #formSheet form .sheetContainer li .inputContainer {
+          float: left;
+          width: 324px;
+          padding: 10px 25px 0; }
+          #formSheet form .sheetContainer li .inputContainer input {
+            width: 290px;
+            height: 25px;
+            padding: 5px 20px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: inset 2px 3px 7px #efefef;
+            box-shadow: inset 2px 3px 7px #efefef;
+            -moz-box-shadow: inset 2px 3px 7px #efefef;
+            border: 1px solid #bfbfbf; }
+      #formSheet form .sheetContainer li.last {
+        border: none; }
+    #formSheet form .submit {
+      margin: 6px 0 0; }
+      #formSheet form .submit #sheetBtn {
+        border: 0;
+        width: 970px;
+        height: 52px;
+        background: url(../i/submit_btn.png) no-repeat left top; }
+      #formSheet form .submit #sheetBtn:hover {
+        background: url(../i/submit_btn.png) no-repeat left bottom; }
+
+/* =============================================================================
+     contentsFlow03
+   ========================================================================== */
+#afterEntry {
+  padding: 135px 0 165px;
+  -moz-box-shadow: 0px 3px 5px #c9c9c9;
+  -webkit-box-shadow: 0px 3px 5px #c9c9c9;
+  box-shadow: 0px 3px 5px #c9c9c9;
+  position: relative;
+  z-index: 1; }
+  #afterEntry h2 {
+    text-align: center;
+    margin: 0 0 5px; }
+  #afterEntry .caption {
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 0 30px; }
+  #afterEntry .gotoTop {
+    font-size: 10px;
+    text-align: center; }
+    #afterEntry .gotoTop a {
+      color: #999; }
+    #afterEntry .gotoTop a:hover {
+      color: #b6ff00; }
+  #afterEntry .socialIntroduction {
+    text-align: center;
+    margin: 0 0 30px; }
+
+/* =============================================================================
+     contentsFlow04
+   ========================================================================== */
+.presentchoco {
+  padding: 55px 0;
+  margin: -62px 0 0;
+  -moz-box-shadow: 0px 3px 5px #c9c9c9;
+  -webkit-box-shadow: 0px 3px 5px #c9c9c9;
+  box-shadow: 0px 3px 5px #c9c9c9;
+  position: relative;
+  z-index: 1; }
+  .presentchoco .arrow {
+    position: relative;
+    left: 47%;
+    top: 495px; }
+  .presentchoco .presentContainer {
+    text-align: center;
+    margin: 0 0 20px; }
+    .presentchoco .presentContainer .twitterName {
+      margin: 10px 0 30px;
+      font-size: 24px; }
+    .presentchoco .presentContainer .pushMessage {
+      width: 463px;
+      margin: 0 auto;
+      padding: 0 0 0 335px; }
+      .presentchoco .presentContainer .pushMessage .twitterImage {
+        width: 128px; }
+      .presentchoco .presentContainer .pushMessage .messageContainer {
+        width: 335px;
+        height: 128px;
+        background: url(../i/messageballoon.png) no-repeat left top; }
+        .presentchoco .presentContainer .pushMessage .messageContainer p.message {
+          padding: 50px 50px 0 110px;
+          text-align: center; }
+    .presentchoco .presentContainer .btnContainer {
+      margin: 0 auto;
+      width: 951px; }
+      .presentchoco .presentContainer .btnContainer a {
+        width: 303px;
+        height: 73px;
+        display: block;
+        margin: 0 20px 0 0; }
+      .presentchoco .presentContainer .btnContainer a.last {
+        margin: 0; }
+      .presentchoco .presentContainer .btnContainer a.over {
+        text-indent: -9999px;
+        overflow: hidden; }
+      .presentchoco .presentContainer .btnContainer a.type01 {
+        background: url(../i/presentchoco_btn01.png) no-repeat left top; }
+      .presentchoco .presentContainer .btnContainer a.type01:hover {
+        background: url(../i/presentchoco_btn01.png) no-repeat left bottom; }
+      .presentchoco .presentContainer .btnContainer a.type02 {
+        background: url(../i/presentchoco_btn01.png) no-repeat right top; }
+      .presentchoco .presentContainer .btnContainer a.type02:hover {
+        background: url(../i/presentchoco_btn01.png) no-repeat right bottom; }
+  .presentchoco h2 {
+    text-align: center;
+    margin: 0 0 5px; }
+  .presentchoco .caption {
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 0 30px; }
+
+#presentchoco02 {
+  margin: 0; }
+
+/* =============================================================================
+     contentsFlow05
+   ========================================================================== */
+#contentsFlow05 .presentchoco .arrow {
+  top: 460px; }
+#contentsFlow05 .presentchoco .caption {
+  font-family: "Hiragino Maru Gothic Pro" ,"HG丸ゴシックM-PRO" ,verdana ,arial ,sans-serif;
+  font-size: 24px;
+  font-weight: normal; }
+#contentsFlow05 .aboutContainer {
+  background-image: none;
+  padding-bottom: 40px; }
+
+/* =============================================================================
+     contentsFlow06
+   ========================================================================== */
+#contentsFlow06 .presentchoco .arrow {
+  top: 313px; }
+#contentsFlow06 .presentchoco h2 {
+  text-align: center;
+  margin: 0 0 30px; }
+#contentsFlow06 .socialIntroduction {
+  text-align: center;
+  margin: 0 0 30px; }
+#contentsFlow06 p.goTop {
+  font-size: 10px;
+  text-align: center; }
+  #contentsFlow06 p.goTop a {
+    color: #999; }
+  #contentsFlow06 p.goTop a:hover {
+    color: #b6ff00; }
+#contentsFlow06 .aboutContainer {
+  background-image: none;
+  padding-bottom: 40px; }
+
+/* =============================================================================
+     contentsFlow07
+   ========================================================================== */
+#contentsFlow07 .presentchoco .arrow {
+  top: 415px; }
+#contentsFlow07 .presentchoco .leftBlock {
+  width: 220px;
+  padding: 0 29px 0 143px; }
+  #contentsFlow07 .presentchoco .leftBlock h2 {
+    text-align: left; }
+#contentsFlow07 .presentchoco .rightBlock {
+  padding: 100px 0 0;
+  width: 470px; }
+#contentsFlow07 .aboutContainer {
+  background-image: none;
+  padding-bottom: 40px; }
+
+/* =============================================================================
+     contentsFlow08
+   ========================================================================== */
+#contentsFlow08 .presentchoco .wrapper {
+  text-align: center; }
+  #contentsFlow08 .presentchoco .wrapper .presentdone {
+    width: 303px;
+    margin: 0 auto;
+    height: 73px;
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../i/presentdone_btn.png) no-repeat left top; }
+  #contentsFlow08 .presentchoco .wrapper .presentdone:hover {
+    background: url(../i/presentdone_btn.png) no-repeat left bottom; }
+#contentsFlow08 .presentchoco .arrow {
+  top: 423px; }
+#contentsFlow08 .aboutContainer {
+  background-image: none;
+  padding-bottom: 40px; }
+
+/* =============================================================================
+     contentsFlow09
+   ========================================================================== */
+#contentsFlow09 .presentchoco .arrow {
+  top: 335px; }
+#contentsFlow09 .presentchoco h2 {
+  text-align: center;
+  margin: 0 0 30px; }
+#contentsFlow09 .socialIntroduction {
+  text-align: center;
+  margin: 0 0 30px; }
+#contentsFlow09 p.goTop {
+  font-size: 10px;
+  text-align: center; }
+  #contentsFlow09 p.goTop a {
+    color: #999; }
+  #contentsFlow09 p.goTop a:hover {
+    color: #b6ff00; }
+#contentsFlow09 .aboutContainer {
+  background-image: none;
+  padding-bottom: 40px; }
+
+/* =============================================================================
+   oldie
+   ========================================================================== */
+.oldie .entryContainer .formContainer input#twitterAccount {
+  height: 48px;
+  padding: 20px 0 0 20px; }
+
+.oldie #formSheet form .sheetContainer li .inputContainer input {
+  padding: 10px 20px 0;
+  vertical-align: middle; }
