@@ -234,7 +234,7 @@ class UsersController extends AppController {
         // successful login
         $this->login_success($user, false);
         
-        $this->redirect("/posts/set_type/" . $postId);
+        $this->redirect("/payment/index/" . $postId);
     }   
 }
 

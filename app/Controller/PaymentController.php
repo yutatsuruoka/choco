@@ -25,64 +25,61 @@ class PaymentController extends AppController {
 	 */
 	function index($post_id=null) {
 
-		$user_id = $this->current_user['id'];
-		
-		if(!empty($post_id)&&!empty($user_id)){
-						
-			$post = $this->Post->read(null,$post_id);
-			
-			if(empty($post)){
-	          	
-				$this->Session->setFlash("post($post_id) not found.");
-	          	$this->logger->info("post($post_id) not found.");
-	            $this->redirect('/');				
-	            
-			}else{
-				
-				//if post is already paid, never go to payment.
-				$payment = $this->Payment->find("first",array( "conditions" => array("Payment.post_id"=>$post_id,'Payment.status' => 1)));				
-				if(!empty($payment)){
-					$this->Session->setFlash("post($post_id) already paid.");
-		          	$this->logger->info("post($post_id) already paid.");
-		            $this->redirect('/');				
-				}
-				
-				// Create an instance of the paypal library
-				$myPaypal = new Paypal();
-				
-				// Specify your paypal email
-				$myPaypal->addField('business', PAYMENT_RECIPIENT);
-				
-				// Specify the currency
-				$myPaypal->addField('currency_code', 'JPY');
-				
-				// Specify the url where paypal will send the user on success/failure
-				$root_path = rtrim($this->currentURL(),"/index/$post_id");
-				$myPaypal->addField('return', "$root_path/paypal_success/?uid=$user_id&pid=$post_id");
-				$myPaypal->addField('cancel_return', "$root_path/paypal_failure/?uid=$user_id&pid=$post_id");
-							
-				// Specify the product information
-				$myPaypal->addField('item_name', ITEM_NAME);
-				$myPaypal->addField('amount', ITEM_PRICE);
-				$myPaypal->addField('item_number', 1);
-				
-				// Specify any custom value
-				$myPaypal->addField('custom', PAYMENT_SUBJECT);
-				
-				// Enable test mode if needed
-				$myPaypal->enableTestMode();
-				
-				// Let's start the train!
-				$myPaypal->submitPayment();		
-					
-			}
-			
-		}else{
-          	$this->Session->setFlash('Invalid parameter.');
-	        $this->logger->info('Invalid parameter.');
-          	$this->redirect('/');				
+            $user_id = $this->current_user['id'];
+
+            if (!empty($post_id) && !empty($user_id)) {
+
+                $post = $this->Post->read(null, $post_id);
+
+                if (empty($post)) {
+
+                    $this->Session->setFlash("post($post_id) not found.");
+                    $this->logger->info("post($post_id) not found.");
+                    $this->redirect('/');
+                } else {
+
+                    //if post is already paid, never go to payment.
+                    $payment = $this->Payment->find("first", array("conditions" => array("Payment.post_id" => $post_id, 'Payment.status' => 1)));
+                    if (!empty($payment)) {
+                        $this->Session->setFlash("post($post_id) already paid.");
+                        $this->logger->info("post($post_id) already paid.");
+                        $this->redirect('/');
+                    }
+
+                    // Create an instance of the paypal library
+                    $myPaypal = new Paypal();
+
+                    // Specify your paypal email
+                    $myPaypal->addField('business', PAYMENT_RECIPIENT);
+
+                    // Specify the currency
+                    $myPaypal->addField('currency_code', 'JPY');
+
+                    // Specify the url where paypal will send the user on success/failure
+                    $root_path = rtrim($this->currentURL(), "/index/$post_id");
+                    $myPaypal->addField('return', "$root_path/paypal_success/?uid=$user_id&pid=$post_id");
+                    $myPaypal->addField('cancel_return', "$root_path/paypal_failure/?uid=$user_id&pid=$post_id");
+
+                    // Specify the product information
+                    $myPaypal->addField('item_name', ITEM_NAME);
+                    $myPaypal->addField('amount', ITEM_PRICE);
+                    $myPaypal->addField('item_number', 1);
+
+                    // Specify any custom value
+                    $myPaypal->addField('custom', PAYMENT_SUBJECT);
+
+                    // Enable test mode if needed
+                    $myPaypal->enableTestMode();
+                    
+                    $this->set('fields', $myPaypal->fields);
+                    $this->set('gatewayUrl', $myPaypal->gatewayUrl);
+                }
+            } else {
+                $this->Session->setFlash('Invalid parameter.');
+                $this->logger->info('Invalid parameter.');
+                $this->redirect('/');
+            }
         }
-	}
 
 	function paypal_success(){
 		//$this->logger->debug("paypal_success() ".print_r($_REQUEST,true));
