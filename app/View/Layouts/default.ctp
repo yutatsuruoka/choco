@@ -90,7 +90,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon01.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">家入一真</p>
-                            <p class="post">Hyperinternets<br>Programmer</p>
+                            <p class="post">warusou<br>インターネット関係</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
@@ -100,30 +100,30 @@
                     <div class="teamMember left clearfix">
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon02.jpg"></div>
                         <div class="memberProfile left">
-                            <p class="name">名字名前</p>
-                            <p class="post">Hyperinternets<br>Programmer</p>
+                            <p class="name">アントニオ</p>
+                            <p class="post">warusou<br>下僕</p>
                         </div>
                         <ul class="memberSns left clearfix">
-                            <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
-                            <li class="twitterIcon left"><a href="https://twitter.com/#!/hbkr" target="_blank">Twitter</a></li>
+                            <li class="facebookIcon left"><a href="https://www.facebook.com/akamiya" target="_blank">facebook</a></li>
+                            <li class="twitterIcon left"><a href="https://twitter.com/#!/antonio_kamiya" target="_blank">Twitter</a></li>
                         </ul>
                     </div><!-- end teamMember -->
                     <div class="teamMember left clearfix">
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon03.jpg"></div>
                         <div class="memberProfile left">
-                            <p class="name">名字名前</p>
-                            <p class="post">Hyperinternets<br>Programmer</p>
+                            <p class="name">越後龍一</p>
+                            <p class="post">warusou<br>ルンペン</p>
                         </div>
                         <ul class="memberSns left clearfix">
-                            <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
-                            <li class="twitterIcon left"><a href="https://twitter.com/#!/hbkr" target="_blank">Twitter</a></li>
+                            <li class="facebookIcon left"><a href="https://www.facebook.com/echigoryuichi" target="_blank">facebook</a></li>
+                            <li class="twitterIcon left"><a href="https://twitter.com/#!/tebasakidaisuki" target="_blank">Twitter</a></li>
                         </ul>
                     </div><!-- end teamMember -->
                     <div class="teamMember left last clearfix">
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon04.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">鶴岡裕太</p>
-                            <p class="post">Hyperinternets<br>Programmer</p>
+                            <p class="post">warusou<br>へべれけ</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/yuta.tsuruoka" target="_blank">facebook</a></li>
