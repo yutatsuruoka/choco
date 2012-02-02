@@ -5,7 +5,8 @@ App::import('Vendor', 'facebook/facebook');
 class UsersController extends AppController {
     public $name = 'Users';
     public $components = array('OauthConsumer');
-
+    var $uses = array('User', 'Post'); 
+    
     var $fb;  
       
     public function index() {
@@ -128,21 +129,25 @@ class UsersController extends AppController {
                     'email' => $user->id . '@twitter'
                     , 'type' => 1
                     , 'name' => $user->name
+                    , 'screen_name' => $user->screen_name
                 )), false);            
         }
         
         $this->login_success($user, false);
-        
-        $this->Session->write('user_Id', $this->current_user['id']);
-        
+
+        // update post.boy_id with new/logged in user
+        $this->Post->id = $this->Session->read('insert_id');
+        $this->Post->saveField('boy_id', $this->current_user['id']);
+
+        $this->Session->write('user_Id', $this->current_user['id']);        
         $this->Session->write('user_Name', $this->current_user['name']);
         
         $this->redirect('/users/set_address/');
     } 
     
     public function set_address() {
-		$this->User->id = $this->Session->read('user_Id');
-		$this->set('user', $this->User->read());
+        $this->User->id = $this->Session->read('user_Id');
+        $this->set('user', $this->User->read());
         if ($this->request->is('post')) {
             if ($this->User->save($this->request->data)) {
 
@@ -153,7 +158,7 @@ class UsersController extends AppController {
                         , array('status' => 
                             '.' . $this->Session->read('girl_id') . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
                             . '【このツイートはチョコくれを利用して送られています】'
-                            . ' http://chocokure.com/users/give/' . $this->Session->read('insert_id')
+                            . ' http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')
                             . ' #chocokure'
                         ));
                         
