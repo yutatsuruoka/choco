@@ -16,7 +16,7 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
-    <body id="<?php echo $html_body_id ?>">
+    <body id="<?php echo $html_body_id ?>" <?php if ($html_body_id == 'contentsFlow07') echo "onLoad=\"document.forms['gateway_form'].submit();\""; ?>>
         <header>
         <div class="wrapper">
             <h1><a href="/"><img src="<?php echo $this->webroot ?>i/logo.png" alt="gimme choco Valentine's Day project"></a></h1> 

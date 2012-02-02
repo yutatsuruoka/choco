@@ -57,18 +57,9 @@ class PostsController extends AppController {
                 'conditions' => array('User.id' => $p['Post']['boy_id'])
                 ));
             
+            $this->set('post_id', $id);
             $this->set('screen_name', $u['User']['screen_name']);
         }
-                   
-    	if ($this->request->is('get')) {
-            $this->request->data = $this->Post->read();
-        } else {
-            if ($this->Post->save($this->request->data)) {
-                $this->redirect('/payment/index/' . $id);
-            } else {
-                $this->Session->setFlash('Unable to update your post.');
-            }
-    	}
     }
 
     function beforeFilter() {
