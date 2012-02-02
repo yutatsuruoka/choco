@@ -18,7 +18,7 @@
     <body id="<?php echo $html_body_id ?>">
         <header>
         <div class="wrapper">
-            <h1><a href="index.html"><img src="<?php echo $this->webroot ?>i/logo.png" alt="gimme choco Valentine's Day project"></a></h1> 
+            <h1><a href="/"><img src="<?php echo $this->webroot ?>i/logo.png" alt="gimme choco Valentine's Day project"></a></h1> 
             <p class="caption"><img src="<?php echo $this->webroot ?>i/header_caption.png"  alt=""></p>
             <aside class="snsContainer clearfix">
             <div class="snsButton">   
@@ -94,7 +94,7 @@
                             title: 'Social Valentine platform.',
                             subject: '#chocokure',
                             width: 390,
-                            height: 400,
+                            height: 382,
                             theme: {
                                 shell: {
                                     background: '#ffffff',
