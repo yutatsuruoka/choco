@@ -90,7 +90,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon01.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">家入一真</p>
-                            <p class="post">warusou<br>インターネット関係</p>
+                            <p class="post">warusou<br>所長</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
@@ -101,7 +101,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon02.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">アントニオ</p>
-                            <p class="post">warusou<br>下僕</p>
+                            <p class="post">warusou<br>糖尿＆下僕</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/akamiya" target="_blank">facebook</a></li>
@@ -112,7 +112,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon03.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">越後龍一</p>
-                            <p class="post">warusou<br>ルンペン</p>
+                            <p class="post">warusou<br>手羽先</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/echigoryuichi" target="_blank">facebook</a></li>
