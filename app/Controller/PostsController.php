@@ -3,6 +3,7 @@ class PostsController extends AppController {
     public $name = 'Posts';
     public $helpers = array('Html', 'Form');
     public $components = array('OauthConsumer');
+    var $uses = array('User', 'Post'); 
 	
     public function index() {
         $this->set('posts', $this->Post->find('all'));
@@ -47,6 +48,18 @@ class PostsController extends AppController {
 
     function set_type($id = null) {
         $this->Post->id = $id;
+        $p = $this->Post->find('first', array(
+            'conditions' => array('Post.id' => $id)
+            ));
+        
+        if ($p) {
+            $u = $this->User->find('first', array(
+                'conditions' => array('User.id' => $p['Post']['boy_id'])
+                ));
+            
+            $this->set('screen_name', $u['User']['screen_name']);
+        }
+                   
     	if ($this->request->is('get')) {
             $this->request->data = $this->Post->read();
         } else {

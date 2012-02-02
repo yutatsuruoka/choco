@@ -11,8 +11,8 @@
                 <div class="presentContainer">
                     <div class="pushMessage clearfix">
                         <div class="twitterImage left">
-                            <img class="twitterIcon" src="<?php echo $this->webroot ?>i/twitter_icon.jpg" alt="">
-                            <p class="twitterName">@hbkr</p>
+                            <img class="twitterIcon" src="https://api.twitter.com/1/users/profile_image?screen_name=<?php echo $screen_name ?>&size=bigger" alt="">
+                            <p class="twitterName">@<?php echo $screen_name ?></p>
                         </div>
                         <div class="messageContainer left">
                             <p class="message">２０文字以内のテキストがはいります。</p>
