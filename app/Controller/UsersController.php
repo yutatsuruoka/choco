@@ -107,6 +107,9 @@ class UsersController extends AppController {
             $this->Session->setFlash('Access Token invalid');
             $this->redirect('/');
         }
+
+        $this->Session->write('accessKey', $accessToken->key);
+        $this->Session->write('accessSecret', $accessToken->secret);
         
         // 認証ユーザ情報の取得
         $json = $this->OauthConsumer->get('Twitter', $accessToken->key, 
@@ -133,7 +136,7 @@ class UsersController extends AppController {
         $this->Session->write('user_Id', $this->current_user['id']);
         
         $this->Session->write('user_Name', $this->current_user['name']);
-
+        
         $this->redirect('/users/set_address/');
     } 
     
@@ -142,6 +145,18 @@ class UsersController extends AppController {
 		$this->set('user', $this->User->read());
         if ($this->request->is('post')) {
             if ($this->User->save($this->request->data)) {
+
+                $this->OauthConsumer->post('Twitter'
+                        , $this->Session->read('accessKey')
+                        , $this->Session->read('accessSecret')
+                        , 'https://api.twitter.com/1/statuses/update.json'
+                        , array('status' => 
+                            '.' . $this->Session->read('girl_id') . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
+                            . '【このツイートはチョコくれを利用して送られています】'
+                            . ' http://chocokure.com/users/give/' . $this->Session->read('insert_id')
+                            . ' #chocokure'
+                        ));
+                        
                 $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
             } else {
                 $this->Session->setFlash('Unable to add your post.');
