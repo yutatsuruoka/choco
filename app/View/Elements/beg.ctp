@@ -1,6 +1,6 @@
 <div class="entryContainer">
     <div class="wrapper">
-        <p class="counter">The remainder of<strong>2,000</strong>chocolates<p>     
+        <p class="counter"><strong>2,000</strong>chocolates remaining<p>     
         <div class="clearfix">
             <div class="left parenthesis"><img src="<?php echo $this->webroot ?>i/parenthesis_left.png" alt=""></div>
             <div class="left formContainer">
