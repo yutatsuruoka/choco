@@ -378,16 +378,14 @@ footer {
       padding: 0 10px;
       font-size: 48px;
       letter-spacing: .03em; }
-  .presentchoco .arrow {
-    position: relative;
-    left: 47%;
-    top: 510px; }
   .presentchoco .presentContainer {
     text-align: center;
     margin: 0 0 20px; }
     .presentchoco .presentContainer .twitterName {
-      margin: 10px 0 30px;
+      margin: 10px 0 10px;
       font-size: 24px; }
+    .presentchoco .presentContainer .twitterIcon {
+      margin: 0 0 30px; }
     .presentchoco .presentContainer .pushMessage {
       width: 463px;
       margin: 0 auto;
@@ -429,7 +427,8 @@ footer {
     font-weight: bold;
     text-align: center;
     font-size: 14px;
-    margin: 0 0 30px; }
+    margin: 0 0 30px;
+    line-height: 1.6em; }
 
 #presentchoco02 {
   margin: 0; }
@@ -472,8 +471,10 @@ footer {
 /* =============================================================================
      contentsFlow07
    ========================================================================== */
-#contentsFlow07 .presentchoco .arrow {
-  top: 415px; }
+#contentsFlow07 .presentchoco .centerText {
+  text-align: center;
+  margin: 0 0 20px;
+  font-size: 20px; }
 #contentsFlow07 .presentchoco .leftBlock {
   width: 220px;
   padding: 0 29px 0 143px; }

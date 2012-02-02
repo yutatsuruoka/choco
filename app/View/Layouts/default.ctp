@@ -6,9 +6,14 @@
     <head>
         <meta charset="UTF-8">
         <title>chocokure -Social Valentine platform-</title>
-        <meta name="description" content="いつもねだられてばっかりの男子たち。今年のバレンタインは女子にねだってみよーぜ！そしてウハウハ過ごそうぜ！">
+        <meta name="description" content="男性から女性へチョコをねだる、ソーシャルバレンタインプラットフォーム。">
         <meta name="keywords" content="chocokure,バレンタイン,valentine,チョコ,家入一真,MONOspace">
         <meta name="author" content="家入一真 MONOspace">
+        <meta property="og:title"content="chocokure -Social Valentine platform-">
+        <meta property="og:type"content="social valentine platform">
+        <meta property="og:description"content="男性から女性へチョコをねだる、ソーシャルバレンタインプラットフォーム。">
+        <meta property="og:url"content="http://chocokure.com/">
+        <meta property="og:image"content="<?php echo $this->webroot ?>i/like_link.jpg">
         <link rel="stylesheet" href="<?php echo $this->webroot ?>c/reset.css"> 
         <link rel="stylesheet" href="<?php echo $this->webroot ?>c/colorbox.css">
         <link rel="stylesheet" href="<?php echo $this->webroot ?>c/style.css"> 
@@ -26,7 +31,8 @@
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://chocokure.com/" data-text="【チョコくれ】男性から女性へチョコをねだる、ソーシャルバレンタインプラットフォーム" data-lang="en" data-hashtags="chocokure">ツイート</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div><!-- end .snsContainer-->
             <div class="snsButton">
-                <iframe src="//www.facebook.com/plugins/like.php?href=chocokure.com&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;locale=en_US&amp;appId=201926619877324" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+                <div id="fb-root"></div>
+				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fchocokure.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=312737992072908" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
             </div><!-- end .snsContainer-->
             </aside>
         </div><!-- end .wrapper -->
@@ -182,7 +188,7 @@
                         <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon02.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">菊川実紀</p>
-                            <p class="post">MONOspace<br>デザイナー</p>
+                            <p class="post">MONOspace<br>Picolor</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/minocolor" target="_blank">facebook</a></li>

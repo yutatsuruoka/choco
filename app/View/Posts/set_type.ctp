@@ -7,13 +7,13 @@
         <div class="presentchoco">
             <div class="wrapper">
                 <div class="presentContainer">
+                    <p class="twitterName">@<?php echo $screen_name ?> さんが @ギャルソネ さんにチョコをねだっています</p>
                     <div class="pushMessage clearfix">
                         <div class="twitterImage left">
                             <img class="twitterIcon" src="https://api.twitter.com/1/users/profile_image?screen_name=<?php echo $screen_name ?>&size=bigger" alt="">
-                            <p class="twitterName">@<?php echo $screen_name ?></p>
                         </div>
                         <div class="messageContainer left">
-                            <p class="message">２０文字以内のテキストがはいります。</p>
+                            <p class="message">チョコください!!<br>お願いします。</p>
                         </div>
                     </div>
                     <div class="btnContainer clearfix">
@@ -24,7 +24,8 @@
                         </ul>                       
                     </div>
                 </div>
-                <p class="caption">チョコは１個￥５００で購入出来ます。あなたが送ったチョコは、バレンタインの日に彼の元へ直接送られます。</p>
+                <p class="caption">チョコは1つ500円で購入出来ます。チョコをあげるボタンをクリックするとtwitterの認証画面へ飛び、<br>
+クレジット決済手続きが開始されます。あとは相手にチョコが届くのを待つだけ！</p>
             </div>
         </div>
 
