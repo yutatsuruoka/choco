@@ -2,7 +2,6 @@
 
 <?php
     $this->set('html_body_id', 'contentsFlow04');
-    echo $this->Form->create('Post');
 ?>
 
         <div class="presentchoco">
@@ -22,7 +21,7 @@
                         <ul class="clearfix">
                             <li class="left"><a class="type01 over" href="">本命チョコをあげる</a></li>
                             <li class="left"><a class="type02 over" href="">義理チョコをあげる</a></li>
-                            <li class="left"><a class="type03 last " href=""><img src="<?php echo $this->webroot ?>i/presentchoco_btn02.png" alt=""></a></li>
+                            <li class="left"><a class="type03 last " href="<?php echo $this->webroot ?>Pages/no"><img src="<?php echo $this->webroot ?>i/presentchoco_btn02.png" alt=""></a></li>
                         </ul>                       
                     </div>
                 </div>
@@ -31,9 +30,3 @@
             </div>
         </div>
 
-<?php
-echo $this->Form->radio('type', array('1'=>"本命", '2'=>"義理"), 
-        array('legend' => 'この人は本名ですか？', 'value' => '2', 'separator' => '　'));
-
-echo $this->Form->end('Save Post');
-?>

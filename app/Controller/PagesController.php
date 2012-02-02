@@ -12,6 +12,5 @@ class PagesController extends AppController {
 
     function index() {}
 
-    function help() {}
-
+    function no() {}
 }
