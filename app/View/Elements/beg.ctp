@@ -5,9 +5,10 @@ $this->Html->script('twitter_input', array('inline' => false));
 
 echo $this->Form->create('Post');
 ?>	 
+
 <div class="entryContainer">
     <div class="wrapper">
-        <p class="caption"><img src="<?php echo $this->webroot ?>i/entry_caption.png"></p>
+        <p class="counter">The remainder of<strong>2,000</strong>chocolates<p>     
         <div class="clearfix">
             <div class="left parenthesis"><img src="<?php echo $this->webroot ?>i/parenthesis_left.png" alt=""></div>
             <div class="left formContainer">
@@ -28,6 +29,7 @@ echo $this->Form->create('Post');
         </div>
     </div>
 </div><!-- end .entryContainer -->
+
 <?php
 echo $this->Form->end();
 ?>

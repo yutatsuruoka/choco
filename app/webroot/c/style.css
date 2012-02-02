@@ -88,11 +88,14 @@ header {
   box-shadow: 0px 3px 5px #c9c9c9;
   position: relative;
   z-index: 1; }
-  .entryContainer .caption {
+  .entryContainer .counter {
+    letter-spacing: .1em;
     font-size: 24px;
     margin: 0 0 15px; }
-    .entryContainer .caption strong {
-      font-size: 48px; }
+    .entryContainer .counter strong {
+      padding: 0 10px;
+      font-size: 48px;
+      letter-spacing: .03em; }
   .entryContainer .parenthesis {
     width: 80px;
     margin: -25px 0 0; }
@@ -359,10 +362,19 @@ footer {
   box-shadow: 0px 3px 5px #c9c9c9;
   position: relative;
   z-index: 1; }
+  .presentchoco .counter {
+    text-align: center;
+    letter-spacing: .1em;
+    font-size: 24px;
+    margin: 0 0 15px; }
+    .presentchoco .counter strong {
+      padding: 0 10px;
+      font-size: 48px;
+      letter-spacing: .03em; }
   .presentchoco .arrow {
     position: relative;
     left: 47%;
-    top: 495px; }
+    top: 510px; }
   .presentchoco .presentContainer {
     text-align: center;
     margin: 0 0 20px; }
