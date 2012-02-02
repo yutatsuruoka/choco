@@ -154,7 +154,7 @@ $.fn.ahPlaceholder = function(options)
         },
         _clearPlaceholder = function(self)
         {
-            self.value = '';
+            self.value = '@';
             $(self).css('color', $.data(self, 'placeholder-color'));
         };
     // construct

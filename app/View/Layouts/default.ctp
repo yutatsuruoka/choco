@@ -180,6 +180,16 @@
     <script type="text/javascript" src="<?php echo $this->webroot ?>j/modernizr-2.0.6.js"></script>
     <script type="text/javascript" src="<?php echo $this->webroot ?>j/fixHeight.js"></script>
     <script type="text/javascript" src="<?php echo $this->webroot ?>j/script.js"></script>
+    <script type="text/javascript" src="<?php echo $this->webroot ?>j/jquery.ah-placeholder.js"></script>
+    <script type="text/javascript">
+    $(function()
+    {
+        $('.jq-placeholder').ahPlaceholder({
+            placeholderColor : 'silver',
+            likeApple : true
+        });
+    });
+    </script>
       <!--[if lt IE 8 ]>
       <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
       <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
