@@ -110,12 +110,12 @@ class PaymentController extends AppController {
 		}else{
           	$this->Session->setFlash('Invalid parameter.');
 	        $this->logger->info('Invalid parameter.');
-			$this->redirect(array('controller'=>'payment','action'=>'paypal_failure'));				
-		}
+                $this->redirect(array('controller'=>'payment','action'=>'paypal_failure'));				
+            }
 	}
 	
 	function paypal_failure(){
-		$this->logger->debug("paypal failure.  ".print_r($_REQUEST,true));		
+            $this->redirect(array('controller'=>'Pages','action'=>'no'));				
 	}
 }
 

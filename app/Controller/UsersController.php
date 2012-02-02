@@ -221,10 +221,6 @@ class UsersController extends AppController {
                     , 'name' => $user->name
                 )), false);
             
-            $this->Session->setFlash('Twitter user created at give_callback()');
-        }
-        else {
-            $this->Session->setFlash('Returning Twitter user at give_callback()');
         }
         
         // check that we are the right person

@@ -12,8 +12,8 @@ foreach ($fields as $name => $value)
 ?>
 
 
-<p style="text-align:center;"><br/><br/>If you are not automatically redirected to payment website within 5 seconds...<br/><br/>
-<input type="submit" value="Click Here"></p>
+<p style="text-align:center;"><br/><br/>５秒後に自動的に決済画面に移動します。移動しない場合は下のボタンをクリックしてください。<br/><br/>
+<input type="submit" value="決済画面に移動する"></p>
 
 </form>
 </body>

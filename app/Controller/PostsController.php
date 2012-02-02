@@ -67,7 +67,7 @@ class PostsController extends AppController {
 
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
-        $this->Auth->allow('add', 'index', 'beg', 'beg_callback');
+        $this->Auth->allow('add', 'index', 'set_type');
     }
 	
     function delete($id) {
