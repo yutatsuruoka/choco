@@ -17,7 +17,7 @@
                     echo $this->Form->submit('',array('id' => 'submitButton'));
                     echo $this->Form->end();
                 ?>
-                <p>チョコをもらいたい女の子のTwitterアカウントを入れて ”チョコくれ！” ボタンをクリック！ Twitter認証へ飛んでいきます！</p>
+                <p>チョコをねだりたい女の子のTwitterアカウントを入れて ”チョコくれ！” ボタンをクリック！ Twitter認証へ飛んでいきます！</p>
             </div>
             <div class="right parenthesis"><img src="<?php echo $this->webroot ?>i/parenthesis_right.png" alt=""></div>
         </div>
