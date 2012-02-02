@@ -2,19 +2,21 @@
 <!--[if lt IE 7]> <html class="ie6 oldie" lang="jp"> <![endif]-->
 <!--[if IE 7]>    <html class="ie7 oldie" lang="jp"> <![endif]-->
 <!--[if IE 8]>    <html class="ie8 oldie" lang="jp"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="jp"> <!--<![endif]-->
+<!--[if gt IE 8]>--> <html lang="jp"> <!--<![endif]-->
     <head>
         <meta charset="UTF-8">
         <title>chocokure -Social Valentine platform-</title>
         <meta name="description" content="いつもねだられてばっかりの男子たち。今年のバレンタインは女子にねだってみよーぜ！そしてウハウハ過ごそうぜ！">
         <meta name="keywords" content="chocokure,バレンタイン,valentine,チョコ,家入一真,MONOspace">
         <meta name="author" content="家入一真 MONOspace">
-        <link rel="stylesheet" href="/cake/app/webroot/c/reset.css"> 
-        <link rel="stylesheet" href="/cake/app/webroot/c/style.css"> 
+        <link rel="stylesheet" href="<?php echo $this->webroot ?>c/reset.css"> 
+        <link rel="stylesheet" href="<?php echo $this->webroot ?>c/style.css"> 
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-    </head>
+    <?php echo $scripts_for_layout ?>
+        
+    </head> 
 <?php 
 	if($this->Session->check("Message.flash")){
 	echo '<div id="flashWrapper">';
@@ -25,10 +27,10 @@
 }
 ?>
 <body id="contentsFlow01">
-	<header>
+    <header>
 	<div class="wrapper">
-		<h1><a href="/cake/"><img src="/cake/app/webroot/i/logo.png" alt="gimme choco Valentine's Day project"></a></h1> 
-        <p class="caption"><img src="/cake/app/webroot/i/header_caption.png"  alt=""></p>
+		<h1><a href=""><img src="<?php echo $this->webroot ?>i/logo.png" alt="gimme choco Valentine's Day project"></a></h1> 
+        <p class="caption"><img src="<?php echo $this->webroot ?>i/header_caption.png"  alt=""></p>
         <aside class="snsContainer clearfix">
         <div class="snsButton">   
             <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
@@ -40,32 +42,9 @@
         </aside>
     </div><!-- end .wrapper -->
     </header>
-	<?php echo $content_for_layout ?>
-	
-	<div class="aboutContainer">
-        <div class="wrapper">
-            <section id="flow1" class="clearfix">
-            <div class="textContainer left">
-                <h2><img src="/cake/app/webroot/i/flow1_ttl.png" alt=""></h2>
-                <p>自分がチョコをもらいたい女性に向けて、<br>chocokureからおねだりコールを送ろう。</p>
-            </div>
-            <img class="right" src="/cake/app/webroot/i/about_img01.png" alt="">
-            </section>
-            <section id="flow2" class="clearfix">
-            <img class="left" src="/cake/app/webroot/i/about_img02.png" alt="">
-            <div class="textContainer left">
-                <h2><img src="/cake/app/webroot/i/flow2_ttl.png" alt=""></h2>
-                <p>女の子にラブコールが届き、運命の選択画面へ。<br>相手が “プレゼントボタン” を押すと…<br>あなたのおねだりが成立します♩</p>
-            </div>
-            </section>
-            <section id="flow3" class="clearfix">
-            <h2><img src="/cake/app/webroot/i/flow3_ttl.png" alt=""></h2>
-            <p>相手がプレゼントボタンを押してくれれば、今年のバレンタインはもう悲しむ事はありません！！<br>2月14日に愛する人からチョコが届きます♩</p>
-            <img src="/cake/app/webroot/i/about_img03.png" alt="">
-            </section>
-        </div>
-    </div>
-	
+    
+    <?php echo $content_for_layout ?>
+		
 	<div id="socialContainer">
         <div class="wrapper clearfix">
         <div class="fbContainer">
@@ -119,9 +98,9 @@
     <div class="wrapper">
         <div class="createTeam clearfix">
             <div id="hiinc" class="team left clearfix">
-                <h3 class="teamLogo"><a href="http://hiinc.jp/" target="_blank"><img src="/cake/app/webroot/i/hiinc_logo.png" alt=""></a></h3>
+                <h3 class="teamLogo"><a href="http://hiinc.jp/" target="_blank"><img src="<?php echo $this->webroot ?>i/hiinc_logo.png" alt=""></a></h3>
                 <div class="teamMember left clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/hiinc_icon01.jpg"></div>
+                    <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/hiinc_icon01.jpg"></div>
                     <div class="memberProfile left">
                         <ul class="memberSns clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
@@ -132,18 +111,7 @@
                     </div>
                 </div><!-- end teamMember -->
                 <div class="teamMember right clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/hiinc_icon02.jpg"></div>
-                    <div class="memberProfile left">
-                        <ul class="memberSns clearfix">
-                            <li class="facebookIcon left"><a href="https://www.facebook.com/akamiya"target="_blank">facebook</a></li>
-                            <li class="twitterIcon left"><a href="https://twitter.com/#!/antonio_kamiya" target="_blank">Twitter</a></li>
-                        </ul>
-                        <p class="name">アントニオ</p>
-                        <p class="post">Hyperinternets<br>Programmer</p>
-                    </div>
-                </div><!-- end teamMember -->
-                <div class="teamMember left last clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/hiinc_icon03.jpg"></div>
+                    <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/hiinc_icon03.jpg"></div>
                     <div class="memberProfile left">
                         <ul class="memberSns clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/echigoryuichi" target="_blank">facebook</a></li>
@@ -153,8 +121,8 @@
                         <p class="post">Hyperinternets<br>Programmer</p>
                     </div>
                 </div><!-- end teamMember -->
-                <div class="teamMember right last clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/hiinc_icon04.jpg"></div>
+                <div class="teamMember left last clearfix">
+                    <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/hiinc_icon04.jpg"></div>
                     <div class="memberProfile left">
                         <ul class="memberSns clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/yuta.tsuruoka" target="_blank">facebook</a></li>
@@ -164,11 +132,22 @@
                         <p class="post">Hyperinternets<br>Programmer</p>
                     </div>
                 </div><!-- end teamMember -->
+                <div class="teamMember right last clearfix">
+                    <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/hiinc_icon02.jpg"></div>
+                    <div class="memberProfile left">
+                        <ul class="memberSns clearfix">
+                            <li class="facebookIcon left"><a href="https://www.facebook.com/akamiya"target="_blank">facebook</a></li>
+                            <li class="twitterIcon left"><a href="https://twitter.com/#!/antonio_kamiya" target="_blank">Twitter</a></li>
+                        </ul>
+                        <p class="name">アントニオ</p>
+                        <p class="post">Hyperinternets<br>下僕</p>
+                    </div>
+                </div><!-- end teamMember -->
             </div><!-- end #hiinc -->
             <div id="monosp" class="team right clearfix">
-                <h3 class="teamLogo"><a href="http://monosp.com/" target="_blank"><img src="/cake/app/webroot/i/monosp_logo.png" alt=""></a></h3>
+                <h3 class="teamLogo"><a href="http://monosp.com/" target="_blank"><img src="<?php echo $this->webroot ?>i/monosp_logo.png" alt=""></a></h3>
                 <div class="teamMember left clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/monosp_icon01.jpg"></div>
+                    <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon01.jpg"></div>
                     <div class="memberProfile left">
                         <ul class="memberSns clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/profile.php?id=100001862109715" target="_blank">facebook</a></li>
@@ -179,7 +158,7 @@
                     </div>
                 </div><!-- end teamMember -->
                 <div class="teamMember right clearfix" id="second">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/monosp_icon02.jpg"></div>
+                    <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon02.jpg"></div>
                     <div class="memberProfile left">
                         <ul class="memberSns clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/minocolor" target="_blank">facebook</a></li>
@@ -190,7 +169,7 @@
                     </div>
                 </div><!-- end teamMember -->
                 <div class="teamMember left last clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/monosp_icon03.jpg"></div>
+                    <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon03.jpg"></div>
                     <div class="memberProfile left">
                         <ul class="memberSns clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/profile.php?id=100002491780831" target="_blank">facebook</a></li>

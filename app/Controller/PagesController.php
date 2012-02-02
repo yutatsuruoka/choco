@@ -1,14 +1,17 @@
 <?php
 class PagesController extends AppController {
 	
-	function display() {}
-	
-	function beforeFilter() {
+    function beforeFilter() {
         parent::beforeFilter();
 
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
-        $this->Auth->allow('display', 'index');
+        $this->Auth->allow('index', 'help');
    
     }
+
+    function index() {}
+
+    function help() {}
+
 }
