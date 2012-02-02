@@ -176,6 +176,10 @@ class UsersController extends AppController {
 	
     public function give() {
         $postId = $this->request->params['pass'][0];
+        $type = $this->request->params['pass'][1];
+        
+        $this->Post->id = $postId;
+        $this->Post->saveField('type', $type);        
         
         $requestToken = $this->OauthConsumer->getRequestToken('Twitter', 
                 'https://api.twitter.com/oauth/request_token', 
