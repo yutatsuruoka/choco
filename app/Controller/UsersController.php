@@ -125,12 +125,7 @@ class UsersController extends AppController {
                     'email' => $user->id . '@twitter'
                     , 'type' => 1
                     , 'name' => $user->name
-                )), false);
-            
-            $this->Session->setFlash('Twitter user created');
-        }
-        else {
-            $this->Session->setFlash('Returning Twitter user');
+                )), false);            
         }
         
         $this->login_success($user, false);

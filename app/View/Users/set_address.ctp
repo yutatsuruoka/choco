@@ -1,11 +1,12 @@
 <?php
     $this->set('html_body_id', 'contentsFlow02');
+    echo $this->Session->flash();
 ?>	 
         <div id="formSheet">
             <div class="wrapper">
                 <h2><img src="<?php echo $this->webroot ?>i/formsheet_ttl.png" alt=""></h2>
                 <p class="caption">チョコを届けて欲しい住所を入力して下さい。<br>バレンタインの日、指定された場所にチョコが届きます♩</p>
-                    <?php echo $this->Form->create('Post', array('class'=>'clearfix')); ?>	 
+                    <?php echo $this->Form->create('User', array('class'=>'clearfix')); ?>	 
                     <div class="sheetContainer left">
                         <ul>
                             <li class="clearfix fixHeight">
@@ -14,7 +15,7 @@
                             </li>
                             <li class="clearfix fixHeight">
                             <div class="labelContainer"><label for="tel">郵便番号</label></div>
-                            <div class="inputContainer"><input type="text" placeholder="150-0002" id="zip" name="zip"></div>
+                            <div class="inputContainer"><input type="text" placeholder="150-0002" id="postal_code" name="postal_code"></div>
                             </li>
                             <li class="clearfix fixHeight last">
                             <div class="labelContainer"><label for="mail">住所</label></div>
@@ -30,7 +31,7 @@
                             </li>
                             <li class="clearfix fixHeight">
                             <div class="labelContainer"><label for="mail">メール</label></div>
-                            <div class="inputContainer"><input type="text" placeholder="gimmechoco@gmail.com" id="mail" name="mail"></div>
+                            <div class="inputContainer"><input type="text" placeholder="gimmechoco@gmail.com" id="email" name="enail"></div>
                             </li>
                             <li class="clearfix fixHeight">
                             <div class="labelContainer"><label for="mail">メッセージ</label></div>
