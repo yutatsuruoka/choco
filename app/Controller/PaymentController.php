@@ -69,7 +69,7 @@ class PaymentController extends AppController {
                     $myPaypal->addField('custom', PAYMENT_SUBJECT);
 
                     // Enable test mode if needed
-                    $myPaypal->enableTestMode();
+                    //$myPaypal->enableTestMode();
                     
                     $this->set('fields', $myPaypal->fields);
                     $this->set('gatewayUrl', $myPaypal->gatewayUrl);
