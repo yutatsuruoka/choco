@@ -8,8 +8,8 @@
         <div class="wrapper">
             <h2><img src="/cake/app/webroot/i/contentsFlow09_presentchoco_ttl.png" alt=""></h2>
             <div class="socialIntroduction clearfix">
-                <a href=""><img src="/cake/app/webroot/i/twitterbtn.png" alt="gimme choco Twitterページへリンク"></a>
-                <a href=""><img src="/cake/app/webroot/i/facebookbtn.png" alt="gimme choco Facebookページへリンク"></a>
+                <a href="http://twitter.com/share?text=チョコあげちゃいました&url=http://chocokure.com/"><img src="<?php echo $this->webroot ?>i/twitterbtn.png"></a>
+                <a href="http://www.facebook.com/sharer.php?u=http://chocokure.com/" rel="nofollow" target="_blank"><img src="<?php echo $this->webroot ?>i/facebookbtn.png"></a>
             </div>
             <p class="goTop"><a href="index.html">chocokure TOP &gt;&gt;</a></p>
         </div>
