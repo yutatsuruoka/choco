@@ -22,11 +22,10 @@
             <p class="caption"><img src="<?php echo $this->webroot ?>i/header_caption.png"  alt=""></p>
             <aside class="snsContainer clearfix">
             <div class="snsButton">   
-                <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://chocokure.com/" data-text="【チョコくれ】男性から女性へチョコをねだる、ソーシャルバレンタインプラットフォーム" data-lang="en" data-hashtags="chocokure">ツイート</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div><!-- end .snsContainer-->
             <div class="snsButton">
-                <iframe src="//www.facebook.com/plugins/like.php?href=monosp.com&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;locale=en_US&amp;appId=201926619877324" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+                <iframe src="//www.facebook.com/plugins/like.php?href=chocokure.com&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;locale=en_US&amp;appId=201926619877324" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
             </div><!-- end .snsContainer-->
             </aside>
         </div><!-- end .wrapper -->
@@ -125,7 +124,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon01.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">家入一真</p>
-                            <p class="post">warusou<br>所長</p>
+                            <p class="post">ワルソウ<br>所長</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
@@ -136,7 +135,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon02.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">アントニオ</p>
-                            <p class="post">warusou<br>糖尿＆下僕</p>
+                            <p class="post">ワルソウ<br>糖尿＆下僕</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/akamiya" target="_blank">facebook</a></li>
@@ -147,7 +146,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon03.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">越後龍一</p>
-                            <p class="post">warusou<br>手羽先</p>
+                            <p class="post">ワルソウ<br>手羽先</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/echigoryuichi" target="_blank">facebook</a></li>
@@ -158,7 +157,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon04.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">鶴岡裕太</p>
-                            <p class="post">warusou<br>へべれけ</p>
+                            <p class="post">ワルソウ<br>へべれけ</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/yuta.tsuruoka" target="_blank">facebook</a></li>
@@ -171,7 +170,7 @@
                         <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon01.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">板橋聡</p>
-                            <p class="post">MONOspace<br>web designer</p>
+                            <p class="post">MONOspace<br>Bボーイ</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/profile.php?id=100001862109715" target="_blank">facebook</a></li>
@@ -182,7 +181,7 @@
                         <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon02.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">菊川実紀</p>
-                            <p class="post">MONOspace<br>web designer</p>
+                            <p class="post">MONOspace<br>デザイナー</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/minocolor" target="_blank">facebook</a></li>
@@ -193,7 +192,7 @@
                         <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon03.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">茂木聡嗣</p>
-                            <p class="post">MONOspace<br>Programmer</p>
+                            <p class="post">MONOspace<br>ミライ</p>
                         </div>
                         <ul class="memberSns clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/profile.php?id=100002491780831" target="_blank">facebook</a></li>
