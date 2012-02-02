@@ -5,7 +5,6 @@
 ?>
 
         <div class="presentchoco">
-            <img class="arrow" src="<?php echo $this->webroot ?>i/about_topbg.png" alt="">
             <div class="wrapper">
                 <div class="presentContainer">
                     <div class="pushMessage clearfix">
