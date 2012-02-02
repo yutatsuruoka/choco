@@ -67,14 +67,16 @@ header {
       width: 246px;
       margin: 0 auto 35px; }
     header .wrapper .caption {
-      padding: 0 0 0 138px; }
+      width: 665px;
+      margin: 0 auto; }
     header .wrapper .snsContainer {
       position: absolute;
-      top: -20px;
+      top: -30px;
       right: 0; }
       header .wrapper .snsContainer .snsButton {
-        float: left;
-        width: 70px; }
+        float: left; }
+    header .wrapper iframe.twitter-share-button {
+      width: 80px!important; }
 
 /*********** end header ***********/
 /*********** .entryContainer ***********/
@@ -200,62 +202,57 @@ footer {
   color: #fff;
   overflow: hidden; }
   footer .createTeam {
-    margin: 45px 0; }
+    margin: 30px 0; }
   footer .team {
-    width: 500px;
-    border-right: 1px solid #333; }
+    width: 1000px; }
     footer .team h3 {
       margin: 0 0 30px; }
     footer .team .teamMember {
-      width: 235px;
+      width: 256px;
       margin: 0 0 20px; }
       footer .team .teamMember .memberIcon {
-        width: 100px;
+        width: 50px;
         float: left;
-        margin: 0 14px 0 0; }
-      footer .team .teamMember .memberProfile .memberSns {
-        margin: 12px 0 0; }
-        footer .team .teamMember .memberProfile .memberSns .facebookIcon a {
+        margin: 0 10px 0 0; }
+      footer .team .teamMember .memberProfile {
+        margin: 3px 10px 0 0; }
+        footer .team .teamMember .memberProfile p.name {
+          font-size: 12px;
+          line-height: 12px;
+          font-style: normal;
+          margin: 0 0 8px;
+          letter-spacing: .2em; }
+        footer .team .teamMember .memberProfile p.post {
+          line-height: 1.4em;
+          letter-spacing: .2em; }
+      footer .team .teamMember .memberSns {
+        margin: 30px 0 0; }
+        footer .team .teamMember .memberSns .facebookIcon a {
           display: block;
           text-indent: -9999px;
           width: 21px;
           height: 20px;
           margin: 0 4px 12px 0;
           background: url(../i/facebook_icon.png) no-repeat left top; }
-        footer .team .teamMember .memberProfile .memberSns .twitterIcon a {
+        footer .team .teamMember .memberSns .twitterIcon a {
           display: block;
           text-indent: -9999px;
           width: 21px;
           height: 20px;
           margin: 0 0 10px;
           background: url(../i/twitter_icon.png) no-repeat left top; }
-        footer .team .teamMember .memberProfile .memberSns .facebookIcon a:hover {
+        footer .team .teamMember .memberSns .facebookIcon a:hover {
           background: url(../i/facebook_icon.png) no-repeat left bottom; }
-        footer .team .teamMember .memberProfile .memberSns .twitterIcon a:hover {
+        footer .team .teamMember .memberSns .twitterIcon a:hover {
           background: url(../i/twitter_icon.png) no-repeat left bottom; }
-      footer .team .teamMember .memberProfile p.name {
-        font-size: 18px;
-        line-height: 18px;
-        font-style: normal;
-        margin: 0 0 8px;
-        letter-spacing: .25em; }
-      footer .team .teamMember .memberProfile p.post {
-        line-height: 1.4em;
-        letter-spacing: .15em; }
     footer .team .last {
+      width: 232px;
       margin: 0; }
   footer ul.info {
     text-align: center;
     padding: 0 0 20px; }
     footer ul.info li {
       display: inline; }
-
-#monosp {
-  width: 449px;
-  padding: 0 0 0 50px;
-  border-right: none; }
-  #monosp #second {
-    width: 209px; }
 
 /*********** end footer ***********/
 /* =============================================================================

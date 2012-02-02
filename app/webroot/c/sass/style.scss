@@ -81,19 +81,20 @@ header{
 
         }
         .caption{
-            padding:0 0 0 138px;
+            width: 665px;
+            margin: 0 auto;
         }
         .snsContainer{
             position:absolute;
-            top:-20px;
+            top:-30px;
             right:0;
             .snsButton{
                 float:left;
-                width:70px;
-            }
-            
+            }   
         }
-
+        iframe.twitter-share-button {
+            width: 80px!important;
+        }
     }
 }
 /*********** end header ***********/
@@ -264,64 +265,65 @@ footer{
     color:#fff;
     overflow:hidden;
     .createTeam{
-        margin:45px 0;
+        margin:30px 0;
     }
     .team{
-        width:500px;
-        border-right:1px solid #333;
+        width:1000px;
         h3{
             margin:0 0 30px;
         }
         .teamMember{
-            width:235px;
+            width:256px;
             margin:0 0 20px;
             .memberIcon{
-                width:100px;
+                width:50px;
                 float:left;
-                margin:0 14px 0 0;
+                margin:0 10px 0 0;
             }
             .memberProfile{
-                .memberSns{
-                    margin:12px 0 0;
-                    .facebookIcon a{
-                        display:block;
-                        text-indent:-9999px;
-                        width:21px;
-                        height:20px;
-                        margin:0 4px 12px 0;
-                        background:url(../i/facebook_icon.png) no-repeat left top;
-                    }
-                    .twitterIcon a{
-                        display:block;
-                        text-indent:-9999px;
-                        width:21px;
-                        height:20px;
-                        margin:0 0 10px;
-                        background:url(../i/twitter_icon.png) no-repeat left top;
-
-                    }
-                    .facebookIcon a:hover{
-                        background:url(../i/facebook_icon.png) no-repeat left bottom;
-                    }
-                    .twitterIcon a:hover{
-                        background:url(../i/twitter_icon.png) no-repeat left bottom;
-                    }
-                }
+                margin:3px 10px 0 0;
                 p.name{
-                    font-size:18px;
-                    line-height:18px;
+                    font-size:12px;
+                    line-height:12px;
                     font-style:normal;
                     margin:0 0 8px;
-                    letter-spacing:.25em;
+                    letter-spacing:.2em;
                 }
                 p.post{
                     line-height:1.4em;
-                    letter-spacing:.15em;
-
+                    letter-spacing:.2em;
                 }
             }
+            .memberSns{
+                margin:30px 0 0;
+                .facebookIcon a{
+                    display:block;
+                    text-indent:-9999px;
+                    width:21px;
+                    height:20px;
+                    margin:0 4px 12px 0;
+                    background:url(../i/facebook_icon.png) no-repeat left top;
+                }
+                .twitterIcon a{
+                    display:block;
+                    text-indent:-9999px;
+                    width:21px;
+                    height:20px;
+                    margin:0 0 10px;
+                    background:url(../i/twitter_icon.png) no-repeat left top;
+
+                }
+                .facebookIcon a:hover{
+                    background:url(../i/facebook_icon.png) no-repeat left bottom;
+                }
+                .twitterIcon a:hover{
+                    background:url(../i/twitter_icon.png) no-repeat left bottom;
+                }
+            }
+
         }
         .last{
+            width:232px;
             margin:0;
         }
     }
@@ -335,14 +337,6 @@ footer{
     }
 }
 
-#monosp{
-    width:449px;
-    padding:0 0 0 50px;
-    border-right:none;
-    #second{
-        width:209px;
-    }
-}
 
 /*********** end footer ***********/
 

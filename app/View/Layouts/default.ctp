@@ -116,100 +116,98 @@
     </div>
 	
     <footer>
-    <div class="wrapper">
-        <div class="createTeam clearfix">
-            <div id="hiinc" class="team left clearfix">
-                <h3 class="teamLogo"><a href="http://hiinc.jp/" target="_blank"><img src="/cake/app/webroot/i/hiinc_logo.png" alt=""></a></h3>
-                <div class="teamMember left clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/hiinc_icon01.jpg"></div>
-                    <div class="memberProfile left">
-                        <ul class="memberSns clearfix">
+        <div class="wrapper">
+            <div class="createTeam clearfix">
+                <div id="hiinc" class="team clearfix">
+                    <div class="teamMember left clearfix">
+                        <div class="memberIcon left"><img src="/cake/app/webroot/i/hiinc_icon01.jpg"></div>
+                        <div class="memberProfile left">
+                            <p class="name">家入一真</p>
+                            <p class="post">Hyperinternets<br>Programmer</p>
+                        </div>
+                        <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
                             <li class="twitterIcon left"><a href="https://twitter.com/#!/hbkr" target="_blank">Twitter</a></li>
-                        </ul><D-d>
-                        <p class="name">家入一真</p>
-                        <p class="post">Hyperinternets<br>Programmer</p>
-                    </div>
-                </div><!-- end teamMember -->
-                <div class="teamMember right clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/hiinc_icon02.jpg"></div>
-                    <div class="memberProfile left">
-                        <ul class="memberSns clearfix">
-                            <li class="facebookIcon left"><a href="https://www.facebook.com/akamiya"target="_blank">facebook</a></li>
-                            <li class="twitterIcon left"><a href="https://twitter.com/#!/antonio_kamiya" target="_blank">Twitter</a></li>
                         </ul>
-                        <p class="name">アントニオ</p>
-                        <p class="post">Hyperinternets<br>Programmer</p>
-                    </div>
-                </div><!-- end teamMember -->
-                <div class="teamMember left last clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/hiinc_icon03.jpg"></div>
-                    <div class="memberProfile left">
-                        <ul class="memberSns clearfix">
-                            <li class="facebookIcon left"><a href="https://www.facebook.com/echigoryuichi" target="_blank">facebook</a></li>
-                            <li class="twitterIcon left"><a href="https://twitter.com/#!/tebasakidaisuki" target="_blank">Twitter</a></li>
+                    </div><!-- end teamMember -->
+                    <div class="teamMember left clearfix">
+                        <div class="memberIcon left"><img src="/cake/app/webroot/i/hiinc_icon02.jpg"></div>
+                        <div class="memberProfile left">
+                            <p class="name">名字名前</p>
+                            <p class="post">Hyperinternets<br>Programmer</p>
+                        </div>
+                        <ul class="memberSns left clearfix">
+                            <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
+                            <li class="twitterIcon left"><a href="https://twitter.com/#!/hbkr" target="_blank">Twitter</a></li>
                         </ul>
-                        <p class="name">越後龍一</p>
-                        <p class="post">Hyperinternets<br>Programmer</p>
-                    </div>
-                </div><!-- end teamMember -->
-                <div class="teamMember right last clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/hiinc_icon04.jpg"></div>
-                    <div class="memberProfile left">
-                        <ul class="memberSns clearfix">
+                    </div><!-- end teamMember -->
+                    <div class="teamMember left clearfix">
+                        <div class="memberIcon left"><img src="/cake/app/webroot/i/hiinc_icon03.jpg"></div>
+                        <div class="memberProfile left">
+                            <p class="name">名字名前</p>
+                            <p class="post">Hyperinternets<br>Programmer</p>
+                        </div>
+                        <ul class="memberSns left clearfix">
+                            <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
+                            <li class="twitterIcon left"><a href="https://twitter.com/#!/hbkr" target="_blank">Twitter</a></li>
+                        </ul>
+                    </div><!-- end teamMember -->
+                    <div class="teamMember left last clearfix">
+                        <div class="memberIcon left"><img src="/cake/app/webroot/i/hiinc_icon04.jpg"></div>
+                        <div class="memberProfile left">
+                            <p class="name">鶴岡裕太</p>
+                            <p class="post">Hyperinternets<br>Programmer</p>
+                        </div>
+                        <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/yuta.tsuruoka" target="_blank">facebook</a></li>
                             <li class="twitterIcon left"><a href="https://twitter.com/#!/0Q7" target="_blank">Twitter</a></li>
                         </ul>
-                        <p class="name">鶴岡裕太</p>
-                        <p class="post">Hyperinternets<br>Programmer</p>
-                    </div>
-                </div><!-- end teamMember -->
-            </div><!-- end #hiinc -->
-            <div id="monosp" class="team right clearfix">
-                <h3 class="teamLogo"><a href="http://monosp.com/" target="_blank"><img src="/cake/app/webroot/i/monosp_logo.png" alt=""></a></h3>
-                <div class="teamMember left clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/monosp_icon01.jpg"></div>
-                    <div class="memberProfile left">
-                        <ul class="memberSns clearfix">
+                    </div><!-- end teamMember -->
+                </div><!-- end #hiinc -->
+                <div id="monosp" class="team clearfix">
+                    <div class="teamMember left clearfix">
+                        <div class="memberIcon"><img src="/cake/app/webroot/i/monosp_icon01.jpg"></div>
+                        <div class="memberProfile left">
+                            <p class="name">板橋聡</p>
+                            <p class="post">MONOspace<br>web designer</p>
+                        </div>
+                        <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/profile.php?id=100001862109715" target="_blank">facebook</a></li>
                             <li class="twitterIcon left"><a href="https://twitter.com/#!/satoru_itabashi" target="_blank">Twitter</a></li>
                         </ul>
-                        <p class="name">板橋聡</p>
-                        <p class="post">MONOspace<br>web designer</p>
-                    </div>
-                </div><!-- end teamMember -->
-                <div class="teamMember right clearfix" id="second">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/monosp_icon02.jpg"></div>
-                    <div class="memberProfile left">
-                        <ul class="memberSns clearfix">
+                    </div><!-- end teamMember -->
+                    <div class="teamMember left clearfix">
+                        <div class="memberIcon"><img src="/cake/app/webroot/i/monosp_icon02.jpg"></div>
+                        <div class="memberProfile left">
+                            <p class="name">菊川実紀</p>
+                            <p class="post">MONOspace<br>web designer</p>
+                        </div>
+                        <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/minocolor" target="_blank">facebook</a></li>
                             <li class="twitterIcon left"><a href="https://twitter.com/#!/minocolor" target="_blank">Twitter</a></li>
                         </ul>
-                        <p class="name">菊川実紀</p>
-                        <p class="post">MONOspace<br>web designer</p>
-                    </div>
-                </div><!-- end teamMember -->
-                <div class="teamMember left last clearfix">
-                    <div class="memberIcon"><img src="/cake/app/webroot/i/monosp_icon03.jpg"></div>
-                    <div class="memberProfile left">
+                    </div><!-- end teamMember -->
+                    <div class="teamMember left clearfix">
+                        <div class="memberIcon"><img src="/cake/app/webroot/i/monosp_icon03.jpg"></div>
+                        <div class="memberProfile left">
+                            <p class="name">茂木聡嗣</p>
+                            <p class="post">MONOspace<br>Programmer</p>
+                        </div>
                         <ul class="memberSns clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/profile.php?id=100002491780831" target="_blank">facebook</a></li>
                             <li class="twitterIcon left"><a href="https://twitter.com/#!/Mogi_Satoshi" target="_blank">Twitter</a></li>
                         </ul>
-                        <p class="name">茂木聡嗣</p>
-                        <p class="post">MONOspace<br>Programmer</p>
-                    </div>
-                </div><!-- end teamMember -->
-            </div><!-- end #monosp -->
-        </div><!-- end createTeam -->
-        <ul class="info">
-            <li><a href="">特定商取引法に基づく表記</a>&#12288;&#65372;&#12288;</li>
-            <li><a href="">利用規約</a>&#12288;&#65372;&#12288;</li>
-            <li><a href="">プライバシーポリシー</a>&#12288;&#65372;&#12288;</li>
-            <li><a href="">運営会社</a>&#12288;&#65372;&#12288;</li>
-            <li id="copyRight"><small>&copy;2012 hyperinternets inc. & MONOspace</small></li>
-        </ul>
-    </div>
+                    </div><!-- end teamMember -->
+                </div><!-- end #monosp -->
+            </div><!-- end createTeam -->
+            <ul class="info">
+                <li><a href="">特定商取引法に基づく表記</a>&#12288;&#65372;&#12288;</li>
+                <li><a href="">利用規約</a>&#12288;&#65372;&#12288;</li>
+                <li><a href="">プライバシーポリシー</a>&#12288;&#65372;&#12288;</li>
+                <li><a href="">運営会社</a>&#12288;&#65372;&#12288;</li>
+                <li id="copyRight"><small>&copy;2012 hyperinternets inc. （Designed by MONOspace）</small></li>
+            </ul>
+        </div>
     </footer>
 	<script type="text/javascript" src="j/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="j/modernizr-2.0.6.js"></script>
