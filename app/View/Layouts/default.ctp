@@ -5,15 +5,15 @@
 <!--[if gt IE 8]>--> <html lang="jp"> <!--<![endif]-->
     <head>
         <meta charset="UTF-8">
-        <title>chocokure -Social Valentine platform-</title>
+        <title>chocokure (チョコくれ) - ソーシャルバレンタインプラットフォーム</title>
         <meta name="description" content="男性から女性へチョコをねだる、ソーシャルバレンタインプラットフォーム。">
         <meta name="keywords" content="chocokure,バレンタイン,valentine,チョコ,家入一真,MONOspace">
         <meta name="author" content="家入一真 MONOspace">
-        <meta property="og:title"content="chocokure -Social Valentine platform-">
-        <meta property="og:type"content="social valentine platform">
-        <meta property="og:description"content="男性から女性へチョコをねだる、ソーシャルバレンタインプラットフォーム。">
-        <meta property="og:url"content="http://chocokure.com/">
-        <meta property="og:image"content="<?php echo $this->webroot ?>i/like_link.jpg">
+        <meta property="og:title" content="chocokure -Social Valentine platform-">
+        <meta property="og:description" content="男性から女性へチョコをねだる、ソーシャルバレンタインプラットフォーム。">
+        <meta property="og:url" content="http://chocokure.com/">
+        <meta property="og:image" content="webroot/i/like_link.jpg">
+        <meta property="og:type" content="website" />
         <link rel="stylesheet" href="<?php echo $this->webroot ?>c/reset.css"> 
         <link rel="stylesheet" href="<?php echo $this->webroot ?>c/colorbox.css">
         <link rel="stylesheet" href="<?php echo $this->webroot ?>c/style.css"> 
@@ -40,7 +40,8 @@
             <p class="caption"><img src="<?php echo $this->webroot ?>i/header_caption.png"  alt=""></p>
             <aside class="snsContainer clearfix">
             <div class="snsButton">   
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://chocokure.com/" data-text="【チョコくれ】男性から女性へチョコをねだる、ソーシャルバレンタインプラットフォーム" data-lang="en" data-hashtags="chocokure">ツイート</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://chocokure.com/" data-text="【チョコくれ】女の子へチョコをおねだり出来る、ソーシャルバレンタインプラットフォーム" data-hashtags="chocokure">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div><!-- end .snsContainer-->
             <div class="snsButton">
                 <div id="fb-root"></div>
@@ -55,8 +56,8 @@
         <div id="socialContainer">
             <div class="wrapper clearfix">
                 <div class="megamiContainer">
-                    <h2>Topix</h2>
-                    ・2002.2.3　チョコくれオープンしました。
+                    <h2>Topics</h2>
+                    ・2012/02/03 リリースしました！
                     <br><br><br><br><br><br>
                     <h2>Future</h2>
                     ・おねだりボーイズ機能<br><br>
@@ -154,7 +155,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon01.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">家入一真</p>
-                            <p class="post"><a href="http://hiinc.jp/" target="_blank">hyperinternets</a><br>所長</p>
+                            <p class="post"><a href="http://hiinc.jp/" target="_blank">hyperinternets</a><br>Producer</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
@@ -165,7 +166,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon02.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">アントニオ</p>
-                            <p class="post"><br>糖尿＆下僕</p>
+                            <p class="post"><br>Programmer</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/akamiya" target="_blank">facebook</a></li>
@@ -176,7 +177,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon03.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">越後龍一</p>
-                            <p class="post"><a href="http://hiinc.jp/" target="_blank">hyperinternets</a><br>手羽先</p>
+                            <p class="post"><a href="http://hiinc.jp/" target="_blank">hyperinternets</a><br>AD</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/echigoryuichi" target="_blank">facebook</a></li>
@@ -187,7 +188,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon04.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">鶴岡裕太</p>
-                            <p class="post"><a href="http://hiinc.jp/" target="_blank">hyperinternets</a><br>へべれけ</p>
+                            <p class="post"><a href="http://hiinc.jp/" target="_blank">hyperinternets</a><br>Programmer</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/yuta.tsuruoka" target="_blank">facebook</a></li>
@@ -200,7 +201,7 @@
                         <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon01.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">板橋聡</p>
-                            <p class="post"><a href="http://monosp.com/" target="_blank">MONOspace</a><br>Bボーイ</p>
+                            <p class="post"><a href="http://monosp.com/" target="_blank">MONOspace</a><br>Web Designer</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/profile.php?id=100001862109715" target="_blank">facebook</a></li>
@@ -211,7 +212,7 @@
                         <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon02.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">菊川実紀</p>
-                            <p class="post"><a href="http://monosp.com/" target="_blank">MONOspace</a><br>Picolor</p>
+                            <p class="post"><a href="http://monosp.com/" target="_blank">MONOspace</a><br>Web Designer</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/minocolor" target="_blank">facebook</a></li>
@@ -222,7 +223,7 @@
                         <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon03.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">茂木聡嗣</p>
-                            <p class="post"><a href="http://monosp.com/" target="_blank">MONOspace</a><br>ミライ</p>
+                            <p class="post"><a href="http://monosp.com/" target="_blank">MONOspace</a><br>Programmer</p>
                         </div>
                         <ul class="memberSns clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/profile.php?id=100002491780831" target="_blank">facebook</a></li>
@@ -245,10 +246,6 @@
                         <tr>
                             <th>事業者</th>
                             <td>ワルソウ</td>
-                        </tr>
-                        <tr>
-                            <th>運営責任者</th>
-                            <td>家入　一真（イエイリ　カズマ）</td>
                         </tr>
                         <tr>
                             <th>所在地</th>
