@@ -26,7 +26,7 @@
                         <ul>
                             <li class="clearfix fixHeight">
                             <div class="labelContainer"><label for="name">お名前</label></div>
-                            <div class="inputContainer"><input type="text" placeholder="家入 一真" id="user_name" name="user_name" value= <?php echo $user['User']['user_name'] ?>></div>
+                            <div class="inputContainer"><input type="text" placeholder="おねだり太郎" id="user_name" name="user_name" value= <?php echo $user['User']['user_name'] ?>></div>
                             </li>
                             <li class="clearfix fixHeight">
                             <div class="labelContainer"><label for="tel">郵便番号</label></div>
