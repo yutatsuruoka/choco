@@ -181,20 +181,31 @@ header {
   padding: 55px 0; }
   #socialContainer .megamiContainer {
     float: left;
-    width: 560px;
-    height: 530px;
+    /* width: 560px; */
+    width: 350px;
+    /* height: 530px; */
+    height: 350px;
     overflow: scroll; }
-    #socialContainer .megamiContainer h3 {
+    #socialContainer .megamiContainer h2 {
+      font-size: 25px;
       margin: 0 0 10px; }
     #socialContainer .megamiContainer li {
       width: 70px;
       height: 70px;
       margin: 0 10px 10px 0;
       float: left; }
+  #socialContainer .faceContainer {
+    float: left;
+    /* width: 560px; */
+    width: 300px;
+    /* height: 530px; */
+    height: 350px;
+    overflow: scroll; }
   #socialContainer .happyContainer {
-    margin: 25px 0 0;
+    /* margin: 25px 0 0; */
     float: right;
-    width: 390px; }
+    width: 300px;
+    /* width: 390px; */ }
     #socialContainer .happyContainer li {
       margin: 0 10px 10px 0;
       float: left;

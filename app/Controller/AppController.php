@@ -123,5 +123,4 @@ class AppController extends Controller {
 	    App::uses('Sanitize', 'Utility');
 	    $this->data = Sanitize::clean($this->data, array('remove_html' => true));
 	}
-
 }
