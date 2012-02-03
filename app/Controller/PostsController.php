@@ -26,8 +26,11 @@ class PostsController extends AppController {
                 
                 // remove @ mark
                 $girl_id = $this->request->data['Post']['girl_id'];
-                while (substr($girl_id, 0, 1) == '@') {
+                $fc = substr($girl_id, 0, 1);
+                while ($fc == '@'
+                        || $fc == ' ') {
                     $girl_id = substr($girl_id, 1);                    
+                    $fc = substr($girl_id, 0, 1);
                 }
                 $this->request->data['Post']['girl_id'] = $girl_id;
                 

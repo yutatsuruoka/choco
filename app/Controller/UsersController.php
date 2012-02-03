@@ -24,7 +24,7 @@ class UsersController extends AppController {
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
         $this->Auth->allow('signup', 'login', 'twitter', 'twitter_callback'
-                , 'facebook', 'facebook_callback', 'beg', 'beg_callback');
+                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'give', 'give_callback');
 
         $this->fb = new Facebook(array(  
             'appId'  => Configure::Read('Facebook.appId'),  
