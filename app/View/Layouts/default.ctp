@@ -20,6 +20,18 @@
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <script type="text/javascript">
+
+  		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-23653112-6']);
+ 		_gaq.push(['_trackPageview']);
+
+  		(function() {
+    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+		</script>
     </head>
     <body id="<?php echo $html_body_id ?>" <?php if ($html_body_id == 'contentsFlow07') echo "onLoad=\"document.forms['gateway_form'].submit();\""; ?>>
         <header>
@@ -131,7 +143,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon01.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">家入一真</p>
-                            <p class="post">ワルソウ<br>所長</p>
+                            <p class="post"><a href="http://hiinc.jp/" target="_blank">hyperinternets</a><br>所長</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/ieiri" target="_blank">facebook</a></li>
@@ -142,7 +154,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon02.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">アントニオ</p>
-                            <p class="post">ワルソウ<br>糖尿＆下僕</p>
+                            <p class="post"><br>糖尿＆下僕</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/akamiya" target="_blank">facebook</a></li>
@@ -153,7 +165,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon03.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">越後龍一</p>
-                            <p class="post">ワルソウ<br>手羽先</p>
+                            <p class="post"><a href="http://hiinc.jp/" target="_blank">hyperinternets</a><br>手羽先</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/echigoryuichi" target="_blank">facebook</a></li>
@@ -164,7 +176,7 @@
                         <div class="memberIcon left"><img src="<?php echo $this->webroot ?>i/hiinc_icon04.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">鶴岡裕太</p>
-                            <p class="post">ワルソウ<br>へべれけ</p>
+                            <p class="post"><a href="http://hiinc.jp/" target="_blank">hyperinternets</a><br>へべれけ</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/yuta.tsuruoka" target="_blank">facebook</a></li>
@@ -177,7 +189,7 @@
                         <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon01.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">板橋聡</p>
-                            <p class="post">MONOspace<br>Bボーイ</p>
+                            <p class="post"><a href="http://monosp.com/" target="_blank">MONOspace</a><br>Bボーイ</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/profile.php?id=100001862109715" target="_blank">facebook</a></li>
@@ -188,7 +200,7 @@
                         <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon02.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">菊川実紀</p>
-                            <p class="post">MONOspace<br>Picolor</p>
+                            <p class="post"><a href="http://monosp.com/" target="_blank">MONOspace</a><br>Picolor</p>
                         </div>
                         <ul class="memberSns left clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/minocolor" target="_blank">facebook</a></li>
@@ -199,7 +211,7 @@
                         <div class="memberIcon"><img src="<?php echo $this->webroot ?>i/monosp_icon03.jpg"></div>
                         <div class="memberProfile left">
                             <p class="name">茂木聡嗣</p>
-                            <p class="post">MONOspace<br>ミライ</p>
+                            <p class="post"><a href="http://monosp.com/" target="_blank">MONOspace</a><br>ミライ</p>
                         </div>
                         <ul class="memberSns clearfix">
                             <li class="facebookIcon left"><a href="https://www.facebook.com/profile.php?id=100002491780831" target="_blank">facebook</a></li>

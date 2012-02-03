@@ -3,11 +3,9 @@ class Post extends AppModel {
     public $name = 'Post';
 
     public $validate = array(
-        'title' => array(
-            'rule' => 'notEmpty'
+        'girl_id' => array(
+            'rule' => 'notEmpty',
+            'rule' => array('custom', '/[a-z0-9_@]$/i'),
         ),
-        'body' => array(
-            'rule' => 'notEmpty'
-        )
     );
 }
