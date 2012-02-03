@@ -6,7 +6,7 @@ class PagesController extends AppController {
 
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
-        $this->Auth->allow('index', 'help');
+        $this->Auth->allow('index', 'no');
    
     }
 

@@ -7,7 +7,7 @@
         <div class="presentchoco">
             <div class="wrapper">
                 <div class="presentContainer">
-                    <p class="twitterName">@<?php echo $screen_name ?> さんが <?php echo $girl_id ?> さんにチョコをねだっています</p>
+                    <p class="twitterName">@<?php echo $screen_name ?> さんが @<?php echo $girl_id ?> さんにチョコをねだっています</p>
                     <div class="pushMessage clearfix">
                         <div class="twitterImage left">
                             <img class="twitterIcon" src="https://api.twitter.com/1/users/profile_image?screen_name=<?php echo $screen_name ?>&size=bigger" alt="">

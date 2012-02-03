@@ -9,6 +9,10 @@ class PaymentController extends AppController {
 
 		parent::beforeFilter();
 
+                // Tell the Auth controller that the 'create' action is accessible 
+                // without being logged in.
+                $this->Auth->allow('index', 'paypal_success', 'paypal_failure');
+                
 		$this->set("title_for_layout", "Paypal Payment");
 
 		//$this->logger->debug('Start debugging payment controller.');
