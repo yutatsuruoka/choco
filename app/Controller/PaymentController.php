@@ -59,6 +59,7 @@ class PaymentController extends AppController {
                     $root_path = rtrim($this->currentURL(), "/index/$post_id");
                     $myPaypal->addField('return', "$root_path/paypal_success/?uid=$user_id&pid=$post_id");
                     $myPaypal->addField('cancel_return', "$root_path/paypal_failure/?uid=$user_id&pid=$post_id");
+                    $myPaypal->addField('notify_url', "$root_path/paypal_failure/?uid=$user_id&pid=$post_id");
 
                     // Specify the product information
                     $myPaypal->addField('item_name', ITEM_NAME);
@@ -66,7 +67,7 @@ class PaymentController extends AppController {
                     $myPaypal->addField('item_number', 1);
 
                     // Specify any custom value
-                    $myPaypal->addField('custom', PAYMENT_SUBJECT);
+                    $myPaypal->addField('custom', $post_id);
 
                     // Enable test mode if needed
                     //$myPaypal->enableTestMode();

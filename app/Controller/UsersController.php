@@ -163,13 +163,14 @@ class UsersController extends AppController {
                            	 . ' http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')
                            	 . ' #chocokure'
                         	));
-                        
-                	$this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
-            	} else {
-             		$this->Session->setFlash('Unable to add your post.');
+                    $this->Session->setFlash('');
+                    $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
             	}
-        	}
+            }
     	}
+        
+        $this->set('errors', $this->User->validationErrors);
+           
     }
 	
     public function thankyou() {

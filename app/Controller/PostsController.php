@@ -26,12 +26,15 @@ class PostsController extends AppController {
             	if ($this->Post->save($this->request->data)) {
                 	$this->Session->write('girl_id', $this->request->data['Post']['girl_id']);
                 	$this->Session->write('insert_id', $this->Post->getInsertID());
+        	        $this->Session->setFlash('');
 	                $this->redirect(array('controller' => 'users', 'action' => 'beg'));
     	        } else {
         	        $this->Session->setFlash('Unable to add your post.');
             	}
-        	}
+            }
     	}
+        
+        $this->set('errors', $this->Post->validationErrors);
     }
     
     function edit($id = null) {
@@ -61,6 +64,7 @@ class PostsController extends AppController {
             
             $this->set('post_id', $id);
             $this->set('screen_name', $u['User']['screen_name']);
+            $this->set('girl_id', $p['Post']['girl_id']);
         }
     }
 
