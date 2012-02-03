@@ -61,6 +61,7 @@ class PostsController extends AppController {
             
             $this->set('post_id', $id);
             $this->set('screen_name', $u['User']['screen_name']);
+            $this->set('girl_id', $p['Post']['girl_id']);
         }
     }
 
