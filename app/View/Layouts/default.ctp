@@ -12,7 +12,7 @@
         <meta property="og:title" content="chocokure -Social Valentine platform-">
         <meta property="og:description" content="男性から女性へチョコをねだる、ソーシャルバレンタインプラットフォーム。">
         <meta property="og:url" content="http://chocokure.com/">
-        <meta property="og:image" content="webroot/i/like_link.jpg">
+        <meta property="og:image" content="http://chocokure.com/i/like_link.jpg">
         <meta property="og:type" content="website" />
         <link rel="stylesheet" href="<?php echo $this->webroot ?>c/reset.css"> 
         <link rel="stylesheet" href="<?php echo $this->webroot ?>c/colorbox.css">
@@ -60,6 +60,7 @@
                     ・2012/02/03 リリースしました！
                     <br><br><br><br><br><br>
                     <h2>Future</h2>
+                    ・ホワイトデー復讐機能<br><br>
                     ・おねだりボーイズ機能<br><br>
                     ・おねだりマスカッツと提携<br><br>
                     ・ソーシャルおねだりプラットフォーム化<br>
