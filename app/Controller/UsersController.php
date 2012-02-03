@@ -158,7 +158,7 @@ class UsersController extends AppController {
             	            , $this->Session->read('accessSecret')
                 	        , 'https://api.twitter.com/1/statuses/update.json'
                     	    , array('status' => 
-                        	    '.' . $this->Session->read('girl_id') . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
+                        	    '.@' . $this->Session->read('girl_id') . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
                             	. '【このツイートはチョコくれを利用して送られています】'
                            	 . ' http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')
                            	 . ' #chocokure'

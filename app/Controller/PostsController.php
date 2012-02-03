@@ -21,10 +21,18 @@ class PostsController extends AppController {
     
     public function add() {
         if ($this->request->is('post')) {
-            if (!empty($this->data)) {
-      		  	$this->__sanitize();
+            if (!empty($this->request->data)) {
+                $this->__sanitize();
+                
+                // remove @ mark
+                $girl_id = $this->request->data['Post']['girl_id'];
+                if (substr($girl_id, 0, 1) == '@') {
+                    $girl_id = substr($girl_id, 1);
+                    $this->request->data['Post']['girl_id'] = $girl_id;
+                }
+                
             	if ($this->Post->save($this->request->data)) {
-                	$this->Session->write('girl_id', $this->request->data['Post']['girl_id']);
+                	$this->Session->write('girl_id', $girl_id);
                 	$this->Session->write('insert_id', $this->Post->getInsertID());
         	        $this->Session->setFlash('');
 	                $this->redirect(array('controller' => 'users', 'action' => 'beg'));
