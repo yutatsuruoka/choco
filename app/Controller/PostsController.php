@@ -26,10 +26,10 @@ class PostsController extends AppController {
                 
                 // remove @ mark
                 $girl_id = $this->request->data['Post']['girl_id'];
-                if (substr($girl_id, 0, 1) == '@') {
-                    $girl_id = substr($girl_id, 1);
-                    $this->request->data['Post']['girl_id'] = $girl_id;
+                while (substr($girl_id, 0, 1) == '@') {
+                    $girl_id = substr($girl_id, 1);                    
                 }
+                $this->request->data['Post']['girl_id'] = $girl_id;
                 
             	if ($this->Post->save($this->request->data)) {
                 	$this->Session->write('girl_id', $girl_id);
