@@ -4,29 +4,21 @@ class User extends AppModel {
     public $name = 'User';
 
     public $validate = array(
-        'username' => array(
-            'alphaNumeric' => array(
-                'rule' => 'alphaNumeric',
-                'allowEmpty' => FALSE,
-                'message' => 'Please insert a username'
-            ),
-            'check_user' => array(
-                'rule' => 'check_user',
-                'message' => 'Either your Username or Password is invalid',
-                'last' => TRUE
-            ),
-            'check_username_exists' => array(
-                'rule' => 'check_username_exists',
-                'message' => 'Username already exists, please choose another',
-            ),
+        'mail' => array(
+            'rule' => 'notEmpty',
         ),
-        'password' => array(
-            'alphaNumeric' => array(
-                'rule' => 'alphaNumeric',
-                'allowEmpty' => FALSE,
-                'message' => 'Please insert a password'
-            )
-        )
+        'postal_code' => array(
+            'rule' => 'notEmpty',
+        ),
+        'user_name' => array(
+            'rule' => 'notEmpty',
+        ),
+        'address' => array(
+            'rule' => 'notEmpty',
+        ),
+        'tel' => array(
+            'rule' => 'notEmpty',
+        ),        
     );
 
     /**

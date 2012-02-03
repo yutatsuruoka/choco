@@ -21,15 +21,17 @@ class PostsController extends AppController {
     
     public function add() {
         if ($this->request->is('post')) {
-            if ($this->Post->save($this->request->data)) {
-                $this->Session->write('girl_id', $this->request->data['Post']['girl_id']);
-                $this->Session->write('insert_id', $this->Post->getInsertID());
-                
-                $this->redirect(array('controller' => 'users', 'action' => 'beg'));
-            } else {
-                $this->Session->setFlash('Unable to add your post.');
-            }
-        }
+            if (!empty($this->data)) {
+      		  	$this->__sanitize();
+            	if ($this->Post->save($this->request->data)) {
+                	$this->Session->write('girl_id', $this->request->data['Post']['girl_id']);
+                	$this->Session->write('insert_id', $this->Post->getInsertID());
+	                $this->redirect(array('controller' => 'users', 'action' => 'beg'));
+    	        } else {
+        	        $this->Session->setFlash('Unable to add your post.');
+            	}
+        	}
+    	}
     }
     
     function edit($id = null) {

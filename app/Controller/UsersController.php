@@ -149,24 +149,27 @@ class UsersController extends AppController {
         $this->User->id = $this->Session->read('user_Id');
         $this->set('user', $this->User->read());
         if ($this->request->is('post')) {
-            if ($this->User->save($this->request->data)) {
+            if (!empty($this->data)) {
+      		  	$this->__sanitize();
+	            if ($this->User->save($this->request->data)) {
 
-                $this->OauthConsumer->post('Twitter'
-                        , $this->Session->read('accessKey')
-                        , $this->Session->read('accessSecret')
-                        , 'https://api.twitter.com/1/statuses/update.json'
-                        , array('status' => 
-                            '.' . $this->Session->read('girl_id') . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
-                            . '【このツイートはチョコくれを利用して送られています】'
-                            . ' http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')
-                            . ' #chocokure'
-                        ));
+    	            $this->OauthConsumer->post('Twitter'
+        	                , $this->Session->read('accessKey')
+            	            , $this->Session->read('accessSecret')
+                	        , 'https://api.twitter.com/1/statuses/update.json'
+                    	    , array('status' => 
+                        	    '.' . $this->Session->read('girl_id') . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
+                            	. '【このツイートはチョコくれを利用して送られています】'
+                           	 . ' http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')
+                           	 . ' #chocokure'
+                        	));
                         
-                $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
-            } else {
-                $this->Session->setFlash('Unable to add your post.');
-            }
-        }
+                	$this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
+            	} else {
+             		$this->Session->setFlash('Unable to add your post.');
+            	}
+        	}
+    	}
     }
 	
     public function thankyou() {
