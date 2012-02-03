@@ -55,8 +55,15 @@
         <div id="socialContainer">
             <div class="wrapper clearfix">
                 <div class="megamiContainer">
-                    <h3>君も女神達にチョコをもらおう！！</h3>
-                    <ul class="clearfix">
+                    <h2>Topix</h2>
+                    ・2002.2.3　チョコくれオープンしました。
+                    <br><br><br><br><br><br>
+                    <h2>Future</h2>
+                    ・おねだりボーイズ機能<br><br>
+                    ・おねだりマスカッツと提携<br><br>
+                    ・ソーシャルおねだりプラットフォーム化<br>
+                    <!--
+<ul class="clearfix">
                         <li><img src="https://si0.twimg.com/profile_images/1562503499/image_reasonably_small.png" width="70" height="70"></li>
                         <li><img src="https://si0.twimg.com/profile_images/1371844197/__________2011-05-28_14.00.09__reasonably_small.png" width="70" height="70"></li>
                         <li><img src="https://si0.twimg.com/profile_images/1709587444/2011-11-29-11.27.53_reasonably_small.jpg" width="70" height="70"></li>
@@ -100,6 +107,10 @@
                         <li><img src="https://twimg0-a.akamaihd.net/profile_images/1712872998/yosaaan1123_reasonably_small.jpg" width="70" height="70"></li>
                         <li><img src="https://twimg0-a.akamaihd.net/profile_images/1522806792/o015001501303897278923_reasonably_small.jpg" width="70" height="70"></li>
                     </ul> 
+-->
+                </div>
+                <div class="faceContainer">
+                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fwarusou&amp;width=300&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:290px;" allowTransparency="true"></iframe>
                 </div>
                 <div class="happyContainer">
                     <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
@@ -111,8 +122,8 @@
                             interval: 30000,
                             title: 'Social Valentine platform.',
                             subject: '#chocokure',
-                            width: 390,
-                            height: 382,
+                            width: 320,
+                            height: 200,
                             theme: {
                                 shell: {
                                     background: '#ffffff',
@@ -223,7 +234,7 @@
         </div>
         <ul class="info">
                 <li><a class='inline' href="#popUp01">特定商取引法に基づく表記</a>&#12288;&#65372;&#12288;</li>
-                <li><a class='inline' href="#popUp02">会員契約</a>&#12288;&#65372;&#12288;</li>
+                <li><a class='inline' href="#popUp02">会員利用規約</a>&#12288;&#65372;&#12288;</li>
                 <li><a class='inline' href="#popUp03">プライバシーポリシー</a>&#12288;&#65372;&#12288;</li>
                 <li id="copyRight"><small>&copy;2012 <a href="http://warusou.com/" target="_blank">ワルソウ</a>（Designed by <a href="http://monosp.com/" target="_blank">MONOspace</a>）</small></li>
             </ul>
