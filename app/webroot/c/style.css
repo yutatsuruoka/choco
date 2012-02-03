@@ -76,7 +76,7 @@ header {
       header .wrapper .snsContainer .snsButton {
         float: left; }
     header .wrapper iframe.twitter-share-button {
-      width: 80px!important; }
+      width: 100px!important; }
 
 /*********** end header ***********/
 /*********** .entryContainer ***********/
