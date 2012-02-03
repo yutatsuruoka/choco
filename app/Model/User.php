@@ -5,20 +5,26 @@ class User extends AppModel {
 
     public $validate = array(
         'mail' => array(
-            'rule' => 'notEmpty',
+            'rule' => 'notEmpty'
+            , 'message' => 'メールが入力されていません' 
+
         ),
         'postal_code' => array(
-            'rule' => 'notEmpty',
+            'rule' => 'notEmpty'
+            , 'message' => '郵便番号が入力されていません' 
         ),
         'user_name' => array(
-            'rule' => 'notEmpty',
+            'rule' => 'notEmpty'
+            , 'message' => 'ユーザー名が入力されていません' 
         ),
         'address' => array(
-            'rule' => 'notEmpty',
+            'rule' => 'notEmpty'
+            , 'message' => '住所が入力されていません' 
         ),
         'tel' => array(
-            'rule' => 'notEmpty',
-        ),        
+            'rule' => 'notEmpty'
+            , 'message' => '電話番号が入力されていません' 
+        )
     );
 
     /**

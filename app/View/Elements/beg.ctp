@@ -1,6 +1,20 @@
-<div class="entryContainer">
+<?php
+    $e  = '';
+    if ($errors) {
+        foreach($errors as $error) {
+            if (strlen($e) > 0) {
+                $e .= '<br>';
+            }
+            $e .= $error[0];
+        }
+    }
+    if (strlen($e) == 0) {
+        $e = '残り<strong>2,000</strong>チョコ';
+    }
+?>
+        <div class="entryContainer">
     <div class="wrapper">
-        <p class="counter">残り<strong>2,000</strong>チョコ<p>     
+        <p class="counter"><?php echo $e ?></p>     
         <div class="clearfix">
             <div class="left parenthesis"><img src="<?php echo $this->webroot ?>i/parenthesis_left.png" alt=""></div>
             <div class="left formContainer">
@@ -13,6 +27,7 @@
                         , 'label' => false
                         , 'class' => 'jq-placeholder'
                         , 'title' => "女の子のTwitterアカウントを入力"
+                        , 'error' => false
                         ));
                     echo $this->Form->submit('',array('id' => 'submitButton'));
                     echo $this->Form->end();

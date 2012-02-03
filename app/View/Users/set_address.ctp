@@ -1,6 +1,21 @@
 <?php
     $this->set('html_body_id', 'contentsFlow02');
-    echo $this->Session->flash();
+
+    $e  = '';
+    if ($errors) {
+        foreach($errors as $error) {
+            if (strlen($e) > 0) {
+                $e .= '<br>';
+            }
+            $e .= $error[0];
+        }
+    }
+
+    if (strlen($e) == 0) {
+        $e = $this->Session->flash();
+    }
+    
+    echo '<font color=\'red\'>' . $e . '</font>';
 ?>	 
         <div id="formSheet">
             <div class="wrapper">
@@ -33,10 +48,12 @@
                             <div class="labelContainer"><label for="mail">メール</label></div>
                             <div class="inputContainer"><input type="text" placeholder="gimmechoco@gmail.com" id="mail" name="mail" value=<?php echo $user['User']['mail'] ?>></div>
                             </li>
-                            <li class="clearfix fixHeight">
-                            <div class="labelContainer"><label for="mail">メッセージ</label></div>
-                            <div class="inputContainer"><input type="text" placeholder="20文字以内" id="mail" name="mail" value=<?php echo $user['User']['mail'] ?>></div>
-                            </li>
+<!--
+//                            <li class="clearfix fixHeight">
+//                            <div class="labelContainer"><label for="mail">メッセージ</label></div>
+//                            <div class="inputContainer"><input type="text" placeholder="20文字以内" id="mail" name="mail" value=<?php echo $user['User']['mail'] ?>></div>
+//                            </li>
+-->
                         </ul>
                     </div>
                     <p class="submit"><input type="submit" id="sheetBtn" src="<?php echo $this->webroot ?>i/submit_btn.png" value=""></p>
