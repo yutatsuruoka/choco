@@ -69,9 +69,13 @@
 <?php
                         $count = 0;
                         foreach ($girls as $girl ) {
-                            echo '<li><img src="https://api.twitter.com/1/users/profile_image?screen_name=';
+                            echo '<li>';
+                            echo '<a href=\'https://twitter.com/#!/' . $girl . '\'>';
+                            echo '<img src="https://api.twitter.com/1/users/profile_image?screen_name=';
                             echo $girl;
-                            echo '&size=bigger" width="70" height="70"></li>';
+                            echo '&size=bigger" width="70" height="70">';
+                            echo '</a>';
+                            echo '</li>';
                             
                             // draw only first 60
                             $count ++;
