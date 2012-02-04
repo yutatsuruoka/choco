@@ -3,7 +3,7 @@ class PostsController extends AppController {
     public $name = 'Posts';
     public $helpers = array('Html', 'Form');
     public $components = array('OauthConsumer');
-    var $uses = array('User', 'Post'); 
+    var $uses = array('User', 'Post', 'Payment'); 
 	
     public function index() {
         $this->set('posts', $this->Post->find('all'));
@@ -44,6 +44,14 @@ class PostsController extends AppController {
             	}
             }
     	}
+        
+        // get count of payments
+        $condition = array("status" => 1, "is_delete" => 0);
+        $count = $this->Payment->find('count', array('conditions' => $condition));
+        if ($count > 2000) {
+            $count = 2000;
+        }
+        $this->set('remaining', 2000 - $count);
         
         $this->set('errors', $this->Post->validationErrors);
     }
