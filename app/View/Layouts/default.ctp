@@ -111,10 +111,8 @@
 <?php
                         foreach ($girls as $girl ) {
                             echo '<li>';
-                            echo '<a href=\'https://twitter.com/#!/' . $girl . '\'>';
-                            echo '<img src="https://api.twitter.com/1/users/profile_image?screen_name=';
-                            echo $girl;
-                            echo '&size=bigger" width="70" height="70">';
+                            echo '<a href=\'https://twitter.com/#!/' . $girl['screen_name'] . '\'>';
+                            echo '<img src="' . $girl['avatar'] . '" width="70" height="70">';
                             echo '</a>';
                             echo "</li>\n";
                         }

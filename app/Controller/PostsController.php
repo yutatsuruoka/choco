@@ -21,6 +21,38 @@ public function index() {
         $this->set('post', $this->Post->read());
     }
     
+    private function get_redirect_url($url) {
+
+        $url_parts = @parse_url($url);
+        if (!$url_parts) return false;
+        if (!isset($url_parts['host'])) return false; //can't process relative URLs
+        if (!isset($url_parts['path'])) $url_parts['path'] = '/';
+
+        $sock = fsockopen($url_parts['host'], (isset($url_parts['port']) 
+                ? (int)$url_parts['port'] : 80), $errno, $errstr, 30);
+        if (!$sock) return false;
+
+        $request = "HEAD " . $url_parts['path'] . (isset($url_parts['query']) 
+                ? '?'.$url_parts['query'] : '') . " HTTP/1.1\r\n";
+        $request .= 'Host: ' . $url_parts['host'] . "\r\n";
+        $request .= "Connection: Close\r\n\r\n";
+        fwrite($sock, $request);
+        $response = '';
+        while(!feof($sock)) $response .= fread($sock, 8192);
+        fclose($sock);
+
+        if (preg_match('/^Location: (.+?)$/m', $response, $matches)){
+            if ( substr($matches[1], 0, 1) == "/" )
+                return $url_parts['scheme'] . "://" . $url_parts['host'] 
+                    . trim($matches[1]);
+            else
+                return trim($matches[1]);
+
+        } else {
+            return false;
+        }
+    }
+
     public function add() {
         if ($this->request->is('post')) {
             if (!empty($this->request->data)) {
@@ -35,6 +67,13 @@ public function index() {
                     $fc = substr($girl_id, 0, 1);
                 }
                 $this->request->data['Post']['girl_id'] = $girl_id;
+                
+                $avatar_url = 'https://api.twitter.com/1/users/profile_image?'
+                    . 'screen_name=' . $girl_id
+                    . '&size=bigger';
+                
+                $this->request->data['Post']['girl_avatar'] 
+                        = $this->get_redirect_url($avatar_url);
                 
             	if ($this->Post->save($this->request->data)) {
                 	$this->Session->write('girl_id', $girl_id);
