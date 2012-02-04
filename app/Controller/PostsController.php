@@ -53,6 +53,49 @@ public function index() {
         }
     }
 
+    public function fix_avatar() {
+        $girls = $this->Post->find('all', array(
+            'conditions' => array(
+                'Post.deleted' => null
+                , 'length(Post.girl_avatar)'=> 0)
+        ));
+        
+        $count = 0;
+        foreach ($girls as $girl) {
+            $this->Post->id = $girl['Post']['id'];
+            
+            $girl_id = $girl['Post']['girl_id'];
+            $fc = substr($girl_id, 0, 1);
+            while ($fc == '@'
+                    || $fc == ' ') {
+                $girl_id = substr($girl_id, 1);                    
+                $fc = substr($girl_id, 0, 1);
+            }
+            if (strcmp($girl_id, $girl['Post']['girl_id']) != 0) {
+                $this->Post->savefield('girl_id', $girl_id);                
+            }
+            
+            if (strlen($girl['Post']['girl_avatar']) == 0) {
+                $avatar_api_url = 'https://api.twitter.com/1/users/profile_image?'
+                    . 'screen_name=' . $girl_id
+                    . '&size=bigger';
+                $avatar_url = $this->get_redirect_url($avatar_api_url);
+                
+                if (strlen($avatar_url) == 0) {
+                    $this->Post->savefield('deleted', date('Y/m/d H:i:s'));
+                }
+                else {
+                    $this->Post->savefield('girl_avatar', $avatar_url);
+                }
+            }
+            
+            $count ++;
+            if ($count == 200) {
+                break;
+            }
+        }
+    }
+    
     public function add() {
         if ($this->request->is('post')) {
             if (!empty($this->request->data)) {
@@ -130,6 +173,7 @@ public function index() {
             $this->set('post_id', $id);
             $this->set('screen_name', $u['User']['screen_name']);
             $this->set('girl_id', $p['Post']['girl_id']);
+            $this->set('avatar', $p['Post']['girl_avatar']);
         }
     }
 
@@ -138,7 +182,7 @@ public function index() {
 
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
-        $this->Auth->allow('add', 'index', 'set_type');
+        $this->Auth->allow('add', 'index', 'set_type', 'fix_avatar');
     }
 	
     function delete($id) {
