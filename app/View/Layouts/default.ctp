@@ -65,52 +65,22 @@
                     ・おねだりボーイズ機能<br><br>
                     ・おねだりマスカッツと提携<br><br>
                     ・ソーシャルおねだりプラットフォーム化<br>
-                    <!--
-<ul class="clearfix">
-                        <li><img src="https://si0.twimg.com/profile_images/1562503499/image_reasonably_small.png" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1371844197/__________2011-05-28_14.00.09__reasonably_small.png" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1709587444/2011-11-29-11.27.53_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1560100725/twipple1316999192429_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1751971960/annnnne09_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1288559643/albatross_sss_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1288575533/saitama_ken2_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1764859390/IMG_4626_reasonably_small.JPG" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1633461953/maakoropokkul_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1647054040/top_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1239447061/Unnamed-1_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/946435806/__________2010-05-31_21.08.47__reasonably_small.png" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1782113083/image_reasonably_small.png" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1777072403/ayanatsubaki_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1372243284/image_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://si0.twimg.com/profile_images/1381862084/riserin_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/854566596/shiho0531_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1725872960/image_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1029370766/kkkk_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/787390130/9862_1270011382_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1653728312/image_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/782629041/_MG_4718_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1642270942/110228_2303_0500010001_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1425437571/yamazaki_mai_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1714629165/b638cd6ddaabaf3fd52838662e0c1df7_reasonably_small.jpeg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1326397096/kanako_kawabata_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1753212711/yamamoto_yuuki_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1744738411/image_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1714877105/image_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1273310085/54617440_origin_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1597806427/DSC07994____reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1712463112/_________reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1670920637/image_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1367776512/imagesCAL7U4R8_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1397149362/parkbom_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1642047812/profile1_by_Koshi_Ann_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1130179833/FV039_L_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1588254312/image_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1759317212/ktr_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1795953043/fuyu_tn_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1712872998/yosaaan1123_reasonably_small.jpg" width="70" height="70"></li>
-                        <li><img src="https://twimg0-a.akamaihd.net/profile_images/1522806792/o015001501303897278923_reasonably_small.jpg" width="70" height="70"></li>
+                    <ul class="clearfix">
+<?php
+                        $count = 0;
+                        foreach ($girls as $girl ) {
+                            echo '<li><img src="https://api.twitter.com/1/users/profile_image?screen_name=';
+                            echo $girl;
+                            echo '&size=bigger" width="70" height="70"></li>';
+                            
+                            // draw only first 60
+                            $count ++;
+                            if ($count > 60) {
+                                break;
+                            }
+                        }
+?>
                     </ul> 
--->
                 </div>
                 <div class="faceContainer">
                 <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fwarusou&amp;width=300&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:290px;" allowTransparency="true"></iframe>

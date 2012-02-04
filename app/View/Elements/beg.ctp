@@ -17,7 +17,8 @@
         }
     }
 ?>
-        <div class="entryContainer">
+
+<div class="entryContainer">
     <div class="wrapper">
         <p class="counter"><?php echo $e ?></p>     
         <div class="clearfix">

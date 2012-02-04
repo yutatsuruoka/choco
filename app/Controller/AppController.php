@@ -25,6 +25,7 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
     var $helpers = array('Html', 'Form', 'Facebook.Facebook', "Session");
     var $components = array('Session', 'Auth', 'Facebook.Connect');
+    var $uses = array('Post'); 
 
     var $current_user = false;
     
@@ -102,6 +103,14 @@ class AppController extends Controller {
         // For example, in your view you can reach the current user's
         // email address as follows: echo $current_user['email'];
         $this->set('current_user', $this->current_user );
+        
+        // create array of most recent girl_ids
+        $girls = $this->Post->find('list', array(
+            'fields' => array('Post.girl_id')
+            , 'conditions' => array('Post.deleted' => null)
+            , 'order' => array('Post.created DESC')
+        ));
+        $this->set('girls', $girls);
     }    
     
     function currentURL(){
