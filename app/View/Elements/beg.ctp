@@ -9,7 +9,12 @@
         }
     }
     if (strlen($e) == 0) {
-        $e = '限定<strong>' . $remaining . '</strong>チョコ';
+        if ($remaining > 1700) {
+            $e = 'チョコ<strong>' . $begs . '個</strong>おねだり済み';
+        }
+        else {
+            $e = '限定<strong>' . $remaining . '</strong>チョコ';
+        }
     }
 ?>
         <div class="entryContainer">

@@ -49,11 +49,16 @@ public function index() {
         
         // get count of payments
         $condition = array("status" => 1, "is_delete" => 0);
-        $count = $this->Payment->find('count', array('conditions' => $condition));
-        if ($count > 2000) {
-            $count = 2000;
+        $paid = $this->Payment->find('count', array('conditions' => $condition));
+        if ($paid > 2000) {
+            $paid = 2000;
         }
-        $this->set('remaining', 2000 - $count);
+        $this->set('remaining', 2000 - $paid);
+        
+        // get count of begs
+        $condition = array("deleted" => null);
+        $begs = $this->Post->find('count', array('conditions' => $condition));
+        $this->set('begs', $begs);
         
         $this->set('errors', $this->Post->validationErrors);
     }
