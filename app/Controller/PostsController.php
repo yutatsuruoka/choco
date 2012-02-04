@@ -118,14 +118,19 @@ public function index() {
                 $this->request->data['Post']['girl_avatar'] 
                         = $this->get_redirect_url($avatar_url);
                 
-            	if ($this->Post->save($this->request->data)) {
-                	$this->Session->write('girl_id', $girl_id);
-                	$this->Session->write('insert_id', $this->Post->getInsertID());
-        	        $this->Session->setFlash('');
-	                $this->redirect(array('controller' => 'users', 'action' => 'beg'));
-    	        } else {
-        	        $this->Session->setFlash('Unable to add your post.');
-            	}
+                if (strlen($this->request->data['Post']['girl_avatar']) == 0) {
+                    $this->Session->setFlash('Twitter IDが無効です');
+                } else {
+                    if ($this->Post->save($this->request->data)) {
+                            $this->Session->write('girl_id', $girl_id);
+                            $this->Session->write('insert_id', $this->Post->getInsertID());
+                            $this->Session->setFlash('');
+                            $this->redirect(array('controller' => 'users', 'action' => 'beg'));
+                    } else {
+                            $this->Session->setFlash('Unable to add your post.');
+                    }
+                }
+                
             }
     	}
         
