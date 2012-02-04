@@ -9,7 +9,7 @@
         }
     }
     if (strlen($e) == 0) {
-        $e = '残り<strong>' . $remaining . '</strong>チョコ';
+        $e = '限定<strong>' . $remaining . '</strong>チョコ';
     }
 ?>
         <div class="entryContainer">

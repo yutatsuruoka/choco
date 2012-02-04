@@ -5,9 +5,11 @@ class PostsController extends AppController {
     public $components = array('OauthConsumer');
     var $uses = array('User', 'Post', 'Payment'); 
 	
-    public function index() {
+    /*
+public function index() {
         $this->set('posts', $this->Post->find('all'));
     }
+*/
     
     public function view($id = null) {
     	$this->Post->id = $id;
