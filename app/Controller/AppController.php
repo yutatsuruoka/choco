@@ -105,11 +105,23 @@ class AppController extends Controller {
         $this->set('current_user', $this->current_user );
         
         // create array of most recent girl_ids
-        $girls = $this->Post->find('list', array(
-            'fields' => array('Post.girl_id')
+        $all_girls = $this->Post->find('all', array(
+            'fields' => array('DISTINCT Post.girl_id')
             , 'conditions' => array('Post.deleted' => null)
             , 'order' => array('Post.created DESC')
         ));
+        
+        $girls = array();
+        $count = 0;
+        foreach ($all_girls as $girl ) {
+            $girls[] = $girl['Post']['girl_id'];
+            // draw only first 40
+            $count ++;
+            if ($count == 40) {
+                break;
+            }
+        }
+
         $this->set('girls', $girls);
     }    
     

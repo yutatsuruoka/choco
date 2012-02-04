@@ -179,17 +179,17 @@ header {
 #socialContainer {
   background: #f6f6f6;
   padding: 55px 0; }
-  #socialContainer .megamiContainer {
+  #socialContainer .topicsContainer {
     float: left;
     /* width: 560px; */
     width: 350px;
     /* height: 530px; */
     height: 350px;
     overflow: scroll; }
-    #socialContainer .megamiContainer h2 {
+    #socialContainer .topicsContainer h2 {
       font-size: 25px;
       margin: 0 0 10px; }
-    #socialContainer .megamiContainer li {
+    #socialContainer .topicsContainer li {
       width: 70px;
       height: 70px;
       margin: 0 10px 10px 0;
@@ -215,6 +215,25 @@ header {
       margin: 0; }
 
 /*********** end #socialContainer ***********/
+
+#megamiContainer {
+  background: #f6d6d6;
+  padding: 10px 0; }
+#megamiContainer h2 {
+  font-size: 25px;
+  margin: 0px 20px 10px;
+}
+#megamiContainer .imagebox {
+  float: center;
+  width: 800px;
+  height: 350px;
+  overflow: scroll; }
+#megamiContainer .imagebox li {
+    width: 70px;
+    height: 70px;
+    margin: 0 10px 10px 0;
+    float: left; }
+
 /*********** footer ***********/
 footer {
   font-size: 10px;

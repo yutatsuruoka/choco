@@ -55,7 +55,7 @@
 		
         <div id="socialContainer">
             <div class="wrapper clearfix">
-                <div class="megamiContainer">
+                <div class="topicsContainer">
                     <h2>Topics</h2>
                     ・<a href="http://dailynews.yahoo.co.jp/fc/entertainment/valentine_s_day/?1328253168" style="color: black;">yahoo!ニュースに掲載されました！</a><br></br>
                     ・2012/02/03 リリースしました！
@@ -65,26 +65,6 @@
                     ・おねだりボーイズ機能<br><br>
                     ・おねだりマスカッツと提携<br><br>
                     ・ソーシャルおねだりプラットフォーム化<br>
-                    <ul class="clearfix">
-<?php
-                        $count = 0;
-                        foreach ($girls as $girl ) {
-                            echo '<li>';
-                            echo '<a href=\'https://twitter.com/#!/' . $girl . '\'>';
-                            echo '<img src="https://api.twitter.com/1/users/profile_image?screen_name=';
-                            echo $girl;
-                            echo '&size=bigger" width="70" height="70">';
-                            echo '</a>';
-                            echo '</li>';
-                            
-                            // draw only first 60
-                            $count ++;
-                            if ($count > 60) {
-                                break;
-                            }
-                        }
-?>
-                    </ul> 
                 </div>
                 <div class="faceContainer">
                 <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fwarusou&amp;width=300&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:290px;" allowTransparency="true"></iframe>
@@ -123,6 +103,27 @@
                 </div>
             </div>
         </div>
+        <div id="megamiContainer">
+            <h2 align="left">最近のねだられガール</h2>
+            <div class="wrapper clearfix" align="center">
+                <div class="imagebox">
+                    <ul class="clearfix">
+<?php
+                        foreach ($girls as $girl ) {
+                            echo '<li>';
+                            echo '<a href=\'https://twitter.com/#!/' . $girl . '\'>';
+                            echo '<img src="https://api.twitter.com/1/users/profile_image?screen_name=';
+                            echo $girl;
+                            echo '&size=bigger" width="70" height="70">';
+                            echo '</a>';
+                            echo "</li>\n";
+                        }
+?>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+        
         <footer>
         <div class="wrapper">
             <div class="createTeam clearfix">
