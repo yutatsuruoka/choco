@@ -109,6 +109,7 @@
                 <div class="imagebox">
                     <ul class="clearfix">
 <?php
+
                         foreach ($girls as $girl ) {
                             echo '<li>';
                             echo '<a href=\'https://twitter.com/#!/' . $girl['screen_name'] . '\'>';
