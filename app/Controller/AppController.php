@@ -107,7 +107,8 @@ class AppController extends Controller {
         // create array of most recent girl_ids
         $all_girls = $this->Post->find('all', array(
             'fields' => array('DISTINCT Post.girl_id', 'Post.girl_avatar')
-            , 'conditions' => array('Post.deleted' => null)
+            , 'conditions' => array('Post.deleted' => null
+                , 'Post.boy_id >' => 0)
             , 'order' => array('Post.created DESC')
         ));
         
@@ -122,14 +123,14 @@ class AppController extends Controller {
                 'screen_name' => $girl['Post']['girl_id']
                 , 'avatar' => $girl['Post']['girl_avatar']
             );
-            
+  
             // draw only first 40
             $count ++;
             if ($count == 40) {
                 break;
             }
         }
-
+        
         $this->set('girls', $girls);
     }    
     

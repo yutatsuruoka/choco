@@ -101,24 +101,26 @@ public function index() {
             if (!empty($this->request->data)) {
                 $this->__sanitize();
                 
+                $data = $this->request->data;
+                
                 // remove @ mark
-                $girl_id = $this->request->data['Post']['girl_id'];
+                $girl_id = $data['Post']['girl_id'];
                 $fc = substr($girl_id, 0, 1);
                 while ($fc == '@'
                         || $fc == ' ') {
                     $girl_id = substr($girl_id, 1);                    
                     $fc = substr($girl_id, 0, 1);
                 }
-                $this->request->data['Post']['girl_id'] = $girl_id;
+                $data['Post']['girl_id'] = $girl_id;
                 
                 $avatar_url = 'https://api.twitter.com/1/users/profile_image?'
                     . 'screen_name=' . $girl_id
                     . '&size=bigger';
                 
-                $this->request->data['Post']['girl_avatar'] 
+                $data['Post']['girl_avatar'] 
                         = $this->get_redirect_url($avatar_url);
                 
-                if ($this->Post->save($this->request->data)) {
+                if ($this->Post->save($data)) {
                     $this->Session->write('girl_id', $girl_id);
                     $this->Session->write('insert_id', $this->Post->getInsertID());
                     $this->Session->setFlash('');
