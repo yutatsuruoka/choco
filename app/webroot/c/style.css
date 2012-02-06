@@ -220,8 +220,8 @@ header {
   background: #f6d6d6;
   padding: 10px 0; }
 #megamiContainer h2 {
-  font-size: 25px;
-  margin: 0px 20px 10px;
+  font-size: 23px;
+  margin: 0px 20px 10px 400px;
 }
 #megamiContainer .imagebox {
   float: center;
