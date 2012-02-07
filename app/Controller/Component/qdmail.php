@@ -3324,7 +3324,9 @@ $this->debugEchoLf($this->to);
 	}
 
 	function errorGather( $message = null , $line = null){
-
+		echo memory_get_usage();
+		debug_print_backtrace();
+		
 		if( !is_null( $message ) ){
 			if( !is_null( $line ) ){
 				$message .= ' line -> '.$line;
