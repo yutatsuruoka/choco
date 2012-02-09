@@ -11,7 +11,7 @@ class PaymentController extends AppController {
 
                 // Tell the Auth controller that the 'create' action is accessible 
                 // without being logged in.
-                $this->Auth->allow('index', 'paypal_success', 'paypal_failure');
+                $this->Auth->allow('index','paypal_success', 'paypal_failure', 'bank');
                 
 		$this->set("title_for_layout", "Paypal Payment");
 
@@ -121,6 +121,9 @@ class PaymentController extends AppController {
 	
 	function paypal_failure(){
             $this->redirect(array('controller'=>'Pages','action'=>'no'));				
+	}
+	
+	function bank(){
 	}
 }
 

@@ -57,11 +57,12 @@
             <div class="wrapper clearfix">
                 <div class="topicsContainer">
                     <h2>Topics</h2>
+                    ・<a href="http://www.penn-olson.com/2012/02/09/chocokure/" style="color: black;">pennolsonに掲載されました！</a><br></br>
                     ・<a href="http://dailynews.yahoo.co.jp/fc/entertainment/valentine_s_day/?1328253168" style="color: black;">yahoo!ニュースに掲載されました！</a><br></br>
                     ・<a href="http://nlab.itmedia.co.jp/nl/articles/1202/03/news067.html" style="color: black;">ねとらぼに掲載されました！</a><br></br>
                     ・<a href="http://www.rbbtoday.com/article/2012/02/03/85924.html" style="color: black;">RBBTODAYに掲載されました！</a><br></br>
                     ・2012/02/03 リリースしました！
-                    <br><br><br>
+                    <br><br>
                     <h2>Future</h2>
                     ・ホワイトデー復讐機能<br><br>
                     ・おねだりボーイズ機能<br><br>

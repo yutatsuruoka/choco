@@ -569,3 +569,41 @@ footer {
 .oldie #formSheet form .sheetContainer li .inputContainer input {
   padding: 10px 20px 0;
   vertical-align: middle; }
+
+/* =============================================================================
+   #bankAccount
+   ========================================================================== */
+#bankAccount {
+  padding: 50px 0;
+  font-size: 22px;
+  font-weight: bold; }
+  #bankAccount h2 {
+    margin: 0 0 30px;
+    font-weight: bold;
+    text-align: center; }
+  #bankAccount .bankAccountContainer {
+    width: 600px;
+    margin: 0 auto; }
+    #bankAccount .bankAccountContainer .bankAccountInfo {
+      width: 300px; }
+      #bankAccount .bankAccountContainer .bankAccountInfo dt {
+        width: 95px;
+        float: left;
+        padding: 0 5px 10px 0; }
+      #bankAccount .bankAccountContainer .bankAccountInfo dd {
+        text-align: left;
+        float: left;
+        width: 200px; }
+      #bankAccount .bankAccountContainer .bankAccountInfo p.attention {
+        font-size: 15px; }
+      #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow {
+        margin: 20px 0 0 30px;
+        font-size: 15px; }
+        #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow a {
+          color: #000; }
+        #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow a:hover {
+          color: #b6ff00; }
+        #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow ul {
+          margin: 10px 0 0; }
+        #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow li {
+          margin: 0 0 5px; }
