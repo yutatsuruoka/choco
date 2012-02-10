@@ -216,7 +216,8 @@
                 <li><a class='inline' href="#popUp01">特定商取引法に基づく表記</a>&#12288;&#65372;&#12288;</li>
                 <li><a class='inline' href="#popUp02">会員利用規約</a>&#12288;&#65372;&#12288;</li>
                 <li><a class='inline' href="#popUp03">プライバシーポリシー</a>&#12288;&#65372;&#12288;</li>
-                <li id="copyRight"><small>&copy;2012 <a href="http://warusou.com/" target="_blank">ワルソウ</a>（Designed by <a href="http://monosp.com/" target="_blank">MONOspace</a>）</small></li>
+                <li id="copyRight"><small>&copy;2012 <a href="http://warusou.com/" target="_blank">ワルソウ</a>（Designed by <a href="http://monosp.com/" target="_blank">MONOspace</a>）</small>&#12288;&#65372;&#12288;</li>
+                <li><a href="http://camp-fire.jp" target="_blank" title="クラウドファンディング">CAMPFIRE - クラウドファンディング</a></li>
             </ul>
             <div class="footerPopup"> 
                 <div id="popUp01">
