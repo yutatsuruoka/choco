@@ -143,6 +143,8 @@ public function index() {
         $this->set('begs', $begs);
         
         $this->set('errors', $this->Post->validationErrors);
+        
+        $this->fix_avatar();
     }
     
     function edit($id = null) {
