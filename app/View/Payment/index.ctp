@@ -1,20 +1,23 @@
 <?php
-    $this->set('html_body_id', 'contentsFlow07');
+    $this->set('html_body_id', 'contentsFlow10');
 ?>
 
-<form method="POST" name="gateway_form" action="<?php echo $gatewayUrl ?>">
+    <div class="chocopayment">
+        <div class="wrapper">
+            <div class="paymentContainer">
+                <div class="messageContainer">
+                    <p class="message">チョコレートの決済方法を選択してください</p>
+                </div>
+                <div class="btnContainer clearfix">
+                    <ul class="clearfix">
+                        <li class="left"><a class="type01 over" href="<?php echo $this->webroot ?>Payment/bank"></a></li>
+                        <li class="left"><a class="type02 last" href="<?php echo $this->webroot ?>Payment/paypal/<?php echo $post_id ?>/1"></a></li>
+                    </ul>                       
+                </div>
+            </div>
+        </div>
+    </div>
 
-<?php
-foreach ($fields as $name => $value)
-{
-        echo "<input type=\"hidden\" name=\"$name\" value=\"$value\"/>\n";
-}
-?>
-
-
-<p style="text-align:center;"><br/><br/>５秒後に自動的に決済画面に移動します。移動しない場合は下のボタンをクリックしてください。<br/><br/>
-<input type="submit" value="決済画面に移動する"></p>
-
-</form>
 </body>
 </html>
+

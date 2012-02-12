@@ -449,6 +449,10 @@ footer {
         background: url(../i/presentchoco_btn01.png) no-repeat right top; }
       .presentchoco .presentContainer .btnContainer a.type02:hover {
         background: url(../i/presentchoco_btn01.png) no-repeat right bottom; }
+      .chocopayment .presentContainer .btnContainer a.type01 {
+        background: url(../i/rakuten_button.png) no-repeat left top; }
+      .chocopayment .presentContainer .btnContainer a.type02 {
+        background: url(../i/paypal_button.png) no-repeat left top; }
   .presentchoco h2 {
     text-align: center;
     margin: 0 0 5px; }
@@ -607,3 +611,66 @@ footer {
           margin: 10px 0 0; }
         #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow li {
           margin: 0 0 5px; }
+
+/* =============================================================================
+     contentsFlow10
+   ========================================================================== */
+.chocopayment {
+  padding: 20px 0;
+  -moz-box-shadow: 0px 3px 5px #c9c9c9;
+  -webkit-box-shadow: 0px 3px 5px #c9c9c9;
+  box-shadow: 0px 3px 5px #c9c9c9;
+  position: relative;
+  z-index: 1; }
+  .chocopayment .counter {
+    text-align: center;
+    letter-spacing: .1em;
+    font-size: 24px;
+    margin: 0 0 15px; }
+    .chocopayment .counter strong {
+      padding: 0 10px;
+      font-size: 48px;
+      letter-spacing: .03em; }
+  .chocopayment .paymentContainer {
+    text-align: center;
+    margin: 0 0 20px; }
+    .chocopayment .paymentContainer .messageContainer {
+      width: 631px;
+      margin: 0 auto;
+      padding: 0 0 0 0; }
+      .chocopayment .paymentContainer .messageContainer p.message {
+        padding: 20px 20px 20px 20px;
+        text-align: center; }
+    .chocopayment .paymentContainer .btnContainer {
+      margin: 0 auto;
+      width: 631px; }
+      .chocopayment .paymentContainer .btnContainer a {
+        width: 303px;
+        height: 73px;
+        display: block;
+        margin: 0 20px 0 0; }
+      .chocopayment .paymentContainer .btnContainer a.last {
+        margin: 0; }
+      .chocopayment .paymentContainer .btnContainer a.over {
+        text-indent: -9999px;
+        overflow: hidden; }
+      .chocopayment .paymentContainer .btnContainer a.type01 {
+        background: url(../i/rakuten_button.png) no-repeat left top; 
+      }
+      .chocopayment .paymentContainer .btnContainer a.type02 {
+        background: url(../i/paypal_button.png) no-repeat left top; 
+      }
+  .chocopayment h2 {
+    text-align: center;
+    margin: 0 0 5px; }
+  .chocopayment .caption {
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 0 30px;
+    line-height: 1.6em; }
+
+#chocopayment {
+  margin: 0; }
+
+        

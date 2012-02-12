@@ -11,7 +11,7 @@ class PaymentController extends AppController {
 
                 // Tell the Auth controller that the 'create' action is accessible 
                 // without being logged in.
-                $this->Auth->allow('index','paypal_success', 'paypal_failure', 'bank');
+                $this->Auth->allow('index','paypal_success', 'paypal_failure', 'bank', 'paypal');
                 
 		$this->set("title_for_layout", "Paypal Payment");
 
@@ -21,13 +21,11 @@ class PaymentController extends AppController {
 		include_once (APP.'/Vendor/payment/Paypal.php');
 	}
 	
-	/**
-	 * Displays a view
-	 *
-	 * @param <string> $url URl
-	 * @access public
-	 */
 	function index($post_id=null) {
+            $this->set("post_id", $post_id);
+        }
+        
+	function paypal($post_id=null) {
 
             $user_id = $this->current_user['id'];
 
