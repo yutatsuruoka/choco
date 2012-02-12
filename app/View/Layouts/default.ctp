@@ -57,6 +57,7 @@
             <div class="wrapper clearfix">
                 <div class="topicsContainer">
                     <h2>Topics</h2>
+                    ・銀行振込決済に対応しました！<br></br>
                     ・<a href="http://www.penn-olson.com/2012/02/09/chocokure/" style="color: black;">pennolsonに掲載されました！</a><br></br>
                     ・<a href="http://dailynews.yahoo.co.jp/fc/entertainment/valentine_s_day/?1328253168" style="color: black;">yahoo!ニュースに掲載されました！</a><br></br>
                     ・<a href="http://nlab.itmedia.co.jp/nl/articles/1202/03/news067.html" style="color: black;">ねとらぼに掲載されました！</a><br></br>
@@ -70,7 +71,7 @@
                     ・ソーシャルおねだりプラットフォーム化<br>
                 </div>
                 <div class="faceContainer">
-                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fwarusou&amp;width=300&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:290px;" allowTransparency="true"></iframe>
+                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fwarusou&amp;width=300&amp;height=345&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:345px;" allowTransparency="true"></iframe>
                 </div>
                 <div class="happyContainer">
                     <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
@@ -83,7 +84,7 @@
                             title: 'Social Valentine platform.',
                             subject: '#chocokure',
                             width: 320,
-                            height: 200,
+                            height: 258,
                             theme: {
                                 shell: {
                                     background: '#ffffff',
