@@ -1,676 +1,738 @@
-/* =============================================================================
-    base 
-   ========================================================================== */
-body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "ヒラギノ角ゴ ProN", Arial, sans-serif;
+html {
   color: #000;
-  min-width: 1000px;
+  background: #FFF;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset, img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+caption, th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before, q:after {
+  content: '';
+}
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+input, textarea, select {
+  *font-size: 100%;
+}
+legend {
+  color: #000;
+}
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input, select {
+  vertical-align: middle;
+}
+/* ===== Primary Styles ================================================================================================================================== */
+body {
+  font-family: "ヒラギノ角ゴ ProN W6", "HiraKakuProN-W6", Arial, sans-serif;
+  color: #999;
+  background: #fff;
+  font-size: 10px;
+  border-top: 15px solid #000;
+  letter-spacing: .09em;
+  line-height: 1.3em;
+  width: 100%;
+  min-width: 1060px;
   -webkit-font-smoothing: subpixel-antialiased;
   /* Fix for webkit rendering */
-  -webkit-text-size-adjust: none; }
 
+  -webkit-text-size-adjust: none;
+}
 a, a:visited {
-  color: #fff;
-  text-decoration: none; }
-
+  color: #ff99cc;
+  text-decoration: none;
+}
 a:hover {
-  color: #b6ff00; }
-
+  color: #ff72b9;
+}
 ::-moz-selection {
-  background: #b6ff00;
+  background: #999;
   color: #fff;
-  text-shadow: none; }
-
+  text-shadow: none;
+}
 ::selection {
-  background: #b6ff00;
+  background: #999;
   color: #fff;
-  text-shadow: none; }
-
+  text-shadow: none;
+}
+input[type="text"] {
+  letter-spacing: .1em;
+}
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  cursor: pointer; }
-
-.wrapper {
-  width: 1000px;
-  margin: 0 auto; }
-
+  cursor: pointer;
+}
 .left {
-  float: left; }
-
+  float: left;
+}
 .right {
-  float: right; }
-
+  float: right;
+}
+.mgt30 {
+  margin-top: 30px;
+}
+.mgt50 {
+  margin-top: 50px;
+}
+.mgt100 {
+  margin-top: 100px;
+}
+.mgb30 {
+  margin-bottom: 30px;
+}
+.mgb50 {
+  margin-bottom: 50px;
+}
+.mgb100 {
+  margin-bottom: 100px;
+}
 .clearfix:after {
   height: 0;
   visibility: hidden;
   content: ".";
   display: block;
-  clear: both; }
-
+  clear: both;
+}
 .clearfix {
-  zoom: 1; }
-
-/* =============================================================================
-    contentsFlow01 template 
-   ========================================================================== */
-/*********** header ***********/
+  zoom: 1;
+}
+.wrapper {
+  width: 1040px;
+  margin: 0 auto;
+}
+/* ===== header ================================================================================================================================== */
 header {
+  margin: 50px 0 0;
+}
+header h1 {
+  width: 184px;
   position: relative;
-  z-index: 2;
-  background: #b6ff00 url(../i/hrimg.png) repeat-x left bottom;
-  padding: 50px 0 60px; }
-  header .wrapper {
-    position: relative; }
-    header .wrapper h1 {
-      width: 246px;
-      margin: 0 auto 35px; }
-    header .wrapper .caption {
-      width: 665px;
-      margin: 0 auto; }
-    header .wrapper .snsContainer {
-      position: absolute;
-      top: -30px;
-      right: 0; }
-      header .wrapper .snsContainer .snsButton {
-        float: left; }
-    header .wrapper iframe.twitter-share-button {
-      width: 100px!important; }
-
-/*********** end header ***********/
-/*********** .entryContainer ***********/
-.entryContainer {
-  padding: 40px 0 50px;
-  text-align: center;
-  -moz-box-shadow: 0px 3px 5px #c9c9c9;
-  -webkit-box-shadow: 0px 3px 5px #c9c9c9;
-  box-shadow: 0px 3px 5px #c9c9c9;
+}
+header .snsContainer {
+  width: 250px;
   position: relative;
-  z-index: 1; }
-  .entryContainer .counter {
-    letter-spacing: .1em;
-    font-size: 24px;
-    margin: 0 0 15px; }
-    .entryContainer .counter strong {
-      padding: 0 10px;
-      font-size: 48px;
-      letter-spacing: .03em; }
-  .entryContainer .parenthesis {
-    width: 80px;
-    margin: -25px 0 0; }
-  .entryContainer .formContainer {
-    width: 813px;
-    margin: 0 13px; }
-    .entryContainer .formContainer input {
-      display: block;
-      float: left;
-      font-size: 24px;
-      color: #000000;
-      letter-spacing: .01em;
-      border: none; }
-    .entryContainer .formContainer input#twitterAccount {
-      width: 478px;
-      height: 70px;
-      padding: 0 0 0 20px;
-      margin: 0 10px 0 0;
-      border: solid 1px #cccccc;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      background: #ffffff; }
-    .entryContainer .formContainer input#twitterAccount:focus {
-      color: #666;
-      letter-spacing: .05em; }
-    .entryContainer .formContainer input#submitButton {
-      width: 303px;
-      height: 73px;
-      overflow: hidden;
-      background: url(../i/chocokure_btn.png) no-repeat left top; }
-    .entryContainer .formContainer input#submitButton:hover {
-      background: url(../i/chocokure_btn.png) no-repeat left bottom; }
-    .entryContainer .formContainer p {
-      margin: 20px 0 0;
-      text-align: center;
-      font-size: 12px;
-      font-weight: bold; }
-
-/*********** end .entryContainer ***********/
-/*********** .aboutContainer ***********/
-.aboutContainer {
-  background: #f6f6f6;
-  padding: 100px 0 100px;
-  position: relative;
-  z-index: 0; }
-  .aboutContainer section {
-    padding: 0 0 100px;
-    margin: 0 0 100px;
-    border-bottom: 1px solid #ccc;
-    box-shadow: 0 1px 0 #fff; }
-    .aboutContainer section .textContainer h2 {
-      margin: 0 0 25px; }
-    .aboutContainer section .textContainer p {
-      font-size: 14px;
-      line-height: 1.6em;
-      font-weight: bold; }
-  .aboutContainer #flow2 .textContainer {
-    margin: 60px 0 0;
-    padding: 0 0 0 30px; }
-  .aboutContainer #flow3 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    border-bottom: none;
-    box-shadow: none; }
-    .aboutContainer #flow3 h2 {
-      margin: 0 0 25px; }
-    .aboutContainer #flow3 p {
-      margin: 0 0 25px;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 1.6em; }
-
-.aboutContainer h2.aboutTtl {
-  margin: 0 0 145px;
-  text-align: center; }
-
-/*********** end .aboutContainer ***********/
-/*********** #socialContainer ***********/
-#socialContainer {
-  background: #f6f6f6;
-  padding: 55px 0; }
-  #socialContainer .topicsContainer {
-    float: left;
-    /* width: 560px; */
-    width: 350px;
-    /* height: 530px; */
-    height: 350px;
-    overflow: scroll; }
-    #socialContainer .topicsContainer h2 {
-      font-size: 25px;
-      margin: 0 0 10px; }
-    #socialContainer .topicsContainer li {
-      width: 70px;
-      height: 70px;
-      margin: 0 10px 10px 0;
-      float: left; }
-  #socialContainer .faceContainer {
-    float: left;
-    /* width: 560px; */
-    width: 300px;
-    /* height: 530px; */
-    height: 350px;
-    overflow: scroll; }
-  #socialContainer .happyContainer {
-    /* margin: 25px 0 0; */
-    float: right;
-    width: 300px;
-    /* width: 390px; */ }
-    #socialContainer .happyContainer li {
-      margin: 0 10px 10px 0;
-      float: left;
-      width: 90px;
-      height: 90px; }
-    #socialContainer .happyContainer li.last {
-      margin: 0; }
-
-/*********** end #socialContainer ***********/
-
-#megamiContainer {
-  background: #f6d6d6;
-  padding: 10px 0; }
-#megamiContainer h2 {
-  font-size: 23px;
-  margin: 0px 20px 10px; }
-#megamiContainer .imagebox {
-  float: center;
-  width: 800px;
-  height: 350px;
-  overflow: scroll; }
-#megamiContainer .imagebox li {
-    width: 70px;
-    height: 70px;
-    margin: 0 10px 10px 0;
-    float: left; }
-
-/*********** footer ***********/
-footer {
+  text-align: right;
+  margin-top: -22px;
+  left: 800px;
+}
+/* ===== footer ==================================================================================================================================*/footer {
+  font-family: "ヒラギノ角ゴ ProN W3", "HiraKakuProN-W3";
   font-size: 10px;
   letter-spacing: .12em;
-  padding: 20px 0 0;
+  padding: 50px 0 0;
   background: #000;
   color: #fff;
-  overflow: hidden; }
-  footer .createTeam {
-    margin: 30px 0; }
-  footer .team {
-    width: 1000px; }
-    footer .team h3 {
-      margin: 0 0 30px; }
-    footer .team .teamMember {
-      width: 256px;
-      margin: 0 0 20px; }
-      footer .team .teamMember .memberIcon {
-        width: 50px;
-        float: left;
-        margin: 0 10px 0 0; }
-      footer .team .teamMember .memberProfile {
-        margin: 3px 10px 0 0; }
-        footer .team .teamMember .memberProfile p.name {
-          font-size: 12px;
-          line-height: 12px;
-          font-style: normal;
-          margin: 0 0 8px;
-          letter-spacing: .2em; }
-        footer .team .teamMember .memberProfile p.post {
-          line-height: 1.4em;
-          letter-spacing: .2em; }
-      footer .team .teamMember .memberSns {
-        margin: 30px 0 0; }
-        footer .team .teamMember .memberSns .facebookIcon a {
-          display: block;
-          text-indent: -9999px;
-          width: 21px;
-          height: 20px;
-          margin: 0 4px 12px 0;
-          background: url(../i/facebook_icon.png) no-repeat left top; }
-        footer .team .teamMember .memberSns .twitterIcon a {
-          display: block;
-          text-indent: -9999px;
-          width: 21px;
-          height: 20px;
-          margin: 0 0 10px;
-          background: url(../i/twitter_icon.png) no-repeat left top; }
-        footer .team .teamMember .memberSns .facebookIcon a:hover {
-          background: url(../i/facebook_icon.png) no-repeat left bottom; }
-        footer .team .teamMember .memberSns .twitterIcon a:hover {
-          background: url(../i/twitter_icon.png) no-repeat left bottom; }
-    footer .team .last {
-      width: 232px;
-      margin: 0; }
-  footer ul.info {
-    text-align: center;
-    padding: 0 0 20px; }
-    footer ul.info li {
-      display: inline; }
-
-/*********** end footer ***********/
-/* =============================================================================
-    contentsFlow02 
-   ========================================================================== */
-#formSheet {
-  padding: 50px 0 60px;
-  -moz-box-shadow: 0px 3px 5px #c9c9c9;
-  -webkit-box-shadow: 0px 3px 5px #c9c9c9;
-  box-shadow: 0px 3px 5px #c9c9c9;
-  position: relative;
-  z-index: 1; }
-  #formSheet h2 {
-    text-align: center; }
-  #formSheet .caption {
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.6em;
-    margin: 0 0 20px; }
-  #formSheet form {
-    padding: 0 15px; }
-    #formSheet form .sheetContainer {
-      width: 476px;
-      border: 1px solid #d2d2d2;
-      font-size: 12px;
-      margin: 0 0 10px; }
-      #formSheet form .sheetContainer li {
-        border-bottom: 1px solid #d2d2d2;
-        background: url(../i/form_bg.png) repeat-x left top; }
-        #formSheet form .sheetContainer li .labelContainer {
-          border-right: 1px solid #d2d2d2;
-          float: left;
-          padding: 20px 0 0;
-          text-align: center;
-          width: 100px; }
-          #formSheet form .sheetContainer li .labelContainer label {
-            line-height: 20px;
-            color: #525252; }
-        #formSheet form .sheetContainer li .inputContainer {
-          float: left;
-          width: 324px;
-          padding: 10px 25px 0; }
-          #formSheet form .sheetContainer li .inputContainer input {
-            width: 290px;
-            height: 25px;
-            padding: 5px 20px;
-            -moz-border-radius: 5px;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-            -webkit-box-shadow: inset 2px 3px 7px #efefef;
-            box-shadow: inset 2px 3px 7px #efefef;
-            -moz-box-shadow: inset 2px 3px 7px #efefef;
-            border: 1px solid #bfbfbf; }
-      #formSheet form .sheetContainer li.last {
-        border: none; }
-    #formSheet form .submit {
-      margin: 6px 0 0; }
-      #formSheet form .submit #sheetBtn {
-        border: 0;
-        width: 970px;
-        height: 52px;
-        background: url(../i/submit_btn.png) no-repeat left top; }
-      #formSheet form .submit #sheetBtn:hover {
-        background: url(../i/submit_btn.png) no-repeat left bottom; }
-
-/* =============================================================================
-     contentsFlow03
-   ========================================================================== */
-#afterEntry {
-  padding: 135px 0 165px;
-  -moz-box-shadow: 0px 3px 5px #c9c9c9;
-  -webkit-box-shadow: 0px 3px 5px #c9c9c9;
-  box-shadow: 0px 3px 5px #c9c9c9;
-  position: relative;
-  z-index: 1; }
-  #afterEntry h2 {
-    text-align: center;
-    margin: 0 0 5px; }
-  #afterEntry .caption {
-    font-weight: bold;
-    text-align: center;
-    font-size: 14px;
-    margin: 0 0 30px; }
-  #afterEntry .gotoTop {
-    font-size: 10px;
-    text-align: center; }
-    #afterEntry .gotoTop a {
-      color: #999; }
-    #afterEntry .gotoTop a:hover {
-      color: #b6ff00; }
-  #afterEntry .socialIntroduction {
-    text-align: center;
-    margin: 0 0 30px; }
-
-/* =============================================================================
-     contentsFlow04
-   ========================================================================== */
-.presentchoco {
-  padding: 55px 0;
-  -moz-box-shadow: 0px 3px 5px #c9c9c9;
-  -webkit-box-shadow: 0px 3px 5px #c9c9c9;
-  box-shadow: 0px 3px 5px #c9c9c9;
-  position: relative;
-  z-index: 1; }
-  .presentchoco .counter {
-    text-align: center;
-    letter-spacing: .1em;
-    font-size: 24px;
-    margin: 0 0 15px; }
-    .presentchoco .counter strong {
-      padding: 0 10px;
-      font-size: 48px;
-      letter-spacing: .03em; }
-  .presentchoco .presentContainer {
-    text-align: center;
-    margin: 0 0 20px; }
-    .presentchoco .presentContainer .twitterName {
-      margin: 10px 0 10px;
-      font-size: 24px; }
-    .presentchoco .presentContainer .twitterIcon {
-      margin: 0 0 30px; }
-    .presentchoco .presentContainer .pushMessage {
-      width: 463px;
-      margin: 0 auto;
-      padding: 0 0 0 335px; }
-      .presentchoco .presentContainer .pushMessage .twitterImage {
-        width: 128px; }
-      .presentchoco .presentContainer .pushMessage .messageContainer {
-        width: 335px;
-        height: 128px;
-        background: url(../i/messageballoon.png) no-repeat left top; }
-        .presentchoco .presentContainer .pushMessage .messageContainer p.message {
-          padding: 50px 50px 0 110px;
-          text-align: center; }
-    .presentchoco .presentContainer .btnContainer {
-      margin: 0 auto;
-      width: 951px; }
-      .presentchoco .presentContainer .btnContainer a {
-        width: 303px;
-        height: 73px;
-        display: block;
-        margin: 0 20px 0 0; }
-      .presentchoco .presentContainer .btnContainer a.last {
-        margin: 0; }
-      .presentchoco .presentContainer .btnContainer a.over {
-        text-indent: -9999px;
-        overflow: hidden; }
-      .presentchoco .presentContainer .btnContainer a.type01 {
-        background: url(../i/presentchoco_btn01.png) no-repeat left top; }
-      .presentchoco .presentContainer .btnContainer a.type01:hover {
-        background: url(../i/presentchoco_btn01.png) no-repeat left bottom; }
-      .presentchoco .presentContainer .btnContainer a.type02 {
-        background: url(../i/presentchoco_btn01.png) no-repeat right top; }
-      .presentchoco .presentContainer .btnContainer a.type02:hover {
-        background: url(../i/presentchoco_btn01.png) no-repeat right bottom; }
-      .chocopayment .presentContainer .btnContainer a.type01 {
-        background: url(../i/rakuten_button.png) no-repeat left top; }
-      .chocopayment .presentContainer .btnContainer a.type02 {
-        background: url(../i/paypal_button.png) no-repeat left top; }
-  .presentchoco h2 {
-    text-align: center;
-    margin: 0 0 5px; }
-  .presentchoco .caption {
-    font-weight: bold;
-    text-align: center;
-    font-size: 14px;
-    margin: 0 0 30px;
-    line-height: 1.6em; }
-
-#presentchoco02 {
-  margin: 0; }
-
-/* =============================================================================
-     contentsFlow05
-   ========================================================================== */
-#contentsFlow05 .presentchoco .arrow {
-  top: 460px; }
-#contentsFlow05 .presentchoco .caption {
-  font-family: "Hiragino Maru Gothic Pro" ,"HG丸ゴシックM-PRO" ,verdana ,arial ,sans-serif;
-  font-size: 24px;
-  font-weight: normal; }
-#contentsFlow05 .aboutContainer {
-  background-image: none;
-  padding-bottom: 40px; }
-
-/* =============================================================================
-     contentsFlow06
-   ========================================================================== */
-#contentsFlow06 .presentchoco .arrow {
-  top: 313px; }
-#contentsFlow06 .presentchoco h2 {
-  text-align: center;
-  margin: 0 0 30px; }
-#contentsFlow06 .socialIntroduction {
-  text-align: center;
-  margin: 0 0 30px; }
-#contentsFlow06 p.goTop {
-  font-size: 10px;
-  text-align: center; }
-  #contentsFlow06 p.goTop a {
-    color: #999; }
-  #contentsFlow06 p.goTop a:hover {
-    color: #b6ff00; }
-#contentsFlow06 .aboutContainer {
-  background-image: none;
-  padding-bottom: 40px; }
-
-/* =============================================================================
-     contentsFlow07
-   ========================================================================== */
-#contentsFlow07 .presentchoco .centerText {
-  text-align: center;
+  overflow: hidden;
+}
+footer .team {
+  margin-left: 30px;
+  width: 1000px;
+}
+footer .team h3 {
+  margin: 0 0 30px;
+}
+footer .team .teamMember {
+  width: 256px;
   margin: 0 0 20px;
-  font-size: 20px; }
-#contentsFlow07 .presentchoco .leftBlock {
-  width: 220px;
-  padding: 0 29px 0 143px; }
-  #contentsFlow07 .presentchoco .leftBlock h2 {
-    text-align: left; }
-#contentsFlow07 .presentchoco .rightBlock {
-  padding: 100px 0 0;
-  width: 470px; }
-#contentsFlow07 .aboutContainer {
-  background-image: none;
-  padding-bottom: 40px; }
-
-/* =============================================================================
-     contentsFlow08
-   ========================================================================== */
-#contentsFlow08 .presentchoco .wrapper {
-  text-align: center; }
-  #contentsFlow08 .presentchoco .wrapper .presentdone {
-    width: 303px;
-    margin: 0 auto;
-    height: 73px;
-    display: block;
-    text-indent: -9999px;
-    overflow: hidden;
-    background: url(../i/presentdone_btn.png) no-repeat left top; }
-  #contentsFlow08 .presentchoco .wrapper .presentdone:hover {
-    background: url(../i/presentdone_btn.png) no-repeat left bottom; }
-#contentsFlow08 .presentchoco .arrow {
-  top: 423px; }
-#contentsFlow08 .aboutContainer {
-  background-image: none;
-  padding-bottom: 40px; }
-
-/* =============================================================================
-     contentsFlow09
-   ========================================================================== */
-#contentsFlow09 .presentchoco .arrow {
-  top: 335px; }
-#contentsFlow09 .presentchoco h2 {
+}
+footer .team .teamMember .memberIcon {
+  width: 50px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+footer .team .teamMember .memberProfile {
+  margin: 3px 10px 0 0;
+}
+footer .team .teamMember .memberProfile p.name {
+  font-size: 12px;
+  line-height: 12px;
+  font-style: normal;
+  margin: 0 0 8px;
+  letter-spacing: .2em;
+}
+footer .team .teamMember .memberProfile p.post {
+  line-height: 1.4em;
+  letter-spacing: .2em;
+}
+footer .team .teamMember .memberProfile p.post a {
+  color: #fff;
+}
+footer .team .teamMember .memberProfile p.post a:hover {
+  color: #ff99cc;
+}
+footer .team .teamMember .memberSns {
+  margin: 30px 0 0;
+}
+footer .team .teamMember .memberSns .facebookIcon a {
+  display: block;
+  text-indent: -9999px;
+  width: 21px;
+  height: 21px;
+  margin: 0 4px 12px 0;
+  background: url(../i/snsicon.png) no-repeat left top;
+}
+footer .team .teamMember .memberSns .twitterIcon a {
+  display: block;
+  text-indent: -9999px;
+  width: 21px;
+  height: 21px;
+  margin: 0 0 10px;
+  background: url(../i/snsicon.png) no-repeat right top;
+}
+footer .team .teamMember .memberSns .facebookIcon a:hover {
+  background: url(../i/snsicon.png) no-repeat left bottom;
+}
+footer .team .teamMember .memberSns .twitterIcon a:hover {
+  background: url(../i/snsicon.png) no-repeat right bottom;
+}
+footer .team .last {
+  width: 232px;
+  margin: 0;
+}
+footer ul.info {
   text-align: center;
-  margin: 0 0 30px; }
-#contentsFlow09 .socialIntroduction {
-  text-align: center;
-  margin: 0 0 30px; }
-#contentsFlow09 p.goTop {
+  padding: 20px 0 20px;
+}
+footer ul.info li {
+  display: inline;
+}
+footer ul.info a {
+  color: #fff;
+}
+footer ul.info a:hover {
+  color: #ff99cc;
+}
+/* ===== #infoSnsContainer ================================================================================================================================== */
+#infoSnsContainer {
+  margin: 100px auto 60px;
+}
+#infoSnsContainer .leftContainer {
+  width: 300px;
+  font-size: 12px;
+}
+#infoSnsContainer .leftContainer dl {
+  margin: 0 0 30px;
+}
+#infoSnsContainer .leftContainer dt {
+  margin: 0 0 10px;
+  color: #000;
+}
+#infoSnsContainer .leftContainer dd {
+  margin: 0 0 7px;
+}
+#infoSnsContainer .rightContainer {
+  width: 740px;
+}
+#infoSnsContainer .rightContainer .onedariContainer {
+  margin: 0 0 50px;
+}
+#infoSnsContainer .rightContainer .onedariContainer h2 {
+  color: #000;
+  margin: 0 0 10px;
+}
+#infoSnsContainer .rightContainer .onedariContainer .twList {
+  margin: 0 0 0 -10px;
+  width: 360px;
+}
+#infoSnsContainer .rightContainer .onedariContainer .twList li {
+  margin: 0 0 10px 10px;
+  float: left;
+}
+#infoSnsContainer .rightContainer .twContainer {
+  border: 1px solid #ccc;
+}
+/* ===== top ================================================================================================================================== */
+.top .present {
+  float: left;
+  margin: 0 40px 0 0;
+  width: 320px;
+}
+.top .present.last {
+  margin: 0;
+}
+.top .present h2 {
+  color: #000;
+  font-size: 32px;
+  line-height: 100%;
+  padding: 20px 0 5px;
+  border-bottom: 5px solid #000;
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6";
+}
+.top .present p.price {
+  padding: 10px 0;
+  color: #000;
+  font-size: 14px;
+}
+.top .present p.price span {
   font-size: 10px;
-  text-align: center; }
-  #contentsFlow09 p.goTop a {
-    color: #999; }
-  #contentsFlow09 p.goTop a:hover {
-    color: #b6ff00; }
-#contentsFlow09 .aboutContainer {
-  background-image: none;
-  padding-bottom: 40px; }
+  padding: 0 0 0 1em;
+}
+.top .present p.detaile {
+  font-family: "ヒラギノ角ゴ ProN W3", "HiraKakuProN-W3";
+  padding: 10px 0;
+  border-top: 1px solid #9b9b9b;
+  border-bottom: 1px solid #9b9b9b;
+}
+.top .present ul.onedariContainer {
+  margin: 15px 0 0;
+}
+/* ===== girl_2nd ================================================================================================================================== */
+.girl_2nd {
+  width: 827px;
+  /* end formContainer */
 
-/* =============================================================================
-   oldie
-   ========================================================================== */
-.oldie .entryContainer .formContainer input#twitterAccount {
-  height: 48px;
-  padding: 20px 0 0 20px; }
-
-.oldie #formSheet form .sheetContainer li .inputContainer input {
+}
+.girl_2nd .captionContainer {
+  margin: 60px 0 60px;
+}
+.girl_2nd .formContainer {
+  margin: 0 0 30px;
+}
+.girl_2nd .formContainer .presentImg {
+  width: 320px;
+  height: 300px;
+}
+.girl_2nd .formContainer .sheetContainer {
+  font-size: 12px;
+  font-family: "ヒラギノ角ゴ ProN W3", "HiraKakuProN-W3";
+  width: 475px;
+  border: 1px solid #d2d2d2;
+  color: #525252;
+}
+.girl_2nd .formContainer .sheetContainer li {
+  border-bottom: 1px solid #d2d2d2;
+  background: url(../i/form_inputbg.png) repeat-x left top;
+  height: 59px;
+}
+.girl_2nd .formContainer .sheetContainer li .labelContainer {
+  border-right: 1px solid #d2d2d2;
+  float: left;
+  text-align: center;
+  width: 100px;
+}
+.girl_2nd .formContainer .sheetContainer li .labelContainer label {
+  height: 59px;
+  line-height: 59px;
+  color: #525252;
+}
+.girl_2nd .formContainer .sheetContainer li .inputContainer {
+  float: left;
+  width: 324px;
+  padding: 10px 25px 0;
+}
+.girl_2nd .formContainer .sheetContainer li .inputContainer input {
+  width: 300px;
+  height: 25px;
+  padding: 5px 15px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 2px 3px 7px #efefef;
+  box-shadow: inset 2px 3px 7px #efefef;
+  -moz-box-shadow: inset 2px 3px 7px #efefef;
+  border: 1px solid #bfbfbf;
+}
+.girl_2nd .formContainer .sheetContainer li.last {
+  border: none;
+  height: 58px;
+}
+.girl_2nd .fbContainer {
+  margin: 0 0 30px;
+}
+.girl_2nd .submit #fbSubmitBtn {
+  border: 0;
+  width: 827px;
+  height: 52px;
+  background: url(../i/girl_2nd_fb_btn.png) no-repeat left top;
+}
+.girl_2nd .submit #fbSubmitBtn:hover {
+  background: url(../i/girl_2nd_fb_btn.png) no-repeat left bottom;
+}
+/* ===== #girl_2nd_tw ================================================================================================================================== */
+#girl_2nd_tw .formContainer .presentImg {
+  height: 210px;
+  overflow: hidden;
+}
+#girl_2nd_tw .formContainer .twAccountForm {
+  margin: 10px 0 0;
+}
+#girl_2nd_tw .formContainer .twAccountForm .sheetContainer {
+  width: 318px;
+  border: 1px solid #d2d2d2;
+}
+#girl_2nd_tw .formContainer .twAccountForm .sheetContainer li {
+  border-bottom: none;
+}
+#girl_2nd_tw .formContainer .twAccountForm .sheetContainer li .inputContainer {
+  float: none;
+  width: 328px;
   padding: 10px 20px 0;
-  vertical-align: middle; }
-
-/* =============================================================================
-   #bankAccount
-   ========================================================================== */
-#bankAccount {
-  padding: 50px 0;
-  font-size: 22px;
-  font-weight: bold; }
-  #bankAccount h2 {
-    margin: 0 0 30px;
-    font-weight: bold;
-    text-align: center; }
-  #bankAccount .bankAccountContainer {
-    width: 600px;
-    margin: 0 auto; }
-    #bankAccount .bankAccountContainer .bankAccountInfo {
-      width: 300px; }
-      #bankAccount .bankAccountContainer .bankAccountInfo dt {
-        width: 95px;
-        float: left;
-        padding: 0 5px 10px 0; }
-      #bankAccount .bankAccountContainer .bankAccountInfo dd {
-        text-align: left;
-        float: left;
-        width: 200px; }
-      #bankAccount .bankAccountContainer .bankAccountInfo p.attention {
-        font-size: 15px; }
-      #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow {
-        margin: 20px 0 0 30px;
-        font-size: 15px; }
-        #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow a {
-          color: #000; }
-        #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow a:hover {
-          color: #b6ff00; }
-        #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow ul {
-          margin: 10px 0 0; }
-        #bankAccount .bankAccountContainer .bankAccountInfo .afterFlow li {
-          margin: 0 0 5px; }
-
-/* =============================================================================
-     contentsFlow10
-   ========================================================================== */
-.chocopayment {
-  padding: 20px 0;
-  -moz-box-shadow: 0px 3px 5px #c9c9c9;
-  -webkit-box-shadow: 0px 3px 5px #c9c9c9;
-  box-shadow: 0px 3px 5px #c9c9c9;
+}
+#girl_2nd_tw .formContainer .twAccountForm .sheetContainer li .inputContainer input {
+  width: 245px;
+  height: 25px;
+}
+#girl_2nd_tw .formContainer .twAccountForm p.txt {
+  margin: 8px 0 0;
+  font-family: "ヒラギノ角ゴ ProN W3", "HiraKakuProN-W3";
+  font-size: 12px;
+}
+#girl_2nd_tw .submit #twSubmitBtn {
+  border: 0;
+  width: 827px;
+  height: 52px;
+  background: url(../i/girl_2nd_tw_btn.png) no-repeat left top;
+}
+#girl_2nd_tw .submit #twSubmitBtn:hover {
+  background: url(../i/girl_2nd_tw_btn.png) no-repeat left bottom;
+}
+/* ===== #girl_finish================================================================================================================================== */
+#girl_finish {
+  width: 827px;
+}
+#girl_finish .captionContainer {
+  margin: 60px 0 0;
+}
+#girl_finish .returnTop {
+  width: 301px;
+  margin: 0 auto 0;
+}
+/* ===== boy ================================================================================================================================== */
+.boy .onedariGirlContainer {
+  width: 520px;
+  margin: 50px auto 30px;
   position: relative;
-  z-index: 1; }
-  .chocopayment .counter {
-    text-align: center;
-    letter-spacing: .1em;
-    font-size: 24px;
-    margin: 0 0 15px; }
-    .chocopayment .counter strong {
-      padding: 0 10px;
-      font-size: 48px;
-      letter-spacing: .03em; }
-  .chocopayment .paymentContainer {
-    text-align: center;
-    margin: 0 0 20px; }
-    .chocopayment .paymentContainer .messageContainer {
-      width: 631px;
-      margin: 0 auto;
-      padding: 0 0 0 0; }
-      .chocopayment .paymentContainer .messageContainer p.message {
-        padding: 20px 20px 20px 20px;
-        text-align: center; }
-    .chocopayment .paymentContainer .btnContainer {
-      margin: 0 auto;
-      width: 631px; }
-      .chocopayment .paymentContainer .btnContainer a {
-        width: 303px;
-        height: 73px;
-        display: block;
-        margin: 0 20px 0 0; }
-      .chocopayment .paymentContainer .btnContainer a.last {
-        margin: 0; }
-      .chocopayment .paymentContainer .btnContainer a.over {
-        text-indent: -9999px;
-        overflow: hidden; }
-      .chocopayment .paymentContainer .btnContainer a.type01 {
-        background: url(../i/rakuten_button.png) no-repeat left top; 
-      }
-      .chocopayment .paymentContainer .btnContainer a.type02 {
-        background: url(../i/paypal_button.png) no-repeat left top; 
-      }
-  .chocopayment h2 {
-    text-align: center;
-    margin: 0 0 5px; }
-  .chocopayment .caption {
-    font-weight: bold;
-    text-align: center;
-    font-size: 14px;
-    margin: 0 0 30px;
-    line-height: 1.6em; }
-
-#chocopayment {
-  margin: 0; }
-
-        
+}
+.boy .onedariGirlContainer .imgContainer {
+  width: 100px;
+  float: left;
+}
+.boy .onedariGirlContainer .commentContainrt {
+  width: 420px;
+  height: 106px;
+  float: left;
+  background: url(../i/balloon_bg.png) no-repeat left top;
+}
+.boy .onedariGirlContainer .commentContainrt p.comment {
+  padding: 30px 30px 10px 90px;
+  text-align: center;
+  color: #ff99cc;
+  line-height: 1.6em;
+}
+.boy .onedariCaption {
+  text-align: center;
+  color: #000;
+  font-size: 32px;
+  font-family: "ヒラギノ角ゴ Std W8", "Hiragino Kaku Gothic Std";
+  letter-spacing: .07em;
+  line-height: 1.4em;
+}
+.boy .onedariCaption .pink {
+  color: #ff99cc;
+}
+.boy .info {
+  margin: 15px 0 0;
+  color: #999;
+  font-size: 10px;
+  line-height: 1.7em;
+}
+.boy .present {
+  margin: 50px auto 30px;
+  width: 320px;
+}
+.boy .present.last {
+  margin: 0;
+}
+.boy .present h2 {
+  color: #000;
+  font-size: 32px;
+  line-height: 100%;
+  padding: 20px 0 5px;
+  border-bottom: 5px solid #000;
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6";
+}
+.boy .present p.price {
+  padding: 10px 0;
+  color: #000;
+  font-size: 14px;
+}
+.boy .present p.price span {
+  font-size: 10px;
+  padding: 0 0 0 1em;
+}
+.boy .choiceBtn {
+  width: 624px;
+  margin: 0 auto;
+}
+.boy .choiceBtn li {
+  float: left;
+  width: 302px;
+  margin: 0 20px 0 0;
+}
+.boy .choiceBtn li.last {
+  margin: 0;
+}
+/* ===== boy OK1 ================================================================================================================================== */
+#boy_ok1 .choiceBtn {
+  margin: 60px auto 0;
+}
+/* ===== boy OK2 ================================================================================================================================== */
+#boy_ok2 .onedariCaption {
+  margin: 50px 0 0;
+}
+#boy_ok2 .choiceBtn {
+  margin: 30px auto 20px;
+  width: 567px;
+}
+#boy_ok2 .choiceBtn li {
+  width: 280px;
+  margin: 0 7px 0 0;
+}
+#boy_ok2 .choiceBtn li.last {
+  margin: 0;
+}
+#boy_ok2 .goTop {
+  text-align: center;
+}
+/* ===== boy khyohi2 ================================================================================================================================== */
+#boy_kyohi2 .onedariCaption {
+  margin: 50px 0 0;
+}
+#boy_kyohi2 .choiceBtn {
+  margin: 30px auto 20px;
+  width: 567px;
+}
+#boy_kyohi2 .choiceBtn li {
+  width: 280px;
+  margin: 0 7px 0 0;
+}
+#boy_kyohi2 .choiceBtn li.last {
+  margin: 0;
+}
+#boy_kyohi2 .goTop {
+  text-align: center;
+}

@@ -24,7 +24,7 @@ class UsersController extends AppController {
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
         $this->Auth->allow('signup', 'login', 'twitter', 'twitter_callback'
-                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'give', 'give_callback');
+                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'give', 'give_callback', 'set_address_fb', 'set_address_tw', 'thankyou');
 
         $this->fb = new Facebook(array(  
             'appId'  => Configure::Read('Facebook.appId'),  
@@ -145,14 +145,13 @@ class UsersController extends AppController {
         $this->redirect('/users/set_address/');
     } 
     
-    public function set_address() {
+    public function set_address_tw() {
         $this->User->id = $this->Session->read('user_Id');
         $this->set('user', $this->User->read());
         if ($this->request->is('post')) {
             if (!empty($this->data)) {
       		  	$this->__sanitize();
 	            if ($this->User->save($this->request->data)) {
-
     	            $this->OauthConsumer->post('Twitter'
         	                , $this->Session->read('accessKey')
             	            , $this->Session->read('accessSecret')
@@ -168,9 +167,32 @@ class UsersController extends AppController {
             	}
             }
     	}
-        
-        $this->set('errors', $this->User->validationErrors);
-           
+        $this->set('errors', $this->User->validationErrors);  
+    }
+   
+    public function set_address_fb() {
+        $this->User->id = $this->Session->read('user_Id');
+        $this->set('user', $this->User->read());
+        if ($this->request->is('post')) {
+            if (!empty($this->data)) {
+      		  	$this->__sanitize();
+	            if ($this->User->save($this->request->data)) {
+    	            $this->OauthConsumer->post('Twitter'
+        	                , $this->Session->read('accessKey')
+            	            , $this->Session->read('accessSecret')
+                	        , 'https://api.twitter.com/1/statuses/update.json'
+                    	    , array('status' => 
+                        	    '.@' . $this->Session->read('girl_id') . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
+                            	. '【このツイートはチョコくれを利用して送られています】'
+                           	 . ' http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')
+                           	 . ' #chocokure'
+                        	));
+                    $this->Session->setFlash('');
+                    $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
+            	}
+            }
+    	}
+        $this->set('errors', $this->User->validationErrors);  
     }
 	
     public function thankyou() {

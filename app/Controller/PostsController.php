@@ -3,7 +3,9 @@ class PostsController extends AppController {
     public $name = 'Posts';
     public $helpers = array('Html', 'Form');
     public $components = array('OauthConsumer');
-    var $uses = array('User', 'Post', 'Payment'); 
+    var $uses = array('User', 'Post', 'Payment');
+    var $view = 'Theme';
+ 
 	
     /*
 public function index() {
@@ -145,6 +147,7 @@ public function index() {
         $this->set('errors', $this->Post->validationErrors);
         
         $this->fix_avatar();
+        
     }
     
     function edit($id = null) {

@@ -31,6 +31,8 @@ class AppController extends Controller {
     
     var $logger = null;
     
+    public $view = 'Theme';
+    
     function beforeFilter()
     {
         // Specify which controller/action handles logging in:
@@ -94,8 +96,20 @@ class AppController extends Controller {
                                 $log_level = PEAR_LOG_NONE;
                                 break; 
         }
-
         $this->logger = &Log::factory(LOG_OUTPUT,LOG_FILE, 'APP',null,$log_level);
+    	
+    	$useragents = array(
+      		'iPhone', // Apple iPhone
+      		'iPod',   // Apple iPod touch
+      		'Android' // Android
+    	); 
+    	$pattern = '/'.implode('|', $useragents).'/i';
+    	if ( preg_match($pattern, $_SERVER['HTTP_USER_AGENT']) ) {
+      		$this->theme = 'smartphone';  // view/themed/smartphone 以下のviewファイルを使うようになる
+    	}
+    	if ($this->theme === 'smartphone') {
+    		$this->layout = 'smartphone';
+		}
     }
 
     function beforeRender() {

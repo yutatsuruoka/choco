@@ -1,46 +1,44 @@
-<?php
-    $e  = '';
-    if ($errors) {
-        foreach($errors as $error) {
-            if (strlen($e) > 0) {
-                $e .= '<br>';
-            }
-            $e .= $error[0];
-        }
-    }
-    if (strlen($e) == 0) {
-        if ($remaining > 1700) {
-            $e = 'チョコ<strong>' . $begs . '個</strong>おねだり済み';
-        }
-        else {
-            $e = '限定<strong>' . $remaining . '</strong>チョコ';
-        }
-    }
-?>
-
-<div class="entryContainer">
-    <div class="wrapper">
-        <p class="counter"><?php echo $e ?></p>     
-        <div class="clearfix">
-            <div class="left parenthesis"><img src="<?php echo $this->webroot ?>i/parenthesis_left.png" alt=""></div>
-            <div class="left formContainer">
-                <?
-                    echo $this->Form->create('Post', array('class'=>'clearfix'));
-                    echo $this->Form->input('girl_id',array(
-                        'id' => 'twitterAccount'
-//                        , 'placeholder' => "女の子のTwitterアカウントを入力"
-                        , 'type' => 'text'
-                        , 'label' => false
-                        , 'class' => 'jq-placeholder'
-                        , 'title' => "女の子のTwitterアカウントを入力"
-                        , 'error' => false
-                        ));
-                    echo $this->Form->submit('',array('id' => 'submitButton'));
-                    echo $this->Form->end();
-                ?>
-                <p>チョコをねだりたい女の子のTwitterアカウントを入れて ”チョコくれ！” ボタンをクリック！ Twitter認証へ飛んでいきます！</p>
-            </div>
-            <div class="right parenthesis"><img src="<?php echo $this->webroot ?>i/parenthesis_right.png" alt=""></div>
-        </div>
+    <div class="top wrapper">
+        <div class="captionContainer mgt30 mgb50">
+            <p><img src="<?php echo $this->webroot ?>i/top_cap.png" alt="チョコくれ！が女性の為に帰ってきたぜ！！男性におねだり（復讐）できるソーシャルホワイトデープラットフォーム"></p>
+        </div><!-- end wrapper captionContainer-->
+        <article class="clearfix">
+        <section class="present">
+        <img src="<?php echo $this->webroot ?>i/present_a.jpg" alt="Pruduct name">
+        <h2>Pruduct name</h2>
+        <p class="price">¥500<span>プレゼントして当たり前だよねってレベル</span></p>
+        <p class="detaile">ここに商品の説明が入りますここに商品の説明が入りますここに商品の
+        説明が入りますここに商品の説明が入りますここに商品の説明が入りま
+        すここに商品の説明が入ります。</p>
+        <ul class="onedariContainer clearfix">
+            <li class="left tw"><a href="<?php echo $this->webroot ?>Users/set_address_tw/"><img src="<?php echo $this->webroot ?>i/present_twbtn.png" alt="Twitterでおねだり"></a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.png" alt="Facebookでおねだり"></a></li>
+        </ul>
+        </section>
+        <section class="present">
+        <img src="<?php echo $this->webroot ?>i/present_a.jpg" alt="Pruduct name">
+        <h2>Pruduct name</h2>
+        <p class="price">¥300,000<span>これ買ってくれたら嬉しいよね〜</span></p>
+        <p class="detaile">ここに商品の説明が入りますここに商品の説明が入りますここに商品の
+        説明が入りますここに商品の説明が入りますここに商品の説明が入りま
+        すここに商品の説明が入ります。</p>
+        <ul class="onedariContainer clearfix">
+            <li class="left tw"><a href="<?php echo $this->webroot ?>Users/set_address_tw/"><img src="<?php echo $this->webroot ?>i/present_twbtn.png" alt="Twitterでおねだり"></a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.png" alt="Facebookでおねだり"></a></li>
+        </ul>
+        </section>
+        <section class="present last">
+        <img src="<?php echo $this->webroot ?>i/present_a.jpg" alt="Pruduct name">
+        <h2>Pruduct name</h2>
+        <p class="price">¥450,000,000<span>責任を持って結婚をオススメします</span></p>
+        <p class="detaile">ここに商品の説明が入りますここに商品の説明が入りますここに商品の
+        説明が入りますここに商品の説明が入りますここに商品の説明が入りま
+        すここに商品の説明が入ります。</p>
+        <ul class="onedariContainer clearfix">
+            <li class="left tw"><a href="<?php echo $this->webroot ?>Users/set_address_tw/"><img src="<?php echo $this->webroot ?>i/present_twbtn.png" alt="Twitterでおねだり"></a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.png" alt="Facebookでおねだり"></a></li>
+        </ul>
+        </section>
+        </article>
     </div>
-</div><!-- end .entryContainer -->
+
