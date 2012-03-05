@@ -8,7 +8,7 @@
     <div class="boy wrapper" id="boy_top">
         <div class="onedariGirlContainer clearfix">
             <div class="imgContainer left">
-                <img src="<?php echo $avatar; ?>" alt="">
+                <img src="<?php echo $avatar; ?>" alt="" height = "100px" width = "100px" >
             </div>
             <div class="commentContainrt">
                 <p class="comment">私はあなたからプレゼントをもらいたいと思っています。<br>

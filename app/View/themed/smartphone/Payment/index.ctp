@@ -15,14 +15,12 @@
 
         <section class="caption">
         <h3><img src="<?php echo $this->webroot ?>i_sp/boy_ok1_cap.png" alt="nice select!!" width="100" height="25"></h3>
-        <p>おねだり商品は５分で決済出来ます。<br>
-PayPalかネットバンク、どちらか好きな方をお選び下さい♩</p>
+        <p>おねだり商品は５分で決済出来ます。</p>
         </section>
 
         <section class="present">
-        <ul class="onedariBtn clearfix">
-            <li class="left tw"><a href="">▶ PayPalでプレゼント</a></li>
-            <li class="right fb"><a href="">▶ 楽天銀行でプレゼント</a></li>
+        <ul class="onedariBtn">
+            <li><a href="<?php echo $this->webroot ?>Payment/paypal/<?php echo $post_id ?>">▶ PayPalでプレゼント</a></li>
         </ul>
         <div class="presentInfo">
             <dl>
@@ -30,12 +28,6 @@ PayPalかネットバンク、どちらか好きな方をお選び下さい♩</
                 <dd>PayPalは世界で最も利用者の多いネット決済サービスです。
                 アカウントを登録しておくと、今後も様々なサイトで簡単に
                 利用する事が出来ます♩
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="" target="_blank">楽天銀行</a>ってなあに？</dt>
-                <dd>P国内有数の企業となる楽天が運営しているネットバンクです。
-                日頃から楽天をご利用の方はこちらをお選び下さい♩
                 </dd>
             </dl>
             <p>※neda.lyは決済を含むサービスです。<br>

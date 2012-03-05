@@ -11,15 +11,23 @@
         </div><!-- end .snsButton-->
         </aside><!-- end .snsContainer-->
 		<article>
-        <div class="caption">
-            <p>商品はneda.lyが郵送であなたにお届けします。<br>
-            あなたの住所、もしくは希望の郵送先を入力して下さい♩
-            送信ボタンを押せばおねだりが完了します♩</p>
+        <div class="presentInfo">
+            <img class="presentImg" src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
+            <p class="presentText">選んだ商品は合っていますか？<br>
+            次におねだり（復讐）する相手を選んで、<br>
+            おねだりの準備を完了しましょう！</p>
         </div>
-
+		<form>
         <div class="formList">
-            <form>
             <ul>
+            	<li>
+        		<input type="text" placeholder="@ ここに相手のTwitterアカウント名を入力" >
+        		</li>
+       		<div class="caption">
+            	<p>商品はneda.lyが郵送であなたにお届けします。<br>
+            	あなたの住所、もしくは希望の郵送先を入力して下さい♩
+            	送信ボタンを押せばおねだりが完了します♩</p>
+        	</div>
                 <li>
                 <label for="">宛名</label>
                 <input type="text">
@@ -37,7 +45,6 @@
                 <input type="text">
                 </li>
             </ul>
-            </form>
         </div>
         
         <div class="menu">
@@ -45,5 +52,6 @@
                 <li><a href="<?php echo $this->webroot ?>Users/thankyou/">おねだり送信</a></li>
             </ul>
         </div>
+        </form>
         </article>
     </div>

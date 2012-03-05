@@ -182,8 +182,24 @@ public function index() {
 	function check(){
 	}
 	
-	function no($post_id=null){
-		$this->set("post_id", $post_id);
+	function no($id=null){
+		$this->set("post_id", $id);
+        $this->Post->id = $id;
+        $p = $this->Post->find('first', array(
+            'conditions' => array('Post.id' => $id)
+            ));
+        
+        if ($p) {
+            $u = $this->User->find('first', array(
+                'conditions' => array('User.id' => $p['Post']['boy_id'])
+                ));
+            
+            $this->set('post_id', $id);
+            $this->set('screen_name', $u['User']['screen_name']);
+            $this->set('girl_id', $p['Post']['girl_id']);
+            $this->set('avatar', $p['Post']['girl_avatar']);
+        }
+        
 	}
 	
 	function nono(){

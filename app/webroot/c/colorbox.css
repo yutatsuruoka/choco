@@ -20,7 +20,7 @@
 */
 #cboxOverlay{background:#fff;}
 #colorbox{}
-    #cboxTopLeft{width:25px; height:25px; background:url(/i/border1.png) no-repeat 0 0;}
+    #cboxTopLeft{width:25px; height:25px; background:url(../i/border1.png) no-repeat 0 0;}
     #cboxTopCenter{height:25px; background:url(../i/border1.png) repeat-x 0 -50px;}
     #cboxTopRight{width:25px; height:25px; background:url(../i/border1.png) no-repeat -25px 0;}
     #cboxBottomLeft{width:25px; height:25px; background:url(../i/border1.png) no-repeat 0 -25px;}

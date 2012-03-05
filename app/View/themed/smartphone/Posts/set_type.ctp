@@ -1,4 +1,11 @@
-<div class="contents wrapper" id="flow05">
+    <div class="contents wrapper" id="flow06">
+        <div class="captionContainer  center">
+            <p class="cap"> チョコくれ！が女性の為に帰ってきたぜ！！<br>
+            ホワイトデーを使って男性におねだり（復讐）できる、<br>
+            ソーシャルおねだりプラットフォーム。
+            </p>
+            <p class="news"><a href="">16:32 Yahoo!ニュースのトップページに掲載されました &gt;&gt;</a></p>
+        </div><!-- end wrapper captionContainer-->
 
         <aside class="snsContainer clearfix">
         <div class="snsButton left">   
@@ -12,20 +19,27 @@
         </aside><!-- end .snsContainer-->
 
         <article>
-        <div class="caption">
-            <h3 ><img src="<?php echo $this->webroot ?>i_sp/boy_login_cap.png" width="125" height="28" alt="hello nice guy!!"></h3>
-            <p><a href="">Neo Iida</a> さんが気になる男性として
-            あなたにメッセージを送信しています。
-            今すぐ <a href="">Neo Iida</a> さんからのラブレターを確認してください♩</p>
-        </div>
 
-        <p class="news"><a href="">16:32 Yahoo!ニュースのトップページに掲載されました &gt;&gt;</a></p> 
-        
-        <div class="menu">
-            <ul>
-                <li><a href="<?php echo $this->webroot ?>Posts/check/">Twitterでログインして中身を確認！</a></li>
-                <li><a href="<?php echo $this->webroot ?>Posts/check/">Facebookでログインして中身を確認！</a></li>
-            </ul>
+        <section class="caption">
+        <h3><img src="<?php echo $this->webroot ?>i_sp/boy_top_cap.png" alt="welcome to nice guy!! " width="185" height="28"></h3>
+        <p><a href="">@<?php echo $girl_id ?></a> さんが気になる男性として
+        あなたにプレゼントのおねだりをしています。
+        ホワイトデーに向けてプレゼントを送ってみませんか？</p>
+        </section>
+
+        <section class="present">
+        <div class="presentTtl">
+            <div>
+                <h2>Godiva chocolate. / ¥500</h2>
+                <p>これはプレゼントして当たり前だよねってレベル</p>
+            </div>
         </div>
+        <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
+        <ul class="onedariBtn clearfix">
+            <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/no/<?php echo $post_id ?>">▶ 僕はケチだから断る</a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Payment/index/<?php echo $post_id ?>">▶ もちろんプレゼント</a></li>
+        </ul>
+        </section>
         </article>
+        
     </div>

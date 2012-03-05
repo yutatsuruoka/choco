@@ -649,16 +649,12 @@ footer #copyRight {
   margin: 0 0 15px;
 }
 #flow06_success .present .onedariBtn li {
-  width: 150px;
+  width: 300px;
   height: 44px;
   line-height: 44px;
   background: #4bc3ee;
   text-align: center;
   font-size: 12px;
-}
-#flow06_success .present .onedariBtn li.tw {
-  width: 149px;
-  border-right: 1px solid #fff;
 }
 #flow06_success .present .onedariBtn a {
   color: #fff;

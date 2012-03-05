@@ -1,0 +1,78 @@
+
+
+footer .footerPopup{
+    display:none;
+    font-size:12px;
+}
+#popUp01 h2{
+    font-weight:bold;
+    margin:0 0 15px;
+}
+
+#popUp01 table.show{
+    font-size:12px;
+    line-height:1.4em;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 3px solid #E8E8E8;
+}
+    
+#popUp01 table.show th, table.show td {
+    border: 1px solid #E8E8E8;
+    padding: 15px;
+}
+
+#popUp01 table.show th {
+width: 30%;
+background-color: #FAFAF7;
+}
+
+
+#popUp02 h2{
+    font-weight:bold;
+    margin:0 0 15px;
+}
+
+#popUp02 p.text{
+    line-height:1.2em;
+}
+
+#popUp02 dt{
+    font-size:14px;
+   margin:20px 0 10px; 
+}
+
+#popUp02 dd{
+    line-height:1.4em;
+    font-size:12px;
+   margin:0 0 10px; 
+}
+
+#popUp02 #popUp02_02{
+    margin:40px 0 0;
+}
+
+
+#popUp03 h2{
+    font-weight:bold;
+    margin:0 0 15px;
+}
+#popUp03 p.text{
+    line-height:1.2em;
+}
+
+#popUp03 dt{
+    font-size:14px;
+   margin:20px 0 10px; 
+}
+
+#popUp03 dd{
+    line-height:1.4em;
+    font-size:12px;
+   margin:0 0 10px; 
+}
+
+#popUp03 #popUp02_02{
+    margin:40px 0 0;
+}
+

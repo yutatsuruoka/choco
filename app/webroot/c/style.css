@@ -246,11 +246,10 @@ input, select {
 }
 /* ===== Primary Styles ================================================================================================================================== */
 body {
-  font-family: "ヒラギノ角ゴ ProN W6", "HiraKakuProN-W6", Arial, sans-serif;
+  font-family: "ヒラギノ角ゴ ProN W3", "HiraKakuProN-W3", Arial, sans-serif;
   color: #999;
   background: #fff;
   font-size: 10px;
-  border-top: 15px solid #000;
   letter-spacing: .09em;
   line-height: 1.3em;
   width: 100%;
@@ -261,19 +260,19 @@ body {
   -webkit-text-size-adjust: none;
 }
 a, a:visited {
-  color: #ff99cc;
+  color: #66c1eb;
   text-decoration: none;
 }
 a:hover {
-  color: #ff72b9;
+  color: #1aa9eb;
 }
 ::-moz-selection {
-  background: #999;
+  background: #66c1eb;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #999;
+  background: #66c1eb;
   color: #fff;
   text-shadow: none;
 }
@@ -382,7 +381,7 @@ footer .team .teamMember .memberProfile p.post a {
   color: #fff;
 }
 footer .team .teamMember .memberProfile p.post a:hover {
-  color: #ff99cc;
+  color: #66c1eb;
 }
 footer .team .teamMember .memberSns {
   margin: 30px 0 0;
@@ -424,7 +423,7 @@ footer ul.info a {
   color: #fff;
 }
 footer ul.info a:hover {
-  color: #ff99cc;
+  color: #66c1eb;
 }
 /* ===== #infoSnsContainer ================================================================================================================================== */
 #infoSnsContainer {
@@ -440,6 +439,7 @@ footer ul.info a:hover {
 #infoSnsContainer .leftContainer dt {
   margin: 0 0 10px;
   color: #000;
+  font-family: "ヒラギノ角ゴ ProN W6", "HiraKakuProN-W6", Arial, sans-serif;
 }
 #infoSnsContainer .leftContainer dd {
   margin: 0 0 7px;
@@ -453,6 +453,8 @@ footer ul.info a:hover {
 #infoSnsContainer .rightContainer .onedariContainer h2 {
   color: #000;
   margin: 0 0 10px;
+  font-family: "ヒラギノ角ゴ ProN W6", "HiraKakuProN-W6", Arial, sans-serif;
+  font-size: 12px;
 }
 #infoSnsContainer .rightContainer .onedariContainer .twList {
   margin: 0 0 0 -10px;
@@ -475,17 +477,17 @@ footer ul.info a:hover {
   margin: 0;
 }
 .top .present h2 {
-  color: #000;
-  font-size: 32px;
+  color: #999;
+  font-size: 14px;
   line-height: 100%;
-  padding: 20px 0 5px;
-  border-bottom: 5px solid #000;
-  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6";
+  padding: 10px 0 5px;
+  border-bottom: 1px solid #ccc;
+  font-family: "ヒラギノ角ゴ ProN W6", "HiraKakuProN-W6", Arial, sans-serif;
 }
 .top .present p.price {
   padding: 10px 0;
-  color: #000;
-  font-size: 14px;
+  color: #999;
+  font-size: 10px;
 }
 .top .present p.price span {
   font-size: 10px;
@@ -542,11 +544,12 @@ footer ul.info a:hover {
 .girl_2nd .formContainer .sheetContainer li .inputContainer {
   float: left;
   width: 324px;
-  padding: 10px 25px 0;
+  padding: 12px 25px 0;
 }
 .girl_2nd .formContainer .sheetContainer li .inputContainer input {
-  width: 300px;
+  width: 295px;
   height: 25px;
+  line-height: 25px;
   padding: 5px 15px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -589,11 +592,12 @@ footer ul.info a:hover {
 }
 #girl_2nd_tw .formContainer .twAccountForm .sheetContainer li .inputContainer {
   float: none;
-  width: 328px;
-  padding: 10px 20px 0;
+  width: 280px;
+  padding: 12px 20px 0;
 }
 #girl_2nd_tw .formContainer .twAccountForm .sheetContainer li .inputContainer input {
-  width: 245px;
+  line-height: 25px;
+  width: 248px;
   height: 25px;
 }
 #girl_2nd_tw .formContainer .twAccountForm p.txt {
@@ -617,9 +621,8 @@ footer ul.info a:hover {
 #girl_finish .captionContainer {
   margin: 60px 0 0;
 }
-#girl_finish .returnTop {
-  width: 301px;
-  margin: 0 auto 0;
+#girl_finish .goTop {
+  text-align: center;
 }
 /* ===== boy ================================================================================================================================== */
 .boy .onedariGirlContainer {
@@ -640,19 +643,18 @@ footer ul.info a:hover {
 .boy .onedariGirlContainer .commentContainrt p.comment {
   padding: 30px 30px 10px 90px;
   text-align: center;
-  color: #ff99cc;
+  color: #66c1eb;
   line-height: 1.6em;
 }
 .boy .onedariCaption {
   text-align: center;
-  color: #000;
+  color: #999;
   font-size: 32px;
-  font-family: "ヒラギノ角ゴ Std W8", "Hiragino Kaku Gothic Std";
   letter-spacing: .07em;
   line-height: 1.4em;
 }
 .boy .onedariCaption .pink {
-  color: #ff99cc;
+  color: #66c1eb;
 }
 .boy .info {
   margin: 15px 0 0;
@@ -668,16 +670,18 @@ footer ul.info a:hover {
   margin: 0;
 }
 .boy .present h2 {
-  color: #000;
+  color: #999;
   font-size: 32px;
   line-height: 100%;
   padding: 20px 0 5px;
-  border-bottom: 5px solid #000;
-  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6";
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-family: "ヒラギノ角ゴ ProN W6", "HiraKakuProN-W6", Arial, sans-serif;
 }
 .boy .present p.price {
   padding: 10px 0;
-  color: #000;
+  color: #999;
+  text-align: center;
   font-size: 14px;
 }
 .boy .present p.price span {
@@ -698,7 +702,19 @@ footer ul.info a:hover {
 }
 /* ===== boy OK1 ================================================================================================================================== */
 #boy_ok1 .choiceBtn {
+  width: 302px;
   margin: 60px auto 0;
+}
+#boy_ok1 #info_text_paypal {
+  margin-top: 60px;
+}
+#boy_ok1 #info_text_paypal p {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6em;
+}
+#boy_ok1 #info_text_paypal .info_title {
+  font-size: 18px;
 }
 /* ===== boy OK2 ================================================================================================================================== */
 #boy_ok2 .onedariCaption {
@@ -718,7 +734,7 @@ footer ul.info a:hover {
 #boy_ok2 .goTop {
   text-align: center;
 }
-/* ===== boy khyohi2 ================================================================================================================================== */
+/* ===== boy kyohi2 ================================================================================================================================== */
 #boy_kyohi2 .onedariCaption {
   margin: 50px 0 0;
 }
@@ -735,4 +751,107 @@ footer ul.info a:hover {
 }
 #boy_kyohi2 .goTop {
   text-align: center;
+}
+/* ===== boy login ================================================================================================================================== */
+#boy_login .onedariCaption {
+  margin: 100px 0 0;
+}
+#boy_login #login_selesct {
+  width: 710px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+#boy_login #login_selesct .tw {
+  margin-right: 10px;
+}
+#boy_login_copyright {
+  margin-top: 50px;
+  background-color: #fff;
+  text-align: center;
+}
+/* ===== paypal login ================================================================================================================================== */
+#boy_paypal_login {
+  margin: 0 auto;
+  float: none;
+}
+#boy_paypal_login #login_selesct {
+  text-align: center;
+  margin-top: 50px;
+}
+#boy_paypal_login #login_selesct .boy_login_fb {
+  margin-left: 10px;
+}
+#boy_paypal_login #login_selesct a:hover {
+  opacity: 0.8;
+}
+#boy_paypal_login p {
+  margin-top: 100px;
+  background-color: #fff;
+  text-align: center;
+}
+/* ===== paypal login 鶴岡くんの作業終わったらスタイル調整================================================================================================================================== */
+#paypal_form {
+  width: 1040px;
+  margin: 0 auto;
+}
+#paypal_form #paypal_sample {
+  margin-top: 100px;
+}
+/* ===== boy message ================================================================================================================================== */
+#boy_ok2 #messagebox {
+  text-align: center;
+}
+#boy_ok2 #messagebox .freeform {
+  margin: 50px 0 10px 0;
+  width: 100%;
+  text-align: left;
+  height: 28px;
+  border: solid 1px #ccc;
+  font-size: 18px;
+  color: #999;
+  padding: 10px;
+  text-align: center;
+}
+#boy_ok2 #messagebox .messagebtn {
+  text-align: center;
+  margin-top: 30px;
+  float: none;
+}
+/* ===== old ie ================================================================================================================================== */
+.oldie #girl_2nd_tw .formContainer .twAccountForm .sheetContainer li .inputContainer {
+  float: none;
+  width: 280px;
+  padding: 12px 20px 0;
+}
+.oldie #girl_2nd_tw .formContainer .twAccountForm .sheetContainer li .inputContainer input {
+  line-height: 25px;
+  width: 248px;
+  height: 25px;
+}
+.oldie .girl_2nd {
+  /* end formContainer */
+
+}
+.oldie .girl_2nd .formContainer .sheetContainer li .inputContainer {
+  float: left;
+  width: 324px;
+  padding: 12px 25px 0;
+}
+.oldie .girl_2nd .formContainer .sheetContainer li .inputContainer input {
+  width: 295px;
+  height: 25px;
+  line-height: 25px;
+  padding: 5px 15px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 2px 3px 7px #efefef;
+  box-shadow: inset 2px 3px 7px #efefef;
+  -moz-box-shadow: inset 2px 3px 7px #efefef;
+  border: 1px solid #bfbfbf;
+}
+.oldie .girl_2nd .formContainer .sheetContainer li.last {
+  border: none;
+  height: 58px;
 }

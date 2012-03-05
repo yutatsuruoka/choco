@@ -22,6 +22,19 @@ $(".choiceBtn img").hover(
         function(){ $(this).css("opacity", 1); }
 );
 
+//boy login マウスオーバー
+$("#login_selesct img").hover(
+        function(){ $(this).css("opacity", .6); },
+        function(){ $(this).css("opacity", 1); }
+);
+
+
+//boy login マウスオーバー
+$("#messagebox .messagebtn").hover(
+        function(){ $(this).css("opacity", .6); },
+        function(){ $(this).css("opacity", 1); }
+);
+
 
 //colorbox 規約部分
 $(function(){
