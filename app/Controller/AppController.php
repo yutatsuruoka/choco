@@ -31,7 +31,7 @@ class AppController extends Controller {
     
     var $logger = null;
     
-    public $view = 'Theme';
+    public $theme = 'Example';
     
     function beforeFilter()
     {
@@ -105,11 +105,12 @@ class AppController extends Controller {
     	); 
     	$pattern = '/'.implode('|', $useragents).'/i';
     	if ( preg_match($pattern, $_SERVER['HTTP_USER_AGENT']) ) {
-      		$this->theme = 'smartphone';  // view/themed/smartphone 以下のviewファイルを使うようになる
+/*       		$this->theme = 'smartphone';  // view/themed/smartphone 以下のviewファイルを使うようになる */
+      		$this->theme = 'Smartphone';
     	}
-    	if ($this->theme === 'smartphone') {
+    	if ($this->theme === 'Smartphone') {
     		$this->layout = 'smartphone';
-		}
+		}	
     }
 
     function beforeRender() {

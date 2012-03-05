@@ -4,7 +4,7 @@ class PostsController extends AppController {
     public $helpers = array('Html', 'Form');
     public $components = array('OauthConsumer');
     var $uses = array('User', 'Post', 'Payment');
-    var $view = 'Theme';
+    public $theme = 'Example';
  
 	
     /*
