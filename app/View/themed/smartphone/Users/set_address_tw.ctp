@@ -40,7 +40,7 @@
                 </li>
                 <li>
                 <label for="">住所</label>
-                <input type="text"  placeholder="東京都渋谷区渋谷1-17-1" id="address" name="address" value= <?php echo $user['User']['address'] ?>>
+                <input type="text"  placeholder="東京都渋谷区渋谷1-1" id="address" name="address" value= <?php echo $user['User']['address'] ?>>
                 </li>
                 <li>
                 <label for="">電話番号</label>
