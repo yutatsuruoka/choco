@@ -6,6 +6,7 @@ class UsersController extends AppController {
     public $name = 'Users';
     public $components = array('OauthConsumer');
     var $uses = array('User', 'Post'); 
+    public $theme = '';
     
     var $fb;  
       
@@ -24,13 +25,45 @@ class UsersController extends AppController {
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
         $this->Auth->allow('signup', 'login', 'twitter', 'twitter_callback'
-                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'give', 'give_callback', 'set_address_fb', 'set_address_tw', 'thankyou');
+                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'give', 'give_callback', 'set_address_fb', 'set_address_tw', 'thankyou', 'set_address_sp');
 
         $this->fb = new Facebook(array(  
             'appId'  => Configure::Read('Facebook.appId'),  
             'secret' => Configure::Read('Facebook.secret'),  
             'cookie' => true,  
         ));
+    }
+
+	private function get_redirect_url($url) {
+
+        $url_parts = @parse_url($url);
+        if (!$url_parts) return false;
+        if (!isset($url_parts['host'])) return false; //can't process relative URLs
+        if (!isset($url_parts['path'])) $url_parts['path'] = '/';
+
+        $sock = fsockopen($url_parts['host'], (isset($url_parts['port']) 
+                ? (int)$url_parts['port'] : 80), $errno, $errstr, 30);
+        if (!$sock) return false;
+
+        $request = "HEAD " . $url_parts['path'] . (isset($url_parts['query']) 
+                ? '?'.$url_parts['query'] : '') . " HTTP/1.1\r\n";
+        $request .= 'Host: ' . $url_parts['host'] . "\r\n";
+        $request .= "Connection: Close\r\n\r\n";
+        fwrite($sock, $request);
+        $response = '';
+        while(!feof($sock)) $response .= fread($sock, 8192);
+        fclose($sock);
+
+        if (preg_match('/^Location: (.+?)$/m', $response, $matches)){
+            if ( substr($matches[1], 0, 1) == "/" )
+                return $url_parts['scheme'] . "://" . $url_parts['host'] 
+                    . trim($matches[1]);
+            else
+                return trim($matches[1]);
+
+        } else {
+            return false;
+        }
     }
 
     public function signup() {
@@ -137,27 +170,50 @@ class UsersController extends AppController {
 
         // update post.boy_id with new/logged in user
         $this->Post->id = $this->Session->read('insert_id');
-        $this->Post->saveField('boy_id', $this->current_user['id']);
+        $this->Post->saveField('userid', $this->current_user['id']);
+        $this->Post->saveField('girl_id', $user->screen_name);
+        
+        $avatar_url = 'https://api.twitter.com/1/users/profile_image?'
+                    . 'screen_name=' . $user->screen_name
+                    . '&size=bigger';
+                $girl_avatar = $this->get_redirect_url($avatar_url);
+        $this->Post->saveField('girl_avatar', $girl_avatar);            
 
         $this->Session->write('user_Id', $this->current_user['id']);        
         $this->Session->write('user_Name', $this->current_user['name']);
         
-        $this->redirect('/users/set_address/');
+        $this->redirect('/users/set_address_tw/');
     } 
     
     public function set_address_tw() {
         $this->User->id = $this->Session->read('user_Id');
+        $this->Post->id = $this->Session->read('insert_id');
         $this->set('user', $this->User->read());
         if ($this->request->is('post')) {
             if (!empty($this->data)) {
-      		  	$this->__sanitize();
-	            if ($this->User->save($this->request->data)) {
-    	            $this->OauthConsumer->post('Twitter'
+            	$data = $this->request->data;
+      		  	if ($this->User->save($this->request->data)) {
+      		  		// boy_id save
+           			// remove @ mark
+                	$boy_id = $data["twname"];
+                	$fc = substr($boy_id, 0, 1);
+                	while ($fc == '@'
+                    	    || $fc == ' ') {
+                    	$boy_id = substr($boy_id, 1);                    
+                    	$fc = substr($boy_id, 0, 1);
+                	}
+                	$data["twname"] = $boy_id;
+            		$add['Post'] = array(
+      					'boy_id' => $data["twname"],
+   					);
+        			$this->Post->save($add);  
+        				            
+        			$this->OauthConsumer->post('Twitter'
         	                , $this->Session->read('accessKey')
             	            , $this->Session->read('accessSecret')
                 	        , 'https://api.twitter.com/1/statuses/update.json'
                     	    , array('status' => 
-                        	    '.@' . $this->Session->read('girl_id') . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
+                        	    '.@' . $data["twname"] . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
                             	. '【このツイートはチョコくれを利用して送られています】'
                            	 . ' http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')
                            	 . ' #chocokure'
@@ -195,6 +251,31 @@ class UsersController extends AppController {
         $this->set('errors', $this->User->validationErrors);  
     }
 	
+    public function set_address_sp() {
+        $this->User->id = $this->Session->read('user_Id');
+        $this->set('user', $this->User->read());
+        if ($this->request->is('post')) {
+            if (!empty($this->data)) {
+      		  	$this->__sanitize();
+	            if ($this->User->save($this->request->data)) {
+    	            $this->OauthConsumer->post('Twitter'
+        	                , $this->Session->read('accessKey')
+            	            , $this->Session->read('accessSecret')
+                	        , 'https://api.twitter.com/1/statuses/update.json'
+                    	    , array('status' => 
+                        	    '.@' . $this->Session->read('girl_id') . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
+                            	. '【このツイートはチョコくれを利用して送られています】'
+                           	 . ' http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')
+                           	 . ' #chocokure'
+                        	));
+                    $this->Session->setFlash('');
+                    $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
+            	}
+            }
+    	}
+        $this->set('errors', $this->User->validationErrors);  
+    }
+    
     public function thankyou() {
     	
     }

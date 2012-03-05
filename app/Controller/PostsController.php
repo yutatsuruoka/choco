@@ -98,37 +98,16 @@ public function index() {
         }
     }
     
-    public function add() {
-        if ($this->request->is('post')) {
-            if (!empty($this->request->data)) {
-                $this->__sanitize();
-                
-                $data = $this->request->data;
-                
-                // remove @ mark
-                $girl_id = $data['Post']['girl_id'];
-                $fc = substr($girl_id, 0, 1);
-                while ($fc == '@'
-                        || $fc == ' ') {
-                    $girl_id = substr($girl_id, 1);                    
-                    $fc = substr($girl_id, 0, 1);
-                }
-                $data['Post']['girl_id'] = $girl_id;
-                
-                $avatar_url = 'https://api.twitter.com/1/users/profile_image?'
-                    . 'screen_name=' . $girl_id
-                    . '&size=bigger';
-                
-                $data['Post']['girl_avatar'] 
-                        = $this->get_redirect_url($avatar_url);
-                
-                if ($this->Post->save($data)) {
-                    $this->Session->write('girl_id', $girl_id);
-                    $this->Session->write('insert_id', $this->Post->getInsertID());
-                    $this->Session->setFlash('');
-                    $this->redirect(array('controller' => 'users', 'action' => 'beg'));
-                }                
-            }
+    public function add($id = null) {
+        if (!empty($id)) {
+            $this->__sanitize();
+            $data['Post'] = array(
+      			'type' => $id,
+   			);
+            if ($this->Post->save($data)) {
+            	$this->Session->write('insert_id', $this->Post->getInsertID());
+                $this->redirect(array('controller' => 'users', 'action' => 'beg'));
+            }                
     	}
         
         // get count of payments
@@ -187,7 +166,7 @@ public function index() {
 
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
-        $this->Auth->allow('add', 'index', 'set_type', 'fix_avatar');
+        $this->Auth->allow('add', 'index', 'set_type', 'fix_avatar', 'no', 'nono', 'check');
     }
 	
     function delete($id) {
@@ -199,7 +178,16 @@ public function index() {
         	$this->redirect(array('action' => 'index'));
     	}
     }
-
+	
+	function check(){
+	}
+	
+	function no($post_id=null){
+		$this->set("post_id", $post_id);
+	}
+	
+	function nono(){
+	}
 }
 
 /*

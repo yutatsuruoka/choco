@@ -1,4 +1,4 @@
-    <div class="contents wrapper" id="top">
+    <div class="contents wrapper" id="flow06">
         <div class="captionContainer  center">
             <p class="cap"> チョコくれ！が女性の為に帰ってきたぜ！！<br>
             ホワイトデーを使って男性におねだり（復讐）できる、<br>
@@ -17,47 +17,27 @@
             <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fchocokure.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=24&amp;appId=312737992072908" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:140px; height:24px;" allowTransparency="true"></iframe>
         </div><!-- end .snsButton-->
         </aside><!-- end .snsContainer-->
+
         <article>
-        <section class="present">
-        <div class="presentTtl clearfix">
-            <div class="left num">1</div>
-            <div class="left">
-                <h2>Godiva chocolate. / ¥500</h2>
-                <p>これはプレゼントして当たり前だよねってレベル</p>
-            </div>
-        </div>
-        <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
-        <ul class="onedariBtn clearfix">
-            <li class="left tw"><a href="<?php echo $this->webroot ?>Users/set_address_tw/">▶ Twitterでおねだり</a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/">▶ Facebookでおねだり</a></li>
-        </ul>
+
+        <section class="caption">
+        <h3><img src="<?php echo $this->webroot ?>i_sp/boy_top_cap.png" alt="welcome to nice guy!! " width="185" height="28"></h3>
+        <p><a href="">Neo Iida</a> さんが気になる男性として
+        あなたにプレゼントのおねだりをしています。
+        ホワイトデーに向けてプレゼントを送ってみませんか？</p>
         </section>
+
         <section class="present">
-        <div class="presentTtl clearfix">
-            <div class="left num">2</div>
-            <div class="left">
+        <div class="presentTtl">
+            <div>
                 <h2>Godiva chocolate. / ¥500</h2>
                 <p>これはプレゼントして当たり前だよねってレベル</p>
             </div>
         </div>
         <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
-            <li class="left tw"><a href="<?php echo $this->webroot ?>Users/set_address_tw/">▶ Twitterでおねだり</a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/">▶ Facebookでおねだり</a></li>
-        </ul>
-        </section>
-        <section class="present">
-        <div class="presentTtl clearfix">
-            <div class="left num">3</div>
-            <div class="left">
-                <h2>Godiva chocolate. / ¥500</h2>
-                <p>これはプレゼントして当たり前だよねってレベル</p>
-            </div>
-        </div>
-        <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
-        <ul class="onedariBtn clearfix">
-            <li class="left tw"><a href="<?php echo $this->webroot ?>Users/set_address_tw/">▶ Twitterでおねだり</a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/">▶ Facebookでおねだり</a></li>
+            <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/no/">▶ 僕はケチだから断る</a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Payment/">▶ もちろんプレゼント</a></li>
         </ul>
         </section>
         </article>

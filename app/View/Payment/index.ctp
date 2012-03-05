@@ -5,7 +5,7 @@
     <div class="boy wrapper" id="boy_ok1">
         <div class="onedariGirlContainer clearfix">
             <div class="imgContainer left">
-                <img src="i/tw_onedari_icon.jpg" alt="">
+                <img src="<?php echo $avatar; ?>" alt="">
             </div>
             <div class="commentContainrt">
                 <p class="comment">私はあなたからプレゼントをもらいたいと思っています。<br>
@@ -21,8 +21,8 @@
         </div>
         <div class="choiceBtn">
             <ul class="clearfix">
-                <li><a href="<?php echo $this->webroot ?>Payment/bank"><img src="i/presentbtn03.png" alt="PayPalでプレゼント"></a></li>
-                <li class="last"><a href="<?php echo $this->webroot ?>Payment/paypal/<?php echo $post_id ?>/1"><img src="i/presentbtn04.png" alt="楽天からプレゼント"></a></li>
+                <li><a href="<?php echo $this->webroot ?>Payment/paypal/<?php echo $post_id ?>"><img src="<?php echo $this->webroot ?>i/presentbtn03.png" alt="PayPalでプレゼント"></a></li>
+                <li class="last"><a href="<?php echo $this->webroot ?>Payment/bank"><img src="<?php echo $this->webroot ?>i/presentbtn04.png" alt="楽天からプレゼント"></a></li>
             </ul>
         </div>
 
