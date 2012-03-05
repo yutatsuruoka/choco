@@ -72,7 +72,9 @@ class PaymentController extends AppController {
                     $myPaypal->addField('custom', $post_id);
 
                     // Enable test mode if needed
-                    //$myPaypal->enableTestMode();
+                    if (PAYMENT_USESANDBOX) {
+                        $myPaypal->enableTestMode();
+                    }
                     
                     $this->set('fields', $myPaypal->fields);
                     $this->set('gatewayUrl', $myPaypal->gatewayUrl);
