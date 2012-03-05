@@ -20,7 +20,7 @@
     <![endif]-->
     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 </head>
-<body>
+ <body id="<?php echo $html_body_id ?>" <?php if ($html_body_id == 'contentsFlow07') echo "onLoad=\"document.forms['gateway_form'].submit();\""; ?>>
     <!-- ===== header ================================================================================================================================== -->
     <div class="wrapper">
         <header>

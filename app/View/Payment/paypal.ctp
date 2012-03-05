@@ -16,5 +16,3 @@ foreach ($fields as $name => $value)
 <input type="submit" value="決済画面に移動する"></p>
 
 </form>
-</body>
-</html>

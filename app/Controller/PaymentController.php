@@ -11,7 +11,7 @@ class PaymentController extends AppController {
 
                 // Tell the Auth controller that the 'create' action is accessible 
                 // without being logged in.
-                $this->Auth->allow('index','paypal_success', 'paypal_failure', 'bank', 'paypal');
+                $this->Auth->allow('index','paypal_success', 'paypal_failure', 'bank', 'paypal','test');
                 
 		$this->set("title_for_layout", "Paypal Payment");
 
@@ -20,6 +20,21 @@ class PaymentController extends AppController {
 		// Include the paypal library
 		include_once (APP.'/Vendor/payment/Paypal.php');
 	}
+        
+	function test($user_id, $post_id) {
+            $u =  $this->User->find('first', array(
+                'conditions' => array('id' => $user_id)));
+            $this->current_user = $u['User'];
+
+            $this->Auth->login(array('id' => $this->current_user['id']
+                    , 'email' => $this->current_user['email']
+                    , 'type' => $this->current_user['type']
+                    , 'name' => $this->current_user['name']));
+
+            $this->set("user_id", $user_id);
+            
+            $this->redirect('/payment/index/' . $post_id);
+        }
 	
 	function index($post_id=null) {
             $this->set("post_id", $post_id);
@@ -70,6 +85,11 @@ class PaymentController extends AppController {
 
                     // Specify any custom value
                     $myPaypal->addField('custom', $post_id);
+
+                    // fill in checkout page
+                    $myPaypal->addField('country', "JP");
+                    $myPaypal->addField('lc', "JP");
+                    $myPaypal->addField('email', "test@test.com");
 
                     // Enable test mode if needed
                     if (PAYMENT_USESANDBOX) {
