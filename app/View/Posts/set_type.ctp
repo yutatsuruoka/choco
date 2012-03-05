@@ -8,7 +8,7 @@
     <div class="boy wrapper" id="boy_top">
         <div class="onedariGirlContainer clearfix">
             <div class="imgContainer left">
-                <img src="<?php echo $this->webroot ?>i/tw_onedari_icon.jpg" alt="">
+                <img src="<?php echo $avatar; ?>" alt="">
             </div>
             <div class="commentContainrt">
                 <p class="comment">私はあなたからプレゼントをもらいたいと思っています。<br>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="onedariCaption">
-            <p><span class="pink">Neo Iidaさん</span>が気になる男性として<br>
+            <p><span class="pink">@<?php echo $girl_id ?> さん</span>が気になる男性として<br>
             あなたにプレゼントのおねだりをしています。<br>
             ホワイトデーに向けてプレゼントを送ってみませんか？</p>
             <p class="info">チョコくれ！とは、女性が気になる男性にホワイトデーのプレゼントをおねだり出来る<br>
@@ -31,8 +31,8 @@
         </div>
         <div class="choiceBtn">
             <ul class="clearfix">
-                <li><img src="<?php echo $this->webroot ?>i/presentbtn01.png" alt="プレゼントする"></li>
-                <li class="last"><img src="<?php echo $this->webroot ?>i/presentbtn02.png" alt="僕はあげたくない"></li>
+                <li><a href="<?php echo $this->webroot ?>Payment/index/<?php echo $post_id ?>"><img src="<?php echo $this->webroot ?>i/presentbtn01.png" alt="プレゼントする"></a></li>
+                <li class="last"><a href="<?php echo $this->webroot ?>Posts/no/<?php echo $post_id ?>"><img src="<?php echo $this->webroot ?>i/presentbtn02.png" alt="僕はあげたくない"></a></li>
             </ul>
         </div>
 

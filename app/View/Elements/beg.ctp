@@ -11,7 +11,7 @@
         説明が入りますここに商品の説明が入りますここに商品の説明が入りま
         すここに商品の説明が入ります。</p>
         <ul class="onedariContainer clearfix">
-            <li class="left tw"><a href="<?php echo $this->webroot ?>Users/set_address_tw/"><img src="<?php echo $this->webroot ?>i/present_twbtn.png" alt="Twitterでおねだり"></a></li>
+            <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/4"><img src="<?php echo $this->webroot ?>i/present_twbtn.png" alt="Twitterでおねだり"></a></li>
             <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.png" alt="Facebookでおねだり"></a></li>
         </ul>
         </section>
@@ -23,7 +23,7 @@
         説明が入りますここに商品の説明が入りますここに商品の説明が入りま
         すここに商品の説明が入ります。</p>
         <ul class="onedariContainer clearfix">
-            <li class="left tw"><a href="<?php echo $this->webroot ?>Users/set_address_tw/"><img src="<?php echo $this->webroot ?>i/present_twbtn.png" alt="Twitterでおねだり"></a></li>
+            <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/5"><img src="<?php echo $this->webroot ?>i/present_twbtn.png" alt="Twitterでおねだり"></a></li>
             <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.png" alt="Facebookでおねだり"></a></li>
         </ul>
         </section>
@@ -35,10 +35,9 @@
         説明が入りますここに商品の説明が入りますここに商品の説明が入りま
         すここに商品の説明が入ります。</p>
         <ul class="onedariContainer clearfix">
-            <li class="left tw"><a href="<?php echo $this->webroot ?>Users/set_address_tw/"><img src="<?php echo $this->webroot ?>i/present_twbtn.png" alt="Twitterでおねだり"></a></li>
+            <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/6"><img src="<?php echo $this->webroot ?>i/present_twbtn.png" alt="Twitterでおねだり"></a></li>
             <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.png" alt="Facebookでおねだり"></a></li>
         </ul>
         </section>
         </article>
     </div>
-

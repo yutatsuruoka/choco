@@ -4,6 +4,7 @@ class PaymentController extends AppController {
 
 	var $name = 'Payment';
 	var $uses = array('Payment','User','Post');
+	public $theme = '';
 
 	function beforeFilter(){
 
@@ -22,8 +23,23 @@ class PaymentController extends AppController {
 	}
 	
 	function index($post_id=null) {
-            $this->set("post_id", $post_id);
+           	$this->set("post_id", $post_id);
+            
+            $this->Post->id = $post_id;
+        	$p = $this->Post->find('first', array(
+          		'conditions' => array('Post.id' => $post_id)
+            ));
+        
+    	    if ($p) {
+        	    $u = $this->User->find('first', array(
+            	    'conditions' => array('User.id' => $p['Post']['boy_id'])
+                ));
+            
+            $this->set('screen_name', $u['User']['screen_name']);
+            $this->set('girl_id', $p['Post']['girl_id']);
+            $this->set('avatar', $p['Post']['girl_avatar']);
         }
+    }
         
 	function paypal($post_id=null) {
 
@@ -126,4 +142,3 @@ class PaymentController extends AppController {
 	function bank(){
 	}
 }
-

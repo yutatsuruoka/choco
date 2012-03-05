@@ -264,6 +264,11 @@ a, a:visited {
 a:hover {
   color: #399bc8;
 }
+input, textarea {
+  border-radius: 0;
+  webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
 input[type="text"] {
   letter-spacing: .1em;
 }
@@ -408,4 +413,362 @@ footer #copyRight {
 .present .onedariBtn a {
   color: #fff;
   display: block;
+}
+/* ===== flow02_fb ==================================================================================================================================*/
+#flow02_fb .presentInfo {
+  margin: 0 0 15px;
+}
+#flow02_fb .presentInfo .presentImg {
+  margin: 0 0 15px;
+}
+#flow02_fb .presentInfo .presentText {
+  line-height: 1.4em;
+  font-size: 12px;
+  text-align: center;
+}
+#flow02_fb .fbList {
+  margin: 0 0 15px;
+}
+#flow02_fb .menu li {
+  width: 150px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: #4bc3ee;
+}
+#flow02_fb .menu li.left {
+  width: 149px;
+  border-right: 1px solid #fff;
+}
+#flow02_fb .menu a {
+  display: block;
+  color: #fff;
+}
+/* ===== flow02_tw ==================================================================================================================================*/
+#flow02_tw .presentInfo {
+  margin: 0 0 15px;
+}
+#flow02_tw .presentInfo .presentImg {
+  margin: 0 0 15px;
+}
+#flow02_tw .presentInfo .presentText {
+  line-height: 1.4em;
+  font-size: 12px;
+  text-align: center;
+}
+#flow02_tw .twPost {
+  margin: 0 0 15px;
+}
+#flow02_tw .twPost input {
+  width: 268px;
+  height: 42px;
+  border: 1px solid #4bc3ee;
+  padding: 0 15px;
+}
+#flow02_tw .menu li {
+  width: 150px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: #4bc3ee;
+}
+#flow02_tw .menu li.left {
+  width: 149px;
+  border-right: 1px solid #fff;
+}
+#flow02_tw .menu a {
+  display: block;
+  color: #fff;
+}
+/* ===== flow03 ==================================================================================================================================*/
+#flow03 article {
+  border-top: 1px solid #ccc;
+}
+#flow03 article .caption {
+  margin: 30px 0;
+  font-size: 12px;
+  line-height: 1.4em;
+  text-align: center;
+}
+#flow03 article .formList li {
+  margin: 0 0 15px;
+}
+#flow03 article .formList li label {
+  margin: 0 0 10px;
+  display: block;
+}
+#flow03 article .formList li input {
+  width: 268px;
+  height: 42px;
+  border: 1px solid #4bc3ee;
+  padding: 0 15px;
+}
+#flow03 article .menu li {
+  width: 300px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: #4bc3ee;
+}
+#flow03 article .menu a {
+  display: block;
+  color: #fff;
+}
+/* ===== flow04 ==================================================================================================================================*/
+#flow04 article {
+  border-top: 1px solid #ccc;
+}
+#flow04 article .caption {
+  margin: 30px 0;
+  font-size: 12px;
+  line-height: 1.4em;
+  text-align: center;
+}
+#flow04 article .menu {
+  margin: 0 0 5px;
+}
+#flow04 article .menu li {
+  width: 300px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: #4bc3ee;
+}
+#flow04 article .menu a {
+  display: block;
+  color: #fff;
+}
+#flow04 article .menu02 li {
+  width: 150px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: #4bc3ee;
+}
+#flow04 article .menu02 li.left {
+  width: 149px;
+  border-right: 1px solid #fff;
+}
+#flow04 article .menu02 a {
+  display: block;
+  color: #fff;
+}
+/* ===== flow05 boy_login==================================================================================================================================*/
+#flow05 article {
+  border-top: 1px solid #ccc;
+}
+#flow05 article .caption {
+  margin: 15px 0;
+  font-size: 12px;
+  line-height: 1.4em;
+  text-align: center;
+}
+#flow05 article .caption h3 {
+  margin: 0 0 15px;
+}
+#flow05 article .news {
+  text-align: center;
+  margin: 0 0 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+}
+#flow05 article .menu {
+  margin: 0 0 5px;
+}
+#flow05 article .menu li {
+  margin: 0 0 5px;
+  width: 300px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: #4bc3ee;
+}
+#flow05 article .menu a {
+  display: block;
+  color: #fff;
+}
+/* ===== flow06 kyohi ==================================================================================================================================*/#flow06_kyohi .caption {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+  margin: 15px 0 30px;
+  font-size: 12px;
+  line-height: 1.4em;
+  text-align: center;
+}
+#flow06_kyohi .caption h3 {
+  margin: 0 0 15px;
+}
+#flow06_kyohi .present {
+  margin: 30px 0 0;
+}
+#flow06_kyohi .present .presentTtl {
+  text-align: center;
+  margin: 0 0 10px;
+}
+#flow06_kyohi .present .onedariBtn {
+  margin: 5px 0 0;
+}
+#flow06_kyohi .present .onedariBtn li {
+  width: 150px;
+  height: 44px;
+  line-height: 44px;
+  background: #4bc3ee;
+  text-align: center;
+  font-size: 12px;
+}
+#flow06_kyohi .present .onedariBtn li.tw {
+  width: 149px;
+  border-right: 1px solid #fff;
+}
+#flow06_kyohi .present .onedariBtn a {
+  color: #fff;
+  display: block;
+}
+/* ===== flow06 ok1 ==================================================================================================================================*/#flow06_success .caption {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+  margin: 15px 0;
+  font-size: 12px;
+  line-height: 1.4em;
+  text-align: center;
+}
+#flow06_success .caption h3 {
+  margin: 0 0 15px;
+}
+#flow06_success .present {
+  margin: 15px 0 0;
+}
+#flow06_success .present .presentTtl {
+  text-align: center;
+  margin: 0 0 10px;
+}
+#flow06_success .present .onedariBtn {
+  margin: 0 0 15px;
+}
+#flow06_success .present .onedariBtn li {
+  width: 150px;
+  height: 44px;
+  line-height: 44px;
+  background: #4bc3ee;
+  text-align: center;
+  font-size: 12px;
+}
+#flow06_success .present .onedariBtn li.tw {
+  width: 149px;
+  border-right: 1px solid #fff;
+}
+#flow06_success .present .onedariBtn a {
+  color: #fff;
+  display: block;
+}
+#flow06_success .present .presentInfo dl {
+  margin: 0 0 20px;
+}
+#flow06_success .present .presentInfo dt {
+  margin: 0 0 10px;
+}
+/* ===== flow07  ok3==================================================================================================================================*/
+#flow07 article {
+  border-top: 1px solid #ccc;
+}
+#flow07 article .caption {
+  margin: 15px 0;
+  line-height: 1.4em;
+  text-align: center;
+}
+#flow07 article .caption h3 {
+  margin: 0 0 15px;
+}
+#flow07 article .messageForm {
+  margin: 0 0 30px;
+}
+#flow07 article .messageForm textarea {
+  display: block;
+  width: 278px;
+  border: 1px solid #4bc3ee;
+  height: 112px;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+#flow07 article .messageForm input {
+  display: block;
+  border: 1px solid #4bc3ee;
+  width: 300px;
+  height: 44px;
+}
+#flow07 article .menu {
+  margin: 0 0 5px;
+}
+#flow07 article .menu li {
+  width: 300px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: #4bc3ee;
+}
+#flow07 article .menu a {
+  display: block;
+  color: #fff;
+}
+#flow07 article .menu02 li {
+  width: 150px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: #4bc3ee;
+}
+#flow07 article .menu02 li.left {
+  width: 149px;
+  border-right: 1px solid #fff;
+}
+#flow07 article .menu02 a {
+  display: block;
+  color: #fff;
+}
+/* ===== flow08  finish==================================================================================================================================*/
+#flow08 article {
+  border-top: 1px solid #ccc;
+}
+#flow08 article .caption {
+  border-bottom: 1px solid #ccc;
+  margin: 15px 0;
+  padding: 0 0 15px;
+  font-size: 12px;
+  line-height: 1.4em;
+  text-align: center;
+}
+#flow08 article .caption h3 {
+  margin: 0 0 15px;
+}
+#flow08 article .menu {
+  margin: 0 0 5px;
+}
+#flow08 article .menu li {
+  width: 300px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: #4bc3ee;
+}
+#flow08 article .menu a {
+  display: block;
+  color: #fff;
+}
+#flow08 article .menu02 li {
+  width: 150px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: #4bc3ee;
+}
+#flow08 article .menu02 li.left {
+  width: 149px;
+  border-right: 1px solid #fff;
+}
+#flow08 article .menu02 a {
+  display: block;
+  color: #fff;
 }
