@@ -106,11 +106,12 @@ class AppController extends Controller {
     	$pattern = '/'.implode('|', $useragents).'/i';
     	if ( preg_match($pattern, $_SERVER['HTTP_USER_AGENT']) ) {
 /*       		$this->theme = 'smartphone';  // view/themed/smartphone 以下のviewファイルを使うようになる */
-      		$this->theme = 'Smartphone';
+            $this->viewClass = 'Theme';
+            $this->theme = 'Smartphone';
     	}
     	if ($this->theme === 'Smartphone') {
-    		$this->layout = 'smartphone';
-		}	
+            $this->layout = 'smartphone';
+        }	
     }
 
     function beforeRender() {
