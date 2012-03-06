@@ -503,15 +503,13 @@ footer #copyRight {
   border: 1px solid #4bc3ee;
   padding: 0 15px;
 }
-#flow03 article .menu li {
-  width: 300px;
-  height: 44px;
-  line-height: 44px;
-  text-align: center;
-  background: #4bc3ee;
+#flow03 article .formList .twnameContainer {
+  margin: 10px 0 0;
 }
-#flow03 article .menu a {
-  display: block;
+#flow03 article .formList .submitBtn #SubmitBtn {
+  background: #4bc3ee;
+  height: 44px;
+  width: 300px;
   color: #fff;
 }
 /* ===== flow04 ==================================================================================================================================*/

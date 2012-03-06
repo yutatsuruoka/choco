@@ -20,44 +20,48 @@
             <img class="presentImg" src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
         </div>
 		<?php echo $this->Form->create('User'); ?>
+        <form>
         <div class="formList">
-            <ul>
+            <ul class="twnameContainer">
             	<li>
-        		<input type="text" placeholder="@ ここに相手のTwitterアカウント名を入力" id="twname" name="twname">
-        		</li>
+        		<input type="text" placeholder="@おねだりする相手のアカウント名を入力" id="twname" name="twname">
+                </li>
+            </ul>
        		<div class="caption">
             	<p>商品はneda.lyが郵送であなたにお届けします。<br>
             	あなたの住所、もしくは希望の郵送先を入力して下さい♩
             	送信ボタンを押せばおねだりが完了します♩</p>
-        	</div>
+            </div>
+            <ul>
                 <li>
                 <label for="">宛名</label>
-                <input type="text" placeholder="おねだり太郎" id="user_name" name="user_name" value= <?php echo $user['User']['user_name'] ?>>
+                <input type="text" placeholder="例：キャリーぱみゅぱみゅ" id="user_name" name="user_name" value= <?php echo $user['User']['user_name'] ?>>
                 </li>
                 <li>
                 <label for="">郵便番号</label>
-                <input type="text" placeholder="150-0002" id="postal_code" name="postal_code" value= <?php echo $user['User']['postal_code'] ?>>
+                <input type="text" placeholder="例：150-0002" id="postal_code" name="postal_code" value= <?php echo $user['User']['postal_code'] ?>>
                 </li>
                 <li>
                 <label for="">住所</label>
-                <input type="text"  placeholder="東京都渋谷区渋谷1-1" id="address" name="address" value= <?php echo $user['User']['address'] ?>>
+                <input type="text" style="font-size:9px;"  placeholder="例：東京都渋谷区渋谷1-1 ※建物名、部屋番号を忘れずに！" id="address" name="address" value= <?php echo $user['User']['address'] ?>>
                 </li>
                 <li>
                 <label for="">電話番号</label>
-                <input type="text"  placeholder="03-0000-0000" id="tel" name="tel" value=<?php echo $user['User']['tel'] ?>>
+                <input type="text"  placeholder="例：03-0000-0000" id="tel" name="tel" value=<?php echo $user['User']['tel'] ?>>
                 </li>
                 <li>
                 <label for="">メールアドレス</label>
-                <input type="text" placeholder="gimmechoco@gmail.com" id="mail" name="mail" value=<?php echo $user['User']['mail'] ?>>
+                <input type="text" placeholder="例：gimmechoco@gmail.com" id="mail" name="mail" value=<?php echo $user['User']['mail'] ?>>
                 </li>
             </ul>
+            <div class="submitBtn">
+                <ul>
+                    <li><input id="SubmitBtn" value="おねだり送信" type="submit"></li>
+                </ul>
+            </div>
         </div>
         
-        <div class="menu">
-            <ul>
-                <li><input id="twSubmitBtn" value="おねだり送信" type="submit"></li>
-            </ul>
-        </div>
+        </form>
         <?php echo $this->Form->end(); ?>
         </article>
     </div>
