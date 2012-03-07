@@ -136,6 +136,7 @@ class PostsController extends AppController {
       			'type' => $id,
    			);
             if ($this->Post->save($data)) {
+            	$this->Session->write('insert_id', $this->Post->getInsertID());
         		$this->autoRender = false;  
     			$url = $this->facebook->getLoginUrl(array(
     				'redirect_uri' => Router::url('/', true) . 'users/begfb_callback/'
