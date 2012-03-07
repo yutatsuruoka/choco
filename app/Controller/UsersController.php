@@ -187,7 +187,7 @@ class UsersController extends AppController {
     
     
     public function begfb_callback() {
-        $this->log('facebook_callback() called', LOG_DEBUG);
+        /* $this->log('facebook_callback() called', LOG_DEBUG); */
         
         $uid = $this->facebook->getUser();  
         if ($uid == 0) {
@@ -199,6 +199,9 @@ class UsersController extends AppController {
         $me = null;  
         try {  
             $me = $this->facebook->api('/me');
+            
+            //フレンドID取得
+            $friendIds = $this->facebook->api('/me/friends');
             
             $access_token = $this->facebook->getAccessToken();  
         } catch (FacebookApiException $e) {  
@@ -233,15 +236,15 @@ class UsersController extends AppController {
                 , 'deleted' => NULL
             )));
         
-        //facebook girl_avatar取得
+        
 		$fb_avatar_url = 'https://graph.facebook.com/' . $me['id'] . '/picture';
-		$fb_girl_avatar = $this->get_redirect_url($fb_avatar_url);
-		       
+		$fb_girl_avatar = $this->get_redirect_url($fb_avatar_url);    
         $this->Post->id = $this->Session->read('insert_id');
         $this->Post->saveField('girl_avatar', $fb_girl_avatar);
         $this->Post->saveField('userid', $user['User']['id']);
         $this->Post->saveField('girl_id', $user['User']['name']);
         $this->Session->write('user_Id', $user['User']['id']); 
+        $this->Session->write('friendIds', $friendIds); 
         $this->Auth->login(array('email' => $me['id'] . '@facebook',
                 'name' => $name,  
                 'type' => 2));              
@@ -293,43 +296,28 @@ class UsersController extends AppController {
     public function set_address_fb() {
         $this->User->id = $this->Session->read('user_Id');
         $this->Post->id = $this->Session->read('insert_id');
+        $friendIds = $this->Session->read('friendIds');        
         $this->set('user', $this->User->read());
         if ($this->request->is('post')) {
             if (!empty($this->data)) {
       		  	$this->__sanitize();
 	            if ($this->User->save($this->request->data)) {
+	            	//ウォールへの投稿
+	            	$attachment = array(
+						"message"=>"",
+						"link"=>"http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')",
+						"name"=>"test",
+					);
+        			$this->facebook->api('/me/feed', 'POST', $attachment);
                     $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
             	}
             }
     	}
-        $this->set('errors', $this->User->validationErrors);  
+        $this->set('errors', $this->User->validationErrors);
+        
+        $this->set('friendIds', $friendIds);  
     }
 	
-    public function set_address_sp() {
-        $this->User->id = $this->Session->read('user_Id');
-        $this->set('user', $this->User->read());
-        if ($this->request->is('post')) {
-            if (!empty($this->data)) {
-      		  	$this->__sanitize();
-	            if ($this->User->save($this->request->data)) {
-    	            $this->OauthConsumer->post('Twitter'
-        	                , $this->Session->read('accessKey')
-            	            , $this->Session->read('accessSecret')
-                	        , 'https://api.twitter.com/1/statuses/update.json'
-                    	    , array('status' => 
-                        	    '.@' . $this->Session->read('girl_id') . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
-                            	. '【このツイートはチョコくれを利用して送られています】'
-                           	 . ' http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')
-                           	 . ' #chocokure'
-                        	));
-                    $this->Session->setFlash('');
-                    $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
-            	}
-            }
-    	}
-        $this->set('errors', $this->User->validationErrors);  
-    }
-    
     public function thankyou() {
     	
     }
@@ -394,6 +382,7 @@ class UsersController extends AppController {
         $this->redirect("/payment/index/" . $postId);
     }   
 
+/*
     public function facebook() {
         $this->log('facebook() called', LOG_DEBUG);
         
@@ -402,6 +391,7 @@ class UsersController extends AppController {
             'req_perms' => 'email'));  
         $this->redirect($url);  
     }
+*/
 
 /*
     public function facebook_callback() {

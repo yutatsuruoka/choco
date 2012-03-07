@@ -50,6 +50,10 @@ class PaymentController extends AppController {
             	    'conditions' => array('User.id' => $p['Post']['boy_id'])
                 ));
             
+            if($u['User']['type'] === 1) {
+            	$this->redirect(array('controller' => 'users', 'action' => 'beg'));
+            }
+            
             $this->set('screen_name', $u['User']['screen_name']);
             $this->set('girl_id', $p['Post']['girl_id']);
             $this->set('avatar', $p['Post']['girl_avatar']);

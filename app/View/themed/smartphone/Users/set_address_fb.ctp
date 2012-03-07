@@ -20,8 +20,9 @@
         <div class="fbList" >
             <form>
                 <select id="" name="" style="">
-                    <option value="">板橋聡</option>
-                    <option value="">菊川実紀</option>
+                	<?php foreach($friendIds['data'] as $fid ){ ?>
+        				<option value=""><?php echo $fid['name']; ?></option>
+        			<?php } ?>
                 </select>
         </div>
         

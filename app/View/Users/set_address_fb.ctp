@@ -65,4 +65,8 @@
             </div>
         </form>
         </article>
+      	<?php 
+      	foreach($friendIds['data'] as $fid ){ ?>
+        	<p><?php echo $fid['name']; ?></p>
+        <?php } ?>
     </div>
