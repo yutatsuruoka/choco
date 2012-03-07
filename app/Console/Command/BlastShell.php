@@ -50,7 +50,7 @@ class BlastShell extends Shell {
 	}
 
 	function main() {
-		$this->out("TEST: " . date('Y-m-d H:i:s') );
+		$this->out("main(): " . date('Y-m-d H:i:s') );
 
 		if ( isset($this->params["debug"]) ) {
 			$this->isDebug = true;
@@ -155,6 +155,8 @@ class BlastShell extends Shell {
 				$this->tweeted[$boy_id] = $girl_id;
 				
 				$c ++;
+				
+				sleep(30);
 			}
 		}
 	}
