@@ -26,11 +26,6 @@
         </div>
         
         <div class="formList">
-            <ul class="fbnameContainer">
-            	<li>
-        		<input type="text" placeholder="@おねだりする相手のアカウント名を入力" id="twname" name="twname">
-                </li>
-            </ul>
        		<div class="caption">
             	<p>商品は郵送されるよ。<br>
             	郵送先の住所を建物名や部屋番号まで記入してね。<br>
