@@ -416,14 +416,21 @@ footer #copyRight {
 }
 /* ===== flow02_fb ==================================================================================================================================*/
 #flow02_fb .presentInfo {
-  margin: 0 0 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
 }
 #flow02_fb .presentInfo .presentImg {
-  margin: 15px 0 0;
+  margin: 15px 0 15px;
 }
 #flow02_fb .presentInfo .presentText {
   line-height: 1.4em;
   font-size: 12px;
+  text-align: center;
+}
+#flow02_fb .caption {
+  margin: 30px 0;
+  font-size: 12px;
+  line-height: 1.4em;
   text-align: center;
 }
 #flow02_fb .fbList {
@@ -433,28 +440,32 @@ footer #copyRight {
   padding: 0 10px;
   width: 300px;
   border: 1px solid #4BC3EE;
-<<<<<<< HEAD
-  background: url(../../i_sp/select_bg.png) no-repeat right top;
-=======
   background: url(../i_sp/select_bg.png) no-repeat right top;
->>>>>>> bb132131f4c0e5b488fe294885a3bab1c4de4a17
   height: 44px;
   backgournd: #fff;
   -webkit-background-size: 20px 42px;
 }
-#flow02_fb .menu li {
-  width: 150px;
-  height: 44px;
-  line-height: 44px;
-  text-align: center;
-  background: #4bc3ee;
+#flow02_fb .formList li {
+  margin: 0 0 15px;
 }
-#flow02_fb .menu li.left {
-  width: 149px;
-  border-right: 1px solid #fff;
-}
-#flow02_fb .menu a {
+#flow02_fb .formList li label {
+  margin: 0 0 10px;
   display: block;
+}
+#flow02_fb .formList li input {
+  width: 268px;
+  height: 42px;
+  border: 1px solid #4bc3ee;
+  padding: 0 15px;
+}
+#flow02_fb .formList .fbnameContainer {
+  margin: 10px 0 0;
+}
+#flow02_fb .formList .submitBtn #SubmitBtn {
+  font-size: 12px;
+  background: #4bc3ee;
+  height: 44px;
+  width: 300px;
   color: #fff;
 }
 /* ===== flow02_tw ==================================================================================================================================*/
@@ -520,6 +531,7 @@ footer #copyRight {
   margin: 10px 0 0;
 }
 #flow03 article .formList .submitBtn #SubmitBtn {
+  font-size: 12px;
   background: #4bc3ee;
   height: 44px;
   width: 300px;
