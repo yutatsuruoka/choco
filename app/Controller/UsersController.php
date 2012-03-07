@@ -233,8 +233,13 @@ class UsersController extends AppController {
                 , 'deleted' => NULL
             )));
         
+        //facebook girl_avatar取得
+		$fb_avatar_url = 'https://graph.facebook.com/' . $me['id'] . '/picture';
+		$fb_girl_avatar = $this->get_redirect_url($fb_avatar_url);
+		       
         $this->Post->id = $this->Session->read('insert_id');
-        $this->Post->saveField('userid', $me['id']);
+        $this->Post->saveField('girl_avatar', $fb_girl_avatar);
+        $this->Post->saveField('userid', $user['User']['id']);
         $this->Post->saveField('girl_id', $user['User']['name']);
         $this->Session->write('user_Id', $user['User']['id']); 
         $this->Auth->login(array('email' => $me['id'] . '@facebook',
