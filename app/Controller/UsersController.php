@@ -341,6 +341,62 @@ class UsersController extends AppController {
         
         $this->redirect("/payment/index/" . $postId);
     }   
+
+    public function facebook() {
+        $this->log('facebook() called', LOG_DEBUG);
+        
+        $url = $this->fb->getLoginUrl(array('redirect_uri' => 
+            'http://kazumax.kamiya.com/users/facebook_callback', 
+            'req_perms' => 'email'));  
+        $this->redirect($url);  
+    }
+
+    public function facebook_callback() {
+        $this->log('facebook_callback() called', LOG_DEBUG);
+        $uid = $this->fb->getUser();  
+        if ($uid == 0) {
+            $this->log('no facebook uid!', LOG_DEBUG);
+            $this->Session->setFlash('Facebook login failed');
+            $this->redirect('/');
+        }
+        
+        $me = null;  
+        try {  
+            $me = $this->fb->api('/me');
+            
+            $access_token = $this->fb->getAccessToken();  
+        } catch (FacebookApiException $e) {  
+            error_log($e);  
+        }
+        
+        $name = $me['first_name'] . ' ' . $me['last_name'];
+        if (!$this->User->find('first', array('conditions' 
+            => array(
+                'email' => $me['id'] . '@facebook'
+                , 'type' => 2
+                , 'deleted' => NULL
+            )))) {
+            // create new user
+            $this->User->save(array('User' 
+                => array(
+                    'email' => $me['id'] . '@facebook'
+                    , 'type' => 2
+                    , 'name' => $name,  
+                )), false);
+            
+            $this->Session->setFlash('Facebook user created');
+        }
+        else {
+            $this->Session->setFlash('Returning Facebook user');
+        }
+        
+        $this->Auth->login(array('email' => $me['id'] . '@facebook',
+                'name' => $name,  
+                'type' => 2));
+        
+        $this->redirect($this->Auth->redirect());
+        
+    }
 }
 
 ?>
