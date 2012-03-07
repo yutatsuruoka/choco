@@ -19,9 +19,9 @@
 		<?php echo $this->Form->create('User'); ?>
         <div class="fbList" >
             <form>
-                <select id="" name="" style="">
+                <select id="fbname" name="fbname" style="">
                 	<?php foreach($friendIds['data'] as $fid ){ ?>
-        				<option value=""><?php echo $fid['name']; ?></option>
+        				<option value="<?php echo $fid['name']; ?>"><?php echo $fid['name']; ?></option>
         			<?php } ?>
                 </select>
         </div>

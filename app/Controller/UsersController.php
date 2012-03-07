@@ -300,12 +300,17 @@ class UsersController extends AppController {
         $this->set('user', $this->User->read());
         if ($this->request->is('post')) {
             if (!empty($this->data)) {
-      		  	$this->__sanitize();
+      		  	$data = $this->request->data;
 	            if ($this->User->save($this->request->data)) {
+            		$add['Post'] = array(
+      					'boy_id' => $data["fbname"],
+   					);
+        			$this->Post->save($add);
+	            
 	            	//ウォールへの投稿
 	            	$attachment = array(
-						"message"=>"",
-						"link"=>"http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')",
+						"message"=>$data["fbname"],
+						"link"=>"http://chocokure.com/posts/set_type/" . $this->Session->read('insert_id'),
 						"name"=>"test",
 					);
         			$this->facebook->api('/me/feed', 'POST', $attachment);
