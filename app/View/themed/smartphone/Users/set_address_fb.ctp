@@ -17,8 +17,13 @@
             おねだりの準備を完了しましょう！</p>
         </div>
 
-        <div class="fbList">
-            <img src="<?php echo $this->webroot ?>i_sp/girl2nd_fb_img.jpg" width="300" height="180">
+        <div class="fbList" >
+            <form action="">
+                <select id="" name="" style="">
+                    <option value="">板橋聡</option>
+                    <option value="">菊川実紀</option>
+                </select>
+            </form>
         </div>
         
         <div class="menu clearfix">
