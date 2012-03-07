@@ -2,8 +2,8 @@
 
         <div class="onedariCaption">
             <p>残念…<br>
-            相手の気持ちはあなたに届かなかった様です。<br>
-            次回は<span class="pink">本命の人</span>からおねだりが届く事を願っています！</p>
+            あなたの気持ちは固く、揺れなかった様ですね。<br>
+            次回は<span class="pink">本命の人</span>からおねだりされる事を祈っています！</p>
         </div>
         <div class="choiceBtn">
             <ul class="clearfix">

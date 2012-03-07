@@ -6,7 +6,18 @@
 
         <div class="onedariCaption">
             <p>プレゼントは無事に送付される事になりました♩<br>
-            ホワイトデーは2人で楽しい夜をお過ごしください。</p>
+            あなたにとって素敵なホワイトデーになりますように。</p>
+        </div>
+        
+        <div id="messagebox">
+            <form>
+                <div class="textarea">
+                    <textarea class="freeform jq-placeholder" name="freeword" title="メッセージを送りたい場合は、こちらに記入して下さい。"></textarea>
+                </div>
+                <div class="messagebtn">
+                    <input type="image" src="i/last_message.jpg" />
+                </div>
+            </form>
         </div>
         <div class="choiceBtn">
             <ul class="clearfix">

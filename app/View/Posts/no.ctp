@@ -5,9 +5,8 @@
                 <img src="<?php echo $avatar; ?>" alt="" height = "100px" width = "100px">
             </div>
             <div class="commentContainrt">
-                <p class="comment">私はあなたからプレゼントをもらいたいと思っています。<br>
-                他の人じゃダメなの。あなたじゃないと。<br>
-                だって私、あなたの事が大好きなんだもん…</p>
+                <p class="comment" style="margin-top:7px">勇気を出しておねだりしてみたけど、<br>
+                やっぱりダメ...かな？</p>
             </div>
         </div>
         <div class="onedariCaption">
