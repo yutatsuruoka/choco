@@ -1,0 +1,209 @@
+@import "reset.less";
+
+/* ===== Primary Styles ================================================================================================================================== */
+@color:#4BC3EE;
+
+body {
+    font-family:osaka, Arial, sans-serif;
+    color: #999;
+    background: #fff;
+    font-size: 10px;
+    line-height: 1.3em;
+    width:100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+    /* Fix for webkit rendering */
+-webkit-text-size-adjust: none; }
+
+a, a:visited {
+    color: @color;
+text-decoration: none; }
+
+a:hover {
+color: #399bc8; }
+
+
+input[type="text"]{
+    letter-spacing:.1em;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+cursor: pointer;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.mgt30{
+    margin-top:30px;
+}
+
+.mgt50{
+    margin-top:50px;
+}
+
+.mgt100{
+    margin-top:100px;
+}
+
+.mgb30{
+    margin-bottom:30px;
+}
+
+.mgb50{
+    margin-bottom:50px;
+}
+
+.mgb100{
+    margin-bottom:100px;
+}
+
+.center{text-align:center;}
+.clearfix:after {
+    height: 0;
+    visibility: hidden;
+    content: ".";
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.wrapper{
+    margin:0 10px;
+}
+
+
+/* ===== header ================================================================================================================================== */
+.headerContainer{
+    margin:10px;
+    h1
+    {
+        width:184px;
+
+    }
+
+}
+
+
+/* ===== snsContainer ==================================================================================================================================*/ 
+.snsContainer{
+    width:250px;
+    margin:20px auto;
+}
+
+
+/* ===== contents ==================================================================================================================================*/ 
+.contents{
+    .captionContainer{
+        padding-bottom:10px;
+        border-bottom:1px solid #ccc;
+        p.cap{
+            background:#4BC3EE;
+            text-align:center;
+            color:#fff;
+            padding:10px;
+        }
+        p.news{margin:10px 10px 0;}
+    }
+}
+
+
+/* ===== onedariContainer ==================================================================================================================================*/ 
+.onedariContainer{
+    .onedari{
+        margin:30px 0 0;
+        ul.twList{
+            width:300px;
+            li{
+                float:left;
+                margin:10px 10px 0 0;
+                &.last{margin-right:0;}
+            }
+        }
+    }
+}
+
+
+
+
+/* ===== footer ==================================================================================================================================*/ 
+footer{
+    margin:30px 0 0;
+    ul.infoLink{
+        
+        li{
+            width:160px;
+            height:44px;
+            border-top:1px solid #e1e1e1;
+            line-height:44px;
+            text-align:center;
+        }
+        li.left{
+            width:159px;
+            border-right:1px solid #e1e1e1;
+        }
+        a{display:block;}
+    }
+    #copyRight{
+        width:100%;
+        padding:15px 0;
+        background:#f6f6f6;
+        text-align:center;
+    }
+}
+
+
+
+/* ===== top ==================================================================================================================================*/ 
+
+.present{
+    margin:30px 0 0;
+
+    .presentTtl{
+        margin:0 0 10px;
+        .num{
+            margin:0 5px 0 0;
+            width:23px;
+            height:23px;
+            border:1px solid #999;
+            border-radius:20px;
+            background:#999;
+            color:#fff;
+            text-align:center;
+            line-height:23px;
+        }
+    }
+
+
+    .onedariBtn{
+        margin:5px 0 0;
+        li{
+            width:150px;
+            height:44px;
+            line-height:44px;
+            background:@color;
+            text-align:center;
+            font-size:12px;
+        }
+        li.tw{
+            width:149px;
+            border-right:1px solid #fff;
+        }
+        a{
+        color:#fff;
+        display:block;
+        }
+    }
+}
+
+

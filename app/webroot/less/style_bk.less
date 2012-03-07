@@ -1,0 +1,676 @@
+@import "reset.less";
+
+/* ===== Primary Styles ================================================================================================================================== */
+@color:#66c1eb;
+
+body {
+    font-family:"ヒラギノ角ゴ ProN W3","HiraKakuProN-W3", Arial, sans-serif;
+    color: #999;
+    background: #fff;
+    font-size: 10px;
+    letter-spacing: .09em;
+    line-height: 1.3em;
+    width:100%;
+    min-width:1060px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    /* Fix for webkit rendering */
+-webkit-text-size-adjust: none; }
+
+a, a:visited {
+    color: @color;
+text-decoration: none; }
+
+a:hover {
+color: #1aa9eb; }
+
+::-moz-selection {
+    background: @color;
+    color: #fff;
+text-shadow: none; }
+
+::selection {
+    background: @color;
+    color: #fff;
+    text-shadow: none; }
+
+
+input[type="text"]{
+    letter-spacing:.1em;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+cursor: pointer;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.mgt30{
+    margin-top:30px;
+}
+
+.mgt50{
+    margin-top:50px;
+}
+
+.mgt100{
+    margin-top:100px;
+}
+
+.mgb30{
+    margin-bottom:30px;
+}
+
+.mgb50{
+    margin-bottom:50px;
+}
+
+.mgb100{
+    margin-bottom:100px;
+}
+
+.clearfix:after {
+    height: 0;
+    visibility: hidden;
+    content: ".";
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.wrapper{
+    width:1040px;
+    margin:0 auto;
+}
+
+
+/* ===== header ================================================================================================================================== */
+header{
+    margin:50px 0 0;
+    h1{
+        width:184px;
+        position:relative;
+    }
+    .snsContainer{
+        width:250px;
+        position:relative;
+        text-align:right;
+        margin-top:-22px;
+        left:800px;
+    }
+}
+
+/* ===== footer ==================================================================================================================================*/ 
+footer{
+    font-family:"ヒラギノ角ゴ ProN W3","HiraKakuProN-W3";
+    font-size:10px;
+    letter-spacing:.12em;
+    padding:50px 0 0;
+    background:#000;
+    color:#fff;
+    overflow:hidden;
+    .team{
+        margin-left:30px;
+        width:1000px;
+        h3{
+            margin:0 0 30px;
+        }
+        .teamMember{
+            width:256px;
+            margin:0 0 20px;
+            .memberIcon{
+                width:50px;
+                float:left;
+                margin:0 10px 0 0;
+            }
+            .memberProfile{
+                margin:3px 10px 0 0;
+                p.name{
+                    font-size:12px;
+                    line-height:12px;
+                    font-style:normal;
+                    margin:0 0 8px;
+                    letter-spacing:.2em;
+                }
+                p.post{
+                    line-height:1.4em;
+                    letter-spacing:.2em;
+                    a{color:#fff;
+                    &:hover{color:@color;}
+                    }
+                }
+            }
+            .memberSns{
+                margin:30px 0 0;
+                .facebookIcon a{
+                    display:block;
+                    text-indent:-9999px;
+                    width:21px;
+                    height:21px;
+                    margin:0 4px 12px 0;
+                    background:url(../i/snsicon.png) no-repeat left top;
+                }
+                .twitterIcon a{
+                    display:block;
+                    text-indent:-9999px;
+                    width:21px;
+                    height:21px;
+                    margin:0 0 10px;
+                    background:url(../i/snsicon.png) no-repeat right top;
+
+                }
+                .facebookIcon a:hover{
+                    background:url(../i/snsicon.png) no-repeat left bottom;
+                }
+                .twitterIcon a:hover{
+                    background:url(../i/snsicon.png) no-repeat right bottom;
+                }
+            }
+
+        }
+        .last{
+            width:232px;
+            margin:0;
+        }
+    }
+    ul.info{
+        text-align:center;
+        padding:20px 0 20px;
+        li{
+            display:inline;
+        }
+        a{color:#fff;
+        &:hover{color:@color;}
+        }
+    }
+}
+
+
+/* ===== #infoSnsContainer ================================================================================================================================== */
+#infoSnsContainer{
+    margin:100px auto 60px;
+    .leftContainer{
+        width:300px;
+        font-size:12px;
+        dl{margin:0 0 30px;}
+        dt{margin:0 0 10px;
+            color:#000;
+            font-family: "ヒラギノ角ゴ ProN W6", "HiraKakuProN-W6", Arial, sans-serif;
+        }
+        dd{
+            margin:0 0 7px;
+        }
+    }
+    .rightContainer{width:740px;
+        .onedariContainer{
+            margin:0 0 50px;
+            h2{
+            color:#000;
+            margin:0 0 10px;
+            font-family: "ヒラギノ角ゴ ProN W6", "HiraKakuProN-W6", Arial, sans-serif;
+            font-size: 12px;
+            }
+
+            .twList{
+                margin:0 0 0 -10px;
+                width:360px;
+                li{
+                    margin:0 0 10px 10px;
+                    float:left;
+                }
+            }
+        }
+        .twContainer{
+        border:1px solid #ccc;
+        }
+    }
+
+}
+
+
+
+
+
+/* ===== top ================================================================================================================================== */
+.top{
+    .present{
+        float:left;
+        margin:0 40px 0 0;
+        width:320px;
+        &.last{margin:0;}
+        h2{
+            color: #999;
+            font-size: 14px;
+            line-height: 100%;
+            padding: 10px 0 5px;
+            border-bottom: 1px solid #ccc;
+            font-family: "ヒラギノ角ゴ ProN W6", "HiraKakuProN-W6", Arial, sans-serif;
+        }
+        p.price{
+            padding: 10px 0;
+            color: #999;
+            font-size: 10px;
+            span{
+                font-size:10px;
+                padding:0 0 0 1em;
+            }
+        }
+        p.detaile{
+            font-family:"ヒラギノ角ゴ ProN W3","HiraKakuProN-W3";
+            padding:10px 0;
+            border-top:1px solid #9b9b9b;
+            border-bottom:1px solid #9b9b9b;
+        }
+        ul.onedariContainer{
+            margin:15px 0 0
+        }
+    }
+}
+
+/* ===== girl_2nd ================================================================================================================================== */
+.girl_2nd{
+    width:827px;
+    .captionContainer{margin:60px 0 60px;}
+    .formContainer{
+        margin:0 0 30px;
+        .presentImg{
+            width:320px;
+            height:300px;
+        }
+        .sheetContainer{
+            font-size:12px;
+            font-family:"ヒラギノ角ゴ ProN W3","HiraKakuProN-W3";
+            width:475px;
+            border:1px solid #d2d2d2;
+            color:#525252;
+            li{
+                border-bottom:1px solid #d2d2d2;
+                background:url(../i/form_inputbg.png) repeat-x left top;
+                height:59px;
+                .labelContainer{
+                    border-right:1px solid #d2d2d2;
+                    float:left; 
+                    text-align:center;
+                    width:100px;
+                    label{
+                        height:59px;
+                        line-height:59px;
+                        color:#525252;
+                    }
+                }
+                .inputContainer {
+                    float:left;
+                    width:324px;
+                    padding:12px 25px 0;
+                    input{
+                        width:295px;
+                        height:25px;
+                        line-height:25px;
+                        padding:5px 15px;
+                        -moz-border-radius: 5px;
+                        -webkit-border-radius: 5px;
+                        border-radius: 5px;
+                        -webkit-box-shadow:inset 2px 3px 7px #efefef;
+                        box-shadow:inset 2px 3px 7px #efefef;
+                        -moz-box-shadow:inset 2px 3px 7px #efefef;
+                        border:1px solid #bfbfbf;
+                    }
+                }
+                &.last{border:none;height:58px;}
+            }
+        }
+    }/* end formContainer */
+    .fbContainer{margin:0 0 30px;}
+    .submit{
+        #fbSubmitBtn{
+            border:0;
+            width:827px;
+            height:52px;
+            background:url(../i/girl_2nd_fb_btn.png) no-repeat left top;
+            &:hover{background:url(../i/girl_2nd_fb_btn.png) no-repeat left bottom;}
+        }
+    }
+}
+
+
+/* ===== #girl_2nd_tw ================================================================================================================================== */
+#girl_2nd_tw{
+    .formContainer{
+        .presentImg{
+            height:210px;
+            overflow:hidden;
+
+        }
+        .twAccountForm{
+            margin:10px 0 0;
+            .sheetContainer{
+                width:318px;
+                border:1px solid #d2d2d2;
+                li{
+                    border-bottom:none;
+                    .inputContainer {
+                        float:none;
+                        width:280px;
+                        padding:12px 20px 0;
+                        input{
+                            line-height:25px;
+                            width:248px;
+                            height:25px;
+                        }
+                    }
+                }
+            }
+            p.txt{
+                margin:8px 0 0;
+                font-family:"ヒラギノ角ゴ ProN W3","HiraKakuProN-W3";
+                font-size:12px;
+            }
+
+        }
+    }
+    .submit{
+        #twSubmitBtn{
+            border:0;
+            width:827px;
+            height:52px;
+            background:url(../i/girl_2nd_tw_btn.png) no-repeat left top;
+            &:hover{background:url(../i/girl_2nd_tw_btn.png) no-repeat left bottom;}
+        }
+    }
+
+
+}
+
+/* ===== #girl_finish================================================================================================================================== */
+#girl_finish{
+    width:827px;
+    .captionContainer{
+        margin:60px 0 0;
+    }
+    .goTop{text-align:center;}
+}
+
+
+
+
+/* ===== boy ================================================================================================================================== */
+.boy{
+    .onedariGirlContainer{
+        width:520px;
+        margin:50px auto 30px;
+        position:relative;
+        .imgContainer{
+            width:100px;
+            float:left;
+        }
+        .commentContainrt{
+            width:420px;
+            height:106px;
+            float:left;
+            background:url(../i/balloon_bg.png) no-repeat left top;
+            p.comment{
+                padding:30px 30px 10px 90px;
+                text-align:center;
+                color:@color;
+                line-height:1.6em;
+            }
+        }
+
+    }
+    .onedariCaption{
+        text-align:center;
+        color:#999;
+        font-size:32px;
+        letter-spacing:.07em;
+        line-height:1.4em;
+        .pink{color:@color;}
+    }
+    .info{
+        margin:15px 0 0;
+        color:#999;
+        font-size:10px;
+        line-height:1.7em;
+    }
+    .present{
+        margin:50px auto 30px;
+        width:320px;
+        &.last{margin:0;}
+        h2{
+            color:#999;
+            font-size:32px;
+            line-height:100%;
+            padding:20px 0 5px;
+            border-bottom:1px solid #ccc;
+            text-align:center;
+            font-family: "ヒラギノ角ゴ ProN W6", "HiraKakuProN-W6", Arial, sans-serif;
+        }
+        p.price{
+            padding:10px 0;
+            color:#999;
+            text-align:center;
+            font-size:14px;
+            span{
+                font-size:10px;
+                padding:0 0 0 1em;
+            }
+        }
+    }
+    .choiceBtn{
+        width:624px;
+        margin:0 auto;
+        li{
+            float:left;
+            width:302px;
+            margin:0 20px 0 0;
+            &.last{margin:0;}
+        }
+    }
+
+}
+
+
+
+
+/* ===== boy OK1 ================================================================================================================================== */
+#boy_ok1{
+    .choiceBtn{
+        width:302px;
+        margin:60px auto 0;
+    }
+    #info_text_paypal {
+        margin-top: 60px;
+        p {
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.6em;
+        }
+        .info_title {
+            font-size: 18px;
+        }
+    }
+}
+/* ===== boy OK2 ================================================================================================================================== */
+#boy_ok2{
+    .onedariCaption{
+    margin:50px 0 0;
+    }
+
+    .choiceBtn{
+        margin:30px auto 20px;
+        width:567px;
+        li{
+            width:280px;
+            margin:0 7px 0 0;
+            &.last{margin:0;}
+        }
+
+    }
+    .goTop{text-align:center;}
+}
+
+/* ===== boy kyohi2 ================================================================================================================================== */
+#boy_kyohi2{
+    .onedariCaption{
+    margin:50px 0 0;
+    }
+
+    .choiceBtn{
+        margin:30px auto 20px;
+        width:567px;
+        li{
+            width:280px;
+            margin:0 7px 0 0;
+            &.last{margin:0;}
+        }
+
+    }
+    .goTop{text-align:center;}
+}
+
+
+
+/* ===== boy login ================================================================================================================================== */
+#boy_login {
+    .onedariCaption {
+        margin: 100px 0 0;
+    }
+    #login_selesct {
+        width:710px;
+        margin:0 auto;
+        text-align: center;
+        margin-top: 50px;
+        .tw{
+            margin-right: 10px;
+        }
+
+    }
+}
+#boy_login_copyright {
+    margin-top: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+
+
+/* ===== paypal login ================================================================================================================================== */
+#boy_paypal_login {
+  margin: 0 auto;
+  float: none;
+}
+#boy_paypal_login #login_selesct {
+  text-align: center;
+  margin-top: 50px;
+}
+#boy_paypal_login #login_selesct .boy_login_fb {
+  margin-left: 10px;
+}
+#boy_paypal_login #login_selesct a:hover {
+  opacity: 0.8;
+}
+#boy_paypal_login p {
+  margin-top: 100px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* ===== paypal login 鶴岡くんの作業終わったらスタイル調整================================================================================================================================== */
+#paypal_form {
+  width: 1040px;
+  margin: 0 auto;
+}
+#paypal_form #paypal_sample {
+  margin-top: 100px;
+}
+
+/* ===== boy message ================================================================================================================================== */
+#boy_ok2 #messagebox{
+text-align: center;
+}
+#boy_ok2 #messagebox .freeform{
+  margin: 50px 0 10px 0;
+  width: 100%;
+  text-align: left;
+  height: 28px;
+  border: solid 1px #ccc;
+  font-size: 18px;
+  color: #999;
+  padding: 10px;
+  text-align: center;
+}
+#boy_ok2 #messagebox .messagebtn{
+  text-align: center;
+  margin-top: 30px;
+  float: none;
+}
+
+
+
+/* ===== old ie ================================================================================================================================== */
+.oldie {
+    #girl_2nd_tw{
+        .formContainer{
+            .twAccountForm{
+                .sheetContainer{
+                    li{
+                        .inputContainer {
+                            float:none;
+                            width:280px;
+                            padding:12px 20px 0;
+                            input{
+                                line-height:25px;
+                                width:248px;
+                                height:25px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+//フォーム
+.oldie{
+    .girl_2nd{
+        .formContainer{
+            .sheetContainer{
+                li{
+                    .inputContainer {
+                        float:left;
+                        width:324px;
+                        padding:12px 25px 0;
+                        input{
+                            width:295px;
+                            height:25px;
+                            line-height:25px;
+                            padding:5px 15px;
+                            -moz-border-radius: 5px;
+                            -webkit-border-radius: 5px;
+                            border-radius: 5px;
+                            -webkit-box-shadow:inset 2px 3px 7px #efefef;
+                            box-shadow:inset 2px 3px 7px #efefef;
+                            -moz-box-shadow:inset 2px 3px 7px #efefef;
+                            border:1px solid #bfbfbf;
+                        }
+                    }
+                    &.last{border:none;height:58px;}
+                }
+            }
+        }/* end formContainer */
+    }
+}
+

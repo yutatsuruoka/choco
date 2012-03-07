@@ -13,8 +13,8 @@
 		<article>
        	<div class="caption">
             <p>選んだ商品は合っていますか？<br>
-            次におねだり（復讐）する相手を選んで、
-          	おねだりの準備を完了しましょう！</p>
+            次はおねだり(復讐)する相手を選んで、<br>
+          	おねだりの準備を完了させよう！</p>
         </div>
         <div class="presentInfo">
             <img class="presentImg" src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
@@ -28,9 +28,9 @@
                 </li>
             </ul>
        		<div class="caption">
-            	<p>商品はneda.lyが郵送であなたにお届けします。<br>
-            	あなたの住所、もしくは希望の郵送先を入力して下さい♩
-            	送信ボタンを押せばおねだりが完了します♩</p>
+            	<p>商品は郵送されるよ。<br>
+            	郵送先の住所を建物名や部屋番号まで記入してね。<br>
+            	[おねだり送信]商品ボタンを押せばおねだり完了♩</p>
             </div>
             <ul>
                 <li>

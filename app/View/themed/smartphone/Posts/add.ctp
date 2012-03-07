@@ -1,7 +1,7 @@
     <div class="contents wrapper" id="top">
         <div class="captionContainer  center">
             <p class="cap"> チョコくれ！が女性の為に帰ってきたぜ！！<br>
-            ホワイトデーを使って男性におねだり（復讐）できる、<br>
+            ねだり返せ！ホワイトデーを300%から楽しむ、<br>
             ソーシャルおねだりプラットフォーム。
             </p>
             <p class="news"><a href="">16:32 Yahoo!ニュースのトップページに掲載されました &gt;&gt;</a></p>
@@ -29,7 +29,7 @@
         <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/4">▶ Twitterでおねだり</a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/">▶ Facebookでおねだり</a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/4">▶ Facebookでおねだり</a></li>
         </ul>
         </section>
         <section class="present">
@@ -43,7 +43,7 @@
         <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/5">▶ Twitterでおねだり</a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/">▶ Facebookでおねだり</a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/5">▶ Facebookでおねだり</a></li>
         </ul>
         </section>
         <section class="present">
@@ -57,7 +57,7 @@
         <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/6">▶ Twitterでおねだり</a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/">▶ Facebookでおねだり</a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/6">▶ Facebookでおねだり</a></li>
         </ul>
         </section>
         </article>

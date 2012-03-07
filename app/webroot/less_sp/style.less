@@ -21,7 +21,7 @@ text-decoration: none; }
 a:hover {
 color: #399bc8; }
 
-input,textarea{
+input,textarea,select{
     border-radius:0;
     webkit-border-radius:0;
     -webkit-appearance:none;
@@ -213,38 +213,74 @@ footer{
 
 
 /* ===== flow02_fb ==================================================================================================================================*/
+
+
 #flow02_fb{
+
     .presentInfo{
-        margin:0 0 15px;
-        .presentImg{margin:0 0 15px;}
+        padding-top:15px;
+        border-top:1px solid #ccc;
+
+        .presentImg{margin:15px 0 15px;}
         .presentText{
             line-height:1.4em;
             font-size:12px;
             text-align:center;
         }
     }
-    .fbList{
-        margin:0 0 15px;
-    }
-    .menu{
-        li{
-            width:150px;
-            height:44px;
-            line-height:44px;
-            text-align:center;
-            background:@color;
-        }
-        li.left{
-            width:149px;
-            border-right:1px solid #fff;
-        }
-        a{
-            display:block;
-            color:#fff;
 
+
+        .caption{
+            margin:30px 0;
+            font-size:12px;
+            line-height:1.4em;
+            text-align:center;
         }
-    }
-}
+
+
+
+
+        .fbList{
+            margin:0 0 15px;
+            select{
+                padding:0 10px;
+                width:300px;
+                border:1px solid #4BC3EE;
+                background:url(../i_sp/select_bg.png) no-repeat right top;
+                height:44px;
+                backgournd:#fff;
+                -webkit-background-size:20px 42px;
+            }
+        }
+        .formList{
+            li{
+                margin:0 0 15px;
+                label{
+                    margin:0 0 10px;
+                    display:block;
+                }
+                input{
+                    width:268px;
+                    height:42px;
+                    border:1px solid @color;
+                    padding:0 15px; 
+                }
+            }
+            .fbnameContainer{margin:10px 0 0;}
+            .submitBtn{
+                #SubmitBtn{
+                    font-size:12px;
+                    background:@color;
+                    height:44px;
+                    width:300px;
+                    color:#fff;
+                }
+            }
+        }
+    }   
+
+
+
 
 
 /* ===== flow02_tw ==================================================================================================================================*/
@@ -318,6 +354,7 @@ footer{
             .twnameContainer{margin:10px 0 0;}
             .submitBtn{
                 #SubmitBtn{
+                    font-size:12px;
                     background:@color;
                     height:44px;
                     width:300px;

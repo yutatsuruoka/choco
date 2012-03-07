@@ -8,16 +8,14 @@
                 <img src="<?php echo $avatar; ?>" alt="" height = "100px" width = "100px" >
             </div>
             <div class="commentContainrt">
-                <p class="comment">私はあなたからプレゼントをもらいたいと思っています。<br>
-                他の人じゃダメなの。あなたじゃないと。<br>
-                だって私、あなたの事が大好きなんだもん…</p>
+                <p class="comment" style="margin-top:5px;">あと一歩だよ。<br>
+                あなたのプレゼント、絶対大事にするね。</p>
             </div>
         </div>
         <div class="onedariCaption">
             <p>OK!<br>
                 あなたは<span class="pink">とても優しい人</span>です。<br>
-                相手も必ず喜んでくれるでしょう。<br>
-                下記のどちらかを選択して<span class="pink">2人の共同作業を完了</span>させて下さい♩</p>
+                おねだり商品は５分で簡単に決済出来ます。</p>
         </div>
         <div class="choiceBtn">
             <ul class="clearfix">
