@@ -137,7 +137,7 @@ class PostsController extends AppController {
    			);
             if ($this->Post->save($data)) {
         		$this->autoRender = false;  
-    			$url = $this->facebook->getLoginUrl(array('next' => 'http://localhost/facebook/callback', 'req_perms' => 'email,publish_stream,status_update'));  
+    			$url = $this->facebook->getLoginUrl(array('next' => 'http://localhost:8888/cake/users/begfb_callback/', 'req_perms' => 'email,publish_stream,status_update'));  
     			$this->redirect($url);
             }                
     	}    
