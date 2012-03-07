@@ -187,6 +187,7 @@ class UsersController extends AppController {
     
     public function begfb_callback() {
         $this->log('facebook_callback() called', LOG_DEBUG);
+        
         $uid = $this->facebook->getUser();  
         if ($uid == 0) {
             $this->log('no facebook uid!', LOG_DEBUG);
