@@ -419,7 +419,7 @@ footer #copyRight {
   margin: 0 0 15px;
 }
 #flow02_fb .presentInfo .presentImg {
-  margin: 0 0 15px;
+  margin: 15px 0 0;
 }
 #flow02_fb .presentInfo .presentText {
   line-height: 1.4em;
@@ -433,7 +433,11 @@ footer #copyRight {
   padding: 0 10px;
   width: 300px;
   border: 1px solid #4BC3EE;
+<<<<<<< HEAD
   background: url(../../i_sp/select_bg.png) no-repeat right top;
+=======
+  background: url(../i_sp/select_bg.png) no-repeat right top;
+>>>>>>> bb132131f4c0e5b488fe294885a3bab1c4de4a17
   height: 44px;
   backgournd: #fff;
   -webkit-background-size: 20px 42px;

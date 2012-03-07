@@ -11,25 +11,61 @@
         </div><!-- end .snsButton-->
         </aside><!-- end .snsContainer-->
         <div class="presentInfo">
-            <img class="presentImg" src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
             <p class="presentText">選んだ商品は合っていますか？<br>
             次におねだり（復讐）する相手を選んで、<br>
-            おねだりの準備を完了しましょう！</p>
+            おねだりの準備を完了させよう！</p>
+            <img class="presentImg" src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
         </div>
-
+		<?php echo $this->Form->create('User'); ?>
         <div class="fbList" >
-            <form action="">
+            <form>
                 <select id="" name="" style="">
                     <option value="">板橋聡</option>
                     <option value="">菊川実紀</option>
                 </select>
-            </form>
         </div>
         
-        <div class="menu clearfix">
-            <ul>
-                <li class="left"><a href="/">商品を選び直す</a></li>
-                <li class="right"><a href="<?php echo $this->webroot ?>Users/set_address_sp/">最後のステップへ進む</a></li>
+        <div class="formList">
+            <ul class="fbnameContainer">
+            	<li>
+        		<input type="text" placeholder="@おねだりする相手のアカウント名を入力" id="twname" name="twname">
+                </li>
             </ul>
+       		<div class="caption">
+            	<p>商品は郵送されるよ。<br>
+            	郵送先の住所を建物名や部屋番号まで記入してね。<br>
+            	[おねだり送信]商品ボタンを押せばおねだり完了♩</p>
+            </div>
+            <ul>
+                <li>
+                <label for="">宛名</label>
+                <input type="text" placeholder="例：キャリーぱみゅぱみゅ" id="user_name" name="user_name" value= <?php echo $user['User']['user_name'] ?>>
+                </li>
+                <li>
+                <label for="">郵便番号</label>
+                <input type="text" placeholder="例：150-0002" id="postal_code" name="postal_code" value= <?php echo $user['User']['postal_code'] ?>>
+                </li>
+                <li>
+                <label for="">住所</label>
+                <input type="text" style="font-size:9px;"  placeholder="例：東京都渋谷区渋谷1-1 ※建物名、部屋番号を忘れずに！" id="address" name="address" value= <?php echo $user['User']['address'] ?>>
+                </li>
+                <li>
+                <label for="">電話番号</label>
+                <input type="text"  placeholder="例：03-0000-0000" id="tel" name="tel" value=<?php echo $user['User']['tel'] ?>>
+                </li>
+                <li>
+                <label for="">メールアドレス</label>
+                <input type="text" placeholder="例：gimmechoco@gmail.com" id="mail" name="mail" value=<?php echo $user['User']['mail'] ?>>
+                </li>
+            </ul>
+            <div class="submitBtn">
+                <ul>
+                    <li><input id="SubmitBtn" value="おねだり送信" type="submit"></li>
+                </ul>
+            </div>
         </div>
+        
+        </form>
+        <?php echo $this->Form->end(); ?>
+        </article>
     </div>

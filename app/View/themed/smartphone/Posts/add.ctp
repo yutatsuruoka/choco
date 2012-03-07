@@ -1,7 +1,7 @@
     <div class="contents wrapper" id="top">
         <div class="captionContainer  center">
             <p class="cap"> チョコくれ！が女性の為に帰ってきたぜ！！<br>
-            ホワイトデーを使って男性におねだり（復讐）できる、<br>
+            ねだり返せ！ホワイトデーを300%から楽しむ、<br>
             ソーシャルおねだりプラットフォーム。
             </p>
             <p class="news"><a href="">16:32 Yahoo!ニュースのトップページに掲載されました &gt;&gt;</a></p>
