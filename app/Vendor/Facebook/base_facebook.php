@@ -490,7 +490,7 @@ abstract class BaseFacebook
       'dialog/oauth',
       array_merge(array(
                     'client_id' => $this->getAppId(),
-                    'redirect_uri' => $currentUrl, // possibly overwritten
+                    'redirect_uri' => 'http://localhost:8888/cake/users/begfb_callback/', // possibly overwritten
                     'state' => $this->state),
                   $params));
   }

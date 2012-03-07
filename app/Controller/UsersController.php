@@ -7,9 +7,9 @@ class UsersController extends AppController {
     public $components = array('OauthConsumer');
     var $uses = array('User', 'Post'); 
     public $theme = '';
+    var $facebook;  
     
-    var $fb;  
-      
+    
     public function index() {
         $this->set('users', $this->User->find('all'));
     }
@@ -25,13 +25,10 @@ class UsersController extends AppController {
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
         $this->Auth->allow('signup', 'login', 'twitter', 'twitter_callback'
-                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'give', 'give_callback', 'set_address_fb', 'set_address_tw', 'thankyou', 'set_address_sp');
+                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'begfb_callback', 'give', 'give_callback', 'set_address_fb', 'set_address_tw', 'thankyou', 'set_address_sp');
 
-        $this->fb = new Facebook(array(  
-            'appId'  => Configure::Read('Facebook.appId'),  
-            'secret' => Configure::Read('Facebook.secret'),  
-            'cookie' => true,  
-        ));
+
+    
     }
 
 	private function get_redirect_url($url) {
@@ -184,6 +181,11 @@ class UsersController extends AppController {
         
         $this->redirect('/users/set_address_tw/');
     } 
+    
+    public function begfb_callback() {
+        
+        $this->redirect('/users/set_address_fb/');
+    }
     
     public function set_address_tw() {
         $this->User->id = $this->Session->read('user_Id');

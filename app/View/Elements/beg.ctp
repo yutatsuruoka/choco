@@ -9,7 +9,7 @@
         <p class="price">¥500<span>プレゼントして当たり前だよねってレベル</span></p>
         <ul class="onedariContainer clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/4"><img src="<?php echo $this->webroot ?>i/present_twbtn.jpg" alt="Twitterでおねだり"></a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.jpg" alt="Facebookでおねだり"></a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/4"><img src="<?php echo $this->webroot ?>i/present_fbbtn.jpg" alt="Facebookでおねだり"></a></li>
         </ul>
         </section>
         <section class="present">
@@ -18,7 +18,7 @@
         <p class="price">¥300,000<span>これ買ってくれたら嬉しいよね〜</span></p>
         <ul class="onedariContainer clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/5"><img src="<?php echo $this->webroot ?>i/present_twbtn.jpg" alt="Twitterでおねだり"></a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.jpg" alt="Facebookでおねだり"></a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/5"><img src="<?php echo $this->webroot ?>i/present_fbbtn.jpg" alt="Facebookでおねだり"></a></li>
         </ul>
         </section>
         <section class="present last">
@@ -27,7 +27,7 @@
         <p class="price">¥450,000,000<span>責任を持って結婚をオススメします</span></p>
         <ul class="onedariContainer clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/6"><img src="<?php echo $this->webroot ?>i/present_twbtn.jpg" alt="Twitterでおねだり"></a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Users/set_address_fb/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.jpg" alt="Facebookでおねだり"></a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/6"><img src="<?php echo $this->webroot ?>i/present_fbbtn.jpg" alt="Facebookでおねだり"></a></li>
         </ul>
         </section>
         </article>

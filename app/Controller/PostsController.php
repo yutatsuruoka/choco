@@ -1,17 +1,17 @@
 <?php
+
+App::import('Vendor', 'facebook/facebook');  
+
 class PostsController extends AppController {
     public $name = 'Posts';
     public $helpers = array('Html', 'Form');
     public $components = array('OauthConsumer');
     var $uses = array('User', 'Post', 'Payment');
     public $theme = '';
- 
-	
-    /*
-public function index() {
-        $this->set('posts', $this->Post->find('all'));
-    }
-*/
+
+    var $facebook;
+    
+    
     
     public function view($id = null) {
     	$this->Post->id = $id;
@@ -129,6 +129,37 @@ public function index() {
         
     }
     
+    public function addfb($id = null) {
+        if (!empty($id)) {
+            $this->__sanitize();
+            $data['Post'] = array(
+      			'type' => $id,
+   			);
+            if ($this->Post->save($data)) {
+        		$this->autoRender = false;  
+    			$url = $this->facebook->getLoginUrl(array('next' => 'http://localhost/facebook/callback', 'req_perms' => 'email,publish_stream,status_update'));  
+    			$this->redirect($url);
+            }                
+    	}    
+    	
+    	// get count of payments
+        $condition = array("status" => 1, "is_delete" => 0);
+        $paid = $this->Payment->find('count', array('conditions' => $condition));
+        if ($paid > 2000) {
+            $paid = 2000;
+        }
+        $this->set('remaining', 2000 - $paid);
+        
+        // get count of begs
+        $condition = array("deleted" => null);
+        $begs = $this->Post->find('count', array('conditions' => $condition));
+        $this->set('begs', $begs);
+        
+        $this->set('errors', $this->Post->validationErrors);
+        
+        $this->fix_avatar();
+    }
+    
     function edit($id = null) {
         $this->Post->id = $id;
     	if ($this->request->is('get')) {
@@ -166,7 +197,15 @@ public function index() {
 
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
-        $this->Auth->allow('add', 'index', 'set_type', 'fix_avatar', 'no', 'nono', 'check');
+        $this->Auth->allow('add', 'index', 'set_type', 'fix_avatar', 'no', 'nono', 'check', 'addfb');
+   	 	
+   	 	
+   	 	//fb connect
+    	$this->facebook = new Facebook(array(  
+        	'appId'  => '252443538175439',  
+        	'secret' => '82410e60599c2e5cfa4f2572c8e660ad',  
+        	'cookie' => true,  
+    	));
     }
 	
     function delete($id) {
