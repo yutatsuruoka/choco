@@ -11,10 +11,10 @@
         </div><!-- end .snsButton-->
         </aside><!-- end .snsContainer-->
         <div class="presentInfo">
-            <img class="presentImg" src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
             <p class="presentText">選んだ商品は合っていますか？<br>
             次におねだり（復讐）する相手を選んで、<br>
-            おねだりの準備を完了しましょう！</p>
+            おねだりの準備を完了させよう！</p>
+            <img class="presentImg" src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
         </div>
 
         <div class="fbList" >
