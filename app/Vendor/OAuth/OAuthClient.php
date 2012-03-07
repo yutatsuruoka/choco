@@ -37,8 +37,13 @@ class OAuthClient {
 
     public function getAccessToken($accessTokenURL, $requestToken, $httpMethod = 'POST', $parameters = array()) {
         $this->url = $accessTokenURL;
-        $queryStringParams = OAuthUtil::parse_parameters($_SERVER['QUERY_STRING']);
-        $parameters['oauth_verifier'] = $queryStringParams['oauth_verifier'];
+        if (array_key_exists('QUERY_STRING', $_SERVER)) {
+			$queryStringParams = OAuthUtil::parse_parameters($_SERVER['QUERY_STRING']);
+			$parameters['oauth_verifier'] = $queryStringParams['oauth_verifier'];
+		}
+		else {
+			$parameters = array();
+		}
         $request = $this->createRequest($httpMethod, $accessTokenURL, $requestToken, $parameters);
 
         return $this->doRequest($request);

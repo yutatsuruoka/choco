@@ -1,5 +1,6 @@
 <?php
-App::import('Controller', 'OauthConsumerComponent');
+
+App::import('Vendor', 'OAuth/OAuthClient');
 
 include_once "oauthapp.inc.php";
 
@@ -78,7 +79,7 @@ class GetaccesstokenShell extends Shell {
 	}
 
 	function createConsumer() {
-		return new OauthConsumer(YOUR_CONSUMER_KEY, YOUR_CONSUMER_SECRET);
+		return new OAuthClient(YOUR_CONSUMER_KEY, YOUR_CONSUMER_SECRET);
 	}
 
 }
