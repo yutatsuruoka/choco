@@ -31,3 +31,4 @@
         </div>
         </article>
     </div>
+    <?php echo $this->element('flow'); ?>

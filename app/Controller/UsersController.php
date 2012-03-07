@@ -7,9 +7,9 @@ class UsersController extends AppController {
     public $components = array('OauthConsumer');
     var $uses = array('User', 'Post'); 
     public $theme = '';
+    var $facebook;  
     
-    var $fb;  
-      
+    
     public function index() {
         $this->set('users', $this->User->find('all'));
     }
@@ -25,13 +25,13 @@ class UsersController extends AppController {
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
         $this->Auth->allow('signup', 'login', 'twitter', 'twitter_callback'
-                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'give', 'give_callback', 'set_address_fb', 'set_address_tw', 'thankyou', 'set_address_sp');
+                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'begfb_callback', 'give', 'give_callback', 'set_address_fb', 'set_address_tw', 'thankyou', 'set_address_sp');
 
-        $this->fb = new Facebook(array(  
+        $this->facebook = new Facebook(array(  
             'appId'  => Configure::Read('Facebook.appId'),  
             'secret' => Configure::Read('Facebook.secret'),  
             'cookie' => true,  
-        ));
+        ));  
     }
 
 	private function get_redirect_url($url) {
@@ -184,6 +184,102 @@ class UsersController extends AppController {
         
         $this->redirect('/users/set_address_tw/');
     } 
+    
+    public function begfb_callback() {
+        $this->log('facebook_callback() called', LOG_DEBUG);
+        
+        $uid = $this->facebook->getUser();  
+        if ($uid == 0) {
+            $this->log('no facebook uid!', LOG_DEBUG);
+            $this->Session->setFlash('Facebook login failed');
+            $this->redirect('/');
+        }
+        
+        $me = null;  
+        try {  
+            $me = $this->facebook->api('/me');
+            
+            $access_token = $this->facebook->getAccessToken();  
+        } catch (FacebookApiException $e) {  
+            error_log($e);  
+        }
+        
+        $name = $me['first_name'] . ' ' . $me['last_name'];
+        if (!$this->User->find('first', array('conditions' 
+            => array(
+                'email' => $me['id'] . '@facebook'
+                , 'type' => 2
+                , 'deleted' => NULL
+            )))) {
+            // create new user
+            $this->User->save(array('User' 
+                => array(
+                    'email' => $me['id'] . '@facebook'
+                    , 'type' => 2
+                    , 'name' => $name,  
+                )), false);
+            
+            $this->Session->setFlash('Facebook user created');
+        }
+        else {
+            $this->Session->setFlash('Returning Facebook user');
+        }
+        
+        $this->Auth->login(array('email' => $me['id'] . '@facebook',
+                'name' => $name,  
+                'type' => 2));              
+        
+        $this->redirect('/users/set_address_fb/');
+    }
+    
+    
+    public function facebook_callback() {
+        $this->log('facebook_callback() called', LOG_DEBUG);
+        $uid = $this->fb->getUser();  
+        if ($uid == 0) {
+            $this->log('no facebook uid!', LOG_DEBUG);
+            $this->Session->setFlash('Facebook login failed');
+            $this->redirect('/');
+        }
+        
+        $me = null;  
+        try {  
+            $me = $this->fb->api('/me');
+            
+            $access_token = $this->fb->getAccessToken();  
+        } catch (FacebookApiException $e) {  
+            error_log($e);  
+        }
+        
+        $name = $me['first_name'] . ' ' . $me['last_name'];
+        if (!$this->User->find('first', array('conditions' 
+            => array(
+                'email' => $me['id'] . '@facebook'
+                , 'type' => 2
+                , 'deleted' => NULL
+            )))) {
+            // create new user
+            $this->User->save(array('User' 
+                => array(
+                    'email' => $me['id'] . '@facebook'
+                    , 'type' => 2
+                    , 'name' => $name,  
+                )), false);
+            
+            $this->Session->setFlash('Facebook user created');
+        }
+        else {
+            $this->Session->setFlash('Returning Facebook user');
+        }
+        
+        $this->Auth->login(array('email' => $me['id'] . '@facebook',
+                'name' => $name,  
+                'type' => 2));
+        
+        $this->redirect($this->Auth->redirect());
+        
+    }
+    
     
     public function set_address_tw() {
         $this->User->id = $this->Session->read('user_Id');
@@ -339,6 +435,64 @@ class UsersController extends AppController {
         
         $this->redirect("/payment/index/" . $postId);
     }   
+
+    public function facebook() {
+        $this->log('facebook() called', LOG_DEBUG);
+        
+        $url = $this->fb->getLoginUrl(array('redirect_uri' => 
+            'http://kazumax.kamiya.com/users/facebook_callback', 
+            'req_perms' => 'email'));  
+        $this->redirect($url);  
+    }
+
+/*
+    public function facebook_callback() {
+        $this->log('facebook_callback() called', LOG_DEBUG);
+        $uid = $this->fb->getUser();  
+        if ($uid == 0) {
+            $this->log('no facebook uid!', LOG_DEBUG);
+            $this->Session->setFlash('Facebook login failed');
+            $this->redirect('/');
+        }
+        
+        $me = null;  
+        try {  
+            $me = $this->fb->api('/me');
+            
+            $access_token = $this->fb->getAccessToken();  
+        } catch (FacebookApiException $e) {  
+            error_log($e);  
+        }
+        
+        $name = $me['first_name'] . ' ' . $me['last_name'];
+        if (!$this->User->find('first', array('conditions' 
+            => array(
+                'email' => $me['id'] . '@facebook'
+                , 'type' => 2
+                , 'deleted' => NULL
+            )))) {
+            // create new user
+            $this->User->save(array('User' 
+                => array(
+                    'email' => $me['id'] . '@facebook'
+                    , 'type' => 2
+                    , 'name' => $name,  
+                )), false);
+            
+            $this->Session->setFlash('Facebook user created');
+        }
+        else {
+            $this->Session->setFlash('Returning Facebook user');
+        }
+        
+        $this->Auth->login(array('email' => $me['id'] . '@facebook',
+                'name' => $name,  
+                'type' => 2));
+        
+        $this->redirect($this->Auth->redirect());
+        
+    }
+*/
 }
 
 ?>
