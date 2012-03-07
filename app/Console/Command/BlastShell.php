@@ -3,14 +3,13 @@
 App::import('Vendor', 'OAuth/OAuthClient');
 
 include_once "oauthapp.inc.php";
-var_dump($access_tokens);
 
 class BlastShell extends Shell {
 
 	var $isDebug = false;
 	var $isTweet = true;
 
-	public $uses = array();
+	public $uses = array('Post', 'User');
 
 	var $curtime;
 	var $dateTimeZoneJapan;
@@ -20,8 +19,17 @@ class BlastShell extends Shell {
 	var $logfilename = "";
 
 	var $consumer;
-	var $access_token = "";
-	var $access_token_secret = "";
+	
+	var $screen_names = array();
+	var $tweeted = array();
+	
+	public function getOptionParser() {
+		$parser = parent::getOptionParser();
+		
+		$parser->addOption('notweet', array('boolean' => true));		
+		
+		return $parser;
+	}
 
 	function __construct() {
 		parent::__construct();
@@ -35,19 +43,20 @@ class BlastShell extends Shell {
 		$this->dateTimeZoneJapan = new DateTimeZone("Asia/Tokyo");
 		$this->dateTimeJapan = new DateTime("now", $this->dateTimeZoneJapan);
 
-		$this->consumer = $this->createConsumer();
-		
-		$this->client_id = 1;
-		$this->access_token = "";
-		$this->access_token_secret = "";
-		if ( count($this->args) == 1 ) {
-			$this->client_id = $this->args[0];
-		}
+		$this->isTweet = false;
+		$this->isDebug = true;
+
+		$this->consumer = $this->createConsumer();		
+	}
+
+	function main() {
+		$this->out("TEST: " . date('Y-m-d H:i:s') );
+
 		if ( isset($this->params["debug"]) ) {
 			$this->isDebug = true;
 		}
 		if ( isset($this->params["notweet"]) ) {
-			$this->isTweet = false;
+			$this->isTweet = !$this->params["notweet"];
 			$this->isDebug = true;
 		}
 
@@ -59,28 +68,95 @@ class BlastShell extends Shell {
 			$this->out( var_export($this->args,true) );
 			$this->out( "---------------------------------------------------------------");
 		}
-	}
 
-	function main() {
-		global $access_tokens;		
+		$client_id = 0;
 		
-		$this->out("TEST: " . date('Y-m-d H:i:s') );
-		$this->out( "-- params --");
-		$this->out( var_export($this->params,true) );
-		$this->out( "-- args --");
-		$this->out( var_export($this->args,true) );
-
-		$client_id = 1;
-		$access_token = "";
-		$access_token_secret = "";
-		if ( count($this->args) == 1 ) {
-			$client_id = $this->args[0];
+		$all_posts = $this->Post->find('all', array(
+			'conditions' => 'deleted is null'
+			, 'fields' => array(
+				'boy_id'
+				, 'girl_id'
+			)
+			, 'group' => array(
+				'boy_id'
+				, 'girl_id'
+			)
+		));
+		
+		$c = 0;
+		foreach ($all_posts as $post) {			
+			// get girl screen_name
+			$girl_id = trim($post['Post']['girl_id']);
+			if (substr($girl_id, 0, 1) == '@') {
+				$girl_id = substr($girl_id, 1);
+			}
+			
+			$boy_user_id = $post['Post']['boy_id'];
+			if ($boy_user_id == null) {
+				continue;
+			}
+			
+			// get email of boy
+			$boy = $this->User->find('first', array(
+				'conditions' => array('id', $boy_user_id)
+			));
+			if ($boy == null) {
+				continue;
+			}
+			$boy_email = $boy['User']['email'];
+			
+			// get boy twitter id
+			$at_pos = strpos($boy_email, '@');
+			$boy_twitter_id = substr($boy_email, 0, $at_pos);
+			
+			if (!array_key_exists($boy_twitter_id, $this->screen_names)) {
+			
+				// get boy screen name
+				$json = file_get_contents(
+					"https://api.twitter.com/1/users/show.json?user_id=" . $boy_twitter_id . "&include_entities=true"
+					, true
+				); 
+				$decode = json_decode($json, true); //getting the file content as array
+				$boy_id = $decode['screen_name'];
+				
+				$this->screen_names[$boy_twitter_id] = $boy_id;
+			}
+			else {
+				$boy_id = $this->screen_names[$boy_twitter_id];
+			}
+			
+			// send reply only if not tweeted
+			$replied = false;
+			if (array_key_exists($boy_id, $this->tweeted)) {
+				if (strcmp($this->tweeted[$boy_id], $girl_id) == 0) {
+					$replied = true;
+				}
+			}
+			
+			global $access_tokens;		
+			if (!$replied) {
+				$msg = "@$boy_id クンにチョコをねだられた@$girl_id さん！3月14日に向けて正々堂々おねだり仕返しちゃおう。URLからnedaly(ネダリー)へアクセス！http://nedaly.com" ;
+				
+				$client_id = $c % 5 + 1;
+				$access_token
+					= $access_tokens['chocokure' . $client_id]['key'];
+				$access_token_secret 
+					= $access_tokens['chocokure' . $client_id]['secret'];
+				
+				echo "client_id: $client_id\n";
+				if ($this->isTweet) {
+					$this->twitter_post($access_token,$access_token_secret, 
+						$msg);
+				}
+				else {
+					echo $msg . "\n";
+				}
+				
+				$this->tweeted[$boy_id] = $girl_id;
+				
+				$c ++;
+			}
 		}
-		$access_token = $access_tokens['chocokure' . $client_id]['key'];
-		$access_token_secret = $access_tokens['chocokure' . $client_id]['secret'];
-
-		$this->twitter_post($access_token,$access_token_secret,'hello worldddd!'." TEST:" . date('Y-m-d H:i:s'));
-
 	}
 
 	function twitter_post($access_token=null,$access_token_secret=null,$message="") {
