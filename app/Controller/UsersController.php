@@ -27,8 +27,11 @@ class UsersController extends AppController {
         $this->Auth->allow('signup', 'login', 'twitter', 'twitter_callback'
                 , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'begfb_callback', 'give', 'give_callback', 'set_address_fb', 'set_address_tw', 'thankyou', 'set_address_sp');
 
-
-    
+        $this->facebook = new Facebook(array(  
+            'appId'  => Configure::Read('Facebook.appId'),  
+            'secret' => Configure::Read('Facebook.secret'),  
+            'cookie' => true,  
+        ));  
     }
 
 	private function get_redirect_url($url) {
