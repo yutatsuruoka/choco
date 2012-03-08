@@ -9,16 +9,6 @@
             あなたにとって素敵なホワイトデーになりますように。</p>
         </div>
         
-        <div id="messagebox">
-            <form>
-                <div class="textarea">
-                    <textarea class="freeform jq-placeholder" name="freeword" title="メッセージを送りたい場合は、こちらに記入して下さい。"></textarea>
-                </div>
-                <div class="messagebtn">
-                    <input type="image" src="i/last_message.jpg" />
-                </div>
-            </form>
-        </div>
         <div class="choiceBtn">
             <ul class="clearfix">
                 <li><a href="https://twitter.com/intent/tweet?hashtags=chocokure&original_referer=http%3A%2F%2Fchocokure.com%2Fusers%2Fthankyou&source=tweetbutton&text=【チョコくれ】女の子へチョコをおねだり出来る、ソーシャルバレンタインプラットフォーム&url=http%3A%2F%2Fchocokure.com%2F"><img src="<?php echo $this->webroot ?>i/twitterbtn.png"></a></li>

@@ -12,7 +12,7 @@ class PaymentController extends AppController {
 
                 // Tell the Auth controller that the 'create' action is accessible 
                 // without being logged in.
-                $this->Auth->allow('index','paypal_success', 'paypal_failure', 'bank', 'paypal','test');
+                $this->Auth->allow('index','paypal_success', 'paypal_failure', 'bank', 'paypal','test', 'paypal_success');
                 
 		$this->set("title_for_layout", "Paypal Payment");
 

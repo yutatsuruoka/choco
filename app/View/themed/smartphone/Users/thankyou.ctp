@@ -20,7 +20,7 @@
         
         <div class="menu">
             <ul>
-                <li><a href="">続けて他の人にもおねだりする！</a></li>
+                <li><a href="/">続けて他の人にもおねだりする！</a></li>
             </ul>
         </div>
         <div class="menu02">

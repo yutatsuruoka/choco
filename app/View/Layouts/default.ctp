@@ -2,7 +2,7 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="jp"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="jp"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="jp"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="jp"> <!--<![endif]-->
+<!--[if gt IE 8]-> <html class="no-js" lang="jp"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,8 +10,14 @@
     <title>chocokure -social white day platform- </title>
     <meta name="description" content="チョコくれ！が女性の為に帰ってきたぜ！！男性におねだり（復讐）できるソーシャルホワイトデープラットフォーム">
     <meta name="keywords" content="chocokure,ホワイトデー,ソーシャルホワイトデー,チョコ,家入一真,MONOspace">
-    <meta name="author" content="家入一真 MONOspace">
+    <meta name="author" content="家入一真 ワルソウ MONOspace">
     <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" href="i/apple-touch-icon-precomposed.png">
+    <meta property="og:title" content="neda.ly at chocokure white day ver.">
+    <meta property="og:description" content="チョコくれ！が女性の為に帰ってきたぜ！！男性におねだり（復讐）できるソーシャルホワイトデープラットフォーム">
+    <meta property="og:url" content="http://nedaly.com/">
+    <meta property="og:image" content="http://nedaly.com/i/fb_link_img.jpg">
+    <meta property="og:type" content="website" />    
     <link rel="stylesheet" href="<?php echo $this->webroot ?>c/colorbox.css">
     <link rel="stylesheet" href="<?php echo $this->webroot ?>c/style.css">
     
@@ -80,64 +86,19 @@
         </div>
         <div class="right rightContainer">
             <div class="onedariContainer clearfix">
-            <div class="onedari_girl left">
                 <h2>新着おねだりガール</h2>
                 <ul class="twList clearfix">
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
+            	    <?php
+                        foreach ($girls as $girl ) {
+                            echo '<li>';
+                            /* echo '<a href=\'https://twitter.com/#!/' . $girl['screen_name'] . '\'>'; */
+                            echo '<img src="' . $girl['avatar'] . '" width="50" height="50">';
+                            echo '</a>';
+                            echo "</li>\n";
+                        }
+					?>
                 </ul>
-            </div>
-            <div class="onedari_boy right">
-                <h2>新着ねだられボーイ</h2>
-                <ul class="twList clearfix">
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                    <li><img src="<?php echo $this->webroot ?>i/onedari_icon.jpg" alt="@hbkr"></li>
-                </ul>
-            </div>
+              </div>
         </div>
         <div class="snsContainer clearfix">
             <div class="fbContainer left">
@@ -270,8 +231,18 @@
         <li><a href="http://camp-fire.jp" target="_blank" title="クラウドファンディング">CAMPFIRE - クラウドファンディング</a></li>
     </ul>
     </footer>
-
-
+    <!-- anal -->
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+  	_gaq.push(['_setAccount', 'UA-23653112-9']);
+  	_gaq.push(['_trackPageview']);
+  	(function() {
+    	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  	})();
+	</script>
+	<!-- end anal -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="j/libs/jquery-1.7.1.min.js"><\/script>')</script> 

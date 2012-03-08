@@ -15,17 +15,6 @@
         <div class="caption">
             <h3 ><img src="<?php echo $this->webroot ?>i_sp/boy_ok3_cap.png" width="140" height="28" alt="thanks nice guy!!"></h3>
             <p>おねだり商品はあなたの協力を得て無事に完了しました。<br>
-[おまけ] おねだりガールにメッセージを送ってみませんか？</p>
-        </div>
-		<!-- paypentのthankyouへ -->
-        <div class="messageForm">
-            <form>
-                <textarea id="" name="" ></textarea>
-                <input type="submit" value="メッセージを送信">
-            </form>
-        </div>
-        
-        <div class="menu">
             <ul>
                 <li><a href="<?php echo $this->webroot ?>/set_address_tw/">Neda.ly Top page</a></li>
             </ul>

@@ -56,17 +56,18 @@
                     </ul>
                 </div><!-- end right -->
             </div><!-- end formContainer -->
-            <div class="fbContainer">
-                <img src="<?php echo $this->webroot ?>i/girl_2nd_fb_img.jpg" alt="">
-            </div><!-- end fbContainer -->
+        <div class="fbList" >
+            <form>
+                <select id="fbname" name="fbname" style="">
+                	<?php foreach($friendIds['data'] as $fid ){ ?>
+        				<option value="<?php echo $fid['name']; ?>"><?php echo $fid['name']; ?></option>
+        			<?php } ?>
+                </select>
+        </div>
             <div class="submit">
                 <input id="fbSubmitBtn" value="" type="submit">
                 <?php echo $this->Form->end(); ?>
             </div>
         </form>
         </article>
-      	<?php 
-      	foreach($friendIds['data'] as $fid ){ ?>
-        	<p><?php echo $fid['name']; ?></p>
-        <?php } ?>
     </div>
