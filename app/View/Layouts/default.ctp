@@ -99,43 +99,43 @@
 					?>
                 </ul>
               </div>
-        </div>
-        <div class="snsContainer clearfix">
-            <div class="fbContainer left">
-                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fwarusou&amp;width=350&amp;height=350&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23cccccc&amp;stream=false&amp;header=true&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:350px;" allowTransparency="true"></iframe>
-            </div>
-            <div class="twContainer right">
-                <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-                <script>
-                    new TWTR.Widget({
-                        version: 2,
-                        type: 'search',
-                        search: '#chocokure',
-                        interval: 30000,
-                        title: 'Social Valentine platform.',
-                        subject: '#chocokure',
-                        width: 348,
-                        height: 258,
-                        theme: {
-                            shell: {
-                                background: '#ffffff',
-                                color: '#000000'
-                            },
-                            tweets: {
-                                background: '#ffffff',
-                                color: '#666666',
-                                links: '#ff99cc'
-                            }
-                        },
-                        features: {
-                            scrollbar: false,
-                            loop: true,
-                            live: true,
-                            behavior: 'default'
-                        }
-                    }).render().start();
-                </script>            
-            </div>
+              <div class="snsContainer clearfix">
+                  <div class="fbContainer left">
+                      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fwarusou&amp;width=350&amp;height=350&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23cccccc&amp;stream=false&amp;header=true&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:350px;" allowTransparency="true"></iframe>
+                  </div>
+                  <div class="twContainer right">
+                      <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+                      <script>
+                          new TWTR.Widget({
+                              version: 2,
+                              type: 'search',
+                              search: '#chocokure',
+                              interval: 30000,
+                              title: 'Social whiteday platform.',
+                              subject: '#chocokure',
+                              width: 348,
+                              height: 258,
+                              theme: {
+                                  shell: {
+                                      background: '#ffffff',
+                                      color: '#999'
+                                  },
+                                  tweets: {
+                                      background: '#ffffff',
+                                      color: '#666666',
+                                      links: '#66c1eb'
+                                  }
+                              },
+                              features: {
+                                  scrollbar: false,
+                                  loop: true,
+                                  live: true,
+                                  behavior: 'default'
+                              }
+                          }).render().start();
+                      </script>            
+                  </div>
+              </div>
         </div>
     </div>
     </div>
