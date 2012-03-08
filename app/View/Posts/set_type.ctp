@@ -25,9 +25,9 @@
 
         </div>
         <div class="present">
-            <img src="<?php echo $this->webroot ?>i/present_a.jpg" alt="Pruduct name">
-            <h2>Pruduct name</h2>
-            <p class="price">¥500<span>プレゼントして当たり前だよねってレベル</span></p>
+            <img src="<?php echo $this->webroot ?>i/present_<?php echo $product['Product']['id'] ?>.jpg" alt="Pruduct name">
+            <h2><?php echo $product['Product']['name'] ?></h2>
+            <p class="price">¥<?php echo $product['Product']['price'] ?><!-- <span>プレゼントして当たり前だよねってレベル</span> --></p>
         </div>
         <div class="choiceBtn">
             <ul class="clearfix">

@@ -14,7 +14,7 @@
             <p class="presentText">選んだ商品は合っていますか？<br>
             次におねだり（復讐）する相手を選んで、<br>
             おねだりの準備を完了させよう！</p>
-            <img class="presentImg" src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
+            <img class="presentImg" src="<?php echo $this->webroot ?>i/present_<?php echo $post["Post"]['type'] ?>.jpg" width="300" height="200" alt="Pruduct name">
         </div>
 		<?php echo $this->Form->create('User'); ?>
         <div class="fbList" >

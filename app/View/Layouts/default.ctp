@@ -33,7 +33,7 @@
         <h1><a href="/"><img src="<?php echo $this->webroot ?>i/logo.png" alt="chocokure social white day platform"></a></h1>
         <aside class="snsContainer clearfix">
         <div class="snsButton left">   
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://chocokure.com/" data-text="【チョコくれ】ソーシャルバレンタインプラットフォーム-“次は女性たちの復讐が待ってるぞ”" data-hashtags="chocokure">Tweet</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://nedaly.com/" data-text="【neda.ly】ソーシャルおねだりプラットフォームの解禁。二人なら、ビスケットは半分こでも笑顔は二倍だよね！" data-hashtags="nedaly">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div><!-- end .snsButton-->
         <div class="snsButton left">
@@ -54,7 +54,22 @@
     <div id="infoSnsContainer" class="wrapper clearfix">
         <div class="left leftContainer">
             <dl>
-                <dt>chocokure2nd NEWS</dt>
+                <dt>nedaly NEWS</dt>
+                <dd>・第一弾はホワイトデーバージョン</dd>
+                <dd>・nedalyリリース!!!</dd>
+                <dd>・</dd>
+                <dd>・</dd>
+                <dd>・</dd>
+            </dl>
+            <dl>
+                <dt>nedaly FUTURE</dt>
+                <dd>・</dd>
+                <dd>・</dd>
+                <dd>・</dd>
+                <dd>・</dd>
+            </dl>
+            <dl>
+                <dt>chocokure NEWS</dt>
                 <dd>・pennolsonに掲載されました！</dd>
                 <dd>・yahoo!ニュースに掲載されました！</dd>
                 <dd>・ねとらぼに掲載されました！</dd>
@@ -62,22 +77,7 @@
                 <dd>・2012/02/03 リリースしました！</dd>
             </dl>
             <dl>
-                <dt>chocokure2nd FUTURE</dt>
-                <dd>・ホワイトデー復讐機能</dd>
-                <dd>・おねだりボーイズ機能</dd>
-                <dd>・おねだりマスカッツと提携</dd>
-                <dd>・ソーシャルおねだりプラットフォーム化</dd>
-            </dl>
-            <dl>
-                <dt>chocokure1st NEWS</dt>
-                <dd>・pennolsonに掲載されました！</dd>
-                <dd>・yahoo!ニュースに掲載されました！</dd>
-                <dd>・ねとらぼに掲載されました！</dd>
-                <dd>・RBBTODAYに掲載されました！</dd>
-                <dd>・2012/02/03 リリースしました！</dd>
-            </dl>
-            <dl>
-                <dt>chocokure1st FUTURE</dt>
+                <dt>chocokure FUTURE</dt>
                 <dd>・ホワイトデー復讐機能</dd>
                 <dd>・おねだりボーイズ機能</dd>
                 <dd>・おねだりマスカッツと提携</dd>
@@ -109,10 +109,10 @@
                           new TWTR.Widget({
                               version: 2,
                               type: 'search',
-                              search: '#chocokure',
+                              search: '#nedaly',
                               interval: 30000,
                               title: 'Social whiteday platform.',
-                              subject: '#chocokure',
+                              subject: '#nedaly',
                               width: 348,
                               height: 258,
                               theme: {

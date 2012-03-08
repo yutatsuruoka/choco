@@ -9,7 +9,7 @@
 
         <aside class="snsContainer clearfix">
         <div class="snsButton left">   
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://chocokure.com/" data-text="【チョコくれ】ソーシャルバレンタインプラットフォーム-“次は女性たちの復讐が待ってるぞ”" data-hashtags="chocokure">Tweet</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://nedaly.com/" data-text="【neda.ly】ソーシャルおねだりプラットフォームの解禁。二人なら、ビスケットは半分こでも笑顔は二倍だよね！" data-hashtags="nedaly">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div><!-- end .snsButton-->
         <div class="snsButton right">
@@ -22,11 +22,11 @@
         <div class="presentTtl clearfix">
             <div class="left num">1</div>
             <div class="left">
-                <h2>Godiva chocolate. / ¥500</h2>
+                <h2><?php echo $product[0]["Product"]['name'] ?> / ¥<?php echo $product[0]["Product"]['price'] ?></h2>
                 <p>これはプレゼントして当たり前だよねってレベル</p>
             </div>
         </div>
-        <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
+        <img src="<?php echo $this->webroot ?>i/present_4.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/4">▶ Twitterでおねだり</a></li>
             <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/4">▶ Facebookでおねだり</a></li>
@@ -36,11 +36,11 @@
         <div class="presentTtl clearfix">
             <div class="left num">2</div>
             <div class="left">
-                <h2>Godiva chocolate. / ¥500</h2>
-                <p>これはプレゼントして当たり前だよねってレベル</p>
+                <h2><?php echo $product[1]["Product"]['name'] ?> / ¥<?php echo $product[1]["Product"]['price'] ?></h2>
+                <p>これ買ってくれたら嬉しいよね〜</p>
             </div>
         </div>
-        <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
+        <img src="<?php echo $this->webroot ?>i/present_5.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/5">▶ Twitterでおねだり</a></li>
             <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/5">▶ Facebookでおねだり</a></li>
@@ -50,11 +50,11 @@
         <div class="presentTtl clearfix">
             <div class="left num">3</div>
             <div class="left">
-                <h2>Godiva chocolate. / ¥500</h2>
-                <p>これはプレゼントして当たり前だよねってレベル</p>
+                <h2><?php echo $product[2]["Product"]['name'] ?> / ¥<?php echo $product[2]["Product"]['price'] ?></h2>
+                <p>責任を持って結婚をオススメします</p>
             </div>
         </div>
-        <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
+        <img src="<?php echo $this->webroot ?>i/present_6.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/6">▶ Twitterでおねだり</a></li>
             <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/6">▶ Facebookでおねだり</a></li>

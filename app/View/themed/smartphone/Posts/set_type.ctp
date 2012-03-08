@@ -9,7 +9,7 @@
 
         <aside class="snsContainer clearfix">
         <div class="snsButton left">   
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://chocokure.com/" data-text="【チョコくれ】ソーシャルバレンタインプラットフォーム-“次は女性たちの復讐が待ってるぞ”" data-hashtags="chocokure">Tweet</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://nedaly.com/" data-text="【neda.ly】ソーシャルおねだりプラットフォームの解禁。二人なら、ビスケットは半分こでも笑顔は二倍だよね！" data-hashtags="nedaly">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div><!-- end .snsButton-->
         <div class="snsButton right">
@@ -30,11 +30,11 @@
         <section class="present">
         <div class="presentTtl">
             <div>
-                <h2>Godiva chocolate. / ¥500</h2>
+                <h2><?php echo $product['Product']['name'] ?> / ¥<?php echo $product['Product']['price'] ?></h2>
                 <p>これはプレゼントして当たり前だよねってレベル</p>
             </div>
         </div>
-        <img src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
+        <img src="<?php echo $this->webroot ?>i/present_<?php echo $product['Product']['id'] ?>.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/no/<?php echo $post_id ?>">▶ 僕はケチだから断る</a></li>
             <li class="right fb"><a href="<?php echo $this->webroot ?>Payment/index/<?php echo $post_id ?>">▶ もちろんプレゼント</a></li>

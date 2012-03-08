@@ -17,7 +17,7 @@
           	おねだりの準備を完了させよう！</p>
         </div>
         <div class="presentInfo">
-            <img class="presentImg" src="<?php echo $this->webroot ?>i_sp/present_a.jpg" width="300" height="200" alt="Pruduct name">
+            <img class="presentImg" src="<?php echo $this->webroot ?>i/present_<?php echo $post["Post"]['type'] ?>.jpg" width="300" height="200" alt="Pruduct name">
         </div>
 		<?php echo $this->Form->create('User'); ?>
         <form>

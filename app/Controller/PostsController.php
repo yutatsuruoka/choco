@@ -6,7 +6,7 @@ class PostsController extends AppController {
     public $name = 'Posts';
     public $helpers = array('Html', 'Form');
     public $components = array('OauthConsumer');
-    var $uses = array('User', 'Post', 'Payment');
+    var $uses = array('User', 'Post', 'Payment', 'Product');
     public $theme = '';
 
     var $facebook;
@@ -123,6 +123,12 @@ class PostsController extends AppController {
         $begs = $this->Post->find('count', array('conditions' => $condition));
         $this->set('begs', $begs);
         
+        //商品写真取得
+        $pro_img = array();
+        $pro_img = $this->Product->find('all', array(
+            'fields' => array('DISTINCT Product.name', 'Product.img', 'Product.price')
+        ));
+        $this->set('product', $pro_img);        
         $this->set('errors', $this->Post->validationErrors);
         
         $this->fix_avatar();
@@ -188,11 +194,16 @@ class PostsController extends AppController {
             $u = $this->User->find('first', array(
                 'conditions' => array('User.id' => $p['Post']['boy_id'])
                 ));
+                
+            $pro = $this->Product->find('first', array(
+                'conditions' => array('Product.id' => $p['Post']['type'])
+                ));
             
             $this->set('post_id', $id);
             $this->set('screen_name', $u['User']['screen_name']);
             $this->set('girl_id', $p['Post']['girl_id']);
             $this->set('avatar', $p['Post']['girl_avatar']);
+            $this->set('product', $pro);
         }
     }
 
@@ -237,10 +248,16 @@ class PostsController extends AppController {
                 'conditions' => array('User.id' => $p['Post']['boy_id'])
                 ));
             
+            $pro = $this->Product->find('first', array(
+                'conditions' => array('Product.id' => $p['Post']['type'])
+                ));
+                            
             $this->set('post_id', $id);
             $this->set('screen_name', $u['User']['screen_name']);
             $this->set('girl_id', $p['Post']['girl_id']);
             $this->set('avatar', $p['Post']['girl_avatar']);
+            $this->set('product', $pro);
+
         }
         
 	}

@@ -28,7 +28,7 @@
             <div class="formContainer clearfix">
                 <div class="left">
                     <div class="presentImg">
-                        <img src="<?php echo $this->webroot ?>i/girl_2nd_present.jpg" alt="">
+                        <img src="<?php echo $this->webroot ?>i/present_<?php echo $post["Post"]['type'] ?>.jpg" alt="">
                     </div><!-- end left presentImg -->
                 </div>
                  <div class="right">

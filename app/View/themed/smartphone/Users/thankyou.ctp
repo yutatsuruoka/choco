@@ -25,8 +25,8 @@
         </div>
         <div class="menu02">
             <ul class="clearfix">
-                <li class="left"><a href="">neda.ly on Twitter</a></li>
-                <li class="right"><a href="">neda.ly on Facebook</a></li>
+                <li class="left"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://nedaly.com/" data-text="【neda.ly】ソーシャルおねだりプラットフォームの解禁。二人なら、ビスケットは半分こでも笑顔は二倍だよね！" data-hashtags="nedaly">neda.ly on Twitter</a></li>
+                <li class="right"><a href="http://www.facebook.com/sharer.php?u=http://nedaly.com/" rel="nofollow" target="_blank">neda.ly on Facebook</a></li>
             </ul>
         </div>
         </article>

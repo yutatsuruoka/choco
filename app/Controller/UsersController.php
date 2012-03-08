@@ -5,7 +5,7 @@ App::import('Vendor', 'facebook/facebook');
 class UsersController extends AppController {
     public $name = 'Users';
     public $components = array('OauthConsumer');
-    var $uses = array('User', 'Post'); 
+    var $uses = array('User', 'Post', 'Product'); 
     public $theme = '';
     var $facebook;  
     
@@ -25,7 +25,7 @@ class UsersController extends AppController {
         // Tell the Auth controller that the 'create' action is accessible 
         // without being logged in.
         $this->Auth->allow('signup', 'login', 'twitter', 'twitter_callback'
-                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'begfb_callback', 'give', 'give_callback', 'set_address_fb', 'set_address_tw', 'thankyou', 'set_address_sp');
+                , 'facebook', 'facebook_callback', 'beg', 'beg_callback', 'begfb_callback', 'give', 'give_callback');
 
         $this->facebook = new Facebook(array(  
             'appId'  => Configure::Read('Facebook.appId'),  
@@ -256,6 +256,7 @@ class UsersController extends AppController {
         $this->User->id = $this->Session->read('user_Id');
         $this->Post->id = $this->Session->read('insert_id');
         $this->set('user', $this->User->read());
+        $this->set('post', $this->Post->read());
         if ($this->request->is('post')) {
             if (!empty($this->data)) {
             	$data = $this->request->data;
@@ -280,9 +281,9 @@ class UsersController extends AppController {
             	            , $this->Session->read('accessSecret')
                 	        , 'https://api.twitter.com/1/statuses/update.json'
                     	    , array('status' => 
-                        	    '.@' . $data["twname"] . ' さん！チョコください！ ねっ？ねっ？おねがーい！'
-                            	. '【このツイートはチョコくれを利用して送られています】'
-                           	 . ' http://chocokure.com/posts/set_type/' . $this->Session->read('insert_id')
+                        	    '.@' . $data["twname"] . ' クン、ホワイトデーには当然3倍返しだよね？コレ買って〜！！'
+                            	. '【このツイートはnedalyを利用して送られています】'
+                           	 . ' http://nedaly.com/posts/set_type/' . $this->Session->read('insert_id')
                            	 . ' #chocokure'
                         	));
                     $this->Session->setFlash('');
@@ -298,6 +299,7 @@ class UsersController extends AppController {
         $this->Post->id = $this->Session->read('insert_id');
         $friendIds = $this->Session->read('friendIds');        
         $this->set('user', $this->User->read());
+        $this->set('post', $this->Post->read());
         if ($this->request->is('post')) {
             if (!empty($this->data)) {
       		  	$data = $this->request->data;
