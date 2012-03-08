@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="<?php echo $this->webroot ?>c/style.css">
     
     <!--[if lt IE 9]>
-    <script src="j/libs/html5shiv.js"></script>
+    <script src="<?php echo $this->webroot ?>j/libs/html5shiv.js"></script>
     <![endif]-->
     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 </head>
