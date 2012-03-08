@@ -311,7 +311,7 @@ class UsersController extends AppController {
 	            
 	            	//ウォールへの投稿
 	            	$attachment = array(
-						"message"=>$data["fbname"] . "http://chocokure.com/posts/set_type/" . $this->Session->read('insert_id'),
+						"message"=>$data["fbname"] . "http://nedaly.com/posts/set_type/" . $this->Session->read('insert_id'),
 						"link"=>"http://chocokure.com/posts/set_type/" . $this->Session->read('insert_id'),
 						"name"=>"test",
 					);
