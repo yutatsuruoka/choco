@@ -33,7 +33,7 @@
                     <div class="twAccountForm">
                         <ul class="sheetContainer">
                             <li>
-                            <div class="inputContainer"><input type="text" placeholder="@おねだりする相手のアカウント名を入力" class="jq-placeholder" id="twname" name="twname"></div>
+                            <div class="inputContainer"><input type="text" title="@おねだりする相手のアカウント名を入力" class="jq-placeholder" id="twname" name="twname"></div>
                             </li>
                         </ul>
                         <p class="txt">送信ボタンを押すと相手にメンションで通知されます</p>
