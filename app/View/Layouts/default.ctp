@@ -7,16 +7,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>chocokure -social white day platform- </title>
+    <title>neda.ly at chocokure white day ver.</title>
     <meta name="description" content="チョコくれ！が女性の為に帰ってきたぜ！！男性におねだり（復讐）できるソーシャルホワイトデープラットフォーム">
     <meta name="keywords" content="chocokure,ホワイトデー,ソーシャルホワイトデー,チョコ,家入一真,MONOspace">
     <meta name="author" content="家入一真 ワルソウ MONOspace">
     <meta name="viewport" content="width=device-width">
-    <link rel="apple-touch-icon" href="i/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="<?php echo $this->webroot ?>i/apple-touch-icon-precomposed.png">
     <meta property="og:title" content="neda.ly at chocokure white day ver.">
     <meta property="og:description" content="チョコくれ！が女性の為に帰ってきたぜ！！男性におねだり（復讐）できるソーシャルホワイトデープラットフォーム">
-    <meta property="og:url" content="http://nedaly.com/">
-    <meta property="og:image" content="http://nedaly.com/i/fb_link_img.jpg">
+    <meta property="og:url" content="http://neda.ly/">
+    <meta property="og:image" content="http://neda.ly/i/fb_link_img.jpg">
     <meta property="og:type" content="website" />    
     <link rel="stylesheet" href="<?php echo $this->webroot ?>c/colorbox.css">
     <link rel="stylesheet" href="<?php echo $this->webroot ?>c/style.css">
@@ -33,12 +33,12 @@
         <h1><a href="/"><img src="<?php echo $this->webroot ?>i/logo.png" alt="chocokure social white day platform"></a></h1>
         <aside class="snsContainer clearfix">
         <div class="snsButton left">   
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://nedaly.com/" data-text="【neda.ly】ソーシャルおねだりプラットフォームの解禁。二人なら、ビスケットは半分こでも笑顔は二倍だよね！" data-hashtags="nedaly">Tweet</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://neda.ly/" data-text="【neda.ly】ソーシャルおねだりプラットフォームの解禁。二人なら、ビスケットは半分こでも笑顔は二倍だよね！" data-hashtags="nedaly">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div><!-- end .snsButton-->
         <div class="snsButton left">
             <div id="fb-root"></div>
-            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fchocokure.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=312737992072908" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fneda.ly%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=312737992072908" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
         </div><!-- end .snsButton-->
         </aside><!-- end .snsContainer-->
         </header>
@@ -101,7 +101,7 @@
               </div>
               <div class="snsContainer clearfix">
                   <div class="fbContainer left">
-                      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fwarusou&amp;width=350&amp;height=350&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23cccccc&amp;stream=false&amp;header=true&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:350px;" allowTransparency="true"></iframe>
+                      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fnedaly.warusou&amp;width=350&amp;height=350&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23cccccc&amp;stream=false&amp;header=true&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:350px;" allowTransparency="true"></iframe>
                   </div>
                   <div class="twContainer right">
                       <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>

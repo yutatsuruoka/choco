@@ -9,11 +9,11 @@
     <meta name="keywords" content="neda.ly,chocokure,ホワイトデー,ソーシャルホワイトデー,チョコ,家入一真,MONOspace">
     <meta name="author" content="家入一真 MONOspace">
     <meta name="viewport" content="width=device-width">
-    <link rel="apple-touch-icon" href="i/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="<?php echo $this->webroot ?>i/apple-touch-icon-precomposed.png">
     <meta property="og:title" content="neda.ly at chocokure white day ver.">
     <meta property="og:description" content="チョコくれ！が女性の為に帰ってきたぜ！！男性におねだり（復讐）できるソーシャルホワイトデープラットフォーム">
-    <meta property="og:url" content="http://nedaly.com/">
-    <meta property="og:image" content="http://nedaly.com/i/fb_link_img.jpg">
+    <meta property="og:url" content="http://neda.ly/">
+    <meta property="og:image" content="http://neda.ly/i/fb_link_img.jpg">
     <meta property="og:type" content="website" />
     <link rel="stylesheet/less" href="<?php echo $this->webroot ?>less_sp/style.less">
     <script src="<?php echo $this->webroot ?>j_sp/libs/less-1.2.1.min.js"></script>
