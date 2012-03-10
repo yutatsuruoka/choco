@@ -6,3 +6,7 @@
 /vendors
 .DS_Store
 tags
+/app/Vendor/pear/.channels/
+/app/Vendor/pear/php/.channels/
+/app/Vendor/pear/.registry/
+/app/Vendor/tmp

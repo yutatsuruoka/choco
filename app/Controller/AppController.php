@@ -62,7 +62,6 @@ class AppController extends Controller {
         $this->current_user = $this->Auth->user();
         
         //Application ロギング
-        require_once APP.'Vendor/PEAR/Log.php';    
         $log_level = PEAR_LOG_INFO;
         switch(LOG_LEVEL){
                         case 'EMERG':     /* System is unusable */

@@ -1,5 +1,7 @@
 <?php
     $this->set('html_body_id', 'contentsFlow07');
+    
+    if (empty($ppErrors)) {
 ?>
 
 <form method="POST" name="gateway_form" action="<?php echo $gatewayUrl ?>">
@@ -16,3 +18,12 @@ foreach ($fields as $name => $value)
 <input type="submit" value="決済画面に移動する"></p>
 
 </form>
+
+<?php
+    } else {
+        foreach ($ppErrors as $ppError)
+        {
+            echo $ppError . "<br/>";
+        }
+    }
+?>
