@@ -125,8 +125,6 @@ class PaymentController extends AppController {
     }
     
     function paypal_ec_success() {
-        $this->logger->info("paypal_ec_success() ".print_r($_REQUEST,true));
-
         // get checkout data
         $getResult = $this->Paypal2->getExpressCheckoutDetails(
                 $this->params['url']['token']);
