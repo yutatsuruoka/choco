@@ -1,3 +1,6 @@
+<?php
+    $this->set('html_body_id', 'contentsFlow10');
+?>
     <div class="contents wrapper" id="flow06_success">
 
         <aside class="snsContainer clearfix">

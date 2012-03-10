@@ -283,7 +283,7 @@ class UsersController extends AppController {
                     	    , array('status' => 
                         	    '.@' . $data["twname"] . ' クン、ホワイトデーには当然3倍返しだよね？コレ買って〜！！'
                             	. '【このツイートはnedalyを利用して送られています】'
-                           	 . ' http://nedaly.com/posts/set_type/' . $this->Session->read('insert_id')
+                           	 . ' http://neda.ly/posts/set_type/' . $this->Session->read('insert_id')
                            	 . ' #chocokure'
                         	));
                     $this->Session->setFlash('');
@@ -311,8 +311,8 @@ class UsersController extends AppController {
 	            
 	            	//ウォールへの投稿
 	            	$attachment = array(
-						"message"=>$data["fbname"] . "http://nedaly.com/posts/set_type/" . $this->Session->read('insert_id'),
-						"link"=>"http://chocokure.com/posts/set_type/" . $this->Session->read('insert_id'),
+						"message"=>$data["fbname"] . "http://neda.ly/posts/set_type/" . $this->Session->read('insert_id'),
+						"link"=>"http://neda.ly/posts/set_type/" . $this->Session->read('insert_id'),
 						"name"=>"test",
 					);
         			$this->facebook->api('/me/feed', 'POST', $attachment);

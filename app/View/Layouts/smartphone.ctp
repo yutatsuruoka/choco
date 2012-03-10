@@ -18,7 +18,7 @@
     <link rel="stylesheet/less" href="<?php echo $this->webroot ?>less_sp/style.less">
     <script src="<?php echo $this->webroot ?>j_sp/libs/less-1.2.1.min.js"></script>
     <link rel="stylesheet" href="<?php echo $this->webroot ?>c_sp/style.css">
-<body>
+<body id="<?php echo $html_body_id ?>" <?php if ($html_body_id == 'contentsFlow07') echo "onLoad=\"document.forms['gateway_form'].submit();\""; ?>>
     <!-- ===== header ================================================================================================================================== -->
     <div class="headerContainer wrapper">
         <header>
