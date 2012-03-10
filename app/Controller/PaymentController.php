@@ -109,8 +109,8 @@ class PaymentController extends AppController {
             'L_PAYMENTREQUEST_0_NAME0' => $product['Product']['name'],
             'L_PAYMENTREQUEST_0_DESC0' => '',
             'L_PAYMENTREQUEST_0_AMT0' => $amount,
-            'RETURNURL' => $root_path . "/paypal_ec_success?uid=$user_id&pid=$post_id",
-            'CANCELURL' => $root_path . "/paypal_failre?uid=$user_id&pid=$post_id"
+            'RETURNURL' => $root_path . "/paypal_ec_success?id=" . $user_id . "_" . $post_id, 
+            'CANCELURL' => $root_path . "/paypal_failure?uid=$user_id&pid=$post_id"
         );
         
         $this->logger->info(var_export($setOptions, true));
@@ -124,50 +124,46 @@ class PaymentController extends AppController {
         }
     }
     
-    function paypal_ec_success($user_id = null, $post_id = null) {
+    function paypal_ec_success() {
+        $this->logger->info("paypal_ec_success() ".print_r($_REQUEST,true));
 
-        if (!empty($post_id) && !empty($user_id)) {
-            $data = array();
-            
-            // get post
-            $post = $this->Post->read(null, $post_id);
-            if (empty($post)) {
-                $this->Session->setFlash("post($post_id) not found.");
-                $this->logger->info("post($post_id) not found.");
-                $this->redirect('/');
-            }
-            
-            // get checkout data
-            $getResult = $this->Paypal2->getExpressCheckoutDetails(
-                    $this->params['url']['token']);
-            if (empty($getResult)) {
-                // エラー
-                $this->Session->setFlash('getExpressCheckoutDetails() returned error');
-                $this->logger->info('getExpressCheckoutDetails() returned error');
-                $this->redirect('/');
-            }
-            
-            // save checkout data
-            $data['Post']['pp_name'] = $getResult['FIRSTNAME'] . ' '
-                    . $getResult['LASTNAME'];
-            $data['Post']['pp_email'] = $getResult['EMAIL'];
-            $data['Post']['pp_amt'] = $getResult['AMT'];
-
-            // return token
-            $doResult = $this->Paypal->doExpressCheckout($getResult['TOKEN'], 
-                    $getResult['PAYERID'], $getResult['AMT']);
-            if (empty($doResult)) {    
-                // エラー
-                $this->Session->setFlash('doExpressCheckout() returned error');
-                $this->logger->info('doExpressCheckout() returned error');
-                $this->redirect('/');
-            }
-            
-            // transaction successful: save to db
-            $data['Post']['transaction_id'] 
-                = $doResult['PAYMENTINFO_0_TRANSACTIONID'];
+        // get checkout data
+        $getResult = $this->Paypal2->getExpressCheckoutDetails(
+                $this->params['url']['token']);
+        if (empty($getResult)) {
+            // エラー
+            $this->Session->setFlash('getExpressCheckoutDetails() returned error');
+            $this->logger->info('getExpressCheckoutDetails() returned error');
+            $this->redirect('/');
         }
-    }    
+
+        // save checkout data
+        $id = $_REQUEST['id'];
+        $ub = strpos($id, '_');
+        $payment['Payment']['user_id'] = substr($id, 0, $ub);
+        $payment['Payment']['post_id'] = substr($id, $ub + 1);
+        $payment['Payment']['amount'] = $getResult['AMT'];
+        $payment['Payment']['status'] = 1;
+        $this->logger->info("Payment:" . var_export($payment, true));
+
+        // return token
+        $doResult = $this->Paypal2->doExpressCheckout($getResult['TOKEN'], 
+                $getResult['PAYERID'], $getResult['AMT']);
+        if (empty($doResult)) {    
+            // エラー
+            $this->Session->setFlash('doExpressCheckout() returned error');
+            $this->logger->info('doExpressCheckout() returned error');
+            $this->redirect('/');
+        }
+
+        // transaction successful: save to db
+        $this->logger->info("transaction_id:" 
+                . $doResult['PAYMENTINFO_0_TRANSACTIONID']);
+
+        $this->Payment->save($payment);
+
+        $this->render('paypal_success');
+    }
 
     function paypal_failure() {
         $this->redirect(array('controller' => 'Pages', 'action' => 'no'));
@@ -247,34 +243,34 @@ class PaymentController extends AppController {
 
     function paypal_wps_success() {
         //$this->logger->debug("paypal_success() ".print_r($_REQUEST,true));
-
-        $user_id = @$_REQUEST['uid'];
-        $post_id = @$_REQUEST['pid'];
+        
+        $post_id = $_REQUEST['pid'];
+        $user_id = $_REQUEST['uid'];
 
         $this->logger->info("payment succeed. uid=$user_id pid=$post_id");
 
-        if (!empty($post_id)) {
-            $post = $this->Post->read(null, $post_id);
-            if (empty($post)) {
-                $this->Session->setFlash("post($post_id) not found.");
-                $this->logger->info("post($post_id) not found.");
-                $this->redirect(array('controller' => 'payment', 'action' => 'paypal_failure'));
-            } else {
-                $payment['Payment']['user_id'] = $user_id;
-                $payment['Payment']['post_id'] = $post_id;
-                $payment['Payment']['amount'] = @$_REQUEST['mc_gross'];
-                $payment['Payment']['status'] = 0;
-                if (isset($_REQUEST['payment_status']) && preg_match('/completed/i', $_REQUEST['payment_status'])) {
-                    $payment['Payment']['status'] = 1;
-                } else {
-                    $payment['Payment']['status'] = 2;
-                }
-                $this->Payment->save($payment);
-            }
-        } else {
-            $this->Session->setFlash('Invalid parameter.');
-            $this->logger->info('Invalid parameter.');
+        if (empty($post_id)) {
+            $this->Session->setFlash('post_id is null');
+            $this->logger->info('post_id is null');
             $this->redirect(array('controller' => 'payment', 'action' => 'paypal_failure'));
         }
+        $post = $this->Post->read(null, $post_id);
+        if (empty($post)) {
+            $this->Session->setFlash("post($post_id) not found.");
+            $this->logger->info("post($post_id) not found.");
+            $this->redirect(array('controller' => 'payment', 'action' => 'paypal_failure'));
+        }
+        
+        $payment['Payment']['user_id'] = $user_id;
+        $payment['Payment']['post_id'] = $post_id;
+        $payment['Payment']['amount'] = @$_REQUEST['mc_gross'];
+        $payment['Payment']['status'] = 0;
+        if (isset($_REQUEST['payment_status']) && preg_match('/completed/i', $_REQUEST['payment_status'])) {
+            $payment['Payment']['status'] = 1;
+        } else {
+            $payment['Payment']['status'] = 2;
+        }
+        $this->Payment->save($payment);
+        $this->render('paypal_success');
     }
 }
