@@ -18,8 +18,8 @@
     <link rel="stylesheet/less" href="<?php echo $this->webroot ?>less_sp/style.less">
     <script src="<?php echo $this->webroot ?>j_sp/libs/less-1.2.1.min.js"></script>
     <link rel="stylesheet" href="<?php echo $this->webroot ?>c_sp/style.css">
-<body id="<?php echo $html_body_id ?>" <?php if ($html_body_id == 'contentsFlow07') echo "onLoad=\"document.forms['gateway_form'].submit();\""; ?>>
-    <!-- ===== header ================================================================================================================================== -->
+ <body id="<?php echo $html_body_id ?>" <?php if ($html_body_id == 'contentsFlow07' && empty($ppErrors) > 0) echo "onLoad=\"document.forms['gateway_form'].submit();\""; ?>>
+ <!-- ===== header ================================================================================================================================== -->
     <div class="headerContainer wrapper">
         <header>
         <h1><a href="/"><img src="<?php echo $this->webroot ?>i_sp/logo.png" width="300" height="28" alt="neda.ly + chocokure white day ver."></a></h1>
