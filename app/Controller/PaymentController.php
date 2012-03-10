@@ -23,21 +23,6 @@ class PaymentController extends AppController {
     }
 
     
-    function test($user_id, $post_id) {
-        $u = $this->User->find('first', array(
-            'conditions' => array('id' => $user_id)));
-        $this->current_user = $u['User'];
-
-        $this->Auth->login(array('id' => $this->current_user['id']
-            , 'email' => $this->current_user['email']
-            , 'type' => $this->current_user['type']
-            , 'name' => $this->current_user['name']));
-
-        $this->set("user_id", $user_id);
-
-        $this->redirect('/payment/index/' . $post_id);
-    }
-
     function index($post_id = null) {
         // display payment information page
         $this->set("post_id", $post_id);
@@ -65,13 +50,7 @@ class PaymentController extends AppController {
         $this->paypal_ec($post_id);
     }
     
-    function paypal_ec($post_id = null) {
-        $user_id = $this->current_user['id'];
-        if (empty($user_id)) {
-            $this->set('ppErrors', array(1 => 'user_id is null'));
-            return;
-        }
-        
+    function paypal_ec($post_id = null) {        
         // get post info
         if (empty($post_id)) {
             $this->set('ppErrors', array(1 => 'post_id is null'));
@@ -109,8 +88,8 @@ class PaymentController extends AppController {
             'L_PAYMENTREQUEST_0_NAME0' => $product['Product']['name'],
             'L_PAYMENTREQUEST_0_DESC0' => '',
             'L_PAYMENTREQUEST_0_AMT0' => $amount,
-            'RETURNURL' => $root_path . "/paypal_ec_success?id=" . $user_id . "_" . $post_id, 
-            'CANCELURL' => $root_path . "/paypal_failure?uid=$user_id&pid=$post_id"
+            'RETURNURL' => $root_path . "/paypal_ec_success?pid=$post_id", 
+            'CANCELURL' => $root_path . "/paypal_failure?pid=$post_id"
         );
         
         $this->logger->info(var_export($setOptions, true));
@@ -136,10 +115,8 @@ class PaymentController extends AppController {
         }
 
         // save checkout data
-        $id = $_REQUEST['id'];
-        $ub = strpos($id, '_');
-        $payment['Payment']['user_id'] = substr($id, 0, $ub);
-        $payment['Payment']['post_id'] = substr($id, $ub + 1);
+        $pid = $_REQUEST['pid'];
+        $payment['Payment']['post_id'] = $pid;
         $payment['Payment']['amount'] = $getResult['AMT'];
         $payment['Payment']['status'] = 1;
         $this->logger->info("Payment:" . var_export($payment, true));
@@ -155,6 +132,8 @@ class PaymentController extends AppController {
         }
 
         // transaction successful: save to db
+        $payment['Payment']['transaction_id']
+            = $doResult['PAYMENTINFO_0_TRANSACTIONID'];
         $this->logger->info("transaction_id:" 
                 . $doResult['PAYMENTINFO_0_TRANSACTIONID']);
 
