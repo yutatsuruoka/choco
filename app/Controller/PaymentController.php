@@ -102,16 +102,19 @@ class PaymentController extends AppController {
 
         $amount = $product['Product']['price'];
         
+        $root_path = rtrim($this->currentURL(), "/paypal/$post_id");
         $setOptions = array(
             'NOSHIPPING' => '1',
             'ALLOWNOTE' => '0',
             'L_PAYMENTREQUEST_0_NAME0' => $product['Product']['name'],
             'L_PAYMENTREQUEST_0_DESC0' => '',
             'L_PAYMENTREQUEST_0_AMT0' => $amount,
-            'RETURNURL' => FULL_BASE_URL . "/Payment/paypal_ec_success?uid=$user_id&pid=$post_id",
-            'CANCELURL' => FULL_BASE_URL . "/Payment/paypal_failre?uid=$user_id&pid=$post_id"
+            'RETURNURL' => $root_path . "/paypal_ec_success?uid=$user_id&pid=$post_id",
+            'CANCELURL' => $root_path . "/paypal_failre?uid=$user_id&pid=$post_id"
         );
-
+        
+        $this->logger->info(var_export($setOptions, true));
+        
         $setResult = $this->Paypal2->setExpressCheckout($amount, 'Sale', $setOptions);
         if (empty($setResult)) {
             $this->set('ppErrors', $this->Paypal2->errorMsg);
