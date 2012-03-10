@@ -1,3 +1,6 @@
+<?php
+    $this->set('html_body_id', 'contentsFlow06');
+?>  
     <div class="boy wrapper" id="boy_kyohi2">
 
         <div class="onedariCaption">
