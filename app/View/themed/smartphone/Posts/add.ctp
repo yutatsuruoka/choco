@@ -36,28 +36,28 @@
         <div class="presentTtl clearfix">
             <div class="left num">2</div>
             <div class="left">
-                <h2><?php echo $product[1]["Product"]['name'] ?> / ¥<?php echo $product[1]["Product"]['price'] ?></h2>
-                <p>これ買ってくれたら嬉しいよね〜</p>
+                <h2>Coming Soon!!</h2>
+                <p></p>
             </div>
         </div>
         <img src="<?php echo $this->webroot ?>i/present_5.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
-            <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/5">▶ Twitterでおねだり</a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/5">▶ Facebookでおねだり</a></li>
+            <li class="left tw"><a href="/">▶ Twitterでおねだり</a></li>
+            <li class="right fb"><a href="/5">▶ Facebookでおねだり</a></li>
         </ul>
         </section>
         <section class="present">
         <div class="presentTtl clearfix">
             <div class="left num">3</div>
             <div class="left">
-                <h2><?php echo $product[2]["Product"]['name'] ?> / ¥<?php echo $product[2]["Product"]['price'] ?></h2>
-                <p>責任を持って結婚をオススメします</p>
+                <h2>Coming Soon!!</h2>
+                <p></p>
             </div>
         </div>
         <img src="<?php echo $this->webroot ?>i/present_6.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
-            <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/6">▶ Twitterでおねだり</a></li>
-            <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/6">▶ Facebookでおねだり</a></li>
+            <li class="left tw"><a href="/">▶ Twitterでおねだり</a></li>
+            <li class="right fb"><a href="/">▶ Facebookでおねだり</a></li>
         </ul>
         </section>
         </article>
