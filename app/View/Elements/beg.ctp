@@ -6,7 +6,7 @@
         <section class="present">
         <img src="<?php echo $this->webroot ?>i/present_4.jpg" alt="Pruduct name">
         <h2><?php echo $product[0]["Product"]['name'] ?></h2>
-        <p class="price">¥<?php echo $product[0]["Product"]['price'] ?><span>プレゼントして当たり前だよねってレベル</span></p>
+        <p class="price">¥<?php echo $product[0]["Product"]['price'] ?><span>バスグッズ等のセットとなります。</span></p>
         <ul class="onedariContainer clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/4"><img src="<?php echo $this->webroot ?>i/present_twbtn.jpg" alt="Twitterでおねだり"></a></li>
             <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/4"><img src="<?php echo $this->webroot ?>i/present_fbbtn.jpg" alt="Facebookでおねだり"></a></li>

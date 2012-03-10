@@ -23,7 +23,7 @@
             <div class="left num">1</div>
             <div class="left">
                 <h2><?php echo $product[0]["Product"]['name'] ?> / ¥<?php echo $product[0]["Product"]['price'] ?></h2>
-                <p>これはプレゼントして当たり前だよねってレベル</p>
+                <p>バスグッズ等のセットとなります。</p>
             </div>
         </div>
         <img src="<?php echo $this->webroot ?>i/present_4.jpg" width="300" height="200" alt="Pruduct name">
