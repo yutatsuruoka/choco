@@ -1,3 +1,7 @@
+<?php
+    $this->set('html_body_id', 'contentsFlow06');
+?>
+
     <!-- ===== boy_kyohi ================================================================================================================================== -->
     <div class="boy wrapper" id="boy_kyohi1">
         <div class="onedariGirlContainer clearfix">
