@@ -1,3 +1,8 @@
+<?php
+    $this->set('html_body_id', 'contentsFlow01');
+    echo $this->element('beg');
+/*     echo $this->element('flow'); */
+?>
     <div class="contents wrapper" id="top">
         <div class="captionContainer  center">
             <p class="cap"> チョコくれ！が女性の為に帰ってきたぜ！！<br>

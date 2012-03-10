@@ -24,6 +24,10 @@ class User extends AppModel {
         'tel' => array(
             'rule' => 'notEmpty'
             , 'message' => '電話番号が入力されていません' 
+        ),
+        'twname' => array(
+            'rule' => 'notEmpty'
+            , 'message' => 'twitterネームが入力されていません' 
         )
     );
 
