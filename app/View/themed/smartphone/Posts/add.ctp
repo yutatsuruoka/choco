@@ -43,7 +43,7 @@
                 <p></p>
             </div>
         </div>
-        <img src="<?php echo $this->webroot ?>i/present_5.jpg" width="300" height="200" alt="Pruduct name">
+        <img src="<?php echo $this->webroot ?>i/present_50.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
             <li class="left tw"><a href="/">▶ Twitterでおねだり</a></li>
             <li class="right fb"><a href="/5">▶ Facebookでおねだり</a></li>
@@ -57,7 +57,7 @@
                 <p></p>
             </div>
         </div>
-        <img src="<?php echo $this->webroot ?>i/present_6.jpg" width="300" height="200" alt="Pruduct name">
+        <img src="<?php echo $this->webroot ?>i/present_60.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
             <li class="left tw"><a href="/">▶ Twitterでおねだり</a></li>
             <li class="right fb"><a href="/">▶ Facebookでおねだり</a></li>

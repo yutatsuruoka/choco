@@ -13,21 +13,21 @@
         </ul>
         </section>
         <section class="present">
-        <img src="<?php echo $this->webroot ?>i/present_5.jpg" alt="Pruduct name">
+        <img src="<?php echo $this->webroot ?>i/present_50.jpg" alt="Pruduct name">
         <h2>Coming Soon!!</h2>
         <p class="price"><span></span></p>
         <ul class="onedariContainer clearfix">
-            <li class="left tw"><a href="/"><img src="<?php echo $this->webroot ?>i/present_twbtn.jpg" alt="Twitterでおねだり"></a></li>
-            <li class="right fb"><a href="/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.jpg" alt="Facebookでおねだり"></a></li>
+            <li class="left tw"><a href="/"><img src="<?php echo $this->webroot ?>i/present_twbtn0.jpg" alt="Twitterでおねだり"></a></li>
+            <li class="right fb"><a href="/"><img src="<?php echo $this->webroot ?>i/present_fbbtn0.jpg" alt="Facebookでおねだり"></a></li>
         </ul>
         </section>
         <section class="present last">
-        <img src="<?php echo $this->webroot ?>i/present_6.jpg" alt="Pruduct name">
+        <img src="<?php echo $this->webroot ?>i/present_60.jpg" alt="Pruduct name">
         <h2>Coming Soon!!</h2>
         <p class="price"><span></span></p>
         <ul class="onedariContainer clearfix">
-            <li class="left tw"><a href="/"><img src="<?php echo $this->webroot ?>i/present_twbtn.jpg" alt="Twitterでおねだり"></a></li>
-            <li class="right fb"><a href="/"><img src="<?php echo $this->webroot ?>i/present_fbbtn.jpg" alt="Facebookでおねだり"></a></li>
+            <li class="left tw"><a href="/"><img src="<?php echo $this->webroot ?>i/present_twbtn0.jpg" alt="Twitterでおねだり"></a></li>
+            <li class="right fb"><a href="/"><img src="<?php echo $this->webroot ?>i/present_fbbtn0.jpg" alt="Facebookでおねだり"></a></li>
         </ul>
         </section>
         </article>
