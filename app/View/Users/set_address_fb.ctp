@@ -1,21 +1,6 @@
 <?php
     $this->set('html_body_id', 'contentsFlow02');
 
-    $e  = '';
-    if ($errors) {
-        foreach($errors as $error) {
-            if (strlen($e) > 0) {
-                $e .= '<br>';
-            }
-            $e .= $error[0];
-        }
-    }
-
-    if (strlen($e) == 0) {
-        $e = $this->Session->flash();
-    }
-    
-    echo '<font color=\'red\'>' . $e . '</font>';
 ?>	 
 
     <!-- ===== girl_2nd_fb ================================================================================================================================== -->
