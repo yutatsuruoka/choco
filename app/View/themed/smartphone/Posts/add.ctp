@@ -45,8 +45,8 @@
         </div>
         <img src="<?php echo $this->webroot ?>i/present_50.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
-            <li class="left tw"><a href="/">▶ Twitterでおねだり</a></li>
-            <li class="right fb"><a href="/5">▶ Facebookでおねだり</a></li>
+            <li class="left tw" style="background: #999999"><a href="/">▶ Twitterでおねだり</a></li>
+            <li class="right fb" style="background: #999999"><a href="/5">▶ Facebookでおねだり</a></li>
         </ul>
         </section>
         <section class="present">
@@ -59,8 +59,8 @@
         </div>
         <img src="<?php echo $this->webroot ?>i/present_60.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
-            <li class="left tw"><a href="/">▶ Twitterでおねだり</a></li>
-            <li class="right fb"><a href="/">▶ Facebookでおねだり</a></li>
+            <li class="left tw" style="background: #999999"><a href="/">▶ Twitterでおねだり</a></li>
+            <li class="right fb" style="background: #999999"><a href="/">▶ Facebookでおねだり</a></li>
         </ul>
         </section>
         </article>
