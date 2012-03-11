@@ -1,3 +1,6 @@
+<?php
+    $this->set('html_body_id', 'contentsFlow06');
+?> 
     <div class="contents wrapper" id="flow08">
 
         <article>

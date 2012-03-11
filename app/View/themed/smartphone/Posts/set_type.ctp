@@ -1,3 +1,6 @@
+<?php
+    $this->set('html_body_id', 'contentsFlow06');
+?> 
     <div class="contents wrapper" id="flow06">
         <div class="captionContainer  center">
             <p class="cap"> チョコくれ！が女性の為に帰ってきたぜ！！<br>
