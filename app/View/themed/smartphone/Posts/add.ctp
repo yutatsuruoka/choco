@@ -1,7 +1,5 @@
 <?php
     $this->set('html_body_id', 'contentsFlow01');
-    echo $this->element('beg');
-/*     echo $this->element('flow'); */
 ?>
     <div class="contents wrapper" id="top">
         <div class="captionContainer  center">
@@ -9,7 +7,7 @@
             ねだり返せ！ホワイトデーを300%から楽しむ、<br>
             ソーシャルおねだりプラットフォーム。
             </p>
-            <p class="news"><a href="">16:32 Yahoo!ニュースのトップページに掲載されました &gt;&gt;</a></p>
+            <p class="news"><a href=""></a></p>
         </div><!-- end wrapper captionContainer-->
 
         <aside class="snsContainer clearfix">
