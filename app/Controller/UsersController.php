@@ -313,7 +313,7 @@ class UsersController extends AppController {
 	            	$attachment = array(
 						"message"=>$data["fbname"] . "http://neda.ly/posts/set_type/" . $this->Session->read('insert_id'),
 						"link"=>"http://neda.ly/posts/set_type/" . $this->Session->read('insert_id'),
-						"name"=>"test",
+						"name"=>"ソーシャルおねだりプラットフォーム【neda.ly】",
 					);
         			$this->facebook->api('/me/feed', 'POST', $attachment);
                     $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
