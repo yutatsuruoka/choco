@@ -143,7 +143,8 @@ class PaymentController extends AppController {
     }
 
     function paypal_failure() {
-        $this->redirect(array('controller' => 'Pages', 'action' => 'no'));
+        $pid = $_REQUEST['pid'];
+        $this->redirect('/Posts/no/' . $pid);
     }
 
     function bank() {
