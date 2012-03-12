@@ -1,6 +1,5 @@
 <?php
     $this->set('html_body_id', 'contentsFlow03');
-    echo $this->Session->flash();
 ?>
     <div class="contents wrapper" id="flow04">
 

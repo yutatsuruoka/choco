@@ -223,10 +223,10 @@ class UsersController extends AppController {
                     , 'name' => $name,  
                 )), false);
             
-            $this->Session->setFlash('Facebook user created');
+            /* $this->Session->setFlash('Facebook user created'); */
         }
         else {
-            $this->Session->setFlash('Returning Facebook user');
+            /* $this->Session->setFlash('Returning Facebook user'); */
         }
         
         $user = $this->User->find('first', array('conditions' 
