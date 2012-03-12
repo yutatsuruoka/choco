@@ -282,7 +282,7 @@ class UsersController extends AppController {
                 	        , 'https://api.twitter.com/1/statuses/update.json'
                     	    , array('status' => 
                         	    '.@' . $data["twname"] . ' クン、ホワイトデーには当然3倍返しだよね？コレ買って〜！！'
-                            	. '【このツイートはnedalyを利用して送られています】'
+                            	. '【このツイートはneda.lyを利用して送られています】'
                            	 . ' http://neda.ly/posts/set_type/' . $this->Session->read('insert_id')
                            	 . ' #nedaly'
                         	));
