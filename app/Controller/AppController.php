@@ -138,7 +138,7 @@ class AppController extends Controller {
                 , 'avatar' => $girl['Post']['girl_avatar']
             );
   
-            // draw only first 24
+            // draw only first 36
             $count ++;
             if ($count == 36) {
                 break;

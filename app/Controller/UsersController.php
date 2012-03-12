@@ -284,7 +284,7 @@ class UsersController extends AppController {
                         	    '.@' . $data["twname"] . ' クン、ホワイトデーには当然3倍返しだよね？コレ買って〜！！'
                             	. '【このツイートはnedalyを利用して送られています】'
                            	 . ' http://neda.ly/posts/set_type/' . $this->Session->read('insert_id')
-                           	 . ' #chocokure'
+                           	 . ' #nedaly'
                         	));
                     $this->Session->setFlash('');
                     $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
@@ -308,14 +308,19 @@ class UsersController extends AppController {
       					'boy_id' => $data["fbname"],
    					);
         			$this->Post->save($add);
-	            
+	            	
+	            	foreach($friendIds['data'] as $fid ){
+	            		if($fid['name'] == $data["fbname"]){
+	            			$data_id = $fid['id'];
+	            		}
+	            	}
 	            	//ウォールへの投稿
 	            	$attachment = array(
 						"message"=>$data["fbname"] . "クン、ホワイトデーには当然3倍返しだよね？コレ買って〜！！ http://neda.ly/posts/set_type/" . $this->Session->read('insert_id'),
 						"link"=>"http://neda.ly/posts/set_type/" . $this->Session->read('insert_id'),
 						"name"=>"ソーシャルおねだりプラットフォーム【neda.ly】",
 					);
-        			$this->facebook->api('/me/feed', 'POST', $attachment);
+        			$this->facebook->api('/' . $data_id . '/feed', 'POST', $attachment);
                     $this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
             	}
             }
