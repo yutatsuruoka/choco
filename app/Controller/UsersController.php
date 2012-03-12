@@ -311,7 +311,7 @@ class UsersController extends AppController {
 	            
 	            	//ウォールへの投稿
 	            	$attachment = array(
-						"message"=>$data["fbname"] . "http://neda.ly/posts/set_type/" . $this->Session->read('insert_id'),
+						"message"=>$data["fbname"] . "クン、ホワイトデーには当然3倍返しだよね？コレ買って〜！！ http://neda.ly/posts/set_type/" . $this->Session->read('insert_id'),
 						"link"=>"http://neda.ly/posts/set_type/" . $this->Session->read('insert_id'),
 						"name"=>"ソーシャルおねだりプラットフォーム【neda.ly】",
 					);
