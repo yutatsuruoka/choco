@@ -17,7 +17,7 @@
         </div><!-- end .snsButton-->
         <div class="snsButton right">
             <div id="fb-root"></div>
-            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fneda.ly%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=24&amp;appId=312737992072908" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:140px; height:24px;" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fnedaly.warusou&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
         </div><!-- end .snsButton-->
         </aside><!-- end .snsContainer-->
         <article>
@@ -39,21 +39,21 @@
         <div class="presentTtl clearfix">
             <div class="left num">2</div>
             <div class="left">
-                <h2>Coming Soon!!</h2>
+                <h2>ちょっと高いものComing Soon!!</h2>
                 <p></p>
             </div>
         </div>
         <img src="<?php echo $this->webroot ?>i/present_50.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
             <li class="left tw" style="background: #999999"><a href="/">▶ Twitterでおねだり</a></li>
-            <li class="right fb" style="background: #999999"><a href="/5">▶ Facebookでおねだり</a></li>
+            <li class="right fb" style="background: #999999"><a href="/">▶ Facebookでおねだり</a></li>
         </ul>
         </section>
         <section class="present">
         <div class="presentTtl clearfix">
             <div class="left num">3</div>
             <div class="left">
-                <h2>Coming Soon!!</h2>
+                <h2>超高いものComing Soon!!</h2>
                 <p></p>
             </div>
         </div>

@@ -38,7 +38,7 @@
         </div><!-- end .snsButton-->
         <div class="snsButton left">
             <div id="fb-root"></div>
-            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fneda.ly%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=312737992072908" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fnedaly.warusou&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=149485031807635" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
         </div><!-- end .snsButton-->
         </aside><!-- end .snsContainer-->
         </header>
@@ -55,10 +55,10 @@
         <div class="left leftContainer">
             <dl>
                 <dt>nedaly NEWS</dt>
+                <dd>・<a href="http://headlines.yahoo.co.jp/hl?a=20120312-00000070-it_nlab-sci">yahoo!ニュースに掲載されました！</a></dd>
+                <dd>・<a href="http://nlab.itmedia.co.jp/nl/articles/1203/12/news073.html">ねとらぼに掲載されました！</a></dd>
                 <dd>・第一弾はホワイトデーバージョン</dd>
                 <dd>・nedalyリリース!!!</dd>
-                <dd>・</dd>
-                <dd>・</dd>
                 <dd>・</dd>
             </dl>
             <dl>
@@ -252,13 +252,6 @@
     <script src="<?php echo $this->webroot ?>j/libs/fixHeight.js"></script>
     <script src="<?php echo $this->webroot ?>j/libs/jquery.colorbox-min.js"></script>
     <script src="<?php echo $this->webroot ?>j/script.js"></script>
-
-    <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
 
 </body>
 </html>

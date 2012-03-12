@@ -14,7 +14,7 @@
         </section>
         <section class="present">
         <img src="<?php echo $this->webroot ?>i/present_50.jpg" alt="Pruduct name">
-        <h2>Coming Soon!!</h2>
+        <h2>ちょっと高いものComing Soon!!</h2>
         <p class="price"><span></span></p>
         <ul class="onedariContainer clearfix">
             <li class="left tw"><a href="/"><img src="<?php echo $this->webroot ?>i/present_twbtn0.jpg" alt="Twitterでおねだり"></a></li>
@@ -23,7 +23,7 @@
         </section>
         <section class="present last">
         <img src="<?php echo $this->webroot ?>i/present_60.jpg" alt="Pruduct name">
-        <h2>Coming Soon!!</h2>
+        <h2>超高いものComing Soon!!</h2>
         <p class="price"><span></span></p>
         <ul class="onedariContainer clearfix">
             <li class="left tw"><a href="/"><img src="<?php echo $this->webroot ?>i/present_twbtn0.jpg" alt="Twitterでおねだり"></a></li>

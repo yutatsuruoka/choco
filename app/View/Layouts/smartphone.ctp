@@ -46,25 +46,21 @@
     </footer>
     <!-- anal -->
 	<script type="text/javascript">
-	var _gaq = _gaq || [];
-  	_gaq.push(['_setAccount', 'UA-23653112-9']);
+
+	  var _gaq = _gaq || [];
+  	_gaq.push(['_setAccount', 'UA-23653112-11']);
   	_gaq.push(['_trackPageview']);
-  	(function() {
+
+	  (function() {
     	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   	})();
 	</script>
 	<!-- end anal -->
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="j/libs/jquery-1.7.1.min.js"><\/script>')</script> 
     <script src="j/script.js"></script>
-    <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+
 </body>
 </html>
