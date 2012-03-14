@@ -1,5 +1,5 @@
 <?php 
-/* generated on: 2012-03-06 01:27:23 : 1330964843 */
+/* generated on: 2012-03-14 14:18:15 : 1331734695 */
 class AppSchema extends CakeSchema {
 
 	public function before($event = array()) {
@@ -24,6 +24,15 @@ class AppSchema extends CakeSchema {
 		'girl_avatar' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 256, 'collate' => 'utf8_general_ci', 'comment' => '', 'charset' => 'utf8'),
 		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1)),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'MyISAM')
+	);
+	public $products = array(
+		'id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'key' => 'primary', 'collate' => NULL, 'comment' => ''),
+		'name' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 45, 'collate' => 'ujis_japanese_ci', 'comment' => '', 'charset' => 'ujis'),
+		'price' => array('type' => 'integer', 'null' => true, 'default' => NULL, 'collate' => NULL, 'comment' => ''),
+		'category_id' => array('type' => 'integer', 'null' => true, 'default' => NULL, 'collate' => NULL, 'comment' => ''),
+		'img' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 45, 'collate' => 'ujis_japanese_ci', 'comment' => '', 'charset' => 'ujis'),
+		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1)),
+		'tableParameters' => array('charset' => 'ujis', 'collate' => 'ujis_japanese_ci', 'engine' => 'InnoDB')
 	);
 	public $users = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'length' => 100, 'key' => 'primary', 'collate' => NULL, 'comment' => ''),
