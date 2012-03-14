@@ -206,8 +206,8 @@ class PostsController extends AppController {
    	 	
    	 	//fb connect
     	$this->facebook = new Facebook(array(  
-        	'appId'  => '252443538175439',  
-        	'secret' => '82410e60599c2e5cfa4f2572c8e660ad',  
+                'appId'  => Configure::Read('Facebook.appId'),  
+                'secret' => Configure::Read('Facebook.secret'),  
         	'cookie' => true,  
     	));
     }
