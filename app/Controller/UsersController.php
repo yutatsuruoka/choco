@@ -10,15 +10,6 @@ class UsersController extends AppController {
     var $facebook;  
     
     
-    public function index() {
-        $this->set('users', $this->User->find('all'));
-    }
-    
-    public function view($id = null) {
-    	$this->User->id = $id;
-        $this->set('user', $this->User->read());
-    }
-
     function beforeFilter() {
         parent::beforeFilter();
 

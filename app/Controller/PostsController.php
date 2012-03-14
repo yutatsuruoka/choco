@@ -13,10 +13,6 @@ class PostsController extends AppController {
     
     
     
-    public function view($id = null) {
-    	$this->Post->id = $id;
-        $this->set('post', $this->Post->read());
-    }
     
     public function user($id = null) {
     	$this->Post->id = $id;
