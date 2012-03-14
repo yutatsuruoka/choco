@@ -15,7 +15,7 @@
         <section class="present">
         <img src="<?php echo $this->webroot ?>i/present_5.jpg" alt="Pruduct name">
         <h2><?php echo $product[1]["Product"]['name'] ?></h2>
-        <p class="price">¥<?php echo $product[1]["Product"]['price'] ?><span>フルーツや花の香を閉じ込めたラグジュアリーなスプマンテ<br>　　　　 ※17時迄の注文は当日から3営業日以内の発送となります。</span></p>
+        <p class="price">¥<?php echo $product[1]["Product"]['price'] ?><span>おねだりした相手とシュワシュワもよし、女子会や友達とのパーティーでシュワシュワもよし！<br>※東京は六本木にあるawabarでのお引き渡しとなります。当日17時迄のご注文で、即日お引き渡し可能です。(<a href="http://awabar.jp/" target="_blank">awabar詳細</a>)</span></p>
         <ul class="onedariContainer clearfix">
             <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/5"><img src="<?php echo $this->webroot ?>i/present_twbtn.jpg" alt="Twitterでおねだり"></a></li>
             <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/5"><img src="<?php echo $this->webroot ?>i/present_fbbtn.jpg" alt="Facebookでおねだり"></a></li>

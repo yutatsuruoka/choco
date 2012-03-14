@@ -12,13 +12,6 @@ class PostsController extends AppController {
     var $facebook;
     
     
-    
-    
-    public function user($id = null) {
-    	$this->Post->id = $id;
-        $this->set('post', $this->Post->read());
-    }
-    
     private function get_redirect_url($url) {
 
         $url_parts = @parse_url($url);
