@@ -1,6 +1,18 @@
 <?php
 
-App::import('Vendor', 'facebook/facebook');  
+App::import('Vendor', 'facebook/facebook');
+
+function filter_male($var) {
+    return strcmp($var['sex'], 'male') == 0;
+}
+
+function filter_female($var) {
+    return strcmp($var['sex'], 'female') == 0;
+}
+
+function sort_friends($var1, $var2) {
+    return strnatcmp($var1['name'], $var2['name']);
+}
 
 class UsersController extends AppController {
     public $name = 'Users';
@@ -192,8 +204,22 @@ class UsersController extends AppController {
             $me = $this->facebook->api('/me');
             
             //フレンドID取得
-            $friendIds = $this->facebook->api('/me/friends');
+            //$friendIds = $this->facebook->api('/fql?q=SELECT+name+FROM+friend+WHERE+uid1=me()');
+            //$friendIds = $this->facebook->api('/me/friends');
+            $fql = 'SELECT uid, name, sex FROM user ';
+            $fql .= ' WHERE uid IN (SELECT uid2 FROM friend WHERE uid1 = me());';
+            $ret_obj = $this->facebook->api(array(
+                                   'method' => 'fql.query',
+                                   'query' => $fql,
+                                 ));
+            // #324: sort the friends list
+            usort($ret_obj, "sort_friends");
             
+            $friendIds['data'] = $ret_obj;
+            
+            $friendIds['male'] = array_filter($ret_obj, "filter_male");
+            $friendIds['female'] = array_filter($ret_obj, "filter_female");
+
             $access_token = $this->facebook->getAccessToken();  
         } catch (FacebookApiException $e) {  
             error_log($e);  
