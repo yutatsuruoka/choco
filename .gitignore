@@ -10,3 +10,4 @@ tags
 /app/Vendor/pear/php/.channels/
 /app/Vendor/pear/.registry/
 /app/Vendor/tmp
+/app/Console/cake5

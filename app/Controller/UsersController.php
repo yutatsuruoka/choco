@@ -21,7 +21,6 @@ class UsersController extends AppController {
     public $theme = '';
     var $facebook;  
     
-    
     function beforeFilter() {
         parent::beforeFilter();
 
@@ -217,6 +216,7 @@ class UsersController extends AppController {
             
             $friendIds['data'] = $ret_obj;
             
+            // create filtered lists
             $friendIds['male'] = array_filter($ret_obj, "filter_male");
             $friendIds['female'] = array_filter($ret_obj, "filter_female");
 
