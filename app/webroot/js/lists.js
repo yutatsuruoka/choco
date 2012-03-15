@@ -40,6 +40,4 @@ function changeList( box, list ) {
 	// Then assign the new list values
 
 	fillList( box, list );
-        
-        return false;
 }

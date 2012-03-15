@@ -108,9 +108,9 @@ lists['female']    = new Array(
             </div><!-- end formContainer -->
 
             <ul class="sex">
-	    <li><input type="radio" class="sex" value="全て" checked onclick="javascript:return changeList(document.forms['User'].fbname, lists['all']); ">全て</li>
-            <li><input type="radio" class="sex" value="男" onclick="javascript:return changeList(document.forms['User'].fbname, lists['male']); ">男</li>
-	    <li><input type="radio" class="sex" value="女" onclick="javascript:return changeList(document.forms['User'].fbname, lists['female']); ">女</li>
+	    <li><input type="radio" name="sex" class="sex" value="全て" checked onchange="javascript:return changeList(document.forms['User'].fbname, lists['all']); ">全て</li>
+            <li><input type="radio" name="sex" class="sex" value="男" onchange="javascript:return changeList(document.forms['User'].fbname, lists['male']); ">男</li>
+	    <li><input type="radio" name="sex" class="sex" value="女" onchange="javascript:return changeList(document.forms['User'].fbname, lists['female']); ">女</li>
             </ul>
 
         <div class="fbList" >
