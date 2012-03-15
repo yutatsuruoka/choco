@@ -39,14 +39,14 @@
         <div class="presentTtl clearfix">
             <div class="left num">2</div>
             <div class="left">
-                <h2>ちょっと高いものComing Soon!!</h2>
-                <p></p>
+                <h2><?php echo $product[1]["Product"]['name'] ?> / ¥<?php echo $product[1]["Product"]['price'] ?></h2>
+                <p>おねだりした相手とシュワシュワもよし、女子会や友達とのパーティーでシュワシュワもよし！<br>※東京は六本木にあるawabarでのお引き渡しとなります。当日17時迄のご注文で、即日お引き渡し可能です。(<a href="http://awabar.jp/" target="_blank">awabar詳細</a>)</p>
             </div>
         </div>
-        <img src="<?php echo $this->webroot ?>i/present_50.jpg" width="300" height="200" alt="Pruduct name">
+        <img src="<?php echo $this->webroot ?>i/present_5.jpg" width="300" height="200" alt="Pruduct name">
         <ul class="onedariBtn clearfix">
-            <li class="left tw" style="background: #999999"><a href="/">▶ Twitterでおねだり</a></li>
-            <li class="right fb" style="background: #999999"><a href="/">▶ Facebookでおねだり</a></li>
+            <li class="left tw"><a href="<?php echo $this->webroot ?>Posts/add/5">▶ Twitterでおねだり</a></li>
+            <li class="right fb"><a href="<?php echo $this->webroot ?>Posts/addfb/5">▶ Facebookでおねだり</a></li>
         </ul>
         </section>
         <section class="present">

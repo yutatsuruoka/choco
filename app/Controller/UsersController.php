@@ -328,7 +328,7 @@ class UsersController extends AppController {
 	            	
 	            	foreach($friendIds['data'] as $fid ){
 	            		if($fid['name'] == $data["fbname"]){
-	            			$data_id = $fid['id'];
+	            			$data_id = $fid['uid'];
 	            		}
 	            	}
 	            	//ウォールへの投稿
