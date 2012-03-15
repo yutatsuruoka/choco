@@ -57,6 +57,13 @@
                     </ul>
                 </div><!-- end right -->
             </div><!-- end formContainer -->
+
+            <ul class="sex">
+	    <li><input type="radio" class="sex" value="全て" checked>全て</li>
+            <li><input type="radio" class="sex" value="男">男</li>
+	    <li><input type="radio" class="sex" value="女">女</li>
+            </ul>
+
         <div class="fbList" >
             <form>
                 <select id="fbname" name="fbname" style="">

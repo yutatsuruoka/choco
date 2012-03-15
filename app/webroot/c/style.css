@@ -864,3 +864,32 @@ footer ul.info a:hover {
   border: none;
   height: 58px;
 }
+input.sex {
+  font-size: 18px;
+  color: #999;
+  padding-top: 6px;
+  height: 30px;
+  width: 15px;
+  }
+
+ul.sex{
+    margin-top:20px;
+    font-size:12px;
+    padding-left:0;
+    margin-left:0;
+    width:100%;
+  
+
+
+}
+ul.sex li{
+    list-style:none;
+    width:80px;
+    float:right;
+    border-width:2px;
+    border-style:outset;
+    height: 30px;
+    background: url(../i/form_inputbg.png) repeat-x left bottom;
+    text-align: center;
+
+}
